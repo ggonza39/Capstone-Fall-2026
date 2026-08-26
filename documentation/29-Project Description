@@ -1,0 +1,310 @@
+Website Modernization and Accessibility Enhancement-Tech Smart Learning for Seniors 
+Sponsor: Tech Smart Learning for Seniors  techsmartseniors.org
+Project Duration: One Semester (Senior Capstone)
+Sponsor information: Daniel Kolawole danielk@techsmartseniors.org
+________________________________________
+Sponsor Background
+Tech Smart Learning for Seniors is a nonprofit organization focused on helping senior adults successfully use technology and connecting volunteers and supporters with opportunities to assist the senior community.
+The organization currently maintains a public website that provides information about its services, opportunities to help, and ways to contact the organization. As Tech for Seniors continues to grow, it would like its website to better represent its mission, clearly guide its different audiences, improve accessibility and usability, and provide a foundation for future digital services.
+________________________________________
+Project Background
+Tech Smart Learning for Seniors would like to modernize its existing public website.
+This project is not simply a visual redesign. A major objective is for students to work collaboratively with the sponsor to understand what different website visitors are trying to accomplish and help the organization determine how its future website should work.
+Two particularly important audiences are:
+1.	People who need help – primarily senior adults and others seeking technology assistance or information.
+2.	People who want to help – volunteers, donors, community partners, and others interested in supporting the organization.
+The website should make these pathways clear and intuitive.
+The existing website also submits information into Salesforce. Tech Smart Learning for Seniors plans to replace the Salesforce functionality it currently uses with a lightweight contact-management system being developed by a separate capstone team.
+This website team will therefore replace applicable Salesforce-dependent website calls with calls to a documented backend API. A dedicated capstone team (capstone project #30) will focus on the backend development and APIs. If the API is not available during development, students shall use mocked endpoints or dummy responses so that this project's progress is not dependent upon another team's delivery.
+________________________________________
+Project Philosophy
+This project shall follow an iterative, user-centered design process.
+Students are not expected to simply reproduce the existing website with a more modern appearance. They shall work with Tech for Seniors to understand the organization's audiences, goals, content, current challenges, and desired future direction.
+Requirements are expected to evolve as students and sponsor representatives review designs and prototypes together.
+The Phase 1 deliverable should demonstrate a compelling and realistic vision for the future Tech for Seniors website. Functionality that cannot reasonably be completed during one semester should be documented in a future-development roadmap.
+________________________________________
+Project Goal
+Design and develop a modern, accessible, responsive Tech for Seniors website that clearly serves the organization's major audiences, improves the visitor experience, and provides a technical foundation for future growth.
+The completed prototype should allow the sponsor to confidently answer:
+“Is this what we want the future Tech for Seniors website to become?”
+________________________________________
+Intended Users
+People Seeking Help
+Visitors looking for technology assistance, services, resources, or information.
+People Wanting to Help
+Visitors interested in:
+•	volunteering;
+•	donating;
+•	partnering with the organization;
+•	supporting Tech for Seniors; or
+•	learning how they can become involved.
+Website Administrator
+Authorized Tech for Seniors personnel responsible for maintaining website content.
+Administrative CRM functions such as contact management, reporting, campaigns, data cleanup, and donor/contact dashboards are not part of this project. They are being developed by the related backend capstone project.
+________________________________________
+Functional Requirements
+1. Requirements Analysis and Sponsor Discovery
+Students shall work closely with Tech for Seniors to understand:
+•	who currently visits the website;
+•	why they visit;
+•	what actions visitors should be able to complete;
+•	problems with the existing website;
+•	content that should be retained, revised, reorganized, or removed;
+•	accessibility requirements;
+•	volunteer and donor engagement goals;
+•	administrator needs;
+•	current Salesforce-dependent website functions; and
+•	desired future capabilities.
+Students should actively help the sponsor evaluate alternatives rather than expecting the sponsor to provide a complete predetermined specification.
+________________________________________
+2. Information Architecture
+Students shall evaluate and redesign the organization of website content.
+The site should clearly distinguish between major visitor journeys, particularly:
+I Need Help
+Visitors seeking assistance should be able to quickly understand:
+•	what assistance Tech for Seniors provides;
+•	who qualifies or may participate;
+•	how to request assistance;
+•	what to expect next; and
+•	how to contact the organization.
+I Want to Help
+Visitors wishing to support the organization should be able to quickly identify opportunities such as:
+•	volunteering;
+•	donating;
+•	partnering;
+•	supporting programs; and
+•	contacting Tech for Seniors.
+The final terminology and navigation structure shall be developed collaboratively with the sponsor.
+________________________________________
+3. Website Design and Branding
+Students shall develop a professional and contemporary design appropriate for a nonprofit organization serving senior adults.
+The design should:
+•	reflect the organization's mission and identity;
+•	use sponsor-provided branding where available;
+•	provide consistent navigation;
+•	use readable typography;
+•	avoid unnecessary complexity;
+•	work effectively on desktop, tablet, and mobile devices; and
+•	remain approachable for users with varying levels of technical experience.
+Wireframes and design concepts shall be reviewed with the sponsor before major implementation begins.
+________________________________________
+4. Accessibility
+Accessibility shall be treated as a core design requirement rather than a final-semester add-on.
+Students shall research and apply appropriate web accessibility practices, including consideration of:
+•	keyboard navigation;
+•	screen-reader compatibility;
+•	semantic page structure;
+•	text readability;
+•	color contrast;
+•	scalable text;
+•	accessible forms;
+•	meaningful labels;
+•	alternative text for meaningful images;
+•	understandable error messages; and
+•	accessibility for users with limited technology experience.
+Students shall conduct appropriate accessibility testing and document the results.
+________________________________________
+5. Public Forms and Engagement Workflows
+The website shall provide sponsor-approved forms supporting appropriate visitor interactions.
+Potential workflows include:
+•	requesting technology assistance;
+•	expressing interest in volunteering;
+•	contacting Tech for Seniors;
+•	expressing interest in donating or supporting the organization; and
+•	other engagement workflows identified during requirements analysis.
+Students shall determine the exact forms and fields with the sponsor.
+________________________________________
+6. Backend API Integration
+Information collected through appropriate public-facing forms shall be submitted to the contact-management backend through an agreed API.
+The initial integration is expected to be primarily submission-based.
+Possible API operations include:
+•	submit a request for assistance;
+•	submit a volunteer inquiry;
+•	submit a general contact inquiry; and
+•	submit another sponsor-approved engagement request.
+The website shall send the information supplied by the visitor to the backend.
+The website team shall not be responsible for determining whether the person already exists in the contact database. Duplicate detection, matching, merging, and contact-management business logic belong to the backend system.
+The backend response should provide only the information necessary to confirm whether the submission succeeded or failed. Existing contact records shall not be exposed unnecessarily to the public website.
+________________________________________
+7. Shared API Contract
+During Milestone 1, the website team and backend team shall collaborate to define the interface between the two applications.
+The API contract should document, as appropriate:
+•	endpoint names;
+•	required fields;
+•	optional fields;
+•	data types;
+•	request format;
+•	response format;
+•	validation requirements;
+•	success responses;
+•	error responses;
+•	duplicate-handling expectations; and
+•	security requirements.
+The contract should be documented sufficiently for either team to develop independently.
+________________________________________
+8. Independent Development / Mock API
+The website team's progress shall not depend upon completion of the related backend project.
+Students shall be able to demonstrate all website workflows using mocked endpoints, dummy API responses, or another appropriate simulation if the production backend is unavailable.
+Once the actual backend API becomes available, students may replace the mocks with real API integration.
+Successful cross-team integration is desirable but shall not be required for this project's MVP to be considered successful.
+________________________________________
+9. Website Administration
+Students shall work with the sponsor to determine what website content authorized staff should be able to maintain without modifying source code.
+The Phase 1 administrative functionality should remain appropriate for the scope of a one-semester prototype.
+CRM administration, contact management, campaign management, donor reporting, and Salesforce-replacement functions are specifically excluded because they belong to the second capstone project.
+________________________________________
+10. Error Handling
+Public workflows shall provide understandable feedback when:
+•	required information is missing;
+•	information is incorrectly formatted;
+•	an API request fails;
+•	the backend is temporarily unavailable; or
+•	another submission problem occurs.
+Technical error information should not be exposed unnecessarily to public users.
+________________________________________
+Suggested Technology
+Students shall recommend an appropriate web technology stack during requirements analysis.
+The solution should prioritize:
+•	maintainability;
+•	accessibility;
+•	responsive design;
+•	low operational cost;
+•	ease of future development; and
+•	straightforward integration with the backend API.
+GitHub shall be used for source control and project documentation.
+________________________________________
+Nonfunctional Requirements
+The website should be:
+•	accessible;
+•	responsive;
+•	intuitive;
+•	secure;
+•	maintainable;
+•	professionally designed;
+•	performant;
+•	well documented; and
+•	usable by visitors with varying levels of technical experience.
+________________________________________
+Out of Scope
+Unless specifically approved during requirements analysis, Phase 1 does not include:
+•	rebuilding Salesforce;
+•	Salesforce data migration;
+•	contact deduplication;
+•	donor/contact database management;
+•	campaign administration;
+•	administrative CRM dashboards;
+•	advanced analytics;
+•	predictive analytics;
+•	AI functionality.
+These capabilities either belong to Project 2 or may be considered for future phases.
+________________________________________
+Sponsor Responsibilities
+Tech for Seniors will:
+•	designate appropriate sponsor representatives;
+•	participate in regular meetings;
+•	explain current website workflows;
+•	help students understand major visitor audiences;
+•	provide existing website content and branding resources;
+•	identify current Salesforce-dependent website interactions;
+•	review wireframes and prototypes;
+•	help prioritize MVP functionality;
+•	provide timely feedback; and
+•	participate in milestone demonstrations.
+________________________________________
+Student Responsibilities
+Students shall:
+•	conduct stakeholder interviews;
+•	evaluate the existing website;
+•	help the sponsor refine requirements;
+•	develop user personas or user journeys as appropriate;
+•	design the information architecture;
+•	develop wireframes;
+•	implement the website;
+•	implement public forms;
+•	implement or mock the agreed API calls;
+•	collaborate with Project 2 on the API contract;
+•	conduct usability and accessibility testing;
+•	maintain GitHub;
+•	document the solution;
+•	identify future enhancements; and
+•	present the completed prototype.
+________________________________________
+Project Milestones
+Milestone 1 – Discovery, Requirements, and Design
+Students shall:
+•	evaluate the current website;
+•	interview sponsor stakeholders;
+•	identify major user groups and journeys;
+•	document functional and nonfunctional requirements;
+•	identify current Salesforce-dependent website interactions;
+•	collaborate with Team 2 on the shared API contract;
+•	develop information architecture;
+•	prepare wireframes;
+•	define the MVP;
+•	develop a preliminary future roadmap.
+Mandatory Deliverable: Sponsor-reviewed Requirements Engineering Document.
+________________________________________
+Milestone 2 – Website Prototype
+Students shall demonstrate:
+•	primary website navigation;
+•	I Need Help user journey;
+•	I Want to Help user journey;
+•	responsive design;
+•	representative website content;
+•	public-facing forms;
+•	mocked or functional backend API integration;
+•	initial accessibility implementation; and
+•	initial usability testing.
+Sponsor feedback shall be incorporated into the final development cycle.
+________________________________________
+Milestone 3 – Refined MVP and Future Roadmap
+Students shall deliver:
+•	refined website MVP;
+•	completed sponsor-approved workflows;
+•	responsive implementation;
+•	accessibility testing;
+•	usability testing;
+•	API integration or validated mock integration;
+•	technical documentation;
+•	user/administrator documentation;
+•	GitHub repository containing code and project documentation;
+•	future-development roadmap; and
+•	final presentation.
+________________________________________
+Minimum Viable Product (MVP)
+The MVP shall include:
+•	sponsor-approved modern website design;
+•	clear separation between major visitor journeys;
+•	intuitive navigation;
+•	responsive design;
+•	accessibility-conscious implementation;
+•	core public-facing forms;
+•	defined backend API contract;
+•	functioning API calls or realistic mocked equivalents;
+•	appropriate error handling;
+•	documentation; and
+•	a roadmap for functionality not completed during Phase 1.
+________________________________________
+Future Roadmap
+Students shall identify and prioritize functionality recommended for future development.
+Potential areas may include:
+•	additional online services;
+•	expanded volunteer functionality;
+•	additional donation functionality;
+•	deeper integration with the Project 2 backend;
+•	additional administrative content-management capabilities;
+•	enhanced accessibility;
+•	multilingual support;
+•	advanced engagement features; and
+•	AI opportunities identified through requirements analysis.
+Future functionality should be clearly distinguished from the Phase 1 MVP.
+________________________________________
+Definition of Success
+This project will be considered successful if the student team thoroughly understands Tech for Seniors' goals and audiences, helps the sponsor determine what its future website should provide, and delivers a modern, accessible prototype that demonstrates that vision.
+Success does not require implementation of every feature the organization may eventually want.
+The strongest measure of success is that the sponsor can review the completed MVP and roadmap and confidently state:
+“Yes. This represents the direction we want for the future Tech for Seniors website.”
+________________________________________
+Student Résumé Outcome
+Improved digital access and engagement for senior adults, volunteers, donors, and community supporters by designing and developing a modern, accessible nonprofit website using stakeholder requirements engineering, user-centered design, information architecture, responsive web development, accessibility standards, REST API integration, usability testing, GitHub, and collaborative software engineering.
+
