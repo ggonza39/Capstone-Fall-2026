@@ -1,8 +1,7 @@
-# Capstone-Fall-2026
-# Tech Smart Learning for Seniors – Website Modernization and Accessibility Enhancement
+# Capstone-Fall-2026: Tech Smart Learning for Seniors – Website Modernization and Accessibility Enhancement
 
 ## Team Name
-Tech Smart Web Team
+- Tech Smart Web Team
 
 ## Team Roster & Roles
 - **Team Lead & Project Coordinator**
