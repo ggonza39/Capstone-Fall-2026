@@ -30,10 +30,19 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
       - name: Deploy to Vercel (Preview)
-        run: vercel deploy --prebuilt --debug --token=${{ secrets.VERCEL_TOKEN }}
+        id: deploy
+        run: |
+          URL=$(vercel deploy --prebuilt --debug --token=${{ secrets.VERCEL_TOKEN }})
+          echo "DEPLOY_URL=$URL" >> $GITHUB_OUTPUT
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Write Deployment Summary
+        run: |
+          echo "### 🚀 Vercel Preview Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** Successful ✅" >> $GITHUB_STEP_SUMMARY
+          echo "**Preview URL:** ${{ steps.deploy.outputs.DEPLOY_URL }}" >> $GITHUB_STEP_SUMMARY
 
   Deploy-Production:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -58,7 +67,16 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
       - name: Deploy to Vercel (Production)
-        run: vercel deploy --prebuilt --prod --debug --token=${{ secrets.VERCEL_TOKEN }}
+        id: deploy
+        run: |
+          URL=$(vercel deploy --prebuilt --prod --debug --token=${{ secrets.VERCEL_TOKEN }})
+          echo "DEPLOY_URL=$URL" >> $GITHUB_OUTPUT
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Write Deployment Summary
+        run: |
+          echo "### 🚀 Vercel Production Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** Live in Production ✅" >> $GITHUB_STEP_SUMMARY
+          echo "**Deployment URL:** ${{ steps.deploy.outputs.DEPLOY_URL }}" >> $GITHUB_STEP_SUMMARY
