@@ -5,10 +5,10 @@
 
 ## Team Roster & Roles
 - **Team Lead & Project Coordinator**
-  - TBD (Project Management, Requirements Engineering & Sponsor Liaison)
+  - Gilberto Gonzalez (Project Management, Requirements Engineering & Sponsor Liaison)
 - **UI/UX & Information Architecture Lead**
   - TBD (User Journeys, Personas, Wireframes & Usability Testing)
-- **Web Accessibility Specialist (a11y Lead) & Front-End Developer**
+- **Web Accessibility Specialist & Front-End Developer**
   - TBD (WCAG Compliance, Responsive Design & Accessible Forms)
 - **Lead Web Developer**
   - TBD (Core Architecture, Landing Pages & Website Admin System)
