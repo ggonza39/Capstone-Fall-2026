@@ -9,7 +9,7 @@
 - **UI/UX & Information Architecture Lead**
   - TBD (User Journeys, Personas, Wireframes & Usability Testing)
 - **Web Accessibility Specialist & Front-End Developer**
-  - TBD (WCAG Compliance, Responsive Design & Accessible Forms)
+  - Jazmine Harvey (WCAG Compliance, Responsive Design & Accessible Forms)
 - **Lead Web Developer**
   - TBD (Core Architecture, Landing Pages & Website Admin System)
 - **Integration Engineer & Backend API Specialist**
