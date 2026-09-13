@@ -13,7 +13,7 @@
 - **Lead Web Developer**
   - TBD (Core Architecture, Landing Pages & Website Admin System)
 - **Integration Engineer & Backend API Specialist**
-  - TBD (Shared API Contract, Mock API Endpoints & REST Integration)
+  - Elvin Chi (Shared API Contract, Mock API Endpoints & REST Integration)
 
 ## Project Overview
 Tech Smart Learning for Seniors is a nonprofit organization focused on helping senior adults successfully use technology and connecting volunteers and supporters with opportunities to assist the senior community.
