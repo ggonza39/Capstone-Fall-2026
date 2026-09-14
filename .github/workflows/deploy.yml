@@ -16,11 +16,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: Check for package.json & Install
+        run: |
+          if [ -f "package.json" ]; then
+            if [ -f "package-lock.json" ]; then
+              npm ci
+            else
+              npm install
+            fi
+          else
+            echo "No package.json found at root; skipping Node dependencies."
+          fi
 
       - name: Lint & Formatting Check
         run: npm run lint --if-present
