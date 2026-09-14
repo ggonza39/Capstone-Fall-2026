@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: Check for package.json & Install
+      - name: Install Dependencies
         run: |
           if [ -f "package.json" ]; then
             if [ -f "package-lock.json" ]; then
@@ -26,18 +26,42 @@ jobs:
             else
               npm install
             fi
+          elif [ -f "src/package.json" ]; then
+            cd src
+            if [ -f "package-lock.json" ]; then npm ci; else npm install; fi
           else
-            echo "No package.json found at root; skipping Node dependencies."
+            echo "No package.json found. Skipping dependency installation."
           fi
 
       - name: Lint & Formatting Check
-        run: npm run lint --if-present
+        run: |
+          if [ -f "package.json" ]; then
+            npm run lint --if-present
+          elif [ -f "src/package.json" ]; then
+            cd src && npm run lint --if-present
+          else
+            echo "No package.json found. Skipping linting."
+          fi
 
       - name: Typecheck Project
-        run: npx tsc --noEmit --skipLibCheck || echo "No TypeScript setup or skipped"
+        run: |
+          if [ -f "package.json" ]; then
+            npx tsc --noEmit --skipLibCheck || echo "TypeScript check skipped"
+          elif [ -f "src/package.json" ]; then
+            cd src && (npx tsc --noEmit --skipLibCheck || echo "TypeScript check skipped")
+          else
+            echo "No package.json found. Skipping typecheck."
+          fi
 
       - name: Run Tests
-        run: npm test --if-present
+        run: |
+          if [ -f "package.json" ]; then
+            npm test --if-present
+          elif [ -f "src/package.json" ]; then
+            cd src && npm test --if-present
+          else
+            echo "No package.json found. Skipping tests."
+          fi
 
   Deploy-Preview:
     needs: Quality-Checks
