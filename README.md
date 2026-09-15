@@ -8,8 +8,10 @@
   - Gilberto Gonzalez (Project Management, Requirements Engineering & Sponsor Liaison)
 - **Web Accessibility Specialist & Front-End Developer**
   - Jazmine Harvey (WCAG Compliance, Responsive Design & Accessible Forms)
-- ** UI/UX Specialist and Mock API Service Layer Developer **
-  - Jake Schramm (Core Architecture, Landing Pages & Website Admin System)
+- **UI/UX Specialist and Mock API Service Layer Developer**
+  - Jake Schramm (User Journeys, Personas, Wireframes & Usability Testing)
+- **Lead Web Developer**
+  - Jordan Toney (Core Architecture, Landing Pages & Website Admin System)
 - **Integration Engineer & Backend API Specialist**
   - Elvin Chi (Shared API Contract, Mock API Endpoints & REST Integration)
 
