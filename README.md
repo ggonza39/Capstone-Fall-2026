@@ -9,9 +9,11 @@
 - **Web Accessibility Specialist & Front-End Developer**
   - Jazmine Harvey (WCAG Compliance, Responsive Design & Accessible Forms)
 - ** UI/UX Specialist and Mock API Service Layer Developer **
-  - Jake Schramm (Core Architecture, Landing Pages & Website Admin System)
+  - Jake Schramm (User Journeys, Personas, Wireframes & Usability Testing)
 - **Integration Engineer & Backend API Specialist**
   - Elvin Chi (Shared API Contract, Mock API Endpoints & REST Integration)
+- **Lead Web Developer**
+  - Jordan Toney (Core Architecture, Landing Pages, & Website Admin System) 
 
 ## Project Overview
 Tech Smart Learning for Seniors is a nonprofit organization focused on helping senior adults successfully use technology and connecting volunteers and supporters with opportunities to assist the senior community.
