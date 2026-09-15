@@ -6,12 +6,10 @@
 ## Team Roster & Roles
 - **Team Lead & Project Coordinator**
   - Gilberto Gonzalez (Project Management, Requirements Engineering & Sponsor Liaison)
-- **UI/UX & Information Architecture Lead**
-  - TBD (User Journeys, Personas, Wireframes & Usability Testing)
 - **Web Accessibility Specialist & Front-End Developer**
   - Jazmine Harvey (WCAG Compliance, Responsive Design & Accessible Forms)
-- **Lead Web Developer**
-  - TBD (Core Architecture, Landing Pages & Website Admin System)
+- ** UI/UX Specialist and Mock API Service Layer Developer **
+  - Jake Schramm (Core Architecture, Landing Pages & Website Admin System)
 - **Integration Engineer & Backend API Specialist**
   - Elvin Chi (Shared API Contract, Mock API Endpoints & REST Integration)
 
