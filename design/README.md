@@ -41,7 +41,7 @@ Preview:
 To access learning opportunities and resources, a senior learner would start at the landing page and go to "I need help with technology" -> "Learn in person".
 This brings them to a filterable list of upcoming classes with their locations and times.
 
-## TODO
+## To-Do
 - Finish remaining wireframes (Learn Online, Free Resources, Training Manuals, Volunteer, Donation Page, Support Us > a) Become a Partner & b) Fundraising Events, Contact)
 - Include testimonials and storytelling (on landing page?)
 - Finish user journeys
