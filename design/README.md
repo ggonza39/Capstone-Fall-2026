@@ -94,6 +94,24 @@ Preview:
 ### Learn In-Person Page:
 <img width="975" height="797" alt="image" src="https://github.com/user-attachments/assets/7aaec2c6-24ef-430d-83dd-c8e5aa4063ab" />
 
+### Free Learning Resources Page (Wireframe Design):
+#### Notes for Dev:
+<img width="1006" height="667" alt="image" src="https://github.com/user-attachments/assets/b08eaac6-b6eb-4500-9b81-7fd8ab8f3149" />
+
+### Donations Pages:
+#### Notes for Dev: 
+  - It's very important that we do input validation for each input field to ensure security and correctness.
+  - API Contract: email on this page should align with email on "Contact Us" forms to find users.
+
+#### Page 1:
+<img width="687" height="437" alt="image" src="https://github.com/user-attachments/assets/739d82e2-154a-4a6a-81c0-21caca333b84" />
+
+#### Page 2:
+<img width="677" height="377" alt="image" src="https://github.com/user-attachments/assets/fdc148f7-d007-4048-ae35-afbe3689eaaf" />
+
+#### Page 3:
+<img width="817" height="432" alt="image" src="https://github.com/user-attachments/assets/028d2e7e-623c-4a83-9326-e62ab0b7265f" />
+
 ## User Journeys
 To access learning opportunities and resources, a senior learner would start at the landing page and go to "I need help with technology" -> "Learn in person".
 This brings them to a filterable list of upcoming classes with their locations and times.
