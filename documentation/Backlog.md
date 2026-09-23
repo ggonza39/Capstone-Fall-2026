@@ -1,8 +1,8 @@
 # Product Backlog
 
-The product backlog for the TSLS-Web project is managed using GitHub Projects.
+The product backlog for the TSLS-Web project is managed directly within GitHub Repository Issues.
 
-- [Backlog URL](https://github.com/users/ggonza39/projects/2)
+- [Repository Issues URL](https://github.com/ggonza39/Capstone-Fall-2026/issues)
 
 ---
 
@@ -10,7 +10,7 @@ The product backlog for the TSLS-Web project is managed using GitHub Projects.
 
 The product backlog is ordered based on a combination of sponsor-approved requirements, technical dependencies, implementation priorities, risk reduction, and design readiness.
 
-Foundational requirements and design activities are prioritized first in Milestone 1 (due September 30, 2026) because they establish the approved scope and provide the structure needed before significant development can begin. This includes confirming the sponsor requirements baseline, defining the information architecture and user journeys, creating initial responsive wireframes, establishing development and CI/CD workflows, and defining the frontend integration boundary and Mock API schema.
+Foundational requirements and design activities are prioritized first in Milestone 1 (due September 30, 2026) because they establish the approved scope and provide the structure needed before significant development can begin. This includes confirming the sponsor requirements baseline, defining the information architecture and user journeys, creating initial responsive wireframes, establishing development and repository issue workflows, and defining the frontend integration boundary and Mock API schema.
 
 The primary audience journeys are prioritized next in Milestone 2 — Interactive Sandbox Prototype (due October 28, 2026) because they represent the core functionality of the redesigned website. The "I Need Help" path must support workshop discovery, ZIP-code search, workshop information, and registration, while the "I Want to Help" path must provide separate Donate, Volunteer, and Advocate experiences. Responsive design, WCAG accessibility remediation, and local Mock API endpoint integrations are prioritized alongside these core user journeys to ensure a fully functional, testable web prototype.
 
@@ -46,16 +46,16 @@ Each Product Backlog Item (PBI) was compared against the other items to determin
 Estimation was performed sequentially from the top of the backlog to the bottom to maintain consistent relative comparison across the Product Backlog.
 
 The items are distributed across three strategic project milestones:
-- **Milestone 1 — Requirements & Design (Due September 30, 2026):** PBIs 1–5 (27 pts total) focus on establishing baseline requirements, user journey maps, wireframes, frontend integration boundaries/Mock API contracts, and dev infrastructure.
+- **Milestone 1 — Requirements & Design (Due September 30, 2026):** PBIs 1–5 (27 pts total) focus on establishing baseline requirements, user journey maps, wireframes, frontend integration boundaries/Mock API contracts, and repository development infrastructure.
 - **Milestone 2 — Interactive Sandbox Prototype (Due October 28, 2026):** PBIs 6–12 (39 pts total) focus on core dual-path navigation, workshop discovery, primary audience journeys, responsive layouts, accessibility remediation, and mock API integration.
 - **Milestone 3 — Production Release & Handover (Due December 4, 2026):** PBIs 13–15 (21 pts total) focus on live external form/CRM/payment integration boundaries, performance & SEO optimizations, and administrative management features.
 
 ---
 
-- **Note:** Each Product Backlog Item (PBI) is listed by its summary title for scannability. The full User Stories, acceptance criteria, and other detailed technical requirements are documented within the description field of each individual item on the GitHub Project board.
+- **Note:** Each Product Backlog Item (PBI) is listed by its summary title for scannability. The detailed descriptions and testable acceptance criteria are documented directly within the body of each individual item in GitHub Issues.
 
-- **Note:** User story numbers are identifiers used for referencing issues and tasks in GitHub. 
-The order shown here reflects the current priority of the Product Backlog and does not correspond to the story numbering.
+- **Note:** PBI numbers are identifiers used for referencing issues and tasks in GitHub. 
+The order shown here reflects the current priority of the Product Backlog and does not correspond to the issue numbering.
 
 - **Note:** This is the team's initial Product Backlog. The backlog may be refined as requirements are clarified, sponsor feedback is received, and implementation details become better understood.
 
