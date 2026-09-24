@@ -1,4 +1,4 @@
-# Milestone 1 Backlog — Requirements & Design
+# Milestone 1 Backlog: Requirements & Design
 
 **Target Completion Date:** September 30, 2026  
 **Total Points:** 27 Story Points  
