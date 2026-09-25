@@ -14,8 +14,8 @@ Two particularly important audiences are:
 1.	People who need help – primarily senior adults and others seeking technology assistance or information.
 2.	People who want to help – volunteers, donors, community partners, and others interested in supporting the organization.
 The website should make these pathways clear and intuitive.
-The existing website also submits information into Salesforce. Tech Smart Learning for Seniors plans to replace the Salesforce functionality it currently uses with a lightweight contact-management system being developed by a separate capstone team.
-This website team will therefore replace applicable Salesforce-dependent website calls with calls to a documented backend API. A dedicated capstone team (capstone project #30) will focus on the backend development and APIs. If the API is not available during development, students shall use mocked endpoints or dummy responses so that this project's progress is not dependent upon another team's delivery.
+The existing website also submits information into Salesforce. Tech Smart Learning for Seniors plans to replace the Salesforce functionality it currently uses with a lightweight contact-management system being developed by backend Team #30.
+This website team will therefore replace applicable Salesforce-dependent website calls with calls to a documented backend API. Backend Team #30 will focus on the backend development and APIs. If the API is not available during development, students shall use mocked endpoints or dummy responses so that this project's progress is not dependent upon another team's delivery.
 ________________________________________
 Project Philosophy
 This project shall follow an iterative, user-centered design process.
@@ -40,7 +40,7 @@ Visitors interested in:
 •	learning how they can become involved.
 Website Administrator
 Authorized Tech for Seniors personnel responsible for maintaining website content.
-Administrative CRM functions such as contact management, reporting, campaigns, data cleanup, and donor/contact dashboards are not part of this project. They are being developed by the related backend capstone project.
+Administrative CRM functions such as contact management, reporting, campaigns, data cleanup, and donor/contact dashboards are not part of this project. They are being developed by backend Team #30.
 ________________________________________
 Functional Requirements
 1. Requirements Analysis and Sponsor Discovery
@@ -151,7 +151,7 @@ ________________________________________
 9. Website Administration
 Students shall work with the sponsor to determine what website content authorized staff should be able to maintain without modifying source code.
 The Phase 1 administrative functionality should remain appropriate for the scope of a one-semester prototype.
-CRM administration, contact management, campaign management, donor reporting, and Salesforce-replacement functions are specifically excluded because they belong to the second capstone project.
+CRM administration, contact management, campaign management, donor reporting, and Salesforce-replacement functions are specifically excluded because they belong to backend Team #30.
 ________________________________________
 10. Error Handling
 Public workflows shall provide understandable feedback when:
@@ -196,7 +196,7 @@ Unless specifically approved during requirements analysis, Phase 1 does not incl
 •	advanced analytics;
 •	predictive analytics;
 •	AI functionality.
-These capabilities either belong to Project 2 or may be considered for future phases.
+These capabilities either belong to backend Team #30 or may be considered for future phases.
 ________________________________________
 Sponsor Responsibilities
 Tech for Seniors will:
@@ -222,7 +222,7 @@ Students shall:
 •	implement the website;
 •	implement public forms;
 •	implement or mock the agreed API calls;
-•	collaborate with Project 2 on the API contract;
+•	collaborate with backend Team #30 on the shared API contract;
 •	conduct usability and accessibility testing;
 •	maintain GitHub;
 •	document the solution;
@@ -237,7 +237,7 @@ Students shall:
 •	identify major user groups and journeys;
 •	document functional and nonfunctional requirements;
 •	identify current Salesforce-dependent website interactions;
-•	collaborate with Team 2 on the shared API contract;
+•	collaborate with backend Team #30 on the shared API contract;
 •	develop information architecture;
 •	prepare wireframes;
 •	define the MVP;
@@ -291,7 +291,7 @@ Potential areas may include:
 •	additional online services;
 •	expanded volunteer functionality;
 •	additional donation functionality;
-•	deeper integration with the Project 2 backend;
+•	deeper integration with backend Team #30;
 •	additional administrative content-management capabilities;
 •	enhanced accessibility;
 •	multilingual support;
