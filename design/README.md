@@ -83,7 +83,76 @@ Link (requires Figma login): https://www.figma.com/make/CxpBxF4lL8zXGGeXf00rLN/U
 Preview:
 <img width="1795" height="851" alt="image" src="https://github.com/user-attachments/assets/8cbf7252-c8af-444d-b95f-d44973817fcc" />
 
+## User Journeys 
+### Cindy: Finding Answers to Technology Questions Quickly (v1)
+	1. User is wondering how to charge a new smartphone -> she arrives at landing page.
+	2. Sees "I want technology help" at the top 
+	3. Arrives at 4 choices -> chooses "free online resources"
+	4. Selects one of 4 sub-categories (smartphone) -> feels frustrated from clicking so much, but relieved at simplicity and step-by-step clarity.
+	5. Finds article on charging a smartphone
+	6. Feels frustrated that she has to read through the article, but she finds her answer -> Task complete.
 
+#### Improvements:
+	1. Add FAQ on the free learning resources page per-category. (Note: this also improves SEO)
+
+<hr>
+
+### Cindy: Finding Answers to Technology Questions Quickly (v2)
+	1. User is wondering how to charge a new smartphone -> she arrives at landing page.
+	2. Sees "I want technology help" at the top 
+	3. Arrives at 4 choices -> chooses "free online resources"
+	4. Selects one of 4 sub-categories (smartphone) 
+	5. Pleased to find her answer in the FAQ section, with articles for more details. -> Task complete.
+
+#### Considerations:	
+	1. For the ALL option (when selecting a technology category), we could only show FAQ when the user selects a technology category, or have a "Default" set of FAQ when the user selects ALL. The former might prevent the user from feeling overwhelmed from too much content, but the latter would provide consistency and possibly quicker answers.
+
+<hr>
+
+### John: Finding Volunteer Opportunities & Signing Up
+	1. User is wondering how to volunteer.
+	2. Sees "I want to volunteer" on landing page -> brought to volunteer options page.
+	3. Volunteer options page has a "Classroom Volunteers" option -> clicks "See opportunities"
+	4. Brought to Sign Up page -> selects filters for preferred day of week and location -> options filtered. Feels delighted that options are clearly presented and that filters work instantly (without another click).
+	5. Clicks Sign Up -> modal appears. Feels frustrated that there is more work to be done. 	6. Fills out form -> clicks submit. Feels relieved that the process only took 2-3 minutes. 
+	6. Task Complete.
+
+#### Pain points:
+	1. Clicking "I want to volunteer" doesn't provide list of opportunities up-front. There are several hoops to jump through- but only 2 clicks to get the opportunities page. Given that this is a reasonable user flow, the clarity of knowing where to go may outweigh the need for more efficiency.
+
+#### Improvements:
+	1. If we add login feature, system will already have all their information. Will be able to skip the contact form step every time. This may be good for recurring volunteers as well. (Note: a login/sign-up page would take 1 extra week of work, with design, API contract, and implementation included ... better as a stretch goal).
+	2. Additional suggestion by ChatGPT: add a confirmation message to show that the user's form has been submitted.
+
+<hr>
+
+### John: Being Aware of Upcoming Events
+	1. User is interested in seeing what upcoming events TechSmart is offering near him.
+	2. Sees "upcoming events" animated circle at bottom right on landing page
+		- 2b (alternative): Sees "Support Us" dropdown in navbar -> selects "Fundraising Events"
+	3. Clicks -> redirected to "Events" page. Delighted to have found events with their details so quickly.
+
+#### Pain Points:
+	1. There was no option to filter events by date, but there may not be enough events at once to justify filtering. 
+	2. If a senior selected it, thinking that events were for learning, they may not know how to get back to HOME other than the navbar.
+
+#### Improvements:
+	1. Have a clear "Back to Home" button on the Events page.
+
+<hr>
+
+### Patricia: Making a Donation
+	1. User sees landing page -> feels excited about helping.
+	2. User wants to help. They may:
+		- Click "Support Us" > Partners > Individual donors (3 clicks)
+		- Click "Donate" at top right without reading the rest of landing page (1 click)
+		- Feel interested in TechSmart's story -> Read the full landing page -> arrive at the donate section at the bottom -> click Donate (one click)
+	3. Arrive at donation center. 
+	4. Enter amount and card details
+
+#### Improvements:
+	1. Apple Pay integration may help, but it statistically only improves overall donation rate by 2%.
+	2. Added monthly giving to wireframe (new feature). According to statistics, 45% of donors give monthly; this could help overall donation rates.
 ## Wireframes (for layout purposes only, no styling)
 ### Landing Page:
 <img width="975" height="714" alt="image" src="https://github.com/user-attachments/assets/13f29b9c-8d71-41c7-8b5f-de6a66a1d8bf" />
@@ -112,14 +181,12 @@ Preview:
 #### Page 3:
 <img width="817" height="432" alt="image" src="https://github.com/user-attachments/assets/028d2e7e-623c-4a83-9326-e62ab0b7265f" />
 
-## User Journeys
-To access learning opportunities and resources, a senior learner would start at the landing page and go to "I need help with technology" -> "Learn in person".
-This brings them to a filterable list of upcoming classes with their locations and times.
-
 ## To-Do
-- Finish remaining wireframes (Learn Online, Free Resources, Training Manuals, Volunteer, Donation Page, Support Us > a) Become a Partner & b) Fundraising Events, Contact)
-- Include testimonials and storytelling (on landing page?)
-- Finish user journeys
-- Design idea to display upcoming events with TechSmart for Seniors: static icon at bottom-right of screen (with a radiating animation as a signifier). Text: "Events with TechSmart". When clicked, displays a modal with upcoming events.
+- Finish remaining wireframes:
+    - Learn Online
+    - Training Manuals
+    - Support Us > Fundraising Events
+    - Main Contact Page (do we need to make "Contact Us"/contact information more clear, i.e. put it on the navbar and/or landing page instead of the footer?)
+    - About Us Page
 
 
