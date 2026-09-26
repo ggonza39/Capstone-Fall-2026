@@ -49,10 +49,10 @@ This PBI structures the site architecture, page hierarchies, and end-to-end navi
 
 #### Acceptance Criteria
 - [ ] **Sitemap & Page Hierarchy:** Map out the site structure defining parent/child page relationships, primary navigation elements, and footer links across key sections (Home, About, Workshops, Get Involved, Contact).
-- [ ] **Dual-Path Navigation Flow:** Define user flow paths for the primary home page entry points, ensuring clear bifurcation into "I Need Help" (Seniors/Caregivers) and "I Want to Help" (Donors/Volunteers/Advocates).
-- [ ] **Workshop Discovery Journey:** Detail the end-to-end user steps for location-based workshop discovery, including ZIP-code search input, listing filtering, and event detail views.
-- [ ] **Action & Form Conversion Flows:** Document user pathways for event registration, volunteer sign-up, inquiry forms, and Stripe donation processing.
-- [ ] **Senior-Centered UX Guidelines:** Incorporate low-friction UX principles into user journeys, focusing on minimal clicks, persistent contact options, prominent call-to-action placement, and 150% text zoom support.
+- [x] **Dual-Path Navigation Flow:** Define user flow paths for the primary home page entry points, ensuring clear bifurcation into "I Need Help" (Seniors/Caregivers) and "I Want to Help" (Donors/Volunteers/Advocates).
+- [x] **Workshop Discovery Journey:** Detail the end-to-end user steps for location-based workshop discovery, including ZIP-code search input, listing filtering, and event detail views.
+- [x] **Action & Form Conversion Flows:** Document user pathways for event registration, volunteer sign-up, inquiry forms, and Stripe donation processing.
+- [x] **Senior-Centered UX Guidelines:** Incorporate low-friction UX principles into user journeys, focusing on minimal clicks, persistent contact options, prominent call-to-action placement, and 150% text zoom support.
 
 ---
 
@@ -65,11 +65,11 @@ This PBI structures the site architecture, page hierarchies, and end-to-end navi
 This PBI establishes low-to-medium fidelity wireframes for all core screens across desktop, tablet, and mobile breakpoints. Built with a strict focus on senior-accessibility, these wireframes define structural layouts, high-contrast visual hierarchies, large interactive targets, and responsive content flows to validate site usability before UI component development.
 
 #### Acceptance Criteria
-- [ ] **Core Screen Wireframes:** Design comprehensive wireframes covering Home (Dual-Path Landing), Workshop Search/Listings, Workshop Detail, Contact/Inquiry, and Get Involved pages.
+- [x] **Core Screen Wireframes:** Design comprehensive wireframes covering Home (Dual-Path Landing), Workshop Search/Listings, Workshop Detail, Contact/Inquiry, and Get Involved pages.
 - [ ] **Multi-Device Responsiveness:** Define layout adaptations and fluid column behaviors across Desktop (1280px+), Tablet (768px), and Mobile (375px) viewports.
-- [ ] **High-Contrast Accessibility Styling:** Establish low-fidelity visual patterns supporting WCAG 2.1 AA contrast requirements (minimum 4.5:1 text contrast) and high-visibility focus indicators.
-- [ ] **Senior-Friendly Interaction Targets:** Ensure all buttons, form fields, and primary CTA touch targets adhere to minimum physical dimensions (at least 44x44px) and scalable spacing.
-- [ ] **Sponsor Review & Asset Handoff:** Export wireframe artifacts to the project documentation directory (`/documentation/wireframes`) and validate layout flows with the project sponsor.
+- [x] **High-Contrast Accessibility Styling:** Establish low-fidelity visual patterns supporting WCAG 2.1 AA contrast requirements (minimum 4.5:1 text contrast) and high-visibility focus indicators.
+- [x] **Senior-Friendly Interaction Targets:** Ensure all buttons, form fields, and primary CTA touch targets adhere to minimum physical dimensions (at least 44x44px) and scalable spacing.
+- [x] **Sponsor Review & Asset Handoff:** Export wireframe artifacts to the project documentation directory (`/documentation/wireframes`) and validate layout flows with the project sponsor.
 
 ---
 
