@@ -1,14 +1,35 @@
 # Tech Smart Learning for Seniors
-## Shared API Integration Contract (Draft v0.1)
+## Shared API Integration Contract (v0.2 — Milestone 1)
 
 ### Purpose
-This document defines the draft shared REST API contract between the Tech Smart Learning for Seniors website team and backend Team #30.
+This document defines the shared REST API contract between the Tech Smart Learning for Seniors website team and backend Team #30.
 
 The purpose of this contract is to allow both teams to develop independently while maintaining a consistent public interface for website form submissions.
 
-This contract remains Draft - Pending UI, Sponsor, and Backend Team Confirmation.
+### Contract Status Legend
+This contract uses three status tags throughout to reflect Milestone 1 confirmation state:
+
+- **Sponsor-Confirmed** — Requirement and workflow confirmed by the sponsor (REQ-21 through REQ-29). Safe to build against.
+- **Pending Frontend Field Confirmation** — The workflow is sponsor-confirmed, but exact fields are still being finalized by the frontend team building that form (currently Donor Interest/Inquiry; Volunteer Signup fields are now Figma-Confirmed — see below). Do not assume additional fields beyond what is documented here until confirmed.
+- **Figma-Confirmed** — Field names and dropdown values have been directly observed in the current frontend design (Figma) for that workflow. Required/optional status beyond what is documented here and exact backend field-key naming may still require Backend Team #30 Confirmation.
+- **Pending Backend Team #30 Confirmation** — Response/error schema details that Team #30 may still adjust once their API is available.
 
 The public website team may integrate with mock endpoints that follow this same contract until the production backend API becomes available.
+
+---
+
+## Requirements Traceability (REQ-21 – REQ-29)
+| Requirement | Description | Where addressed |
+|---|---|---|
+| REQ-21 | Technology Help Request form | API 1 — Assistance Request |
+| REQ-22 | Volunteer Signup form | API 2 — Volunteer Inquiry (Figma-Confirmed) |
+| REQ-23 | General Contact form | API 3 — General Contact Inquiry |
+| REQ-24 | Donor Interest/Inquiry form, no payment processing | API 4 — Donor Interest/Inquiry |
+| REQ-25 | Phase 1 public forms use Mock API/dummy JSON | Mock API Section; see also mocks/README.md |
+| REQ-26 | Documented REST API contract (endpoints, schemas, types, validation, errors) | This entire document |
+| REQ-27 | Frontend independently testable through Mock API (MSW or equivalent) | Mock API Section |
+| REQ-28 | Frontend must not depend on Team #30 completing its CRM | Mock API Strategy; Backend Team Responsibilities |
+| REQ-29 | No direct production Salesforce integration in Phase 1 | Salesforce Boundary section |
 
 ---
 
@@ -35,8 +56,17 @@ The public website will not retrieve or expose existing contact records as part 
 
 ---
 
+## Salesforce Boundary (REQ-29)
+Tech Smart Learning for Seniors' existing website currently submits information into Salesforce. This project replaces that dependency with calls to backend Team #30's contact-management API, using this shared contract and the Mock API layer during Phase 1.
+
+- No direct production Salesforce integration will be implemented by the website team during Phase 1.
+- The Mock API and this contract are the only integration points the frontend depends on.
+- Any future Salesforce-related migration work belongs to backend Team #30, not this project.
+
+---
+
 ## Security Requirements
-The requirements below are proposed and should be treated as Draft - Pending UI, Sponsor, and Backend Team Confirmation.
+The requirements below are Sponsor-Confirmed as the general security posture for Phase 1. Specific implementation details remain Pending Backend Team #30 Confirmation.
 
 - Use HTTPS for production API communication.
 - Validate input on both the frontend and the backend.
@@ -59,8 +89,8 @@ This identifies the first public version of the shared contract and allows futur
 
 ---
 
-## Standard HTTP Responses
-The following HTTP responses are proposed for this public contract:
+## Standard HTTP Responses (Sponsor-Confirmed)
+The following HTTP responses apply to this public contract:
 
 ### 201 Created
 The submission was successfully accepted or created.
@@ -99,7 +129,7 @@ A consistent JSON error format is proposed for validation and request failures.
 }
 ```
 
-This is a Draft - Pending UI, Sponsor, and Backend Team Confirmation structure. The exact error schema must be agreed with Team #30 before production integration.
+This error schema shape is Sponsor-Confirmed for Phase 1 mock development. The exact final error codes/messages remain Pending Backend Team #30 Confirmation before production integration.
 
 ---
 
@@ -139,27 +169,30 @@ The mock layer allows the website team to:
 
 This architecture allows the frontend to remain compatible with the future real backend without redesigning the website interface.
 
+This satisfies REQ-25 (Mock API/dummy JSON for Phase 1 forms), REQ-27 (frontend independently testable through a Mock API layer), and REQ-28 (frontend independence from Team #30's CRM delivery timeline).
+
 ---
 
 ## Contract Status
-- Status: Draft
-- Website Team Approval: Pending
-- Sponsor Requirements Confirmation: Pending
+- Status: Sponsor-Confirmed (REQ-21 through REQ-29)
+- Website Team Approval: Confirmed for Milestone 1
+- Sponsor Requirements Confirmation: Confirmed
 - Backend Team #30 Confirmation: Pending
-- Fields and validation rules in this contract are proposed and subject to approval.
+- Field sets for Assistance and Contact are Sponsor-Confirmed. Volunteer Signup fields are Figma-Confirmed (REQ-22). Donor Interest/Inquiry fields beyond the baseline remain Pending Frontend Field Confirmation.
 - The mock endpoints are designed to follow the same contract as the future real backend so the website team can continue development while waiting for the final live API.
 
 ---
 
 ## Public API Operations
-The draft contract includes the following proposed public submission endpoints:
-- POST /api/v1/assistance-requests
-- POST /api/v1/volunteer-inquiries
-- POST /api/v1/contact-inquiries
+This contract includes the following Sponsor-Confirmed public submission endpoints:
+- POST /api/v1/assistance-requests (REQ-21)
+- POST /api/v1/volunteer-inquiries (REQ-22 — Figma-Confirmed fields)
+- POST /api/v1/contact-inquiries (REQ-23)
+- POST /api/v1/donor-inquiries (REQ-24 — no payment processing; Pending Frontend Field Confirmation)
 
 ---
 
-# API 1 — Assistance Request
+# API 1 — Assistance Request (REQ-21)
 
 ## Endpoint
 POST /api/v1/assistance-requests
@@ -170,8 +203,7 @@ Allow a visitor seeking technology assistance to submit a new assistance request
 ## Content-Type
 application/json
 
-## Proposed Fields
-Draft - Pending UI, Sponsor, and Backend Team Confirmation.
+## Fields (Sponsor-Confirmed)
 
 ### Required fields
 - firstName
@@ -186,15 +218,17 @@ Draft - Pending UI, Sponsor, and Backend Team Confirmation.
 - preferredContactMethod
 - accessibilityNeeds
 
-### Field notes
-- firstName: Draft – proposed and pending confirmation.
-- lastName: Draft – proposed and pending confirmation.
-- email: Draft – required if phone is not supplied; optional otherwise.
-- phone: Draft – required if email is not supplied; optional otherwise.
-- helpCategory: Draft – must match an approved list of categories.
-- description: Draft – required and must not be empty.
-- preferredContactMethod: Draft – when supplied, it must match an available contact method.
-- accessibilityNeeds: Draft – optional, may be null or a string.
+### Field notes and data types
+| Field | Type | Notes |
+|---|---|---|
+| firstName | string | Sponsor-Confirmed. Required, cannot be empty. |
+| lastName | string | Sponsor-Confirmed. Required, cannot be empty. |
+| email | string (email format) \| null | Sponsor-Confirmed. Required if phone is not supplied; optional otherwise. |
+| phone | string \| null | Sponsor-Confirmed. Required if email is not supplied; optional otherwise. |
+| helpCategory | string (enum) | Sponsor-Confirmed as required; exact approved category values are Pending Frontend Field Confirmation. |
+| description | string | Sponsor-Confirmed. Required and must not be empty. |
+| preferredContactMethod | string (enum: "email" \| "phone") \| null | Sponsor-Confirmed. When supplied, must match an available contact method. |
+| accessibilityNeeds | string \| null | Sponsor-Confirmed. Optional, may be null or a string. |
 
 ## Example Request
 ```json
@@ -250,7 +284,7 @@ HTTP 400 Bad Request
 
 ---
 
-# API 2 — Volunteer Inquiry
+# API 2 — Volunteer Inquiry (REQ-22)
 
 ## Endpoint
 POST /api/v1/volunteer-inquiries
@@ -263,18 +297,34 @@ This endpoint represents the website inquiry contract only and does not replace 
 ## Content-Type
 application/json
 
-## Proposed Fields
-Draft - Pending UI, Sponsor, and Backend Team Confirmation.
+## Fields (Figma-Confirmed — REQ-22)
+These fields and dropdown values reflect the current Volunteer Contact Form design observed in Figma. Exact backend field-key naming and any nuances beyond what is documented here remain Pending Backend Team #30 Confirmation. Do not add availability, skills, background-check consent, or other fields not shown in the current design.
 
 ### Required fields
 - firstName
 - lastName
 - email
-- volunteerInterest
+- reasonForVolunteering
 
 ### Optional fields
 - phone
+- organizationName
+- leadSource
 - message
+
+### Field notes and data types
+| Field | Type | Notes |
+|---|---|---|
+| firstName | string | Figma-Confirmed. Required, cannot be empty. |
+| lastName | string | Figma-Confirmed. Required, cannot be empty. |
+| email | string (email format) | Figma-Confirmed. Required. |
+| reasonForVolunteering | string (enum: "Classroom volunteer" \| "Committee volunteer" \| "Event volunteer") | Figma-Confirmed. Required; must match one of the confirmed dropdown values. |
+| phone | string \| null | Figma-Confirmed. Optional. |
+| organizationName | string \| null | Figma-Confirmed. Optional. |
+| leadSource | string (enum: "Sponsor Referral" \| "Networking Event" \| "Drive-By/Physical Location" \| "Board Referral" \| "Word of mouth" \| "Trade Show" \| "Internet Search" \| "Student" \| "Friend" \| "Gift" \| "Google Ads" \| "Other") \| null | Figma-Confirmed. Optional; when supplied, must match one of the confirmed dropdown values. |
+| message | string \| null | Figma-Confirmed. Optional. |
+
+Additional fields (e.g., availability, skills, background-check consent) are **not part of the current confirmed design** and are intentionally not included.
 
 ## Example Request
 ```json
@@ -283,7 +333,9 @@ Draft - Pending UI, Sponsor, and Backend Team Confirmation.
   "lastName": "Lee",
   "email": "david@example.com",
   "phone": "4045550135",
-  "volunteerInterest": "technology-help",
+  "organizationName": "Local Senior Center",
+  "reasonForVolunteering": "Classroom volunteer",
+  "leadSource": "Word of mouth",
   "message": "I would like to help seniors learn how to use smartphones."
 }
 ```
@@ -292,8 +344,10 @@ Draft - Pending UI, Sponsor, and Backend Team Confirmation.
 - firstName cannot be empty.
 - lastName cannot be empty.
 - email is required and must be in a valid email format.
-- volunteerInterest is required and must match an approved value.
+- reasonForVolunteering is required and must match one of the confirmed values: Classroom volunteer, Committee volunteer, Event volunteer.
 - phone is optional and should be valid if provided.
+- organizationName is optional.
+- leadSource is optional; when supplied, must match one of the confirmed values: Sponsor Referral, Networking Event, Drive-By/Physical Location, Board Referral, Word of mouth, Trade Show, Internet Search, Student, Friend, Gift, Google Ads, Other.
 - message is optional and may be omitted or empty.
 
 ## Successful Response
@@ -317,7 +371,7 @@ HTTP 400 Bad Request
     "message": "The request contains invalid or missing information.",
     "fields": {
       "email": "Enter a valid email address.",
-      "volunteerInterest": "Volunteer interest is required."
+      "reasonForVolunteering": "Reason for volunteering is required."
     }
   }
 }
@@ -325,19 +379,18 @@ HTTP 400 Bad Request
 
 ---
 
-# API 3 — General Contact Inquiry
+# API 3 — General Contact Inquiry (REQ-23)
 
 ## Endpoint
 POST /api/v1/contact-inquiries
 
 ## Purpose
-Allow a visitor to submit a general inquiry that does not belong to the assistance or volunteer workflow.
+Allow a visitor to submit a general inquiry that does not belong to the assistance, volunteer, or donor workflow.
 
 ## Content-Type
 application/json
 
-## Proposed Fields
-Draft - Pending UI, Sponsor, and Backend Team Confirmation.
+## Fields (Sponsor-Confirmed)
 
 ### Required fields
 - firstName
@@ -349,6 +402,17 @@ Draft - Pending UI, Sponsor, and Backend Team Confirmation.
 - phone
 - organization
 - message
+
+### Field notes and data types
+| Field | Type | Notes |
+|---|---|---|
+| firstName | string | Sponsor-Confirmed. Required, cannot be empty. |
+| lastName | string | Sponsor-Confirmed. Required, cannot be empty. |
+| email | string (email format) | Sponsor-Confirmed. Required. |
+| inquiryType | string (enum) | Sponsor-Confirmed as required; exact enum values Pending Frontend Field Confirmation. |
+| phone | string \| null | Sponsor-Confirmed. Optional. |
+| organization | string \| null | Sponsor-Confirmed. Optional. |
+| message | string \| null | Sponsor-Confirmed. Optional. |
 
 ## Example Request
 ```json
@@ -401,20 +465,112 @@ HTTP 400 Bad Request
 
 ---
 
-## Proposed Field Status Summary
-All fields in the three public submission endpoints are Draft - Pending UI, Sponsor, and Backend Team Confirmation.
+# API 4 — Donor Interest/Inquiry (REQ-24)
 
-This includes required and optional field names, validation rules, and accepted enumerated values such as helpCategory, volunteerInterest, and inquiryType.
+## Endpoint
+POST /api/v1/donor-inquiries
+
+## Purpose
+Allow a visitor interested in donating or supporting Tech Smart Learning for Seniors to submit an interest/inquiry. **This endpoint does NOT process payments and does not accept payment, card, or donation-amount information.** Payment processing is explicitly out of scope for Phase 1 (REQ-24, REQ-29).
+
+## Content-Type
+application/json
+
+## Fields (Baseline Sponsor-Confirmed; additional fields Pending Frontend Field Confirmation)
+The exact form fields for Donor Interest/Inquiry have not been finalized with the frontend team. The fields below are a conservative baseline modeled on the other confirmed inquiry workflows. Do not add donation-amount, payment-method, or billing fields — these are out of scope for Phase 1.
+
+### Required fields
+- firstName
+- lastName
+- at least one contact method: email or phone
+
+### Optional fields
+- email if phone is supplied
+- phone if email is supplied
+- message
+
+### Field notes and data types
+| Field | Type | Notes |
+|---|---|---|
+| firstName | string | Sponsor-Confirmed. Required, cannot be empty. |
+| lastName | string | Sponsor-Confirmed. Required, cannot be empty. |
+| email | string (email format) \| null | Sponsor-Confirmed. Required if phone is not supplied; optional otherwise. |
+| phone | string \| null | Sponsor-Confirmed. Required if email is not supplied; optional otherwise. |
+| message | string \| null | Sponsor-Confirmed. Optional free-text field for the visitor's donor interest. |
+
+A donor-specific categorization field (e.g., area of interest such as one-time giving, recurring giving, in-kind, or partnership) is **Pending Frontend Field Confirmation** and is intentionally not included until confirmed.
+
+## Example Request
+```json
+{
+  "firstName": "Susan",
+  "lastName": "Carter",
+  "email": "susan@example.com",
+  "phone": null,
+  "message": "I'd like to learn more about supporting your programs."
+}
+```
+
+## Validation Rules
+- firstName cannot be empty.
+- lastName cannot be empty.
+- At least one contact method must be provided: email or phone.
+- email must have a valid format when supplied.
+- phone must be valid when supplied if the project chooses to enforce formatting.
+- message is optional and may be omitted or empty.
+- No payment, card, or donation-amount fields are accepted by this endpoint. Any such fields submitted must be ignored or rejected, not processed.
+
+## Successful Response
+HTTP 201 Created
+
+```json
+{
+  "inquiryId": "DI-1001",
+  "status": "received",
+  "message": "Your donor interest inquiry has been received."
+}
+```
+
+## Validation Error Response
+HTTP 400 Bad Request
+
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "The request contains invalid or missing information.",
+    "fields": {
+      "email": "Enter a valid email address.",
+      "firstName": "First name is required."
+    }
+  }
+}
+```
+
+---
+
+## Field Status Summary
+Fields across all four public submission endpoints are **Sponsor-Confirmed** for the baseline required/optional fields documented in this contract.
+
+The following are **Figma-Confirmed** (REQ-22):
+- Volunteer Signup fields firstName, lastName, email, phone, organizationName, reasonForVolunteering, leadSource, and message, including the reasonForVolunteering (3 values) and leadSource (12 values) dropdown options documented above.
+
+The following remain **Pending Frontend Field Confirmation**:
+- Any Donor Interest/Inquiry fields beyond firstName, lastName, email/phone, and message (e.g., a donor-interest category).
+- Exact approved enumerated values for helpCategory and inquiryType.
+
+The following remain **Pending Backend Team #30 Confirmation**:
+- Final response field names (e.g., requestId/inquiryId formats) and final error code catalog.
 
 ---
 
 ## Final Contract Notes
 Before production deployment, the website team and Team #30 must agree on:
-- final field names;
+- final field names for Donor Interest/Inquiry (Pending Frontend Field Confirmation); Volunteer Signup field names are Figma-Confirmed;
 - final validation rules;
 - approved enumerated values;
-- error schema details;
+- error schema details (Pending Backend Team #30 Confirmation);
 - security and rate-limit requirements;
 - any backend-specific response details required by the live service.
 
-Until then, this document remains a draft contract for frontend development and mock integration.
+Until then, this contract is Sponsor-Confirmed for Milestone 1 frontend development and Mock API integration, with the specific items above still open.
