@@ -1,0 +1,742 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Tech Smart Learning for Seniors API (Mock, Phase 1)",
+        "version": "1.0.0",
+        "description": "Formal OpenAPI 3.x mirror of documentation/api-contract.md and the Mock API documented in mocks/README.md, produced to satisfy Milestone 1, Issue #16, PBI-4, Acceptance Criterion 1 (\"API Endpoint Specifications\"). This spec is documentation only; it describes the same Mock API behavior already documented in mocks/README.md and does not represent a live production backend. Endpoint naming reconciliation notes: the four form-submission endpoints below use the exact paths and status codes already defined in documentation/api-contract.md (POST, 201 Created). The two workshop endpoints use the exact unversioned paths written in documentation/milestones/Milestone-2.md (PBI-7/PBI-8/PBI-12) and are documented here as GET, 200 OK per standard REST convention, since Milestone-2 does not specify a response status for reads. ASSUMPTION/UNRESOLVED: the workshop endpoints do not share the /api/v1 versioning prefix used by the four form endpoints, because no versioned workshop path is written anywhere in the repository; this inconsistency should be reconciled by the team before Milestone 2 implementation. Workshop registration (PBI-8) is intentionally NOT included in this spec because Issue #16 / PBI-4 AC-1 only requires workshop search, workshop details, volunteer sign-ups, and donation processing, and no literal registration path is documented anywhere in the repository.",
+        "contact": {
+            "name": "Integration Engineer / Backend API Specialist",
+            "url": "https://github.com/ggonza39/Capstone-Fall-2026"
+        }
+    },
+    "servers": [
+        {
+            "url": "/",
+            "description": "Relative paths; served by the Mock API layer (mocks/README.md) during Phase 1."
+        }
+    ],
+    "tags": [
+        {
+            "name": "Assistance",
+            "description": "REQ-21 — Technology Help Request form"
+        },
+        {
+            "name": "Volunteer",
+            "description": "REQ-22 — Volunteer Signup form (Figma-Confirmed)"
+        },
+        {
+            "name": "Contact",
+            "description": "REQ-23 — General Contact form"
+        },
+        {
+            "name": "Donor",
+            "description": "REQ-24 — Donor Interest/Inquiry form (NO payment processing)"
+        },
+        {
+            "name": "Workshops",
+            "description": "Milestone-2 PBI-7/PBI-8/PBI-12 — workshop search and details"
+        }
+    ],
+    "paths": {
+        "/api/v1/assistance-requests": {
+            "post": {
+                "tags": [
+                    "Assistance"
+                ],
+                "summary": "Submit a technology assistance request",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AssistanceRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Assistance request received",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AssistanceRequestResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "415": {
+                        "$ref": "#/components/responses/UnsupportedMediaType"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        },
+        "/api/v1/volunteer-inquiries": {
+            "post": {
+                "tags": [
+                    "Volunteer"
+                ],
+                "summary": "Submit a volunteer signup inquiry",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/VolunteerInquiry"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Volunteer inquiry received",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/VolunteerInquiryResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "415": {
+                        "$ref": "#/components/responses/UnsupportedMediaType"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        },
+        "/api/v1/contact-inquiries": {
+            "post": {
+                "tags": [
+                    "Contact"
+                ],
+                "summary": "Submit a general contact inquiry",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ContactInquiry"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Contact inquiry received",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ContactInquiryResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "415": {
+                        "$ref": "#/components/responses/UnsupportedMediaType"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        },
+        "/api/v1/donor-inquiries": {
+            "post": {
+                "tags": [
+                    "Donor"
+                ],
+                "summary": "Submit a donor interest/inquiry (NO payment processing)",
+                "description": "This endpoint intentionally does not accept payment, card, or donation-amount fields. Payment processing is out of scope for Phase 1 (REQ-24, REQ-29).",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DonorInquiry"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Donor interest/inquiry received",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DonorInquiryResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "415": {
+                        "$ref": "#/components/responses/UnsupportedMediaType"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        },
+        "/api/workshops": {
+            "get": {
+                "tags": [
+                    "Workshops"
+                ],
+                "summary": "Search workshops by ZIP code (Milestone-2 PBI-7 / PBI-12)",
+                "parameters": [
+                    {
+                        "name": "zip",
+                        "in": "query",
+                        "required": true,
+                        "description": "5-digit ZIP code (PBI-7: 'Please enter a valid 5-digit ZIP code').",
+                        "schema": {
+                            "type": "string",
+                            "pattern": "^[0-9]{5}$"
+                        }
+                    },
+                    {
+                        "name": "eventType",
+                        "in": "query",
+                        "required": false,
+                        "description": "ASSUMPTION: exact query parameter name is not specified in PBI-7; inferred from the 'In-Person vs. Virtual' filter control.",
+                        "schema": {
+                            "$ref": "#/components/schemas/WorkshopEventType"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Matching workshops for the given ZIP code (may be an empty list; PBI-7 'Empty and Error Feedback').",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WorkshopSearchResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        },
+        "/api/workshops/{id}": {
+            "get": {
+                "tags": [
+                    "Workshops"
+                ],
+                "summary": "Get workshop details (Milestone-2 PBI-8 / PBI-12)",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ASSUMPTION: workshop identifier is not explicitly named in the docs but is required by the /workshops/[id] route.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Workshop details",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WorkshopDetailResponse"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ApiError": {
+                "type": "object",
+                "required": [
+                    "error"
+                ],
+                "properties": {
+                    "error": {
+                        "type": "object",
+                        "required": [
+                            "code",
+                            "message"
+                        ],
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "example": "VALIDATION_ERROR"
+                            },
+                            "message": {
+                                "type": "string"
+                            },
+                            "fields": {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "AssistanceRequest": {
+                "type": "object",
+                "required": [
+                    "firstName",
+                    "lastName",
+                    "helpCategory",
+                    "description"
+                ],
+                "description": "At least one of email or phone is required (see api-contract.md Validation Rules).",
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "nullable": true
+                    },
+                    "phone": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "helpCategory": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "preferredContactMethod": {
+                        "type": "string",
+                        "enum": [
+                            "email",
+                            "phone"
+                        ],
+                        "nullable": true
+                    },
+                    "accessibilityNeeds": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "AssistanceRequestResponse": {
+                "type": "object",
+                "required": [
+                    "requestId",
+                    "status",
+                    "message"
+                ],
+                "properties": {
+                    "requestId": {
+                        "type": "string",
+                        "example": "TS-1001"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "received"
+                        ]
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ReasonForVolunteering": {
+                "type": "string",
+                "enum": [
+                    "Classroom volunteer",
+                    "Committee volunteer",
+                    "Event volunteer"
+                ]
+            },
+            "LeadSource": {
+                "type": "string",
+                "enum": [
+                    "Sponsor Referral",
+                    "Networking Event",
+                    "Drive-By/Physical Location",
+                    "Board Referral",
+                    "Word of mouth",
+                    "Trade Show",
+                    "Internet Search",
+                    "Student",
+                    "Friend",
+                    "Gift",
+                    "Google Ads",
+                    "Other"
+                ]
+            },
+            "VolunteerInquiry": {
+                "type": "object",
+                "required": [
+                    "firstName",
+                    "lastName",
+                    "email",
+                    "reasonForVolunteering"
+                ],
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "reasonForVolunteering": {
+                        "$ref": "#/components/schemas/ReasonForVolunteering"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "organizationName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "leadSource": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/LeadSource"
+                            }
+                        ],
+                        "nullable": true
+                    },
+                    "message": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "VolunteerInquiryResponse": {
+                "type": "object",
+                "required": [
+                    "inquiryId",
+                    "status",
+                    "message"
+                ],
+                "properties": {
+                    "inquiryId": {
+                        "type": "string",
+                        "example": "VI-1001"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "received"
+                        ]
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ContactInquiry": {
+                "type": "object",
+                "required": [
+                    "firstName",
+                    "lastName",
+                    "email",
+                    "inquiryType"
+                ],
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "inquiryType": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "organization": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "message": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "ContactInquiryResponse": {
+                "type": "object",
+                "required": [
+                    "inquiryId",
+                    "status",
+                    "message"
+                ],
+                "properties": {
+                    "inquiryId": {
+                        "type": "string",
+                        "example": "CI-1001"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "received"
+                        ]
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "DonorInquiry": {
+                "type": "object",
+                "required": [
+                    "firstName",
+                    "lastName"
+                ],
+                "description": "NO payment/card/amount fields are accepted (REQ-24, REQ-29). At least one of email or phone is required.",
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "nullable": true
+                    },
+                    "phone": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "message": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "DonorInquiryResponse": {
+                "type": "object",
+                "required": [
+                    "inquiryId",
+                    "status",
+                    "message"
+                ],
+                "properties": {
+                    "inquiryId": {
+                        "type": "string",
+                        "example": "DI-1001"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "received"
+                        ]
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "WorkshopEventType": {
+                "type": "string",
+                "enum": [
+                    "In-Person",
+                    "Virtual"
+                ],
+                "description": "ASSUMPTION: inferred from PBI-7's 'In-Person vs. Virtual' filter control language."
+            },
+            "WorkshopSummary": {
+                "type": "object",
+                "description": "ASSUMPTION: fields limited to what PBI-7 documents for search result cards (title, date, time, address, distance, and a details link, plus an id needed to link to details).",
+                "required": [
+                    "id",
+                    "title",
+                    "date",
+                    "time",
+                    "address",
+                    "distanceMiles",
+                    "eventType"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    },
+                    "time": {
+                        "type": "string"
+                    },
+                    "address": {
+                        "type": "string"
+                    },
+                    "distanceMiles": {
+                        "type": "number"
+                    },
+                    "eventType": {
+                        "$ref": "#/components/schemas/WorkshopEventType"
+                    }
+                }
+            },
+            "WorkshopSearchResponse": {
+                "type": "object",
+                "required": [
+                    "workshops"
+                ],
+                "properties": {
+                    "workshops": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/WorkshopSummary"
+                        }
+                    }
+                }
+            },
+            "WorkshopDetail": {
+                "type": "object",
+                "description": "ASSUMPTION: fields limited to what PBI-8 documents (title, date/time, physical location, room number, instructor name, building accessibility features, seat availability).",
+                "required": [
+                    "id",
+                    "title",
+                    "dateTime",
+                    "location",
+                    "roomNumber",
+                    "instructorName",
+                    "accessibilityFeatures",
+                    "seatAvailability"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "dateTime": {
+                        "type": "string"
+                    },
+                    "location": {
+                        "type": "string"
+                    },
+                    "roomNumber": {
+                        "type": "string"
+                    },
+                    "instructorName": {
+                        "type": "string"
+                    },
+                    "accessibilityFeatures": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "seatAvailability": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "WorkshopDetailResponse": {
+                "type": "object",
+                "required": [
+                    "workshop"
+                ],
+                "properties": {
+                    "workshop": {
+                        "$ref": "#/components/schemas/WorkshopDetail"
+                    }
+                }
+            }
+        },
+        "responses": {
+            "ValidationError": {
+                "description": "The request contains invalid or missing information.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ApiError"
+                        }
+                    }
+                }
+            },
+            "NotFound": {
+                "description": "The requested resource does not exist.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ApiError"
+                        }
+                    }
+                }
+            },
+            "UnsupportedMediaType": {
+                "description": "The request was not sent using application/json.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ApiError"
+                        }
+                    }
+                }
+            },
+            "ServerError": {
+                "description": "An unexpected server-side error occurred.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ApiError"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
