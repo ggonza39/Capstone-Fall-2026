@@ -2,7 +2,7 @@
 
 **Target Completion Date:** September 30, 2026  
 **Total Points:** 27 Story Points  
-**Progress:** 2 of 5 PBIs Completed (6 / 27 Points)  
+**Progress:** 4 of 5 PBIs Completed (19/ 27 Points)  
 
 ---
 
@@ -13,9 +13,9 @@ Milestone 1 establishes the baseline scope, user interaction architecture, visua
 | PBI # | Title | Points | Status |
 | :--- | :--- | :---: | :---: |
 | **PBI 1** | Establish sponsor requirements baseline and acceptance criteria | 3 | **Completed** |
-| **PBI 2** | Define information architecture and user journeys | 5 | In Progress |
+| **PBI 2** | Define information architecture and user journeys | 5 | **Completed** |
 | **PBI 3** | Create responsive, high-contrast wireframes | 8 | In Progress |
-| **PBI 4** | Define frontend integration boundary and Mock API contract | 8 | In Progress |
+| **PBI 4** | Define frontend integration boundary and Mock API contract | 8 | **Completed** |
 | **PBI 5** | Establish GitHub project backlog and development workflow | 3 | **Completed** |
 
 ---
@@ -41,14 +41,14 @@ This PBI establishes the foundational scope and functional boundaries for the TS
 
 ### [PBI-2] Define information architecture and user journeys
 
-* **Status:** In Progress
+* **Status:** Completed
 * **Story Points:** 5
 
 #### Description
 This PBI structures the site architecture, page hierarchies, and end-to-end navigation flows for the TSLS-Web platform. By mapping user journeys tailored specifically to older adults and supporting community members, this work establishes accessible navigation paradigms, dual-path landing routing, ZIP-code workshop search flows, and streamlined form conversions before UI component design and development.
 
 #### Acceptance Criteria
-- [ ] **Sitemap & Page Hierarchy:** Map out the site structure defining parent/child page relationships, primary navigation elements, and footer links across key sections (Home, About, Workshops, Get Involved, Contact).
+- [x] **Sitemap & Page Hierarchy:** Map out the site structure defining parent/child page relationships, primary navigation elements, and footer links across key sections (Home, About, Workshops, Get Involved, Contact).
 - [x] **Dual-Path Navigation Flow:** Define user flow paths for the primary home page entry points, ensuring clear bifurcation into "I Need Help" (Seniors/Caregivers) and "I Want to Help" (Donors/Volunteers/Advocates).
 - [x] **Workshop Discovery Journey:** Detail the end-to-end user steps for location-based workshop discovery, including ZIP-code search input, listing filtering, and event detail views.
 - [x] **Action & Form Conversion Flows:** Document user pathways for event registration, volunteer sign-up, inquiry forms, and Stripe donation processing.
@@ -66,27 +66,27 @@ This PBI establishes low-to-medium fidelity wireframes for all core screens acro
 
 #### Acceptance Criteria
 - [x] **Core Screen Wireframes:** Design comprehensive wireframes covering Home (Dual-Path Landing), Workshop Search/Listings, Workshop Detail, Contact/Inquiry, and Get Involved pages.
-- [ ] **Multi-Device Responsiveness:** Define layout adaptations and fluid column behaviors across Desktop (1280px+), Tablet (768px), and Mobile (375px) viewports.
+- [x] **Multi-Device Responsiveness:** Define layout adaptations and fluid column behaviors across Desktop (1280px+), Tablet (768px), and Mobile (375px) viewports.
 - [x] **High-Contrast Accessibility Styling:** Establish low-fidelity visual patterns supporting WCAG 2.1 AA contrast requirements (minimum 4.5:1 text contrast) and high-visibility focus indicators.
-- [x] **Senior-Friendly Interaction Targets:** Ensure all buttons, form fields, and primary CTA touch targets adhere to minimum physical dimensions (at least 44x44px) and scalable spacing.
+- [ ] **Senior-Friendly Interaction Targets:** Ensure all buttons, form fields, and primary CTA touch targets adhere to minimum physical dimensions (at least 44x44px) and scalable spacing.
 - [x] **Sponsor Review & Asset Handoff:** Export wireframe artifacts to the project documentation directory (`/documentation/wireframes`) and validate layout flows with the project sponsor.
 
 ---
 
 ### [PBI-4] Define frontend integration boundary and Mock API contract
 
-* **Status:** In Progress
+* **Status:** Completed
 * **Story Points:** 8
 
 #### Description
 This PBI defines the decoupled architecture and API interfaces between the Next.js frontend and underlying data services. By establishing formal Mock API contracts, TypeScript data schemas, and mocked service layers early, the team can develop, test, and render dynamic workshop listings and form submit actions independently without waiting for live backend endpoints.
 
 #### Acceptance Criteria
-- [ ] **API Endpoint Specifications:** Document OpenAPI/Swagger endpoint schemas covering workshop search (`/api/workshops`), workshop details, volunteer sign-ups, and donation processing.
-- [ ] **TypeScript Data Interfaces:** Implement strongly-typed TypeScript models and interfaces in the codebase representing all request payloads and API responses.
-- [ ] **Mock Service Layer:** Build local mock API handlers (e.g., using Next.js Route Handlers or MSW) to deliver static JSON payloads matching production schemas during development.
-- [ ] **Error Handling & State Contracts:** Define standardized HTTP status codes, error payload schemas, loading states, and fallback behaviors for network failures.
-- [ ] **Integration Test Plan:** Publish Mock API documentation to `/documentation/api-contract.md` and establish test cases to validate mock responses against frontend state hooks.
+- [x] **API Endpoint Specifications:** Document OpenAPI/Swagger endpoint schemas covering workshop search (`/api/workshops`), workshop details, volunteer sign-ups, and donation processing.
+- [x] **TypeScript Data Interfaces:** Implement strongly-typed TypeScript models and interfaces in the codebase representing all request payloads and API responses.
+- [x] **Mock Service Layer:** Build local mock API handlers (e.g., using Next.js Route Handlers or MSW) to deliver static JSON payloads matching production schemas during development.
+- [x] **Error Handling & State Contracts:** Define standardized HTTP status codes, error payload schemas, loading states, and fallback behaviors for network failures.
+- [x] **Integration Test Plan:** Publish Mock API documentation to `/documentation/api-contract.md` and establish test cases to validate mock responses against frontend state hooks.
 
 ---
 
