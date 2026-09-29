@@ -30,14 +30,14 @@ Develop an interactive, functional web prototype that implements the primary dua
 * **Story Points:** 8
 
 #### Description
-This PBI constructs the primary landing page and global header/footer navigation for the TSLS-Web platform. It creates two distinct, high-contrast entry pathways for the site's primary user groups: "I Need Help" (seniors and caregivers seeking digital literacy workshops) and "I Want to Help" (donors, volunteers, and advocates). This implementation establishes the foundational visual hierarchy, responsive layout, and client-side routing structure across all viewports.
+This PBI constructs the primary landing page and global header/footer navigation for the TSLS-Web platform. It creates two distinct, accessible entry pathways for the site's primary user groups: “I Need Help” for senior adults and other users seeking technology assistance and local workshops, and “I Want to Help” for volunteers, donors, advocates, and community partners. This implementation establishes the foundational visual hierarchy, responsive layout, and client-side navigation structure while providing clear and direct access to the site's primary resources and user journeys.
 
 #### Acceptance Criteria
-- [ ] **Dual-Path Hero Section:** Construct a hero layout featuring two large, distinct CTA cards labeled "I Need Help" and "I Want to Help" with high-contrast buttons (minimum 4.5:1 contrast ratio) that route directly to `/workshops` and `/get-involved`.
-- [ ] **Accessible Global Header:** Build a persistent header containing the site logo, primary navigation links (Home, Workshops, Get Involved, About, Contact), and an always-visible phone help button.
-- [ ] **Global Accessible Footer:** Build a persistent footer containing contact details, organization address, direct links to privacy policy/terms, and secondary navigation links.
+- [ ] **Dual-Path Hero Section:** Construct a hero layout featuring two large, distinct calls to action labeled “I Need Help” and “I Want to Help,” using accessible, high-contrast controls that provide direct entry into their respective user journeys.
+- [ ] **Accessible Global Header:** Build a consistent header containing the site logo and clear primary navigation to the site's major resources and user pathways. Navigation controls must be keyboard accessible, visibly focusable, and usable across the planned responsive layouts.
+- [ ] **Global Accessible Footer:** Build a consistent footer containing applicable organization contact information and secondary navigation links that provide direct access to important site resources.
 - [ ] **Skip Navigation Link:** Implement a hidden "Skip to main content" link at the top of the DOM that becomes visible on keyboard focus and moves focus directly to the `<main>` element.
-- [ ] **Responsive Breakpoint Behavior:** Verify that top navigation converts smoothly to a simplified, full-screen mobile menu on screens under 768px without clipping text or dropping links.
+- [ ] **Responsive Breakpoint Behavior:** Verify that the header and primary navigation adapt appropriately across desktop, tablet, and mobile layouts, including viewports at 980px and below, without text clipping, overlapping elements, inaccessible controls, or missing navigation links.
 
 ---
 
@@ -47,14 +47,15 @@ This PBI constructs the primary landing page and global header/footer navigation
 * **Story Points:** 5
 
 #### Description
-This PBI builds the workshop search and discovery page (`/workshops`), allowing seniors and caregivers to locate nearby digital literacy classes. It provides a clean, single-input ZIP code search bar, basic filtering options, and high-visibility result cards designed for low cognitive load and easy readability.
+This PBI builds the workshop search and discovery experience for the “I Need Help” journey, allowing senior adults and other users seeking technology assistance to locate relevant local workshops using a ZIP-code search. The interface will provide a clearly labeled ZIP-code input, readable workshop results, accessible feedback for invalid or unsuccessful searches, and direct access to available workshop details and registration. During Phase 1, representative mock workshop data may be used until the sponsor-provided workshop-location source and final workshop dataset are available.
 
 #### Acceptance Criteria
-- [ ] **ZIP Code Search Input:** Implement a numerical input field that accepts a 5-digit ZIP code, includes explicit labels, and triggers a search on button click or Enter keypress.
-- [ ] **Workshop Result Cards:** Render search results as distinct visual cards displaying workshop title, date, time, physical address, distance in miles, and a "View Details" button.
+- [ ] **ZIP Code Search Input:** Implement a clearly labeled input that accepts a valid 5-digit ZIP code and allows the user to initiate the search using the search control or keyboard.
+- [ ] **Workshop Result Cards:** Render matching workshops as clear, readable result cards displaying available workshop information such as title, date/time, location, and a clearly identified control for viewing additional workshop details and registration information.
 - [ ] **Filter Controls:** Include simple filter controls for event type (In-Person vs. Virtual) and date range using large touch targets (minimum 44x44px).
-- [ ] **Empty and Error Feedback:** Display direct, user-friendly messages for invalid ZIP inputs (e.g., "Please enter a valid 5-digit ZIP code") and when zero workshops match the criteria.
-- [ ] **Mock Data Connection:** Wire the search interface state to consume local JSON workshop payloads based on the entered ZIP code.
+- [ ] **Empty and Error Feedback:** Provide clear, user-friendly feedback for invalid ZIP-code input, searches returning no matching workshops, and applicable search errors.
+- [ ] **Sandbox Workshop Data Connection:** Connect the workshop search interface to representative mock workshop data using the agreed Mock API, local JSON, or equivalent sandbox mechanism so that ZIP-code search behavior can be demonstrated independently while the final sponsor-provided workshop-location source remains pending.
+- [ ] **Workshop Journey Continuity:** Ensure each applicable workshop result provides a clear path to additional workshop information and the associated registration journey without unnecessary intermediate navigation.
 
 ---
 
