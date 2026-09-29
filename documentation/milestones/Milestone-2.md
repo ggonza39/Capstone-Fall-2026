@@ -65,14 +65,15 @@ This PBI builds the workshop search and discovery experience for the “I Need H
 * **Story Points:** 5
 
 #### Description
-This PBI creates the individual workshop detail page (`/workshops/[id]`) and its associated registration flow. It presents comprehensive event details—such as venue location, schedule, prerequisites, and instructor details—and provides a simple form for seniors or caregivers to reserve a seat.
+This PBI creates the workshop detail and registration experience within the “I Need Help” journey. Users who select a workshop from the discovery results will be able to view the available workshop information and proceed through an accessible registration pathway. During Phase 1, representative mock workshop and registration data may be used to demonstrate the complete frontend journey while the sponsor-provided workshop-location source and final production registration behavior are confirmed.
 
 #### Acceptance Criteria
-- [ ] **Workshop Detail Page View:** Render full event details including title, date/time, physical location, room number, instructor name, building accessibility features, and seat availability.
-- [ ] **Registration Form Fields:** Build a simple registration form capturing Full Name, Email Address, Phone Number, and an optional text field for accommodation requests.
-- [ ] **Inline Form Validation:** Provide immediate, high-contrast visual error messages directly below input fields when required data is missing or formatted incorrectly.
-- [ ] **Registration Confirmation View:** Display a dedicated success confirmation screen upon submission showing the registration reference code, event summary, and a "Print Details" button.
-- [ ] **Keyboard & Focus Management:** Ensure form submit moves keyboard focus automatically to the confirmation heading for screen reader users.
+- [ ] **Workshop Detail Page View:** Display the available information for the selected workshop, including applicable details such as workshop title, date/time, location, description, and other information provided by the workshop data source. The page must provide a clear path to registration.
+- [ ] **Accessible Registration Interface:** Provide the applicable workshop registration fields required for the Phase 1 sandbox demonstration, using clear labels, accessible controls, and identification of required versus optional information. Final production registration fields will align with the approved workshop-registration workflow when confirmed.
+- [ ] **Accessible Form Validation:** Provide clear, accessible validation and user-friendly error feedback when required information is missing or incorrectly formatted. Error messages must be programmatically associated with the applicable form controls and must not rely on color alone.
+- [ ] **Registration Submission Feedback:** For the Phase 1 sandbox registration flow, provide clear confirmation when a simulated registration submission succeeds, including the applicable workshop summary and appropriate next-step information. The interface must not imply that a production registration has occurred when the submission is using mock or sandbox behavior.
+- [ ] **Keyboard & Focus Management:** Ensure the registration journey is fully keyboard operable and that focus is appropriately managed following validation errors and successful sandbox submission so that status or confirmation information is communicated to keyboard and screen-reader users.
+- [ ] **Journey Continuity:** Maintain a clear connection between the workshop selected from the discovery results, the workshop detail view, and the corresponding registration pathway so users can complete the journey without unnecessary navigation or re-entering workshop information.
 
 ---
 
