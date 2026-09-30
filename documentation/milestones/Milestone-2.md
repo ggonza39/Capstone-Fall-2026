@@ -1,8 +1,8 @@
 # Milestone 2 Backlog: Interactive Sandbox Prototype
 
 **Target Completion Date:** October 28, 2026  
-**Total Points:** 39 Story Points  
-**Progress:** 0 of 7 PBIs Completed (0 / 39 Points)  
+**Total Points:** 47 Story Points  
+**Progress:** 0 of 7 PBIs Completed (0 / 47 Points)  
 
 ---
 
@@ -52,7 +52,6 @@ This PBI builds the workshop search and discovery experience for the “I Need H
 #### Acceptance Criteria
 - [ ] **ZIP Code Search Input:** Implement a clearly labeled input that accepts a valid 5-digit ZIP code and allows the user to initiate the search using the search control or keyboard.
 - [ ] **Workshop Result Cards:** Render matching workshops as clear, readable result cards displaying available workshop information such as title, date/time, location, and a clearly identified control for viewing additional workshop details and registration information.
-- [ ] **Filter Controls:** Include simple filter controls for event type (In-Person vs. Virtual) and date range using large touch targets (minimum 44x44px).
 - [ ] **Empty and Error Feedback:** Provide clear, user-friendly feedback for invalid ZIP-code input, searches returning no matching workshops, and applicable search errors.
 - [ ] **Sandbox Workshop Data Connection:** Connect the workshop search interface to representative mock workshop data using the agreed Mock API, local JSON, or equivalent sandbox mechanism so that ZIP-code search behavior can be demonstrated independently while the final sponsor-provided workshop-location source remains pending.
 - [ ] **Workshop Journey Continuity:** Ensure each applicable workshop result provides a clear path to additional workshop information and the associated registration journey without unnecessary intermediate navigation.
@@ -113,7 +112,7 @@ This PBI implements and refines responsive frontend layouts across the TSLS-Web 
 
 ---
 
-### [PBI-11] Implement WCAG accessibility remediation
+### [PBI-11] Implement targeted Phase 1 accessibility remediation
 
 * **Status:** To Do
 * **Story Points:** 8
@@ -133,7 +132,7 @@ This PBI implements targeted accessibility remediation for the documented Phase 
 
 ---
 
-### [PBI-12] Implement Mock API / sandbox integration
+### [PBI-12] Implement Mock API / sandbox integration and documented integration boundaries
 
 * **Status:** To Do
 * **Story Points:** 5
