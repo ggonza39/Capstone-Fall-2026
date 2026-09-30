@@ -1,6 +1,5 @@
 import { http, HttpResponse } from "msw";
 import { workshops, workshopSummaries } from "./data/workshops";
-
 /**
  * Mock Service Layer (PBI-4, Acceptance Criterion 3).
  *
@@ -56,6 +55,8 @@ function generateId(prefix) {
     return `${prefix}-${nextId++}`;
 }
 
+
+// --------- Handlers ----------------
 export const handlers = [
     // --- API 1: Assistance Request (REQ-21) ---
     http.post("/api/v1/assistance-requests", async ({ request }) => {
@@ -101,54 +102,17 @@ export const handlers = [
     }),
 
     // --- API 2: Volunteer Inquiry (REQ-22, Figma-Confirmed) ---
-    http.post("/api/v1/volunteer-inquiries", async ({ request }) => {
-        const body = await request.json();
-        const fields = {};
+    // ---------- NEW: Validation logic was moved to separate file, and code was moved to mockServer.mjs so that it can be run and tested from both the browser and Postman.
+    // ---------- To run: npm install > npm run mock-server > execute POST localhost:4000/api/v1/volunteer-inquiries in Postman.
+    // -------------------------------------------------------------
+    // http.post("/api/v1/volunteer-inquiries", async ({ request }) => {
+    //     const body = await request.json();
+    //     const result = await createVolunteerInquiry(body);
 
-        if (!requireString(body.firstName)) {
-            fields.firstName = "First name is required.";
-        }
-
-        if (!requireString(body.lastName)) {
-            fields.lastName = "Last name is required.";
-        }
-
-        if (!requireString(body.email)) {
-            fields.email = "Email is required.";
-        } else if (!EMAIL_PATTERN.test(body.email)) {
-            fields.email = "Enter a valid email address.";
-        }
-
-        if (!requireString(body.reasonForVolunteering)) {
-            fields.reasonForVolunteering =
-                "Reason for volunteering is required.";
-        } else if (
-            !REASONS_FOR_VOLUNTEERING.includes(body.reasonForVolunteering)
-        ) {
-            fields.reasonForVolunteering =
-                "Please select a valid reason for volunteering.";
-        }
-
-        if (
-            body.leadSource &&
-            !LEAD_SOURCES.includes(body.leadSource)
-        ) {
-            fields.leadSource = "Please select a valid lead source.";
-        }
-
-        if (Object.keys(fields).length > 0) {
-            return validationError(fields);
-        }
-
-        return HttpResponse.json(
-            {
-                inquiryId: generateId("VI"),
-                status: "received",
-                message: "Your volunteer inquiry has been received.",
-            },
-            { status: 201 }
-        );
-    }),
+    //     return HttpResponse.json(result.body, {
+    //         status: result.status,
+    //     });
+    // }),
 
     // --- API 3: General Contact Inquiry (REQ-23) ---
     http.post("/api/v1/contact-inquiries", async ({ request }) => {
