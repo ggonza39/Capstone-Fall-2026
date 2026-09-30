@@ -3,15 +3,16 @@
 import express from "express";
 import { validateVolunteerInquiry } from "./validation-logic/volunteerInquiries.mjs";
 import { validationError, generateId } from "./validation-logic/validationHelpers.mjs";
-import cors from "cors";
+// import cors from "cors";
 
 const app = express();
 const PORT = 4000;
 
 // Allow browser to access this mock server
-app.use(cors({
-  origin: "http://localhost:3000",
-}));
+// ----- This is being removed because proxy was added to package.json - backend and frontend will be on same origin.
+// app.use(cors({
+//   origin: "http://localhost:3000",
+// }));
 
 // !!! IMPORTANT !!! Parse incoming JSON request bodies
 app.use(express.json());
