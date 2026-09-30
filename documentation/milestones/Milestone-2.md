@@ -83,14 +83,15 @@ This PBI creates the workshop detail and registration experience within the “I
 * **Story Points:** 8
 
 #### Description
-This PBI constructs the community engagement section (`/get-involved`) covering support pathways for volunteers, donors, and advocates. It delivers three tailored views: a volunteer application form, a donation options interface, and downloadable advocacy resources.
+This PBI constructs the “I Want to Help” community-engagement journey for donors, volunteers, advocates, and community partners. The journey provides three clearly separated pathways—Donate, Volunteer, and Advocate—each with a distinct purpose and direct call to action. The Donate pathway provides access to the organization’s existing Stripe-enabled donation workflow, the Volunteer pathway directs users to the established Hands On Atlanta signup process, and the Advocate pathway presents sponsor-approved community-impact information and an appropriate path to learn more or engage when applicable content is available.
 
 #### Acceptance Criteria
-- [ ] **Engagement Landing Hub:** Build the `/get-involved` landing layout presenting clear visual cards routing to Volunteer, Donate, and Advocate sub-sections.
-- [ ] **Volunteer Application Form:** Construct a form capturing applicant contact info, preferred availability (weekdays/weekends), and skill selections (e.g., Tech Mentor, Event Support).
-- [ ] **Donation Interface:** Build a donation view featuring pre-set contribution buttons ($25, $50, $100), a custom amount input, and a payment frequency toggle (One-time vs. Monthly).
-- [ ] **Advocacy Resources Section:** Render a resource list containing direct file download links for printable PDF flyers, community presentations, and outreach toolkits.
-- [ ] **Submission Feedback:** Implement toast alerts and summary state changes confirming successful volunteer application and donation form submissions.
+- [ ] **Engagement Landing Hub:** Build the “I Want to Help” landing experience with three clearly identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose, clear call to action, and direct route to its applicable destination without unnecessary intermediate navigation.
+- [ ] **Volunteer Pathway:** Provide a clearly identified Volunteer pathway that directs users to the organization's established Hands On Atlanta volunteer signup process. The TSLS-Web frontend shall not implement a separate volunteer application form unless a different workflow is later approved.
+- [ ] **Donate Pathway:** Provide a clearly identified Donate pathway and call to action that directs users to the organization's existing Stripe-enabled donation experience. Phase 1 shall preserve the existing Stripe workflow and shall not implement a separate custom payment-processing interface.
+- [ ] **Advocate Pathway:** Provide an Advocate section presenting sponsor-approved community-impact information and an appropriate call to action for users to learn more or engage when applicable sponsor-approved content or resources are available.
+- [ ] **External Pathway Clarity:** Clearly identify when a Donate or Volunteer action directs the user to an established external workflow or service, using understandable link or button text so the destination and purpose are clear before activation.
+- [ ] **Accessible Engagement Navigation:** Ensure the Donate, Volunteer, and Advocate pathway controls are keyboard accessible, visibly focusable, clearly labeled, and presented using understandable headings and calls to action.
 
 ---
 
