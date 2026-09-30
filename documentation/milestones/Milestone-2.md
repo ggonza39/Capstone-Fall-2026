@@ -139,11 +139,13 @@ This PBI implements targeted accessibility remediation for the documented Phase 
 * **Story Points:** 5
 
 #### Description
-This PBI integrates the frontend pages with local Next.js Route Handlers (`/api/*`) to deliver dynamic mock data for workshops, search queries, and form submissions. This validates client-side data fetching, state management, loading indicators, and error handling before production backend integration.
+This PBI implements the sandbox integration layer required for independent frontend development and demonstration of the TSLS-Web user journeys. The team will use the agreed Mock API, Next.js Route Handlers, local/dummy JSON, MSW, or an equivalent sandbox mechanism where simulation is required. The implementation will support applicable workshop discovery, workshop details, registration behavior, loading states, and error handling while maintaining documented boundaries with existing production integrations such as Gravity Forms/Salesforce, Stripe, Hands On Atlanta, and the backend REST API contract.
 
 #### Acceptance Criteria
-- [ ] **Workshop Search API Endpoint:** Connect `/workshops` search UI to `GET /api/workshops?zip={zip}` to fetch matching mock workshop JSON objects.
-- [ ] **Workshop Details API Endpoint:** Connect `/workshops/[id]` to `GET /api/workshops/[id]` to display dynamic event parameters from mock data files.
-- [ ] **Form Handler API Endpoints:** Wire registration, volunteer, and contact forms to `POST` route handlers that validate incoming payloads and return HTTP 200 success responses.
-- [ ] **Loading & Skeleton States:** Display accessible loading skeletons or high-contrast spinners while data requests are pending.
-- [ ] **Error Handling States:** Display fallback error components and retry buttons when API endpoints return 400 or 500 status codes or experience network delays.
+- [ ] **Workshop Search Simulation:** Provide representative sandbox workshop data and applicable mock/API behavior needed to demonstrate ZIP-code workshop discovery independently of the final production workshop-location source.
+- [ ] **Workshop Detail Simulation:** Provide representative workshop detail data through the agreed sandbox mechanism so users can move from workshop search results into the applicable workshop-detail and registration journey.
+- [ ] **Registration Simulation:** Support the applicable Phase 1 workshop-registration interaction through the agreed sandbox mechanism, including representative submission handling and success/error responses needed to demonstrate the frontend registration journey. Mock submission behavior must be clearly separated from the final production registration workflow.
+- [ ] **Applicable Form Integration Boundary:** Preserve the documented Gravity Forms/Salesforce workflow for applicable production contact forms. Where independent sandbox testing requires simulated behavior, use the agreed mock/adapter approach without redefining or replacing the production integration.
+- [ ] **Loading and Error States:** Implement appropriate loading, empty, success, and error states for applicable sandbox-driven interactions so users receive understandable feedback while data is being retrieved or submitted.
+- [ ] **Integration Boundary Documentation:** Document which Phase 1 interactions use sandbox/mock behavior, which preserve existing external or production workflows, and which depend on the shared REST API contract so that the frontend implementation does not silently replace an approved integration.
+- [ ] **Independent Frontend Operation:** Verify that the applicable Phase 1 frontend journeys can be developed, tested, and demonstrated in the sandbox without requiring completion of Team #30's production backend or CRM integration.
