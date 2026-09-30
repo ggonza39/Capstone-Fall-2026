@@ -119,14 +119,17 @@ This PBI implements and refines responsive frontend layouts across the TSLS-Web 
 * **Story Points:** 8
 
 #### Description
-This PBI conducts code-level accessibility remediation across all site components to guarantee compliance with WCAG 2.1 AA standards. It focuses on color contrast ratios, high-visibility keyboard focus indicators, semantic markup, and proper ARIA labels for assistive technologies.
+This PBI implements targeted accessibility remediation for the documented Phase 1 findings identified during the baseline accessibility audit. The work focuses on correcting applicable issues involving keyboard navigation, visible focus, media controls, alternative text, semantic heading structure, color contrast, and related identified defects. Remediated findings will be evaluated against the applicable WCAG 2.1 Level AA success criteria using a combination of automated accessibility tools and manual keyboard and screen-reader testing.
 
 #### Acceptance Criteria
-- [ ] **Color Contrast Compliance:** Audit and update text and UI elements to ensure a minimum contrast ratio of 4.5:1 for body text and 3:1 for large text and interactive boundaries.
-- [ ] **High-Visibility Focus Rings:** Implement custom CSS focus states (`outline: 3px solid #000` or equivalent) across all interactive elements that remain clearly visible against light and dark backgrounds.
-- [ ] **Semantic HTML Hierarchy:** Structure all pages using correct structural landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) and maintain strict heading order (`<h1>` through `<h3>`).
-- [ ] **Accessible Form Labels & ARIA:** Assign explicit `<label>` tags with matching `for` attributes to all input fields, and add `aria-describedby` for inline validation messages.
-- [ ] **Automated Audit Clearance:** Run Lighthouse and Axe DevTools accessibility audits across all pages, achieving a 100% score with zero critical or serious violations.
+- [ ] **Keyboard Navigation and Visible Focus:** Remediate applicable A-001 and A-006 findings so interactive elements can be reached and operated by keyboard and provide a clearly visible focus indicator.
+- [ ] **Text Color Contrast:** Remediate the documented A-013 contrast issue so applicable normal text meets a minimum contrast ratio of 4.5:1 against its background, replacing combinations that fail the established requirement.
+- [ ] **Alternative Text:** Remediate applicable A-010 findings by providing meaningful alternative text for informative images and appropriate treatment for decorative images. Alternative text must communicate the relevant purpose or information of the image without unnecessary or confusing detail.
+- [ ] **Semantic Heading Structure:** Remediate applicable A-012 findings by implementing logical semantic heading structures that communicate page organization appropriately to visual and assistive-technology users.
+- [ ] **Accessible Media Controls:** Remediate applicable A-002 and A-003 findings so media controls required within the Phase 1 implementation can be reached, identified, and operated using a keyboard and appropriate assistive technologies.
+- [ ] **Automated Accessibility Verification:** Run the project's approved automated accessibility tools, such as WAVE, axe DevTools, and/or Lighthouse, against the implemented Phase 1 pages. Review identified issues relevant to the targeted findings and document unresolved accessibility defects requiring additional remediation.
+- [ ] **Manual Accessibility Verification:** Perform manual keyboard testing and applicable screen-reader testing using the project's planned tools, such as NVDA or VoiceOver, to verify behavior that cannot be reliably validated through automated tools alone.
+- [ ] **Finding-Level Results:** Record the verification status of the targeted accessibility findings addressed during Phase 1, identifying whether each applicable finding was remediated, remains unresolved, or requires additional follow-up.
 
 ---
 
