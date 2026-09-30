@@ -101,14 +101,15 @@ This PBI constructs the “I Want to Help” community-engagement journey for do
 * **Story Points:** 8
 
 #### Description
-This PBI optimizes all application page layouts to ensure full responsiveness across screen sizes and complete compatibility with browser text zooming. It guarantees that seniors using up to 150% (and 200%) text zoom can read all content and complete all user journeys without horizontal scrolling or overlapping UI elements.
+This PBI implements and refines responsive frontend layouts across the TSLS-Web application to support desktop, tablet, and mobile use while addressing the responsive-design issues identified in the baseline audit. The implementation will prioritize stable content reflow and navigation behavior at smaller viewports and maintain usability through 150% browser zoom without overlapping logos, text crowding, broken navigation, or other major layout failures.
 
 #### Acceptance Criteria
-- [ ] **Fluid Responsive Breakpoints:** Standardize page layouts across mobile (375px), tablet (768px), and desktop (1280px) viewports with zero horizontal overflow.
-- [ ] **150% & 200% Zoom Verification:** Verify that zooming text up to 200% in browser settings preserves line height, prevents text truncation, and keeps interactive elements fully visible without horizontal scrollbars.
-- [ ] **Touch & Click Target Sizing:** Enforce a strict minimum physical size of 44x44px for all buttons, form controls, navigation links, and clickable cards across all screen sizes.
-- [ ] **Relative CSS Units:** Refactor layout spacing and font sizes to use relative units (`rem`, `em`, `vh`/`vw`) instead of fixed pixel dimensions.
-- [ ] **Cross-Browser Display Audit:** Test and verify responsive layouts and zoom stability across Chrome, Firefox, Safari, and Edge browsers.
+- [ ] **Responsive Layout Behavior:** Implement responsive layouts across the planned desktop, tablet, and mobile viewport ranges, including verification at 980px and below. Content and navigation must reflow without major overlap, clipping, or unusable interface elements.
+- [ ] **150% Zoom Verification:** Verify that the interface remains usable through 150% browser zoom without overlapping logos, text crowding, broken navigation, truncated essential content, or inaccessible interactive controls.
+- [ ] **Usable Interactive Controls:** Ensure buttons, form controls, navigation controls, and other interactive elements provide clear and usable activation targets appropriate for the senior-focused interface across supported screen sizes.
+- [ ] **Scalable Layout Implementation:** Use responsive CSS techniques and appropriate relative/scalable units for typography, spacing, and layout where needed to support content reflow, responsive behavior, and 150% zoom stability.
+- [ ] **Cross-Browser Responsive Verification:** Test the implemented responsive layouts and applicable zoom behavior across the project's supported modern browsers, including Chrome, Firefox, Safari, and Edge where available.
+- [ ] **Baseline Responsive Defect Verification:** Verify that the previously documented responsive issues—including logo/navigation overlap and text/layout crowding associated with smaller viewports and 150% zoom—are addressed in the implemented frontend.
 
 ---
 
