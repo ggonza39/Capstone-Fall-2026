@@ -30,8 +30,8 @@ Final production readiness, platform integrations, performance optimization, and
 8. Implement workshop details and registration journey – 5 pts
 9. Implement "I Want to Help" Donate/Volunteer/Advocate journeys – 8 pts
 10. Implement responsive frontend layout and 150% zoom support – 8 pts
-11. Implement WCAG accessibility remediation – 8 pts
-12. Implement Mock API / sandbox integration – 5 pts
+11. Implement targeted Phase 1 accessibility remediation – 8 pts
+12. Implement Mock API / sandbox integration and documented integration boundaries – 5 pts
 13. Implement public forms, validation, and integration boundaries – 8 pts
 14. Implement performance and technical SEO optimization – 8 pts
 15. Implement lightweight website administration interface – 5 pts
