@@ -17,8 +17,8 @@ Develop an interactive, functional web prototype that implements the primary dua
 | **PBI 8** | Implement workshop details and registration journey | 5 | To Do |
 | **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | To Do |
 | **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | To Do |
-| **PBI 11** | Implement WCAG accessibility remediation | 8 | To Do |
-| **PBI 12** | Implement Mock API / sandbox integration | 5 | To Do |
+| **PBI 11** | Implement targeted Phase 1 accessibility remediation | 8 | To Do |
+| **PBI 12** | Implement Mock API / sandbox integration and documented integration boundaries | 5 | To Do |
 
 ---
 
