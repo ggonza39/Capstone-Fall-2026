@@ -1,5 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
+import { createVolunteerInquiry} from "./mocks/APIClient.ts"
 
 import {
   CssBaseline,
@@ -8,6 +10,10 @@ import {
 
 import App from "./App";
 import theme from "./theme/theme";
+
+// Example call using API Client method
+// const result = createVolunteerInquiry({firstName: "Jake", lastName: "Schramm", email: "junkemail@yahoo.com", reasonForVolunteering: "Event volunteer"});
+// console.log(result);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
