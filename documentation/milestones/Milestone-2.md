@@ -33,11 +33,11 @@ Develop an interactive, functional web prototype that implements the primary dua
 This PBI constructs the primary landing page and global header/footer navigation for the TSLS-Web platform. It creates two distinct, accessible entry pathways for the site's primary user groups: “I Need Help” for senior adults and other users seeking technology assistance and local workshops, and “I Want to Help” for volunteers, donors, advocates, and community partners. This implementation establishes the foundational visual hierarchy, responsive layout, and client-side navigation structure while providing clear and direct access to the site's primary resources and user journeys.
 
 #### Acceptance Criteria
-- [ ] **Dual-Path Hero Section:** Construct a hero layout featuring two large, distinct calls to action labeled “I Need Help” and “I Want to Help,” using accessible, high-contrast controls that provide direct entry into their respective user journeys.
-- [ ] **Accessible Global Header:** Build a consistent header containing the site logo and clear primary navigation to the site's major resources and user pathways. Navigation controls must be keyboard accessible, visibly focusable, and usable across the planned responsive layouts.
-- [ ] **Global Accessible Footer:** Build a consistent footer containing applicable organization contact information and secondary navigation links that provide direct access to important site resources.
-- [ ] **Skip Navigation Link:** Implement a hidden "Skip to main content" link at the top of the DOM that becomes visible on keyboard focus and moves focus directly to the `<main>` element.
-- [ ] **Responsive Breakpoint Behavior:** Verify that the header and primary navigation adapt appropriately across desktop, tablet, and mobile layouts, including viewports at 980px and below, without text clipping, overlapping elements, inaccessible controls, or missing navigation links.
+- [] **Dual-Path Hero Section:** Construct a hero layout featuring two large, distinct calls to action labeled “I Need Help” and “I Want to Help,” using accessible, high-contrast controls that provide direct entry into their respective user journeys.
+- [] **Accessible Global Header:** Build a consistent header containing the site logo and clear primary navigation to the site's major resources and user pathways. Navigation controls must be keyboard accessible, visibly focusable, and usable across the planned responsive layouts.
+- [] **Global Accessible Footer:** Build a consistent footer containing applicable organization contact information and secondary navigation links that provide direct access to important site resources.
+- [] **Skip Navigation Link:** Implement a hidden "Skip to main content" link at the top of the DOM that becomes visible on keyboard focus and moves focus directly to the `<main>` element.
+- [] **Responsive Breakpoint Behavior:** Verify that the header and primary navigation adapt appropriately across desktop, tablet, and mobile layouts, including viewports at 980px and below, without text clipping, overlapping elements, inaccessible controls, or missing navigation links.
 
 ---
 
