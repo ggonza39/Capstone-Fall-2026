@@ -33,11 +33,11 @@ Develop an interactive, functional web prototype that implements the primary dua
 This PBI constructs the primary landing page and global header/footer navigation for the TSLS-Web platform. It creates two distinct, accessible entry pathways for the site's primary user groups: “I Need Help” for senior adults and other users seeking technology assistance and local workshops, and “I Want to Help” for volunteers, donors, advocates, and community partners. This implementation establishes the foundational visual hierarchy, responsive layout, and client-side navigation structure while providing clear and direct access to the site's primary resources and user journeys.
 
 #### Acceptance Criteria
-- [] **Dual-Path Hero Section:** Construct a hero layout featuring two large, distinct calls to action labeled “I Need Help” and “I Want to Help,” using accessible, high-contrast controls that provide direct entry into their respective user journeys.
-- [] **Accessible Global Header:** Build a consistent header containing the site logo and clear primary navigation to the site's major resources and user pathways. Navigation controls must be keyboard accessible, visibly focusable, and usable across the planned responsive layouts.
-- [] **Global Accessible Footer:** Build a consistent footer containing applicable organization contact information and secondary navigation links that provide direct access to important site resources.
-- [] **Skip Navigation Link:** Implement a hidden "Skip to main content" link at the top of the DOM that becomes visible on keyboard focus and moves focus directly to the `<main>` element.
-- [] **Responsive Breakpoint Behavior:** Verify that the header and primary navigation adapt appropriately across desktop, tablet, and mobile layouts, including viewports at 980px and below, without text clipping, overlapping elements, inaccessible controls, or missing navigation links.
+- [x] **Dual-Path Hero Section:** Construct a hero layout featuring two large, distinct calls to action labeled “I Need Help” and “I Want to Help,” using accessible, high-contrast controls that provide direct entry into their respective user journeys.
+- [x] **Accessible Global Header:** Build a consistent header containing the site logo and clear primary navigation to the site's major resources and user pathways. Navigation controls must be keyboard accessible, visibly focusable, and usable across the planned responsive layouts.
+- [x] **Global Accessible Footer:** Build a consistent footer containing applicable organization contact information and secondary navigation links that provide direct access to important site resources.
+- [x] **Skip Navigation Link:** Implement a hidden "Skip to main content" link at the top of the DOM that becomes visible on keyboard focus and moves focus directly to the `<main>` element.
+- [x] **Responsive Breakpoint Behavior:** Verify that the header and primary navigation adapt appropriately across desktop, tablet, and mobile layouts, including viewports at 980px and below, without text clipping, overlapping elements, inaccessible controls, or missing navigation links.
 
 ---
 
@@ -103,12 +103,12 @@ This PBI constructs the “I Want to Help” community-engagement journey for do
 This PBI implements and refines responsive frontend layouts across the TSLS-Web application to support desktop, tablet, and mobile use while addressing the responsive-design issues identified in the baseline audit. The implementation will prioritize stable content reflow and navigation behavior at smaller viewports and maintain usability through 150% browser zoom without overlapping logos, text crowding, broken navigation, or other major layout failures.
 
 #### Acceptance Criteria
-- [ ] **Responsive Layout Behavior:** Implement responsive layouts across the planned desktop, tablet, and mobile viewport ranges, including verification at 980px and below. Content and navigation must reflow without major overlap, clipping, or unusable interface elements.
-- [ ] **150% Zoom Verification:** Verify that the interface remains usable through 150% browser zoom without overlapping logos, text crowding, broken navigation, truncated essential content, or inaccessible interactive controls.
-- [ ] **Usable Interactive Controls:** Ensure buttons, form controls, navigation controls, and other interactive elements provide clear and usable activation targets appropriate for the senior-focused interface across supported screen sizes.
-- [ ] **Scalable Layout Implementation:** Use responsive CSS techniques and appropriate relative/scalable units for typography, spacing, and layout where needed to support content reflow, responsive behavior, and 150% zoom stability.
-- [ ] **Cross-Browser Responsive Verification:** Test the implemented responsive layouts and applicable zoom behavior across the project's supported modern browsers, including Chrome, Firefox, Safari, and Edge where available.
-- [ ] **Baseline Responsive Defect Verification:** Verify that the previously documented responsive issues—including logo/navigation overlap and text/layout crowding associated with smaller viewports and 150% zoom—are addressed in the implemented frontend.
+- [x] **Responsive Layout Behavior:** Implement responsive layouts across the planned desktop, tablet, and mobile viewport ranges, including verification at 980px and below. Content and navigation must reflow without major overlap, clipping, or unusable interface elements.
+- [x] **150% Zoom Verification:** Verify that the interface remains usable through 150% browser zoom without overlapping logos, text crowding, broken navigation, truncated essential content, or inaccessible interactive controls.
+- [x] **Usable Interactive Controls:** Ensure buttons, form controls, navigation controls, and other interactive elements provide clear and usable activation targets appropriate for the senior-focused interface across supported screen sizes.
+- [x] **Scalable Layout Implementation:** Use responsive CSS techniques and appropriate relative/scalable units for typography, spacing, and layout where needed to support content reflow, responsive behavior, and 150% zoom stability.
+- [x] **Cross-Browser Responsive Verification:** Test the implemented responsive layouts and applicable zoom behavior across the project's supported modern browsers, including Chrome, Firefox, Safari, and Edge where available.
+- [x] **Baseline Responsive Defect Verification:** Verify that the previously documented responsive issues—including logo/navigation overlap and text/layout crowding associated with smaller viewports and 150% zoom—are addressed in the implemented frontend.
 
 ---
 
