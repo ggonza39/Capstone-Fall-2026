@@ -18,7 +18,7 @@ Final production readiness, approved integration boundaries, performance and tec
 
 ---
 
-## Original Backlog (Ordered) - 95 total pts (09/23/2026)
+## Original Backlog (Ordered) - 95 total pts (09/23/2026) - Revised 10/01/2026
 
 1. Establish sponsor requirements baseline and acceptance criteria – 3 pts
 2. Define information architecture and user journeys – 5 pts
