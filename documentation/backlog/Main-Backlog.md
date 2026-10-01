@@ -61,6 +61,6 @@ The order shown here reflects the current priority of the Product Backlog and do
 
 - **Note:** This Product Backlog reflects the team's current project baseline and may continue to be refined as requirements are clarified, sponsor feedback is received, and implementation details become better understood.
 
-- **Note:** The current backlog is organized around the team's three-milestone baseline: Milestone 1 — Requirements & Design (due September 30, 2026), Milestone 2 — Interactive Sandbox Prototype (due October 28, 2026), and Milestone 3 — Production Release & Handover (due December 4, 2026).
+- **Note:** The current backlog is organized around the team's three-milestone baseline: Milestone 1 — Requirements & Design (due September 30, 2026), Milestone 2 — Interactive Sandbox Prototype (due October 28, 2026), and Milestone 3 — Production Release & Handover (due December 4, 2026)
 
 ---
