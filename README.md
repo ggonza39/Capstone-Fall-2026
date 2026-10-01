@@ -1,5 +1,8 @@
 # Capstone-Fall-2026: Tech Smart Learning for Seniors – Website Modernization and Accessibility Enhancement
 
+### Live Website
+https://capstone-fall-2026.vercel.app/
+
 ## Team Name
 - Tech Smart Web Team
 
