@@ -173,3 +173,30 @@ export interface WorkshopDetail {
 export interface WorkshopDetailResponse {
     workshop: WorkshopDetail;
 }
+
+// ---------------------------------------------------------------------------
+// Workshop Registration (Milestone-2 PBI-8 / PBI-12)
+//
+// SANDBOX / MOCK ONLY. This is a Phase 1 demonstration of the workshop
+// registration journey and is not the final production registration
+// workflow. See documentation/api-contract.md and mocks/README.md.
+// ---------------------------------------------------------------------------
+
+export interface WorkshopRegistrationRequest {
+    firstName: string;
+    lastName: string;
+    email?: string | null;
+    phone?: string | null;
+}
+
+export interface WorkshopRegistrationResponse {
+    registrationId: string;
+    status: "received";
+    message: string;
+    workshop: {
+        id: string;
+        title: string;
+        dateTime: string;
+        location: string;
+    };
+}

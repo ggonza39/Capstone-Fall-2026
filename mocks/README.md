@@ -308,3 +308,17 @@ The mock API layer does not implement:
 
 The mock API must not be treated as a production backend.
 
+---
+
+## Workshop Search, Details & Registration (Milestone-2 — PBI-7 / PBI-8 / PBI-12)
+
+These three endpoints are implemented as runnable MSW handlers in `capstonefall2026/src/mocks/handlers.js` (started from `capstonefall2026/src/index.js` in development builds only). They are **SANDBOX / MOCK ONLY** — see `documentation/api-contract.md` ("API 5" and "Phase 1 Integration Boundary") for the full request/response schemas. Summary:
+
+- `GET /api/workshops?zip=30301` — search representative sandbox workshop data by ZIP code (PBI-7). Returns `400` for an invalid/missing ZIP, `200` with an empty `workshops` array for no matches.
+- `GET /api/workshops/:id` — representative workshop detail data (PBI-8). Returns `404 NOT_FOUND` for an unknown id.
+- `POST /api/workshops/:id/registrations` — simulates the Phase 1 registration interaction (PBI-8). Returns `201` with a response `message` that explicitly identifies the submission as a sandbox demonstration, `400` for validation errors, `404 NOT_FOUND` for an unknown workshop, and `409 WORKSHOP_FULL` when the mock workshop has no seats available.
+
+These endpoints are reached from the frontend through `capstonefall2026/src/services/workshopService.js` (the service/adapter layer) rather than by importing mock data directly, so a production backend can later be substituted with no changes required in the pages that call it.
+
+**Boundary reminder:** this sandbox layer never replaces the organization's existing Stripe donation workflow or Hands On Atlanta volunteer signup process (PBI-9) — those remain outside the mock layer entirely.
+

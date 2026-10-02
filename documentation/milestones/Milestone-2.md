@@ -2,7 +2,7 @@
 
 **Target Completion Date:** October 28, 2026  
 **Total Points:** 47 Story Points  
-**Progress:** 2 of 7 PBIs Completed (16 / 47 Points)  
+**Progress:** 3 of 7 PBIs Completed (21 / 47 Points)  
 
 ---
 
@@ -18,7 +18,7 @@ Develop an interactive, functional web prototype that implements the primary dua
 | **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | To Do |
 | **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | Complete |
 | **PBI 11** | Implement targeted Phase 1 accessibility remediation | 8 | To Do |
-| **PBI 12** | Implement Mock API / sandbox integration and documented integration boundaries | 5 | To Do |
+| **PBI 12** | Implement Mock API / sandbox integration and documented integration boundaries | 5 | Complete |
 
 ---
 
@@ -134,17 +134,17 @@ This PBI implements targeted accessibility remediation for the documented Phase 
 
 ### [PBI-12] Implement Mock API / sandbox integration and documented integration boundaries
 
-* **Status:** To Do
+* **Status:** Complete
 * **Story Points:** 5
 
 #### Description
 This PBI implements the sandbox integration layer required for independent frontend development and demonstration of the TSLS-Web user journeys. The team will use the agreed Mock API, Next.js Route Handlers, local/dummy JSON, MSW, or an equivalent sandbox mechanism where simulation is required. The implementation will support applicable workshop discovery, workshop details, registration behavior, loading states, and error handling while maintaining documented boundaries with existing production integrations such as Gravity Forms/Salesforce, Stripe, Hands On Atlanta, and the backend REST API contract.
 
 #### Acceptance Criteria
-- [ ] **Workshop Search Simulation:** Provide representative sandbox workshop data and applicable mock/API behavior needed to demonstrate ZIP-code workshop discovery independently of the final production workshop-location source.
-- [ ] **Workshop Detail Simulation:** Provide representative workshop detail data through the agreed sandbox mechanism so users can move from workshop search results into the applicable workshop-detail and registration journey.
-- [ ] **Registration Simulation:** Support the applicable Phase 1 workshop-registration interaction through the agreed sandbox mechanism, including representative submission handling and success/error responses needed to demonstrate the frontend registration journey. Mock submission behavior must be clearly separated from the final production registration workflow.
-- [ ] **Applicable Form Integration Boundary:** Preserve the documented Gravity Forms/Salesforce workflow for applicable production contact forms. Where independent sandbox testing requires simulated behavior, use the agreed mock/adapter approach without redefining or replacing the production integration.
-- [ ] **Loading and Error States:** Implement appropriate loading, empty, success, and error states for applicable sandbox-driven interactions so users receive understandable feedback while data is being retrieved or submitted.
-- [ ] **Integration Boundary Documentation:** Document which Phase 1 interactions use sandbox/mock behavior, which preserve existing external or production workflows, and which depend on the shared REST API contract so that the frontend implementation does not silently replace an approved integration.
-- [ ] **Independent Frontend Operation:** Verify that the applicable Phase 1 frontend journeys can be developed, tested, and demonstrated in the sandbox without requiring completion of Team #30's production backend or CRM integration.
+- [x] **Workshop Search Simulation:** Provide representative sandbox workshop data and applicable mock/API behavior needed to demonstrate ZIP-code workshop discovery independently of the final production workshop-location source.
+- [x] **Workshop Detail Simulation:** Provide representative workshop detail data through the agreed sandbox mechanism so users can move from workshop search results into the applicable workshop-detail and registration journey.
+- [x] **Registration Simulation:** Support the applicable Phase 1 workshop-registration interaction through the agreed sandbox mechanism, including representative submission handling and success/error responses needed to demonstrate the frontend registration journey. Mock submission behavior must be clearly separated from the final production registration workflow.
+- [x] **Applicable Form Integration Boundary:** Preserve the documented Gravity Forms/Salesforce workflow for applicable production contact forms. Where independent sandbox testing requires simulated behavior, use the agreed mock/adapter approach without redefining or replacing the production integration.
+- [x] **Loading and Error States:** Implement appropriate loading, empty, success, and error states for applicable sandbox-driven interactions so users receive understandable feedback while data is being retrieved or submitted.
+- [x] **Integration Boundary Documentation:** Document which Phase 1 interactions use sandbox/mock behavior, which preserve existing external or production workflows, and which depend on the shared REST API contract so that the frontend implementation does not silently replace an approved integration.
+- [x] **Independent Frontend Operation:** Verify that the applicable Phase 1 frontend journeys can be developed, tested, and demonstrated in the sandbox without requiring completion of Team #30's production backend or CRM integration.

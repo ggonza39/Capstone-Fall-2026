@@ -1,5 +1,10 @@
-import { http, HttpResponse } from "msw";
+import { http, HttpResponse, delay } from "msw";
 import { workshops, workshopSummaries } from "./data/workshops";
+import { isValidZip } from "./validation-logic/validationHelpers.mjs";
+import {
+    isWorkshopFull,
+    validateWorkshopRegistration,
+} from "./validation-logic/workshopRegistration.mjs";
 /**
  * Mock Service Layer (PBI-4, Acceptance Criterion 3).
  *
@@ -204,17 +209,20 @@ export const handlers = [
     }),
 
     // --- Workshops: Search (Milestone-2 PBI-7 / PBI-12) ---
-    http.get("/api/workshops", ({ request }) => {
+    http.get("/api/workshops", async ({ request }) => {
         const url = new URL(request.url);
 
         const zip = url.searchParams.get("zip");
         const eventType = url.searchParams.get("eventType");
 
-        if (!zip || !/^\d{5}$/.test(zip)) {
+        if (!isValidZip(zip)) {
             return validationError({
                 zip: "Please enter a valid 5-digit ZIP code.",
             });
         }
+
+        // Simulated network latency so the frontend can demonstrate a loading state (PBI-12 AC-5).
+        await delay(500);
 
         let results = workshopSummaries;
 
@@ -233,7 +241,9 @@ export const handlers = [
     }),
 
     // --- Workshops: Details (Milestone-2 PBI-8 / PBI-12) ---
-    http.get("/api/workshops/:id", ({ params }) => {
+    http.get("/api/workshops/:id", async ({ params }) => {
+        await delay(300);
+
         const workshop = workshops.find(
             (item) => item.id === params.id
         );
@@ -256,6 +266,64 @@ export const handlers = [
                 workshop,
             },
             { status: 200 }
+        );
+    }),
+
+    // --- Workshops: Registration (Milestone-2 PBI-8 / PBI-12 — SANDBOX ONLY) ---
+    // This simulates the Phase 1 registration interaction for demonstration
+    // purposes only. It is not the final production registration workflow
+    // (see documentation/api-contract.md and mocks/README.md).
+    http.post("/api/workshops/:id/registrations", async ({ request, params }) => {
+        await delay(500);
+
+        const workshop = workshops.find((item) => item.id === params.id);
+
+        if (!workshop) {
+            return HttpResponse.json(
+                {
+                    error: {
+                        code: "NOT_FOUND",
+                        message: "The requested workshop does not exist.",
+                    },
+                },
+                { status: 404 }
+            );
+        }
+
+        if (isWorkshopFull(workshop)) {
+            return HttpResponse.json(
+                {
+                    error: {
+                        code: "WORKSHOP_FULL",
+                        message:
+                            "This workshop is full. Please choose another workshop or check back later.",
+                    },
+                },
+                { status: 409 }
+            );
+        }
+
+        const body = await request.json();
+        const fields = validateWorkshopRegistration(body);
+
+        if (Object.keys(fields).length > 0) {
+            return validationError(fields);
+        }
+
+        return HttpResponse.json(
+            {
+                registrationId: generateId("WR"),
+                status: "received",
+                message:
+                    "This is a sandbox registration demonstration for Milestone 2. No production workshop registration has been submitted.",
+                workshop: {
+                    id: workshop.id,
+                    title: workshop.title,
+                    dateTime: workshop.dateTime,
+                    location: workshop.location,
+                },
+            },
+            { status: 201 }
         );
     }),
 ];
