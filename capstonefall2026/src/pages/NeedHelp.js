@@ -46,6 +46,7 @@ function NeedHelp() {
         if (!/^\d{5}$/.test(zipCode)) {
             setError(true);
             setSearched(false);
+            setSearchError("");
             return;
         }
 
@@ -164,6 +165,12 @@ function NeedHelp() {
                         </Stack>
                     </Box>
 
+                    {searchError && (
+                        <Alert severity="error" sx={{ mt: 3 }}>
+                            {searchError}
+                        </Alert>
+                    )}
+
                     {/* Sample Data Search Results */}
 
                     {searched && (
@@ -178,6 +185,7 @@ function NeedHelp() {
                                 Workshops Near {zipCode}
                             </Typography>
 
+                            {workshops.length > 0 && ( 
                             <Alert
                                 severity="info"
                                 sx={{
@@ -186,10 +194,13 @@ function NeedHelp() {
                             >
                                 These are sample workshop results for frontend testing.
                             </Alert>
+                            )}
 
-                            {searchError && (
-                                <Alert severity="error" sx={{ mt: 3 }}>
-                                    {searchError}
+                            
+
+                            {workshops.length === 0 && (
+                                <Alert severity="info" sx={{ mb: 3 }}>
+                                    No workshops were found for this ZIP code. Please try another ZIP code.
                                 </Alert>
                             )}
 
