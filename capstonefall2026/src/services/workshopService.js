@@ -1,4 +1,4 @@
-import { workshopSummaries } from "../mocks/data/workshops.js";
+import { workshops, workshopSummaries } from "../mocks/data/workshops.js";
 
 /**
  * Mock workshop search service.
@@ -28,4 +28,13 @@ export async function getWorkshopsByZip(zipCode) {
             });
         }, 500);
     });
+}
+
+export async function getWorkshopById(id) {
+    const workshop = workshops.find((item) => item.id === id);
+    
+    if (!workshop) {
+        throw new Error("Workshop not found");
+    }
+    return workshop;
 }

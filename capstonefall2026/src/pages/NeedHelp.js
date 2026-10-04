@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { Link as RouterLink } from "react-router-dom";
 
 /*Temporary mock data for testing the workshop search results.
  * Go to workshopService.js to replace with real data from the backend.
@@ -262,7 +263,11 @@ function NeedHelp() {
                                                     )}
                                                 </Stack>
 
-                                                <Button variant="contained">Register for Workshop</Button>
+                                                <Button variant="contained"
+                                                component={RouterLink}
+                                                to={`/workshops/${workshop.id}`}>
+                                                    View Workshop Details
+                                                </Button>
                                             </CardContent>
                                         </Card>
                                     </Grid>
