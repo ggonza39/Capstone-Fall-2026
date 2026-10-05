@@ -130,6 +130,24 @@ This PBI implements targeted accessibility remediation for the documented Phase 
 - [ ] **Manual Accessibility Verification:** Perform manual keyboard testing and applicable screen-reader testing using the project's planned tools, such as NVDA or VoiceOver, to verify behavior that cannot be reliably validated through automated tools alone.
 - [ ] **Finding-Level Results:** Record the verification status of the targeted accessibility findings addressed during Phase 1, identifying whether each applicable finding was remediated, remains unresolved, or requires additional follow-up.
 
+#### Phase 1 Accessibility Verification Results
+
+| Finding | Status | Verification |
+| :--- | :---: | :---: |
+| A-001 | Remediated | Navigation items are reachable, visibly focusable, and operable without mouse input. |
+| A-002 | Not Applicable - Phase 1 | The video found in the original finding was not included in the redesigned Phase 1 site as of yet. |
+| A-003 | Not Applicable - Phase 1 | The video and media controls in the original finding was not included in the redesigned Phase 1 site as of yet. |
+| A-006 | Remediated | The redesigned navigation no longer have drop down menus. Current navigation were confirmed to be reachable with the keyboard and have visible focus. |
+| A-010 | Not Applicable - Phase 1 | The instructional screenshots in the original finding were not included in the redesigned Phase 1 site. No other content images were found during this verification. |
+| A-012 | Remediated | Home and About were manually inspected and use logical heading heirarchy with H1 page titles, H2 major sections, and H3 card headings. |
+| A-013 | Remediated | The original low-contrast Contact form styling is no longer present. The redesigned Contact page uses readable text against a light background and passed Chrome's Lighthouse automated accessibility audit. |
+
+#### Verification Methods
+
+Automated accessibility testing was performed using Chrome's Lighthouse on Phase 1 pages: Home, I Need Help, I Want to Help, Resources, About, and Contact. Each page received a score of 100 with no automated accessibility issues found during the testing. Automated results were also manually tested. 
+
+Manual keyboard testing also verified navigation order, visible focus, keyboard activation, and form interaction. VoiceOver testing was also used to verify navigation links, heading structure, body text, form controls, registration validaion errors, and submission feedback. 
+
 ---
 
 ### [PBI-12] Implement Mock API / sandbox integration and documented integration boundaries
