@@ -155,6 +155,12 @@ function Header() {
 
                                             whiteSpace: "nowrap",
 
+                                            "&:focus-visible": {
+                                                outline: "3px solid #000000",
+                                                outlineOffset: "4px",
+                                                borderRadius: "4px",
+                                            },
+
                                             "&:hover": {
                                                 color: "primary.main",
 

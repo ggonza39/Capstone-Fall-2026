@@ -295,7 +295,7 @@ function Home() {
                         >
                             <TextField
                                 id="home-zip-code"
-                                label="ZIP Code"
+                                placeholder="ZIP Code"
                                 value={zipCode}
                                 onChange={(event) => {
                                     const value = event.target.value.replace(/\D/g, "");
@@ -309,6 +309,7 @@ function Home() {
                                 error={zipError}
                                 helperText={zipError ? "Enter a valid 5-digit ZIP code." : "Example: 30301"}
                                 inputProps={{
+                                    "aira-label": "ZIP Code", 
                                     inputMode: "numeric",
                                     maxLength: 5,
                                 }}

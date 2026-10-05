@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { Link as RouterLink } from "react-router-dom";
 
 /*Temporary mock data for testing the workshop search results.
  * Go to workshopService.js to replace with real data from the backend.
@@ -46,6 +47,7 @@ function NeedHelp() {
         if (!/^\d{5}$/.test(zipCode)) {
             setError(true);
             setSearched(false);
+            setSearchError("");
             return;
         }
 
@@ -164,6 +166,12 @@ function NeedHelp() {
                         </Stack>
                     </Box>
 
+                    {searchError && (
+                        <Alert severity="error" sx={{ mt: 3 }}>
+                            {searchError}
+                        </Alert>
+                    )}
+
                     {/* Sample Data Search Results */}
 
                     {searched && (
@@ -178,6 +186,7 @@ function NeedHelp() {
                                 Workshops Near {zipCode}
                             </Typography>
 
+                            {workshops.length > 0 && ( 
                             <Alert
                                 severity="info"
                                 sx={{
@@ -186,10 +195,13 @@ function NeedHelp() {
                             >
                                 These are sample workshop results for frontend testing.
                             </Alert>
+                            )}
 
-                            {searchError && (
-                                <Alert severity="error" sx={{ mt: 3 }}>
-                                    {searchError}
+                            
+
+                            {workshops.length === 0 && (
+                                <Alert severity="info" sx={{ mb: 3 }}>
+                                    No workshops were found for this ZIP code. Please try another ZIP code.
                                 </Alert>
                             )}
 
@@ -251,7 +263,11 @@ function NeedHelp() {
                                                     )}
                                                 </Stack>
 
-                                                <Button variant="contained">Register for Workshop</Button>
+                                                <Button variant="contained"
+                                                component={RouterLink}
+                                                to={`/workshops/${workshop.id}`}>
+                                                    View Workshop Details
+                                                </Button>
                                             </CardContent>
                                         </Card>
                                     </Grid>
