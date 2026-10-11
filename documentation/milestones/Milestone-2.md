@@ -2,7 +2,7 @@
 
 **Target Completion Date:** October 28, 2026  
 **Total Points:** 47 Story Points  
-**Progress:** 6 of 7 PBIs Completed (39 / 47 Points)  
+**Progress:** 5 of 7 PBIs Completed (31 / 47 Points)  
 
 ---
 
@@ -15,8 +15,8 @@ Develop an interactive, functional web prototype that implements the primary dua
 | **PBI 6** | Implement dual-path landing and navigation | 8 | Complete |
 | **PBI 7** | Implement "I Need Help" workshop discovery and ZIP search | 5 | Complete |
 | **PBI 8** | Implement workshop details and registration journey | 5 | Compelte |
-| **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | To Do |
-| **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | Complete |
+| **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | In progress |
+| **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | In progress |
 | **PBI 11** | Implement targeted Phase 1 accessibility remediation | 8 | Complete |
 | **PBI 12** | Implement Mock API / sandbox integration and documented integration boundaries | 5 | Complete |
 
@@ -78,7 +78,7 @@ This PBI creates the workshop detail and registration experience within the “I
 
 ### [PBI-9] Implement "I Want to Help" Donate/Volunteer/Advocate journeys
 
-* **Status:** To Do
+* **Status:** In progress
 * **Story Points:** 8
 
 #### Description
@@ -96,7 +96,7 @@ This PBI constructs the “I Want to Help” community-engagement journey for do
 
 ### [PBI-10] Implement responsive frontend layout and 150% zoom support
 
-* **Status:** Complete
+* **Status:** In progress
 * **Story Points:** 8
 
 #### Description
@@ -109,6 +109,7 @@ This PBI implements and refines responsive frontend layouts across the TSLS-Web 
 - [x] **Scalable Layout Implementation:** Use responsive CSS techniques and appropriate relative/scalable units for typography, spacing, and layout where needed to support content reflow, responsive behavior, and 150% zoom stability.
 - [x] **Cross-Browser Responsive Verification:** Test the implemented responsive layouts and applicable zoom behavior across the project's supported modern browsers, including Chrome, Firefox, Safari, and Edge where available.
 - [x] **Baseline Responsive Defect Verification:** Verify that the previously documented responsive issues—including logo/navigation overlap and text/layout crowding associated with smaller viewports and 150% zoom—are addressed in the implemented frontend.
+- [ ] **Persistent Mobile Bottom Navigation:** Implement a fixed bottom navigation bar for supported mobile layouts that provides quick access to a small set of frequently used TSLS-Web destinations while users scroll. The bottom navigation will complement the existing hamburger navigation rather than replace it and must remain readable, keyboard accessible, visibly focusable, and positioned without obscuring essential page content or interactive controls.
 
 ---
 
