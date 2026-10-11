@@ -14,7 +14,7 @@ Develop an interactive, functional web prototype that implements the primary dua
 | :--- | :--- | :---: | :---: |
 | **PBI 6** | Implement dual-path landing and navigation | 8 | Complete |
 | **PBI 7** | Implement "I Need Help" workshop discovery and ZIP search | 5 | Complete |
-| **PBI 8** | Implement workshop details and registration journey | 5 | Compelte |
+| **PBI 8** | Implement workshop details and registration journey | 5 | Complete |
 | **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | In progress |
 | **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | In progress |
 | **PBI 11** | Implement targeted Phase 1 accessibility remediation | 8 | Complete |
