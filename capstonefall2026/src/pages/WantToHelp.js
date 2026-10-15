@@ -6,12 +6,12 @@ import CampaignIcon from "@mui/icons-material/Campaign";
 
 /**
  * PBI-9 Implement "I Want to Help" Donate/Volunteer/Advocate journeys
- * 
+ *
  * Engagement Landing Hub: Build the “I Want to Help” landing experience with three clearly
- * identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose, 
- * clear call to action, and direct route to its applicable destination without unnecessary 
+ * identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose,
+ * clear call to action, and direct route to its applicable destination without unnecessary
  * intermediate navigation.
- * 
+ *
  */
 function WantToHelp() {
     return (
@@ -155,7 +155,17 @@ function WantToHelp() {
                                     </Typography>
 
                                     {/* Sponsor wants users to be directed to Hands on Atlanta */}
-                                    <Button variant="contained">Volunteer</Button>
+                                    <Button
+                                        variant="contained"
+                                        target="_blank"
+                                        href="https://volunteer.handsonatlanta.org/"
+                                        onClick={() => {
+                                            alert('You will now be redirected and external network.');
+                                        }}
+
+                                    >
+                                        Register with Hands on Atlanta
+                                    </Button>
                                 </CardContent>
                             </Card>
                         </Grid>
