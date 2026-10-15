@@ -92,6 +92,7 @@ This PBI constructs the “I Want to Help” community-engagement journey for do
 - [ ] **Advocate Pathway:** Provide an Advocate section presenting sponsor-approved community-impact information and an appropriate call to action for users to learn more or engage when applicable sponsor-approved content or resources are available.
 - [ ] **External Pathway Clarity:** Clearly identify when a Donate or Volunteer action directs the user to an established external workflow or service, using understandable link or button text so the destination and purpose are clear before activation.
 - [ ] **Accessible Engagement Navigation:** Ensure the Donate, Volunteer, and Advocate pathway controls are keyboard accessible, visibly focusable, clearly labeled, and presented using understandable headings and calls to action.
+- [ ] **Impact Before Engagement:** Add a clearly visible impact section within the “I Want to Help” experience before or alongside the primary support opportunities. The section must explain who TSLS serves, highlight sponsor-provided examples of the organization’s impact or accomplishments, and communicate how volunteering, donating, sponsoring, partnering, or other community involvement supports that impact. Use sponsor-approved content and available impact information rather than creating unsupported statistics or claims.
 
 ---
 
