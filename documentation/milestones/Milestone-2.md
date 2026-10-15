@@ -2,7 +2,7 @@
 
 **Target Completion Date:** October 28, 2026  
 **Total Points:** 47 Story Points  
-**Progress:** 5 of 7 PBIs Completed (31 / 47 Points)  
+**Progress:** 3 of 7 PBIs Completed (18 / 47 Points)  
 
 ---
 
@@ -12,9 +12,9 @@ Develop an interactive, functional web prototype that implements the primary dua
 
 | PBI # | Title | Points | Status |
 | :--- | :--- | :---: | :---: |
-| **PBI 6** | Implement dual-path landing and navigation | 8 | Complete |
+| **PBI 6** | Implement dual-path landing and navigation | 8 | In progress |
 | **PBI 7** | Implement "I Need Help" workshop discovery and ZIP search | 5 | Complete |
-| **PBI 8** | Implement workshop details and registration journey | 5 | Complete |
+| **PBI 8** | Implement workshop details and registration journey | 5 | In progress |
 | **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | In progress |
 | **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | In progress |
 | **PBI 11** | Implement targeted Phase 1 accessibility remediation | 8 | Complete |
@@ -26,7 +26,7 @@ Develop an interactive, functional web prototype that implements the primary dua
 
 ### [PBI-6] Implement dual-path landing and navigation
 
-* **Status:** Complete
+* **Status:** In progress
 * **Story Points:** 8
 
 #### Description
@@ -62,7 +62,7 @@ This PBI builds the workshop search and discovery experience for the “I Need H
 
 ### [PBI-8] Implement workshop details and registration journey
 
-* **Status:** Complete
+* **Status:** In progress
 * **Story Points:** 5
 
 #### Description
