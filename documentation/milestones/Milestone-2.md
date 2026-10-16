@@ -2,7 +2,7 @@
 
 **Target Completion Date:** October 28, 2026  
 **Total Points:** 47 Story Points  
-**Progress:** 3 of 7 PBIs Completed (18 / 47 Points)  
+**Progress:** 4 of 7 PBIs Completed (26 / 47 Points)  
 
 ---
 
@@ -12,7 +12,7 @@ Develop an interactive, functional web prototype that implements the primary dua
 
 | PBI # | Title | Points | Status |
 | :--- | :--- | :---: | :---: |
-| **PBI 6** | Implement dual-path landing and navigation | 8 | In progress |
+| **PBI 6** | Implement dual-path landing and navigation | 8 | Complete |
 | **PBI 7** | Implement "I Need Help" workshop discovery and ZIP search | 5 | Complete |
 | **PBI 8** | Implement workshop details and registration journey | 5 | In progress |
 | **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | In progress |
@@ -26,7 +26,7 @@ Develop an interactive, functional web prototype that implements the primary dua
 
 ### [PBI-6] Implement dual-path landing and navigation
 
-* **Status:** In progress
+* **Status:** Complete
 * **Story Points:** 8
 
 #### Description
@@ -38,8 +38,8 @@ This PBI constructs the primary landing page and global header/footer navigation
 - [x] **Global Accessible Footer:** Build a consistent footer containing applicable organization contact information and secondary navigation links that provide direct access to important site resources.
 - [x] **Skip Navigation Link:** Implement a hidden "Skip to main content" link at the top of the DOM that becomes visible on keyboard focus and moves focus directly to the `<main>` element.
 - [x] **Responsive Breakpoint Behavior:** Verify that the header and primary navigation adapt appropriately across desktop, tablet, and mobile layouts, including viewports at 980px and below, without text clipping, overlapping elements, inaccessible controls, or missing navigation links.
-- [ ] **Primary Pathway Clarity:** Refine the homepage entry points so the purpose of each primary pathway is immediately understandable. The **“I Need Technology Help”** pathway must clearly direct users toward workshops, technology assistance, and requesting help, while the **“I Want to Help”** pathway must clearly direct volunteers, donors, sponsors, and community partners toward the appropriate support and engagement opportunities. Use concise supporting text and clearly labeled calls to action so users can distinguish the two pathways before selecting one.
-- [ ] **Two-Click Help Access:** Refine the homepage and “I Need Technology Help” navigation so a user can reach the primary workshop pathway, technology-assistance/request-help pathway, or a clear explanation of the next step for receiving help within approximately two primary navigation selections from the homepage. Remove unnecessary intermediate navigation where possible and verify each primary help pathway by testing the complete route from the homepage.
+- [x] **Primary Pathway Clarity:** Refine the homepage entry points so the purpose of each primary pathway is immediately understandable. The **“I Need Technology Help”** pathway must clearly direct users toward workshops, technology assistance, and requesting help, while the **“I Want to Help”** pathway must clearly direct volunteers, donors, sponsors, and community partners toward the appropriate support and engagement opportunities. Use concise supporting text and clearly labeled calls to action so users can distinguish the two pathways before selecting one.
+- [x] **Two-Click Help Access:** Refine the homepage and “I Need Technology Help” navigation so a user can reach the primary workshop pathway, technology-assistance/request-help pathway, or a clear explanation of the next step for receiving help within approximately two primary navigation selections from the homepage. Remove unnecessary intermediate navigation where possible and verify each primary help pathway by testing the complete route from the homepage.
 
 ---
 
