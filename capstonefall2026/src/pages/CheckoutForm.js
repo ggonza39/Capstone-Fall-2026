@@ -4,7 +4,7 @@ import {
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
-import { Box, Container, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Paper, Stack, Typography } from "@mui/material";
 
 // This was developed using ChatGPT (entered prompt given by Stripe website)
 export function CheckoutForm() {
@@ -72,18 +72,25 @@ export function CheckoutForm() {
                     <Typography variant="h1" component="h1" gutterBottom>
                         Make a Donation
                     </Typography>
+                    
                     <form onSubmit={handleSubmit}>
+                        <Stack spacing={2}>
                         <PaymentElement />
 
-                        <button
-                            type="submit"
-                            disabled={!stripe || !elements || loading}
-                        >
-                            {loading ? 'Processing demo...' : 'Simulate Donation'}
-                        </button>
+                        <Button
+                                variant="contained"
+                                size="large"
+                                type="submit"
+                                disabled={!stripe || !elements || loading}
+                            >
+                                {loading ? 'Processing...' : 'Donate'}
+                            </Button>
+                        </Stack>
 
                         {message && <p role="status">{message}</p>}
+                       
                         </form>
+
                 </Container>
             </Box>
   );
