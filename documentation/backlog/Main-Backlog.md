@@ -18,7 +18,7 @@ Final production readiness, approved integration boundaries, performance and tec
 
 ---
 
-## Original Backlog (Ordered) - 95 total pts (09/23/2026)
+## Original Backlog (Ordered - 09/23/2026) - 95 total pts - Revised 10/01/2026
 
 1. Establish sponsor requirements baseline and acceptance criteria – 3 pts
 2. Define information architecture and user journeys – 5 pts
@@ -32,9 +32,9 @@ Final production readiness, approved integration boundaries, performance and tec
 10. Implement responsive frontend layout and 150% zoom support – 8 pts
 11. Implement targeted Phase 1 accessibility remediation – 8 pts
 12. Implement Mock API / sandbox integration and documented integration boundaries – 5 pts
-13. Implement public forms, validation, and integration boundaries – 8 pts
-14. Implement performance and technical SEO optimization – 8 pts
-15. Implement lightweight website administration interface – 5 pts
+13. Refine public forms and validate production integration boundaries – 8 pts
+14. Optimize frontend performance and technical SEO – 8 pts
+15. Implement and validate lightweight sandbox administration interface – 5 pts
 
 ---
 
@@ -61,6 +61,6 @@ The order shown here reflects the current priority of the Product Backlog and do
 
 - **Note:** This Product Backlog reflects the team's current project baseline and may continue to be refined as requirements are clarified, sponsor feedback is received, and implementation details become better understood.
 
-- **Note:** The current backlog is organized around the team's three-milestone baseline: Milestone 1 — Requirements & Design (due September 30, 2026), Milestone 2 — Interactive Sandbox Prototype (due October 28, 2026), and Milestone 3 — Production Release & Handover (due December 4, 2026).
+- **Note:** The current backlog is organized around the team's three-milestone baseline: Milestone 1 — Requirements & Design (due September 30, 2026), Milestone 2 — Interactive Sandbox Prototype (due October 28, 2026), and Milestone 3 — Production Release & Handover (due December 4, 2026)
 
 ---

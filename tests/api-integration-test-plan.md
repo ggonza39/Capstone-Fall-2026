@@ -391,3 +391,58 @@ The workflows (Technology Help Request, Volunteer Signup, General Contact, Donor
 - All tests should be executed against the mock API layer until real backend Team #30 delivery is available.
 - Workflows are Sponsor-Confirmed (REQ-21 through REQ-29); Volunteer Signup fields are Figma-Confirmed (REQ-22); Donor Interest/Inquiry fields beyond the documented baseline remain Pending Frontend Field Confirmation; final error schema details remain Pending Backend Team #30 Confirmation.
 - Error handling should be consistent across all endpoints to support frontend form behavior and API contract verification.
+
+---
+
+## Workshop Search, Details & Registration Tests (Milestone-2 — PBI-7 / PBI-8 / PBI-12, SANDBOX ONLY)
+
+These endpoints (`documentation/api-contract.md`, "API 5") are sandbox/mock only and are not part of the REQ-21–REQ-29 shared contract with Team #30. Automated coverage lives in `capstonefall2026/src/mocks/validation-logic/workshopRegistration.test.js`, `capstonefall2026/src/mocks/validation-logic/validationHelpers.test.js` (pure business-logic/validation rules), and `capstonefall2026/src/pages/NeedHelp.test.js` (UI-level loading/empty/success/error/full states).
+
+### Test 31: Valid Workshop Search (PBI-7)
+- Test scenario: GET /api/workshops with a valid 5-digit ZIP
+- Expected HTTP status: 200 OK
+- Expected behavior: returns a `workshops` array of representative sandbox results
+
+### Test 32: Invalid ZIP Code (PBI-7)
+- Test scenario: GET /api/workshops with a malformed or missing ZIP
+- Expected HTTP status: 400 Bad Request
+- Expected behavior: validation error identifies `zip` as invalid
+
+### Test 33: No Matching Workshops (PBI-7)
+- Test scenario: GET /api/workshops with a valid ZIP and an `eventType` filter that matches no sandbox workshops
+- Expected HTTP status: 200 OK
+- Expected behavior: returns an empty `workshops` array; frontend shows a user-friendly empty-results message
+
+### Test 34: Workshop Loading State (PBI-7 / PBI-12)
+- Test scenario: workshop search request is in flight
+- Expected behavior: frontend displays a visible, accessible loading indicator while awaiting the response
+
+### Test 35: Valid Workshop Detail Lookup (PBI-8)
+- Test scenario: GET /api/workshops/:id with a known workshop id
+- Expected HTTP status: 200 OK
+- Expected behavior: returns the full workshop detail record (title, dateTime, location, roomNumber, instructorName, accessibilityFeatures, seatAvailability)
+
+### Test 36: Unknown Workshop Detail (PBI-8)
+- Test scenario: GET /api/workshops/:id with an id that does not exist
+- Expected HTTP status: 404 Not Found
+- Expected behavior: standard error envelope with `code: "NOT_FOUND"`
+
+### Test 37: Valid Sandbox Registration Submission (PBI-8 / PBI-12)
+- Test scenario: POST /api/workshops/:id/registrations with a workshop that has available seats and a complete payload
+- Expected HTTP status: 201 Created
+- Expected behavior: response includes `registrationId`, `status: "received"`, a `message` that clearly identifies the submission as a sandbox demonstration, and a workshop summary
+
+### Test 38: Registration Missing Required Fields (PBI-8 / PBI-12)
+- Test scenario: POST /api/workshops/:id/registrations missing firstName/lastName and without an email or phone
+- Expected HTTP status: 400 Bad Request
+- Expected behavior: validation error identifies the missing fields
+
+### Test 39: Registration for Unknown Workshop (PBI-8 / PBI-12)
+- Test scenario: POST /api/workshops/:id/registrations where `:id` does not match any sandbox workshop
+- Expected HTTP status: 404 Not Found
+- Expected behavior: standard error envelope with `code: "NOT_FOUND"`
+
+### Test 40: Registration for a Full/Unavailable Workshop (PBI-8 / PBI-12)
+- Test scenario: POST /api/workshops/:id/registrations where the sandbox workshop's `seatAvailability` is 0
+- Expected HTTP status: 409 Conflict
+- Expected behavior: standard error envelope with `code: "WORKSHOP_FULL"`; frontend clearly communicates the workshop is full
