@@ -216,7 +216,7 @@ function NeedHelp() {
             >
                 <Container maxWidth="lg">
                     <Typography variant="h1" component="h1" gutterBottom>
-                        I Need Help
+                        I Need Technology Help
                     </Typography>
 
                     <Typography

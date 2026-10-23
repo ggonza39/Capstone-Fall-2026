@@ -3,15 +3,16 @@ import { Box, Button, Card, CardContent, Container, Grid, Typography } from "@mu
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import CampaignIcon from "@mui/icons-material/Campaign";
-
+import ImpactSection from "../components/ImpactSection";
+import PartnersSection from "../components/PartnersSection";
 /**
  * PBI-9 Implement "I Want to Help" Donate/Volunteer/Advocate journeys
- * 
+ *
  * Engagement Landing Hub: Build the “I Want to Help” landing experience with three clearly
- * identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose, 
- * clear call to action, and direct route to its applicable destination without unnecessary 
+ * identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose,
+ * clear call to action, and direct route to its applicable destination without unnecessary
  * intermediate navigation.
- * 
+ *
  */
 function WantToHelp() {
     return (
@@ -42,12 +43,16 @@ function WantToHelp() {
                 </Container>
             </Box>
 
+            {/* Component Impact */}
+            <ImpactSection />
+
             {/* Help Options */}
 
             <Box
                 component="section"
                 aria-labelledby="help-options-heading"
                 sx={{
+                    backgroundColor: "#F4F8FC",
                     py: {
                         xs: 6,
                         md: 8,
@@ -155,7 +160,17 @@ function WantToHelp() {
                                     </Typography>
 
                                     {/* Sponsor wants users to be directed to Hands on Atlanta */}
-                                    <Button variant="contained">Volunteer</Button>
+                                    <Button
+                                        variant="contained"
+                                        target="_blank"
+                                        href="https://volunteer.handsonatlanta.org/"
+                                        onClick={() => {
+                                            alert('You will now be redirected and external network.');
+                                        }}
+
+                                    >
+                                        Register with Hands on Atlanta
+                                    </Button>
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -209,6 +224,10 @@ function WantToHelp() {
                     </Grid>
                 </Container>
             </Box>
+
+            {/* Component Partners */}
+            <PartnersSection />
+
         </>
     );
 }

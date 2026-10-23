@@ -94,7 +94,7 @@ function Home() {
                                 startIcon={<HelpOutlineIcon />}
                                 onClick={() => navigate("/need-help")}
                             >
-                                I Need Help
+                                I Need Technology Help
                             </Button>
 
                             <Button

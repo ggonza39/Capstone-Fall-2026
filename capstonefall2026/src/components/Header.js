@@ -28,7 +28,7 @@ const navigation = [
         path: "/",
     },
     {
-        label: "I Need Help",
+        label: "I Need Technology Help",
         path: "/need-help",
     },
     {
