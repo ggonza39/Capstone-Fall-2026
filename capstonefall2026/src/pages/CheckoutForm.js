@@ -4,7 +4,7 @@ import {
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
-import { Box, Button, Container, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography, TextField } from "@mui/material";
 
 // This was developed using ChatGPT (entered prompt given by Stripe website)
 export function CheckoutForm() {
@@ -13,7 +13,64 @@ export function CheckoutForm() {
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
+  const [donor, setDonor] = useState({
+    firstName: '',
+    lastName: '',
+    email: ''
+    });
+    
+    // Reference for these useStates and validation methods: https://dev.to/anthonyzhang220/form-validation-with-material-ui-text-field-component-and-react-23dl
+    // ChatGPT used to modify the validation methods
+ const [valid, setValid] = useState({
+    firstNameIsValid: true,
+    lastNameIsValid: true,
+    emailIsValid: true
+ });
+    
+ const validateDonorFields = () => {
+  const firstNameIsValid =
+    /^[a-zA-Z\s'-]+$/.test(donor.firstName.trim());
 
+  const lastNameIsValid =
+    /^[a-zA-Z\s'-]+$/.test(donor.lastName.trim());
+
+  const emailIsValid =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(donor.email.trim());
+
+  const validation = {
+    firstNameIsValid,
+    lastNameIsValid,
+    emailIsValid
+  };
+
+  setValid(validation);
+
+  return Object.values(validation).every(Boolean);
+};
+
+const handleDonorFieldChange = (e) => {
+  const { name, value } = e.target;
+
+  // Update donor information
+  setDonor((prev) => ({
+    ...prev,
+    [name]: value
+  }));
+
+  // Define regex based on field
+  let reg = /^[a-zA-Z\s'-]+$/;
+
+  if (name === "email") {
+    reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  }
+
+  // Update validation for the specific field
+  setValid((prev) => ({
+    ...prev,
+    [`${name}IsValid`]: reg.test(value.trim())
+  }));
+};
+    
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -24,12 +81,31 @@ export function CheckoutForm() {
 
     try {
       // Validate payment fields with Stripe.
-      const { error } = await elements.submit();
+      // Error message code was implemented with help of ChatGPT and Stack Overflow: https://stackoverflow.com/questions/61149020/react-js-how-to-display-multiple-error-messages
+    const { error: paymentError } = await elements.submit();
 
-      if (error) {
-        setMessage(error.message);
-        return;
+    const errors = [
+      {
+        type: "donorValidationError",
+        message: !validateDonorFields()
+          ? "Please enter a valid name and email."
+          : ""
+      },
+      {
+        type: "paymentValidationError",
+        message: paymentError ? paymentError.message : ""
       }
+    ];
+
+    const errorMessage = errors
+      .filter(error => error.message)
+      .map(error => error.message)
+      .join(" ");
+
+    if (errorMessage) {
+      setMessage(errorMessage);
+      return;
+    }
 
       // Only send non-sensitive donation data.
       const response = await fetch('/api/v1/donations', {
@@ -74,7 +150,44 @@ export function CheckoutForm() {
                     </Typography>
                     
                     <form onSubmit={handleSubmit}>
+
+                        <Box
+                        component="form"
+                        sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
+                        autoComplete="off"
+                        >
+                            
+                        <TextField
+                            name="firstName"
+                            label="First Name"
+                            variant="outlined"
+                            value={donor.firstName}
+                            onChange={(e) => handleDonorFieldChange(e)}
+                            error={!valid.firstNameIsValid}
+                            required={true}
+                        />
+                        <TextField
+                        name="lastName"
+                        label="Last Name"
+                        variant="outlined"
+                        value={donor.lastName}
+                        onChange={(e) => handleDonorFieldChange(e)}
+                        error={!valid.lastNameIsValid}
+                        required={true}
+                        />
+
+                        <TextField
+                        name="email"
+                        label="Email"
+                        variant="outlined"
+                        value={donor.email}
+                        onChange={(e) => handleDonorFieldChange(e)}
+                        error={!valid.emailIsValid}
+                        required={true}
+                        />
+                        </Box>
                         <Stack spacing={2}>
+
                         <PaymentElement />
 
                         <Button
