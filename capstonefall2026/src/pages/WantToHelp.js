@@ -1,4 +1,5 @@
 import { Box, Button, Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
@@ -15,6 +16,7 @@ import PartnersSection from "../components/PartnersSection";
  *
  */
 function WantToHelp() {
+    const navigate = useNavigate();
     return (
         <>
             <Box
@@ -115,7 +117,9 @@ function WantToHelp() {
                                     </Typography>
 
                                     {/* Sponsor wants users to use the organization's existing Stripe payment workflow. */}
-                                    <Button variant="contained">Donate</Button>
+                                    <Button variant="contained" 
+                                        onClick={() => navigate("/donate")
+                                        }>Donate</Button>
                                 </CardContent>
                             </Card>
                         </Grid>

@@ -13,7 +13,7 @@ import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import WorkshopDetail from "./pages/WorkshopDetail";
-
+import Donate from "./pages/Donate";
 
 function App() {
   return (
@@ -46,6 +46,11 @@ function App() {
           <Route
             path="/resources"
             element={<Resources />}
+          />
+
+          <Route
+            path="/donate"
+            element={<Donate />}
           />
 
           <Route
