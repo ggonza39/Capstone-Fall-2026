@@ -217,7 +217,7 @@ function WantToHelp() {
                                     {/* Sponsor wants explain the organization's community impact 
                                         and provide an engagement path when sponsor-approved content 
                                         becomes available */}
-                                    <Button variant="contained">Learn About Our Impact</Button>
+                                    <Button variant="contained" href="#community-impact">Learn About Our Impact</Button>
                                 </CardContent>
                             </Card>
                         </Grid>
