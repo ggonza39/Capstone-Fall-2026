@@ -40,11 +40,3 @@ export async function registerForWorkshop(workshopId, registration) {
     return apiRequest(`/workshops/${workshopId}/registrations`, "POST", registration);
 }
 
-export async function getWorkshopById(id) {
-    const workshop = workshops.find((item) => item.id === id);
-    
-    if (!workshop) {
-        throw new Error("Workshop not found");
-    }
-    return workshop;
-}
