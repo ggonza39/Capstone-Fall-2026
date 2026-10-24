@@ -43,6 +43,7 @@ function ImpactSection() {
   return (
     <Box
       component="section"
+      id="community-impact"
       aria-labelledby="impact-heading"
       sx={{
         backgroundColor: "#FFFFFF",
