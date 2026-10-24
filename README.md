@@ -50,7 +50,7 @@ The project uses the following tools to support design, development, accessibili
   Automated testing and continuous integration via GitHub Actions enforce code quality standards before merging to `main`. Continuous deployment is powered by Vercel for preview and production builds.
 
 - **Team Communication:** Microsoft Teams  
-  Used for weekly meetings, sponsor check-ins, asynchronous team coordination, and development updates.
+  Used for weekly meetings, sponsor check-ins, asynchronous team coordination, and development updates
 
 ## Repository Structure
 - `/documentation` — Requirements engineering document, API contract specs, and future-development roadmap
