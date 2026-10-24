@@ -1,50 +1,70 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-
-import {
-  CssBaseline,
-  ThemeProvider,
-} from "@mui/material";
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import App from "./App";
 import theme from "./theme/theme";
 
-// Example call using API Client method
-// const result = createVolunteerInquiry({firstName: "Jake", lastName: "Schramm", email: "junkemail@yahoo.com", reasonForVolunteering: "Event volunteer"});
-// console.log(result);
-
 /**
- * Sandbox/MSW boundary (PBI-12).
+ * PBI-12: Mock API / sandbox integration.
  *
- * Starts the Mock Service Worker only in local development builds so that
- * frontend requests to /api/* (e.g. workshop search/details/registration)
- * are intercepted by src/mocks/handlers.js instead of hitting a real
- * backend. Production builds skip this entirely. See mocks/README.md and
- * documentation/api-contract.md for the full integration-boundary notes.
+ * Local development:
+ *   MSW is enabled by default.
+ *
+ * Deployed sandbox:
+ *   Set REACT_APP_ENABLE_MOCKS=true before building.
+ *
+ * Real production:
+ *   Leave REACT_APP_ENABLE_MOCKS unset or set it to false.
+ *
+ * REACT_APP_ENABLE_MOCKS is embedded at build time by
+ * Create React App.
  */
 async function enableMocking() {
-  if (process.env.NODE_ENV !== "development") {
+  const isDevelopment = process.env.NODE_ENV === "development";
+
+  const isSandboxBuild =
+    process.env.REACT_APP_ENABLE_MOCKS === "true";
+
+  const shouldEnableMocking = isDevelopment || isSandboxBuild;
+
+  if (!shouldEnableMocking) {
     return;
   }
 
   const { worker } = await import("./mocks/browser");
 
-  return worker.start({ onUnhandledRequest: "bypass" });
+  await worker.start({
+    onUnhandledRequest: "bypass",
+    serviceWorker: {
+      url: `${process.env.PUBLIC_URL || ""}/mockServiceWorker.js`,
+    },
+  });
 }
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
 
-enableMocking().then(() => {
-  root.render(
-    <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+enableMocking()
+  .then(() => {
+    root.render(
+      <React.StrictMode>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
+      </React.StrictMode>
+    );
+  })
+  .catch((error) => {
+    console.error("Mock Service Worker failed to start:", error);
 
-        <App />
-      </ThemeProvider>
-    </React.StrictMode>
-  );
-});
+    root.render(
+      <React.StrictMode>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
+      </React.StrictMode>
+    );
+  });
