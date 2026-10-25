@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   PaymentElement,
+  ExpressCheckoutElement,
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
@@ -108,14 +109,16 @@ const handleDonorFieldChange = (e) => {
     }
 
       // Only send non-sensitive donation data.
-      const response = await fetch('/api/v1/donations', {
+      const response = await fetch('/api/v1/donor-inquiries', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          amount: 2500,
-          currency: 'usd',
+          firstName: donor.firstName,
+          lastName: donor.lastName,
+          email: donor.email,
+          phone: '111-111-1111' // test phone number
         }),
       });
 
@@ -137,6 +140,8 @@ const handleDonorFieldChange = (e) => {
     }
   };
 
+  // ChatGPT fix: cannot put a form inside of a Box with component=form
+  // 10/24/2026: Replaced with div
   return (
     <Box
                 sx={{
@@ -150,9 +155,8 @@ const handleDonorFieldChange = (e) => {
                     </Typography>
                     
                     <form onSubmit={handleSubmit}>
-
                         <Box
-                        component="form"
+                        component="div"
                         sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
                         autoComplete="off"
                         >
@@ -187,6 +191,26 @@ const handleDonorFieldChange = (e) => {
                         />
                         </Box>
                         <Stack spacing={2}>
+
+                        {
+                            // Apple Pay - requires legal compliance to use in non-profit websites.
+                            // Change Apple Pay to 'always' only when TechSmart for Seniors is registered through the Apple Developer Program.
+                            <ExpressCheckoutElement
+                            options={{
+                            paymentMethods: {
+                                applePay: "never", 
+                                googlePay: "never",
+                                link: "never"
+                            },
+                            }}
+                            onConfirm={(event) => {
+                            // Demo only: no backend or PaymentIntent exists.
+                            event.paymentFailed({
+                                reason: "fail",
+                                message: "Demo only—no payment was processed.",
+                            });
+                            }}
+                        /> }
 
                         <PaymentElement />
 
