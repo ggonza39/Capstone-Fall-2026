@@ -2,7 +2,7 @@
 
 **Target Completion Date:** October 28, 2026  
 **Total Points:** 47 Story Points  
-**Progress:** 4 of 7 PBIs Completed (26 / 47 Points)  
+**Progress:** 5 of 7 PBIs Completed (26 / 47 Points)  
 
 ---
 
@@ -15,7 +15,7 @@ Develop an interactive, functional web prototype that implements the primary dua
 | **PBI 6** | Implement dual-path landing and navigation | 8 | Complete |
 | **PBI 7** | Implement "I Need Help" workshop discovery and ZIP search | 5 | Complete |
 | **PBI 8** | Implement workshop details and registration journey | 5 | In progress |
-| **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | In progress |
+| **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | Complete |
 | **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | In progress |
 | **PBI 11** | Implement targeted Phase 1 accessibility remediation | 8 | Complete |
 | **PBI 12** | Implement Mock API / sandbox integration and documented integration boundaries | 5 | Complete |
@@ -80,22 +80,22 @@ This PBI creates the workshop detail and registration experience within the “I
 
 ### [PBI-9] Implement "I Want to Help" Donate/Volunteer/Advocate journeys
 
-* **Status:** In progress
+* **Status:** Complete
 * **Story Points:** 8
 
 #### Description
 This PBI constructs the “I Want to Help” community-engagement journey for donors, volunteers, advocates, and community partners. The journey provides three clearly separated pathways—Donate, Volunteer, and Advocate—each with a distinct purpose and direct call to action. The Donate pathway provides access to the organization’s existing Stripe-enabled donation workflow, the Volunteer pathway directs users to the established Hands On Atlanta signup process, and the Advocate pathway presents sponsor-approved community-impact information and an appropriate path to learn more or engage when applicable content is available.
 
 #### Acceptance Criteria
-- [ ] **Engagement Landing Hub:** Build the “I Want to Help” landing experience with three clearly identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose, clear call to action, and direct route to its applicable destination without unnecessary intermediate navigation.
-- [ ] **Volunteer Pathway:** Provide a clearly identified Volunteer pathway that directs users to the organization's established Hands On Atlanta volunteer signup process. The TSLS-Web frontend shall not implement a separate volunteer application form unless a different workflow is later approved.
-- [ ] **Donate Pathway:** Provide a clearly identified Donate pathway and call to action that directs users to the organization's existing Stripe-enabled donation experience. Phase 1 shall preserve the existing Stripe workflow and shall not implement a separate custom payment-processing interface.
-- [ ] **Advocate Pathway:** Provide an Advocate section presenting sponsor-approved community-impact information and an appropriate call to action for users to learn more or engage when applicable sponsor-approved content or resources are available.
-- [ ] **External Pathway Clarity:** Clearly identify when a Donate or Volunteer action directs the user to an established external workflow or service, using understandable link or button text so the destination and purpose are clear before activation.
-- [ ] **Accessible Engagement Navigation:** Ensure the Donate, Volunteer, and Advocate pathway controls are keyboard accessible, visibly focusable, clearly labeled, and presented using understandable headings and calls to action.
-- [ ] **Impact Before Engagement:** Add a clearly visible impact section within the “I Want to Help” experience before or alongside the primary support opportunities. The section must explain who TSLS serves, highlight sponsor-provided examples of the organization’s impact or accomplishments, and communicate how volunteering, donating, sponsoring, partnering, or other community involvement supports that impact. Use sponsor-approved content and available impact information rather than creating unsupported statistics or claims.
-- [ ] **Support Us and Donate Distinction:** Clearly separate the purpose and content of the “Support Us” and “Donate” experiences. “Support Us” must serve as the broader engagement experience by explaining ways users can support TSLS through opportunities such as volunteering, partnerships, sponsorships, community involvement, and financial support. “Donate” must remain a direct call to action that leads users to the organization’s existing donation process. Review the two experiences to ensure their content, calls to action, and destinations are distinct and do not present users with interchangeable or duplicative pathways.
-- [ ] **Community Impact Visuals:** Strengthen the “I Want to Help” impact experience by incorporating available sponsor-provided photos of seniors actively participating in TSLS learning activities and, where sponsor-approved information or assets are available, recognizing applicable community partners. Images must support the surrounding impact content, include appropriate alternative text when informative, and remain readable and properly displayed across supported responsive layouts.
+- [x] **Engagement Landing Hub:** Build the “I Want to Help” landing experience with three clearly identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose, clear call to action, and direct route to its applicable destination without unnecessary intermediate navigation.
+- [x] **Volunteer Pathway:** Provide a clearly identified Volunteer pathway that directs users to the organization's established Hands On Atlanta volunteer signup process. The TSLS-Web frontend shall not implement a separate volunteer application form unless a different workflow is later approved.
+- [x] **Donate Pathway:** Provide a clearly identified Donate pathway and call to action that directs users to the organization's existing Stripe-enabled donation experience. Phase 1 shall preserve the existing Stripe workflow and shall not implement a separate custom payment-processing interface.
+- [x] **Advocate Pathway:** Provide an Advocate section presenting sponsor-approved community-impact information and an appropriate call to action for users to learn more or engage when applicable sponsor-approved content or resources are available.
+- [x] **External Pathway Clarity:** Clearly identify when a Donate or Volunteer action directs the user to an established external workflow or service, using understandable link or button text so the destination and purpose are clear before activation.
+- [x] **Accessible Engagement Navigation:** Ensure the Donate, Volunteer, and Advocate pathway controls are keyboard accessible, visibly focusable, clearly labeled, and presented using understandable headings and calls to action.
+- [x] **Impact Before Engagement:** Add a clearly visible impact section within the “I Want to Help” experience before or alongside the primary support opportunities. The section must explain who TSLS serves, highlight sponsor-provided examples of the organization’s impact or accomplishments, and communicate how volunteering, donating, sponsoring, partnering, or other community involvement supports that impact. Use sponsor-approved content and available impact information rather than creating unsupported statistics or claims.
+- [x] **Support Us and Donate Distinction:** Clearly separate the purpose and content of the “Support Us” and “Donate” experiences. “Support Us” must serve as the broader engagement experience by explaining ways users can support TSLS through opportunities such as volunteering, partnerships, sponsorships, community involvement, and financial support. “Donate” must remain a direct call to action that leads users to the organization’s existing donation process. Review the two experiences to ensure their content, calls to action, and destinations are distinct and do not present users with interchangeable or duplicative pathways.
+- [x] **Community Impact Visuals:** Strengthen the “I Want to Help” impact experience by incorporating available sponsor-provided photos of seniors actively participating in TSLS learning activities and, where sponsor-approved information or assets are available, recognizing applicable community partners. Images must support the surrounding impact content, include appropriate alternative text when informative, and remain readable and properly displayed across supported responsive layouts.
 
 ---
 
