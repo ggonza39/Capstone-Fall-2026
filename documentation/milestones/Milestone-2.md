@@ -2,7 +2,7 @@
 
 **Target Completion Date:** October 28, 2026  
 **Total Points:** 47 Story Points  
-**Progress:** 5 of 7 PBIs Completed (26 / 47 Points)  
+**Progress:** 5 of 7 PBIs Completed (34 / 47 Points)  
 
 ---
 
