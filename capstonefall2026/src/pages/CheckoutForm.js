@@ -192,13 +192,13 @@ const handleDonorFieldChange = (e) => {
                         </Box>
                         <Stack spacing={2}>
 
-                        {/* {
+                        {
                             // Apple Pay - requires legal compliance to use in non-profit websites.
-                            // Uncomment only when TechSmart for Seniors is registered through the Apple Developer Program.
+                            // Change Apple Pay to 'always' only when TechSmart for Seniors is registered through the Apple Developer Program.
                             <ExpressCheckoutElement
                             options={{
                             paymentMethods: {
-                                applePay: "always", 
+                                applePay: "never", 
                                 googlePay: "never",
                                 link: "never"
                             },
@@ -210,7 +210,7 @@ const handleDonorFieldChange = (e) => {
                                 message: "Demo only—no payment was processed.",
                             });
                             }}
-                        /> } */}
+                        /> }
 
                         <PaymentElement />
 
