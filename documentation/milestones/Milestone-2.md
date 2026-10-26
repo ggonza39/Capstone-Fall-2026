@@ -2,7 +2,7 @@
 
 **Target Completion Date:** October 28, 2026  
 **Total Points:** 47 Story Points  
-**Progress:** 5 of 7 PBIs Completed (34 / 47 Points)  
+**Progress:** 7 of 7 PBIs Completed (47 / 47 Points)  
 
 ---
 
@@ -14,9 +14,9 @@ Develop an interactive, functional web prototype that implements the primary dua
 | :--- | :--- | :---: | :---: |
 | **PBI 6** | Implement dual-path landing and navigation | 8 | Complete |
 | **PBI 7** | Implement "I Need Help" workshop discovery and ZIP search | 5 | Complete |
-| **PBI 8** | Implement workshop details and registration journey | 5 | In progress |
+| **PBI 8** | Implement workshop details and registration journey | 5 | Complete |
 | **PBI 9** | Implement "I Want to Help" Donate/Volunteer/Advocate journeys | 8 | Complete |
-| **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | In progress |
+| **PBI 10** | Implement responsive frontend layout and 150% zoom support | 8 | Complete |
 | **PBI 11** | Implement targeted Phase 1 accessibility remediation | 8 | Complete |
 | **PBI 12** | Implement Mock API / sandbox integration and documented integration boundaries | 5 | Complete |
 
@@ -62,7 +62,7 @@ This PBI builds the workshop search and discovery experience for the “I Need H
 
 ### [PBI-8] Implement workshop details and registration journey
 
-* **Status:** In progress
+* **Status:** Complete
 * **Story Points:** 5
 
 #### Description
@@ -72,7 +72,7 @@ This PBI creates the workshop detail and registration experience within the “I
 - [x] **Workshop Detail Page View:** Display the available information for the selected workshop, including applicable details such as workshop title, date/time, location, description, and other information provided by the workshop data source. The page must provide a clear path to registration.
 - [x] **Accessible Registration Interface:** Provide the applicable workshop registration fields required for the Phase 1 sandbox demonstration, using clear labels, accessible controls, and identification of required versus optional information. Final production registration fields will align with the approved workshop-registration workflow when confirmed.
 - [x] **Accessible Form Validation:** Provide clear, accessible validation and user-friendly error feedback when required information is missing or incorrectly formatted. Error messages must be programmatically associated with the applicable form controls and must not rely on color alone.
-- [ ] **Registration Submission Feedback & Next Steps:** After a successful sandbox registration submission, provide a clear confirmation that the user's information was received and explain the appropriate next step in the workshop or assistance journey. Where applicable, identify whether the user should expect additional communication or take another action. Submission feedback must remain accessible, clearly distinguishable from validation or error states, and must not imply completion of a production registration or external workflow that the sandbox does not actually perform.
+- [x] **Registration Submission Feedback & Next Steps:** After a successful sandbox registration submission, provide a clear confirmation that the user's information was received and explain the appropriate next step in the workshop or assistance journey. Where applicable, identify whether the user should expect additional communication or take another action. Submission feedback must remain accessible, clearly distinguishable from validation or error states, and must not imply completion of a production registration or external workflow that the sandbox does not actually perform.
 - [x] **Keyboard & Focus Management:** Ensure the registration journey is fully keyboard operable and that focus is appropriately managed following validation errors and successful sandbox submission so that status or confirmation information is communicated to keyboard and screen-reader users.
 - [x] **Journey Continuity:** Maintain a clear connection between the workshop selected from the discovery results, the workshop detail view, and the corresponding registration pathway so users can complete the journey without unnecessary navigation or re-entering workshop information.
 
@@ -101,7 +101,7 @@ This PBI constructs the “I Want to Help” community-engagement journey for do
 
 ### [PBI-10] Implement responsive frontend layout and 150% zoom support
 
-* **Status:** In progress
+* **Status:** Complete
 * **Story Points:** 8
 
 #### Description
@@ -114,7 +114,7 @@ This PBI implements and refines responsive frontend layouts across the TSLS-Web 
 - [x] **Scalable Layout Implementation:** Use responsive CSS techniques and appropriate relative/scalable units for typography, spacing, and layout where needed to support content reflow, responsive behavior, and 150% zoom stability.
 - [x] **Cross-Browser Responsive Verification:** Test the implemented responsive layouts and applicable zoom behavior across the project's supported modern browsers, including Chrome, Firefox, Safari, and Edge where available.
 - [x] **Baseline Responsive Defect Verification:** Verify that the previously documented responsive issues—including logo/navigation overlap and text/layout crowding associated with smaller viewports and 150% zoom—are addressed in the implemented frontend.
-- [ ] **Persistent Mobile Bottom Navigation:** Implement a fixed bottom navigation bar for supported mobile layouts that provides quick access to a small set of frequently used TSLS-Web destinations while users scroll. Each navigation option must include a recognizable icon accompanied by a short, clear text label so users can easily understand its purpose without relying on the icon alone. The bottom navigation will complement the existing hamburger navigation rather than replace it and must remain readable, keyboard accessible, visibly focusable, and positioned without obscuring essential page content or interactive controls.
+- [x] **Persistent Mobile Bottom Navigation:** Implement a fixed bottom navigation bar for supported mobile layouts that provides quick access to a small set of frequently used TSLS-Web destinations while users scroll. Each navigation option must include a recognizable icon accompanied by a short, clear text label so users can easily understand its purpose without relying on the icon alone. The bottom navigation will complement the existing hamburger navigation rather than replace it and must remain readable, keyboard accessible, visibly focusable, and positioned without obscuring essential page content or interactive controls.
 - [x] **TSLS Brand Kit Alignment:** Update the implemented TSLS-Web interface to use the typography, color palette, and applicable visual branding defined in the sponsor-provided TechSmart Learning for Seniors (TSLS) brand kit. Apply the approved branding consistently across the homepage, primary user-journey pages, forms, navigation, buttons, and other shared interface components while maintaining the project's established accessibility requirements for readability and color contrast.
 - [x] **Senior-Focused Interface Verification:** Review the implemented desktop, tablet, and mobile layouts to confirm that senior-focused accessibility is visibly reflected throughout the interface. Verify that body text and labels remain comfortably readable, important controls use large and easily identifiable interaction areas, text and controls maintain the established accessible contrast requirements, and page layouts remain clear and usable through 150% browser zoom. Correct any newly identified visual accessibility issues before completing the responsive frontend work.
 - [x] **Mobile and Tablet Sponsor Review:** Prepare and present the implemented mobile and tablet experiences for sponsor review, including the primary “I Need Technology Help” and “I Want to Help” journeys. Verify that navigation, content, forms, calls to action, and other key interactions remain clear and usable on the supported responsive layouts, and document any sponsor feedback requiring refinement before final validation.
