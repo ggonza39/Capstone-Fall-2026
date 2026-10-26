@@ -298,6 +298,12 @@ function WorkshopDetail() {
                             This was a sandbox demonstration only. No production workshop
                             registration was created.
                         </Typography>
+                        
+                        <Typography sx={{ mt: 1 }}>
+                            Next steps: No further action is required for this demonstration. To register for 
+                            an actual workshop, please use the organization's official registration process 
+                            when available.
+                        </Typography>
                     </Alert>
                 )}
             </Stack>
