@@ -1,5 +1,8 @@
 # Capstone-Fall-2026: Tech Smart Learning for Seniors – Website Modernization and Accessibility Enhancement
 
+### Live Website
+https://capstone-fall-2026.vercel.app/
+
 ## Team Name
 - Tech Smart Web Team
 
@@ -52,6 +55,6 @@ The project uses the following tools to support design, development, accessibili
 ## Repository Structure
 - `/documentation` — Requirements engineering document, API contract specs, and future-development roadmap
 - `/design` — Wireframes, user journeys, information architecture maps, and persona assets
-- `/src` — Core website source code (frontend layouts, components, admin interface)
+- `/capstonefall2026` — Core website source code (frontend layouts, components, admin interface)
 - `/mocks` — Mock API server scripts and dummy data response schemas
 - `/tests` — Usability testing logs and web accessibility test suites

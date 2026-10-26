@@ -1,10 +1,14 @@
 import { workshops, workshopSummaries } from "../mocks/data/workshops.js";
 
 /**
- * Mock workshop search service.
+ * Workshop service / adapter layer (Milestone-2 PBI-12).
  *
- * This simulates the future backend API 
- * 
+ * This is the single frontend integration boundary for workshop search,
+ * workshop details, and workshop registration. It talks to the shared
+ * /api/workshops* contract (documentation/api-contract.md) instead of
+ * importing mock data directly, so the Mock Service Worker sandbox
+ * (src/mocks/handlers.js) can be swapped for Team #30's production API
+ * later with no changes required in the pages that call these functions.
  */
 export async function getWorkshopsByZip(zipCode) {
     return new Promise((resolve, reject) => {

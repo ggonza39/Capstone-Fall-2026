@@ -549,6 +549,82 @@ HTTP 400 Bad Request
 
 ---
 
+# API 5 — Workshop Search, Details & Registration (Milestone-2 — PBI-7 / PBI-8 / PBI-12)
+
+## Status
+**SANDBOX / MOCK ONLY.** Unlike APIs 1–4 above (which describe the shared contract with backend Team #30), this API exists only inside the frontend sandbox (src/mocks/handlers.js, served through MSW). It is not part of the REQ-21–REQ-29 contract with Team #30 and is not a production workshop-location or registration system. Representative workshop data is illustrative only; the sponsor-provided workshop-location source and final production registration workflow remain to be confirmed (see Milestone-2.md, PBI-7/PBI-8).
+
+## Endpoint: GET /api/workshops
+### Purpose
+Search representative sandbox workshop data by ZIP code to demonstrate the "I Need Help" workshop-discovery journey (PBI-7) independently of the final production workshop-location source.
+
+### Query Parameters
+| Parameter | Type | Notes |
+|---|---|---|
+| zip | string | Required. Must be a valid 5-digit ZIP code. |
+| eventType | string ("In-Person" \| "Virtual") | Optional filter. |
+
+### Successful Response
+HTTP 200 OK
+```json
+{ "workshops": [ { "id": "WS-1001", "title": "Smartphone Basics for Beginners", "date": "2026-10-04", "time": "10:00", "address": "123 Main St, Marietta, GA", "distanceMiles": 3.2, "eventType": "In-Person" } ] }
+```
+An empty `workshops` array is a valid, successful response representing no matching results.
+
+### Validation Error Response
+HTTP 400 Bad Request — returned when `zip` is missing or is not a valid 5-digit ZIP code, using the standard error format above.
+
+## Endpoint: GET /api/workshops/:id
+### Purpose
+Retrieve representative sandbox workshop detail data so a user can move from search results into the workshop-detail and registration journey (PBI-8).
+
+### Successful Response
+HTTP 200 OK — returns a `workshop` object with id, title, dateTime, location, roomNumber, instructorName, accessibilityFeatures, and seatAvailability.
+
+### Not Found Response
+HTTP 404 Not Found
+```json
+{ "error": { "code": "NOT_FOUND", "message": "The requested workshop does not exist." } }
+```
+
+## Endpoint: POST /api/workshops/:id/registrations
+### Purpose
+Simulate the Phase 1 workshop-registration interaction (PBI-8) so the frontend registration journey can be demonstrated end-to-end. **This is a sandbox demonstration only and must never be presented to users as a completed production registration.**
+
+### Fields
+| Field | Type | Notes |
+|---|---|---|
+| firstName | string | Required. |
+| lastName | string | Required. |
+| email | string (email format) \| null | Required if phone is not supplied. |
+| phone | string \| null | Required if email is not supplied. |
+
+### Successful Response
+HTTP 201 Created
+```json
+{
+  "registrationId": "WR-1001",
+  "status": "received",
+  "message": "This is a sandbox registration demonstration for Milestone 2. No production workshop registration has been submitted.",
+  "workshop": { "id": "WS-1001", "title": "Smartphone Basics for Beginners", "dateTime": "2026-10-04T10:00:00-04:00", "location": "Marietta Senior Center, 123 Main St, Marietta, GA" }
+}
+```
+
+### Validation Error Response
+HTTP 400 Bad Request — standard error format, returned when firstName/lastName are missing or neither email nor phone is supplied, or email is malformed.
+
+### Workshop Not Found Response
+HTTP 404 Not Found — standard error format with `code: "NOT_FOUND"`, returned when the `:id` does not match any sandbox workshop.
+
+### Workshop Full / Unavailable Response
+HTTP 409 Conflict
+```json
+{ "error": { "code": "WORKSHOP_FULL", "message": "This workshop is full. Please choose another workshop or check back later." } }
+```
+Returned when the sandbox workshop's `seatAvailability` is 0.
+
+---
+
 ## Field Status Summary
 Fields across all four public submission endpoints are **Sponsor-Confirmed** for the baseline required/optional fields documented in this contract.
 
@@ -574,3 +650,35 @@ Before production deployment, the website team and Team #30 must agree on:
 - any backend-specific response details required by the live service.
 
 Until then, this contract is Sponsor-Confirmed for Milestone 1 frontend development and Mock API integration, with the specific items above still open.
+
+---
+
+## Phase 1 Integration Boundary (Milestone-2 — PBI-12)
+This section makes explicit which Phase 1 interactions are sandbox/mock, which preserve existing external/production workflows, and which depend on the shared REST API contract above, so the sandbox implementation is never mistaken for a completed production integration.
+
+```text
+Frontend (React pages: NeedHelp.js, Contact.js, WantToHelp.js, etc.)
+   |
+Service / Adapter Layer (src/services/*.js, src/mocks/APIClient.ts)
+   |
+Sandbox / MSW during independent development (src/mocks/handlers.js)
+   |
+Shared REST API Contract (this document)
+   |
+Production Backend (Team #30) when available
+```
+
+### A. SANDBOX / MOCK (this repository's MSW layer only — never production)
+- GET /api/workshops, GET /api/workshops/:id, POST /api/workshops/:id/registrations — workshop search, details, and registration (API 5 above). Representative data only; no production workshop-location source or registration system exists yet.
+- POST /api/v1/assistance-requests, /api/v1/contact-inquiries, /api/v1/donor-inquiries, /api/v1/volunteer-inquiries — simulate Team #30's future responses using this same contract (REQ-25, REQ-27).
+
+### B. EXISTING EXTERNAL / PRODUCTION WORKFLOW (never replaced by this mock layer)
+- Donation processing — the organization's existing Stripe-enabled donation experience (PBI-9). Not implemented, replaced, or proxied by this project.
+- Volunteer signup execution — the organization's established Hands On Atlanta signup process (PBI-9). The Volunteer Inquiry mock above (API 2) is a separate website *inquiry* form, not a replacement for Hands On Atlanta's own signup/application workflow.
+- Any current Gravity Forms/Salesforce-driven production form this project has not yet been asked to replace.
+
+### C. SHARED REST API CONTRACT / FUTURE BACKEND DEPENDENCY
+- All `/api/v1/*` endpoints documented in this contract (APIs 1–4) — once Team #30's backend is available, the website's service/adapter layer can point at the real backend using this same contract with no frontend redesign required (REQ-28).
+
+### Independent Frontend Operation
+The sandbox layer (column A) lets the "I Need Help" workshop search/detail/registration journey and the public form workflows be developed, tested, and demonstrated without waiting on Team #30's backend or CRM integration, and without modifying or depending on Team #30's pull requests.
