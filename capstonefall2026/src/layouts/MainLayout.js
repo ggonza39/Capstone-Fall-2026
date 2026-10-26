@@ -5,6 +5,8 @@ import { Outlet } from "react-router-dom";
 import SkipLink from "../components/SkipLink";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import MobileBottomNav from "../components/MobileBottomNav";
+import ScrollToTop from "../components/ScrollToTop";
 
 /**
  * PBI-6 Implement dual-path landing and navigation.
@@ -31,8 +33,15 @@ function MainLayout() {
                 display: "flex",
 
                 flexDirection: "column",
+
+                paddingBottom: {
+                    xs: "calc(80px + env(safe-area-inset-bottom))",
+                    md: 0,
+                },
             }}
         >
+            <ScrollToTop />{/* Scroll to top of page when selecting bottom navigation button */}
+
             <SkipLink /> {/* Skip to main content link for accessibility */}
 
             <Header />
@@ -49,6 +58,7 @@ function MainLayout() {
             </Box>
 
             <Footer />
+            <MobileBottomNav />
         </Box>
     );
 }
