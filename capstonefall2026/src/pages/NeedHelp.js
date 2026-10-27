@@ -9,10 +9,10 @@ import {
     CardContent,
     CircularProgress,
     Container,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogTitle,
+    // Dialog,
+    // DialogActions,
+    // DialogContent,
+    // DialogTitle,
     Grid,
     Stack,
     TextField,
@@ -30,7 +30,10 @@ import { Link as RouterLink } from "react-router-dom";
  * sandbox/MSW /api/workshops* endpoints documented in
  * documentation/api-contract.md and mocks/README.md.
  */
-import { getWorkshopsByZip, registerForWorkshop } from "../services/workshopService";
+import { getWorkshopsByZip } from "../services/workshopService";
+//import { getWorkshopById, getWorkshopsByZip, registerForWorkshop } from "../services/workshopService";
+//const EMPTY_REGISTRATION_FORM = { firstName: "", lastName: "", email: "", phone: "" };
+
 
 /**
  * PBI-8 workshop details and registration journey
@@ -63,86 +66,113 @@ function NeedHelp() {
     const [searchError, setSearchError] = useState("");
 
     // Registration dialog state (PBI-12 sandbox registration journey). null = dialog closed.
-    const [registration, setRegistration] = useState(null);
+    //const [registration, setRegistration] = useState(null);
 
-    const closeRegistrationDialog = () => setRegistration(null);
+    // const openRegistrationDialog = async (workshopSummary) => {
+    //     setRegistration({
+    //         workshopId: workshopSummary.id,
+    //         workshopTitle: workshopSummary.title,
+    //         status: "loading",
+    //         detail: null,
+    //         formValues: EMPTY_REGISTRATION_FORM,
+    //         fieldErrors: {},
+    //         submitError: "",
+    //         result: null,
+    //     });
 
-    const handleRegistrationFieldChange = (field) => (event) => {
-        const { value } = event.target;
+    //     try {
+    //         const detail = await getWorkshopById(workshopSummary.id);
 
-        setRegistration((prev) =>
-            prev
-                ? {
-                    ...prev,
-                    formValues: { ...prev.formValues, [field]: value },
-                    fieldErrors: { ...prev.fieldErrors, [field]: undefined },
-                }
-                : prev
-        );
-    };
+    //         setRegistration((prev) =>
+    //             prev && prev.workshopId === workshopSummary.id
+    //                 ? { ...prev, detail, status: detail.seatAvailability > 0 ? "ready" : "full" }
+    //                 : prev
+    //         );
+    //     } catch (err) {
+    //         setRegistration((prev) =>
+    //             prev && prev.workshopId === workshopSummary.id ? { ...prev, status: "detail-error" } : prev
+    //         );
+    //     }
+    // };
 
-    const handleRegistrationSubmit = async (event) => {
-        event.preventDefault();
+    //const closeRegistrationDialog = () => setRegistration(null);
 
-        if (!registration) {
-            return;
-        }
+    // const handleRegistrationFieldChange = (field) => (event) => {
+    //     const { value } = event.target;
 
-        const { formValues } = registration;
-        const fieldErrors = {};
+    //     setRegistration((prev) =>
+    //         prev
+    //             ? {
+    //                 ...prev,
+    //                 formValues: { ...prev.formValues, [field]: value },
+    //                 fieldErrors: { ...prev.fieldErrors, [field]: undefined },
+    //             }
+    //             : prev
+    //     );
+    // };
 
-        if (!formValues.firstName.trim()) {
-            fieldErrors.firstName = "First name is required.";
-        }
+    // const handleRegistrationSubmit = async (event) => {
+    //     event.preventDefault();
 
-        if (!formValues.lastName.trim()) {
-            fieldErrors.lastName = "Last name is required.";
-        }
+    //     if (!registration) {
+    //         return;
+    //     }
 
-        if (!formValues.email.trim() && !formValues.phone.trim()) {
-            fieldErrors.email = "Provide an email address or phone number.";
-        }
+    //     const { formValues } = registration;
+    //     const fieldErrors = {};
 
-        if (Object.keys(fieldErrors).length > 0) {
-            setRegistration((prev) => (prev ? { ...prev, fieldErrors } : prev));
-            return;
-        }
+    //     if (!formValues.firstName.trim()) {
+    //         fieldErrors.firstName = "First name is required.";
+    //     }
 
-        setRegistration((prev) => (prev ? { ...prev, status: "submitting", submitError: "" } : prev));
+    //     if (!formValues.lastName.trim()) {
+    //         fieldErrors.lastName = "Last name is required.";
+    //     }
 
-        try {
-            const result = await registerForWorkshop(registration.workshopId, {
-                firstName: formValues.firstName,
-                lastName: formValues.lastName,
-                email: formValues.email || null,
-                phone: formValues.phone || null,
-            });
+    //     if (!formValues.email.trim() && !formValues.phone.trim()) {
+    //         fieldErrors.email = "Provide an email address or phone number.";
+    //     }
 
-            setRegistration((prev) => (prev ? { ...prev, status: "success", result } : prev));
-        } catch (err) {
-            const apiError = err?.response?.data?.error;
+    //     if (Object.keys(fieldErrors).length > 0) {
+    //         setRegistration((prev) => (prev ? { ...prev, fieldErrors } : prev));
+    //         return;
+    //     }
 
-            if (apiError?.code === "WORKSHOP_FULL") {
-                setRegistration((prev) => (prev ? { ...prev, status: "full" } : prev));
-            } else if (apiError?.code === "NOT_FOUND") {
-                setRegistration((prev) => (prev ? { ...prev, status: "detail-error" } : prev));
-            } else if (apiError?.fields) {
-                setRegistration((prev) =>
-                    prev ? { ...prev, status: "ready", fieldErrors: apiError.fields } : prev
-                );
-            } else {
-                setRegistration((prev) =>
-                    prev
-                        ? {
-                            ...prev,
-                            status: "ready",
-                            submitError: "We could not submit your sandbox registration. Please try again.",
-                        }
-                        : prev
-                );
-            }
-        }
-    };
+    //     setRegistration((prev) => (prev ? { ...prev, status: "submitting", submitError: "" } : prev));
+
+    //     try {
+    //         const result = await registerForWorkshop(registration.workshopId, {
+    //             firstName: formValues.firstName,
+    //             lastName: formValues.lastName,
+    //             email: formValues.email || null,
+    //             phone: formValues.phone || null,
+    //         });
+
+    //         setRegistration((prev) => (prev ? { ...prev, status: "success", result } : prev));
+    //     } catch (err) {
+    //         const apiError = err?.response?.data?.error;
+
+    //         if (apiError?.code === "WORKSHOP_FULL") {
+    //             setRegistration((prev) => (prev ? { ...prev, status: "full" } : prev));
+    //         } else if (apiError?.code === "NOT_FOUND") {
+    //             setRegistration((prev) => (prev ? { ...prev, status: "detail-error" } : prev));
+    //         } else if (apiError?.fields) {
+    //             setRegistration((prev) =>
+    //                 prev ? { ...prev, status: "ready", fieldErrors: apiError.fields } : prev
+    //             );
+    //         } else {
+    //             setRegistration((prev) =>
+    //                 prev
+    //                     ? {
+    //                         ...prev,
+    //                         status: "ready",
+    //                         submitError: "We could not submit your sandbox registration. Please try again.",
+    //                     }
+    //                     : prev
+    //             );
+    //         }
+    //     }
+    // };
 
     // Handle the search form submission
     const handleSearch = async (event) => {
@@ -367,7 +397,7 @@ function NeedHelp() {
             </Box>
 
             {/* Sandbox Registration Dialog (PBI-8 / PBI-12) */}
-            <Dialog
+            {/* <Dialog
                 open={Boolean(registration)}
                 onClose={closeRegistrationDialog}
                 aria-labelledby="registration-dialog-title"
@@ -488,7 +518,7 @@ function NeedHelp() {
                         </DialogActions>
                     </>
                 )}
-            </Dialog>
+            </Dialog> */}
         </>
     );
 }
