@@ -145,6 +145,7 @@ const theme = createTheme({
         MuiButton: {
             defaultProps: {
                 disableElevation: true,
+                disableRipple: true,
             },
 
             styleOverrides: {
@@ -153,6 +154,11 @@ const theme = createTheme({
                     minWidth: "48px",
                     padding: "10px 20px",
                     fontWeight: 700,
+
+                    "&:focus-visible": {
+                        outline: "3px solid #000000",
+                        outlineOffset: "4px",
+                    },
                 },
             },
         },
@@ -180,6 +186,11 @@ const theme = createTheme({
                 root: {
                     minHeight: "48px",
                     fontSize: "1.125rem",
+
+                    "&.Mui-focused": {
+                        outline: "3px solid #000000",
+                        outlineOffset: "4px",
+                    },
                 },
             },
         },

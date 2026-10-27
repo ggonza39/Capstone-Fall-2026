@@ -12,7 +12,8 @@ import WantToHelp from "./pages/WantToHelp";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
+import WorkshopDetail from "./pages/WorkshopDetail";
+import Donate from "./pages/Donate";
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
             element={<NeedHelp />}
           />
 
+          <Route 
+            path="/workshops/:id"
+            element={<WorkshopDetail />}
+          />
+
           <Route
             path="/want-to-help"
             element={<WantToHelp />}
@@ -40,6 +46,11 @@ function App() {
           <Route
             path="/resources"
             element={<Resources />}
+          />
+
+          <Route
+            path="/donate"
+            element={<Donate />}
           />
 
           <Route

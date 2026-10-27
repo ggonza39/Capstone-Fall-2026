@@ -1,19 +1,22 @@
 import { Box, Button, Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import CampaignIcon from "@mui/icons-material/Campaign";
-
+import ImpactSection from "../components/ImpactSection";
+import PartnersSection from "../components/PartnersSection";
 /**
  * PBI-9 Implement "I Want to Help" Donate/Volunteer/Advocate journeys
- * 
+ *
  * Engagement Landing Hub: Build the “I Want to Help” landing experience with three clearly
- * identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose, 
- * clear call to action, and direct route to its applicable destination without unnecessary 
+ * identified pathways—Donate, Volunteer, and Advocate—each providing a distinct purpose,
+ * clear call to action, and direct route to its applicable destination without unnecessary
  * intermediate navigation.
- * 
+ *
  */
 function WantToHelp() {
+    const navigate = useNavigate();
     return (
         <>
             <Box
@@ -42,12 +45,16 @@ function WantToHelp() {
                 </Container>
             </Box>
 
+            {/* Component Impact */}
+            <ImpactSection />
+
             {/* Help Options */}
 
             <Box
                 component="section"
                 aria-labelledby="help-options-heading"
                 sx={{
+                    backgroundColor: "#F4F8FC",
                     py: {
                         xs: 6,
                         md: 8,
@@ -110,7 +117,9 @@ function WantToHelp() {
                                     </Typography>
 
                                     {/* Sponsor wants users to use the organization's existing Stripe payment workflow. */}
-                                    <Button variant="contained">Donate</Button>
+                                    <Button variant="contained" 
+                                        onClick={() => navigate("/donate")
+                                        }>Donate</Button>
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -155,7 +164,17 @@ function WantToHelp() {
                                     </Typography>
 
                                     {/* Sponsor wants users to be directed to Hands on Atlanta */}
-                                    <Button variant="contained">Volunteer</Button>
+                                    <Button
+                                        variant="contained"
+                                        target="_blank"
+                                        href="https://volunteer.handsonatlanta.org/"
+                                        onClick={() => {
+                                            alert('You will now be redirected and external network.');
+                                        }}
+
+                                    >
+                                        Register with Hands on Atlanta
+                                    </Button>
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -202,13 +221,17 @@ function WantToHelp() {
                                     {/* Sponsor wants explain the organization's community impact 
                                         and provide an engagement path when sponsor-approved content 
                                         becomes available */}
-                                    <Button variant="contained">Learn About Our Impact</Button>
+                                    <Button variant="contained" href="#community-impact">Learn About Our Impact</Button>
                                 </CardContent>
                             </Card>
                         </Grid>
                     </Grid>
                 </Container>
             </Box>
+
+            {/* Component Partners */}
+            <PartnersSection />
+
         </>
     );
 }

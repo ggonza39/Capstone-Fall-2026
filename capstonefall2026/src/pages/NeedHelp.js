@@ -9,10 +9,10 @@ import {
     CardContent,
     CircularProgress,
     Container,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogTitle,
+    // Dialog,
+    // DialogActions,
+    // DialogContent,
+    // DialogTitle,
     Grid,
     Stack,
     TextField,
@@ -23,15 +23,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { Link as RouterLink } from "react-router-dom";
 
 /* Workshop search/detail/registration integration boundary (PBI-12):
  * this page calls the workshopService adapter, which talks to the
  * sandbox/MSW /api/workshops* endpoints documented in
  * documentation/api-contract.md and mocks/README.md.
  */
-import { getWorkshopById, getWorkshopsByZip, registerForWorkshop } from "../services/workshopService";
+import { getWorkshopsByZip } from "../services/workshopService";
+//import { getWorkshopById, getWorkshopsByZip, registerForWorkshop } from "../services/workshopService";
+//const EMPTY_REGISTRATION_FORM = { firstName: "", lastName: "", email: "", phone: "" };
 
-const EMPTY_REGISTRATION_FORM = { firstName: "", lastName: "", email: "", phone: "" };
 
 /**
  * PBI-8 workshop details and registration journey
@@ -64,113 +66,113 @@ function NeedHelp() {
     const [searchError, setSearchError] = useState("");
 
     // Registration dialog state (PBI-12 sandbox registration journey). null = dialog closed.
-    const [registration, setRegistration] = useState(null);
+    //const [registration, setRegistration] = useState(null);
 
-    const openRegistrationDialog = async (workshopSummary) => {
-        setRegistration({
-            workshopId: workshopSummary.id,
-            workshopTitle: workshopSummary.title,
-            status: "loading",
-            detail: null,
-            formValues: EMPTY_REGISTRATION_FORM,
-            fieldErrors: {},
-            submitError: "",
-            result: null,
-        });
+    // const openRegistrationDialog = async (workshopSummary) => {
+    //     setRegistration({
+    //         workshopId: workshopSummary.id,
+    //         workshopTitle: workshopSummary.title,
+    //         status: "loading",
+    //         detail: null,
+    //         formValues: EMPTY_REGISTRATION_FORM,
+    //         fieldErrors: {},
+    //         submitError: "",
+    //         result: null,
+    //     });
 
-        try {
-            const detail = await getWorkshopById(workshopSummary.id);
+    //     try {
+    //         const detail = await getWorkshopById(workshopSummary.id);
 
-            setRegistration((prev) =>
-                prev && prev.workshopId === workshopSummary.id
-                    ? { ...prev, detail, status: detail.seatAvailability > 0 ? "ready" : "full" }
-                    : prev
-            );
-        } catch (err) {
-            setRegistration((prev) =>
-                prev && prev.workshopId === workshopSummary.id ? { ...prev, status: "detail-error" } : prev
-            );
-        }
-    };
+    //         setRegistration((prev) =>
+    //             prev && prev.workshopId === workshopSummary.id
+    //                 ? { ...prev, detail, status: detail.seatAvailability > 0 ? "ready" : "full" }
+    //                 : prev
+    //         );
+    //     } catch (err) {
+    //         setRegistration((prev) =>
+    //             prev && prev.workshopId === workshopSummary.id ? { ...prev, status: "detail-error" } : prev
+    //         );
+    //     }
+    // };
 
-    const closeRegistrationDialog = () => setRegistration(null);
+    //const closeRegistrationDialog = () => setRegistration(null);
 
-    const handleRegistrationFieldChange = (field) => (event) => {
-        const { value } = event.target;
+    // const handleRegistrationFieldChange = (field) => (event) => {
+    //     const { value } = event.target;
 
-        setRegistration((prev) =>
-            prev
-                ? {
-                    ...prev,
-                    formValues: { ...prev.formValues, [field]: value },
-                    fieldErrors: { ...prev.fieldErrors, [field]: undefined },
-                }
-                : prev
-        );
-    };
+    //     setRegistration((prev) =>
+    //         prev
+    //             ? {
+    //                 ...prev,
+    //                 formValues: { ...prev.formValues, [field]: value },
+    //                 fieldErrors: { ...prev.fieldErrors, [field]: undefined },
+    //             }
+    //             : prev
+    //     );
+    // };
 
-    const handleRegistrationSubmit = async (event) => {
-        event.preventDefault();
+    // const handleRegistrationSubmit = async (event) => {
+    //     event.preventDefault();
 
-        if (!registration) {
-            return;
-        }
+    //     if (!registration) {
+    //         return;
+    //     }
 
-        const { formValues } = registration;
-        const fieldErrors = {};
+    //     const { formValues } = registration;
+    //     const fieldErrors = {};
 
-        if (!formValues.firstName.trim()) {
-            fieldErrors.firstName = "First name is required.";
-        }
+    //     if (!formValues.firstName.trim()) {
+    //         fieldErrors.firstName = "First name is required.";
+    //     }
 
-        if (!formValues.lastName.trim()) {
-            fieldErrors.lastName = "Last name is required.";
-        }
+    //     if (!formValues.lastName.trim()) {
+    //         fieldErrors.lastName = "Last name is required.";
+    //     }
 
-        if (!formValues.email.trim() && !formValues.phone.trim()) {
-            fieldErrors.email = "Provide an email address or phone number.";
-        }
+    //     if (!formValues.email.trim() && !formValues.phone.trim()) {
+    //         fieldErrors.email = "Provide an email address or phone number.";
+    //     }
 
-        if (Object.keys(fieldErrors).length > 0) {
-            setRegistration((prev) => (prev ? { ...prev, fieldErrors } : prev));
-            return;
-        }
+    //     if (Object.keys(fieldErrors).length > 0) {
+    //         setRegistration((prev) => (prev ? { ...prev, fieldErrors } : prev));
+    //         return;
+    //     }
 
-        setRegistration((prev) => (prev ? { ...prev, status: "submitting", submitError: "" } : prev));
+    //     setRegistration((prev) => (prev ? { ...prev, status: "submitting", submitError: "" } : prev));
 
-        try {
-            const result = await registerForWorkshop(registration.workshopId, {
-                firstName: formValues.firstName,
-                lastName: formValues.lastName,
-                email: formValues.email || null,
-                phone: formValues.phone || null,
-            });
+    //     try {
+    //         const result = await registerForWorkshop(registration.workshopId, {
+    //             firstName: formValues.firstName,
+    //             lastName: formValues.lastName,
+    //             email: formValues.email || null,
+    //             phone: formValues.phone || null,
+    //         });
 
-            setRegistration((prev) => (prev ? { ...prev, status: "success", result } : prev));
-        } catch (err) {
-            const apiError = err?.response?.data?.error;
+    //         setRegistration((prev) => (prev ? { ...prev, status: "success", result } : prev));
+    //     } catch (err) {
+    //         const apiError = err?.response?.data?.error;
 
-            if (apiError?.code === "WORKSHOP_FULL") {
-                setRegistration((prev) => (prev ? { ...prev, status: "full" } : prev));
-            } else if (apiError?.code === "NOT_FOUND") {
-                setRegistration((prev) => (prev ? { ...prev, status: "detail-error" } : prev));
-            } else if (apiError?.fields) {
-                setRegistration((prev) =>
-                    prev ? { ...prev, status: "ready", fieldErrors: apiError.fields } : prev
-                );
-            } else {
-                setRegistration((prev) =>
-                    prev
-                        ? {
-                            ...prev,
-                            status: "ready",
-                            submitError: "We could not submit your sandbox registration. Please try again.",
-                        }
-                        : prev
-                );
-            }
-        }
-    };
+    //         if (apiError?.code === "WORKSHOP_FULL") {
+    //             setRegistration((prev) => (prev ? { ...prev, status: "full" } : prev));
+    //         } else if (apiError?.code === "NOT_FOUND") {
+    //             setRegistration((prev) => (prev ? { ...prev, status: "detail-error" } : prev));
+    //         } else if (apiError?.fields) {
+    //             setRegistration((prev) =>
+    //                 prev ? { ...prev, status: "ready", fieldErrors: apiError.fields } : prev
+    //             );
+    //         } else {
+    //             setRegistration((prev) =>
+    //                 prev
+    //                     ? {
+    //                         ...prev,
+    //                         status: "ready",
+    //                         submitError: "We could not submit your sandbox registration. Please try again.",
+    //                     }
+    //                     : prev
+    //             );
+    //         }
+    //     }
+    // };
 
     // Handle the search form submission
     const handleSearch = async (event) => {
@@ -179,6 +181,7 @@ function NeedHelp() {
         if (!/^\d{5}$/.test(zipCode)) {
             setError(true);
             setSearched(false);
+            setSearchError("");
             return;
         }
 
@@ -214,7 +217,7 @@ function NeedHelp() {
             >
                 <Container maxWidth="lg">
                     <Typography variant="h1" component="h1" gutterBottom>
-                        I Need Help
+                        I Need Technology Help
                     </Typography>
 
                     <Typography
@@ -298,129 +301,103 @@ function NeedHelp() {
                     </Box>
 
                     {loading && (
-                        <Stack direction="row" spacing={2} alignItems="center" sx={{ mt: 3 }} role="status">
+                        <Stack
+                            direction="row"
+                            spacing={2}
+                            alignItems="center"
+                            role="status"
+                            sx={{ mt: 3 }}
+                        >
                             <CircularProgress size={24} />
-
-                            <Typography>Searching for workshops near {zipCode}...</Typography>
+                            <Typography>
+                                Searching for workshops near {zipCode}...
+                            </Typography>
                         </Stack>
                     )}
 
-                    {/* Sample Data Search Results */}
+                    {searchError && (
+                        <Alert severity="error" sx={{ mt: 3 }}>
+                            {searchError}
+                        </Alert>
+                    )}
 
-                    {(searched || searchError) && (
-                        <Box
-                            component="section"
-                            aria-labelledby="results-heading"
-                            sx={{
-                                mt: 6,
-                            }}
-                        >
-                            {searchError && (
-                                <Alert severity="error" sx={{ mb: 3 }}>
-                                    {searchError}
+                    {searched && (
+                        <Box component="section" aria-labelledby="results-heading" sx={{ mt: 6 }}>
+                            <Typography id="results-heading" variant="h2" component="h2" gutterBottom>
+                                Workshops Near {zipCode}
+                            </Typography>
+
+                            <Alert severity="info" sx={{ mb: 3 }}>
+                                These are sample workshop results for frontend testing.
+                            </Alert>
+
+                            {!searchError && workshops.length === 0 && (
+                                <Alert severity="info" sx={{ mt: 3 }}>
+                                    No workshops were found near {zipCode}. Try a different ZIP code or check back
+                                    later.
                                 </Alert>
                             )}
 
-                            {searched && (
-                                <>
-                                    <Typography id="results-heading" variant="h2" component="h2" gutterBottom>
-                                        Workshops Near {zipCode}
-                                    </Typography>
+                            <Grid container spacing={3}>
+                                {workshops.map((workshop) => (
+                                    <Grid key={workshop.id} size={{ xs: 12, md: 6 }}>
+                                        <Card variant="outlined" sx={{ height: "100%" }}>
+                                            <CardContent>
+                                                <Typography variant="h3" component="h3" gutterBottom>
+                                                    {workshop.title}
+                                                </Typography>
 
-                                    <Alert
-                                        severity="info"
-                                        sx={{
-                                            mb: 3,
-                                        }}
-                                    >
-                                        These are sample workshop results for frontend testing.
-                                    </Alert>
+                                                <Stack spacing={2} sx={{ mb: 3 }}>
+                                                    {/* Location */}
+                                                    <Stack direction="row" spacing={1} alignItems="flex-start">
+                                                        <LocationOnIcon color="primary" aria-hidden="true" />
+                                                        <Typography>{workshop.address}</Typography>
+                                                    </Stack>
 
-                                    {!searchError && workshops.length === 0 && (
-                                        <Alert severity="info" sx={{ mt: 3 }}>
-                                            No workshops were found near {zipCode}. Try a different ZIP code or check back
-                                            later.
-                                        </Alert>
-                                    )}
+                                                    {/* Date */}
+                                                    <Stack direction="row" spacing={1} alignItems="center">
+                                                        <CalendarMonthIcon color="primary" aria-hidden="true" />
+                                                        <Typography>{workshop.date}</Typography>
+                                                    </Stack>
 
-                                    <Grid container spacing={3}>
-                                        {workshops.map((workshop) => (
-                                            <Grid
-                                                key={workshop.id}
-                                                size={{
-                                                    xs: 12,
-                                                    md: 6,
-                                                }}
-                                            >
-                                                <Card
-                                                    variant="outlined"
-                                                    sx={{
-                                                        height: "100%",
-                                                    }}
-                                                >
-                                                    <CardContent>
-                                                        <Typography variant="h3" component="h3" gutterBottom>
-                                                            {workshop.title}
+                                                    {/* Time */}
+                                                    <Stack direction="row" spacing={1} alignItems="center">
+                                                        <AccessTimeIcon color="primary" aria-hidden="true" />
+                                                        <Typography>{workshop.time}</Typography>
+                                                    </Stack>
+
+                                                    {/* Event Type */}
+                                                    <Typography>
+                                                        <strong>Type:</strong> {workshop.eventType}
+                                                    </Typography>
+
+                                                    {/* Distance */}
+                                                    {workshop.eventType !== "Virtual" && (
+                                                        <Typography>
+                                                            <strong>Distance:</strong> {workshop.distanceMiles} miles
                                                         </Typography>
+                                                    )}
+                                                </Stack>
 
-                                                        <Stack spacing={2} sx={{ mb: 3 }}>
-                                                            {/* Location */}
-                                                            <Stack direction="row" spacing={1} alignItems="flex-start">
-                                                                <LocationOnIcon color="primary" aria-hidden="true" />
-
-                                                                <Typography>{workshop.address}</Typography>
-                                                            </Stack>
-
-                                                            {/* Date */}
-                                                            <Stack direction="row" spacing={1} alignItems="center">
-                                                                <CalendarMonthIcon color="primary" aria-hidden="true" />
-
-                                                                <Typography>{workshop.date}</Typography>
-                                                            </Stack>
-
-                                                            {/* Time */}
-                                                            <Stack direction="row" spacing={1} alignItems="center">
-                                                                <AccessTimeIcon color="primary" aria-hidden="true" />
-
-                                                                <Typography>{workshop.time}</Typography>
-                                                            </Stack>
-
-                                                            {/* Event Type */}
-                                                            <Typography>
-                                                                <strong>Type:</strong> {workshop.eventType}
-                                                            </Typography>
-
-                                                            {/* Distance 
-                                                    * Zip code is not set up to calculate distance yet
-                                                    *
-                                                    */}
-                                                            {workshop.eventType !== "Virtual" && (
-                                                                <Typography>
-                                                                    <strong>Distance:</strong> {workshop.distanceMiles} miles
-                                                                </Typography>
-                                                            )}
-                                                        </Stack>
-
-                                                        <Button
-                                                            variant="contained"
-                                                            onClick={() => openRegistrationDialog(workshop)}
-                                                        >
-                                                            Register for Workshop
-                                                        </Button>
-                                                    </CardContent>
-                                                </Card>
-                                            </Grid>
-                                        ))}
+                                                <Button
+                                                    variant="contained"
+                                                    component={RouterLink}
+                                                    to={`/workshops/${workshop.id}`}
+                                                >
+                                                    View Workshop Details
+                                                </Button>
+                                            </CardContent>
+                                        </Card>
                                     </Grid>
-                                </>
-                            )}
+                                ))}
+                            </Grid>
                         </Box>
                     )}
                 </Container>
             </Box>
 
             {/* Sandbox Registration Dialog (PBI-8 / PBI-12) */}
-            <Dialog
+            {/* <Dialog
                 open={Boolean(registration)}
                 onClose={closeRegistrationDialog}
                 aria-labelledby="registration-dialog-title"
@@ -541,7 +518,7 @@ function NeedHelp() {
                         </DialogActions>
                     </>
                 )}
-            </Dialog>
+            </Dialog> */}
         </>
     );
 }
