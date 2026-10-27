@@ -299,118 +299,78 @@ function NeedHelp() {
                         </Stack>
                     </Box>
 
+                    {loading && (
+                        <Stack
+                            direction="row"
+                            spacing={2}
+                            alignItems="center"
+                            role="status"
+                            sx={{ mt: 3 }}
+                        >
+                            <CircularProgress size={24} />
+                            <Typography>
+                                Searching for workshops near {zipCode}...
+                            </Typography>
+                        </Stack>
+                    )}
+
                     {searchError && (
                         <Alert severity="error" sx={{ mt: 3 }}>
                             {searchError}
                         </Alert>
                     )}
 
-                    {/* Sample Data Search Results */}
-
-                    {(searched || searchError) && (
-                        <Box
-                            component="section"
-                            aria-labelledby="results-heading"
-                            sx={{
-                                mt: 6,
-                            }}
-                        >
+                    {searched && (
+                        <Box component="section" aria-labelledby="results-heading" sx={{ mt: 6 }}>
                             <Typography id="results-heading" variant="h2" component="h2" gutterBottom>
                                 Workshops Near {zipCode}
                             </Typography>
 
-                            {workshops.length > 0 && ( 
-                            <Alert
-                                severity="info"
-                                sx={{
-                                    mb: 3,
-                                }}
-                            >
+                            <Alert severity="info" sx={{ mb: 3 }}>
                                 These are sample workshop results for frontend testing.
                             </Alert>
-                            )}
 
-                            
-
-                            {workshops.length === 0 && (
-                                <Alert severity="info" sx={{ mb: 3 }}>
-                                    No workshops were found for this ZIP code. Please try another ZIP code.
+                            {!searchError && workshops.length === 0 && (
+                                <Alert severity="info" sx={{ mt: 3 }}>
+                                    No workshops were found near {zipCode}. Try a different ZIP code or check back
+                                    later.
                                 </Alert>
                             )}
 
-                            {searched && (
-                                <>
-                                    <Typography id="results-heading" variant="h2" component="h2" gutterBottom>
-                                        Workshops Near {zipCode}
-                                    </Typography>
+                            <Grid container spacing={3}>
+                                {workshops.map((workshop) => (
+                                    <Grid key={workshop.id} size={{ xs: 12, md: 6 }}>
+                                        <Card variant="outlined" sx={{ height: "100%" }}>
+                                            <CardContent>
+                                                <Typography variant="h3" component="h3" gutterBottom>
+                                                    {workshop.title}
+                                                </Typography>
 
-                                    <Alert
-                                        severity="info"
-                                        sx={{
-                                            mb: 3,
-                                        }}
-                                    >
-                                        These are sample workshop results for frontend testing.
-                                    </Alert>
+                                                <Stack spacing={2} sx={{ mb: 3 }}>
+                                                    {/* Location */}
+                                                    <Stack direction="row" spacing={1} alignItems="flex-start">
+                                                        <LocationOnIcon color="primary" aria-hidden="true" />
+                                                        <Typography>{workshop.address}</Typography>
+                                                    </Stack>
 
-                                    {!searchError && workshops.length === 0 && (
-                                        <Alert severity="info" sx={{ mt: 3 }}>
-                                            No workshops were found near {zipCode}. Try a different ZIP code or check back
-                                            later.
-                                        </Alert>
-                                    )}
+                                                    {/* Date */}
+                                                    <Stack direction="row" spacing={1} alignItems="center">
+                                                        <CalendarMonthIcon color="primary" aria-hidden="true" />
+                                                        <Typography>{workshop.date}</Typography>
+                                                    </Stack>
 
-                                    <Grid container spacing={3}>
-                                        {workshops.map((workshop) => (
-                                            <Grid
-                                                key={workshop.id}
-                                                size={{
-                                                    xs: 12,
-                                                    md: 6,
-                                                }}
-                                            >
-                                                <Card
-                                                    variant="outlined"
-                                                    sx={{
-                                                        height: "100%",
-                                                    }}
-                                                >
-                                                    <CardContent>
-                                                        <Typography variant="h3" component="h3" gutterBottom>
-                                                            {workshop.title}
-                                                        </Typography>
+                                                    {/* Time */}
+                                                    <Stack direction="row" spacing={1} alignItems="center">
+                                                        <AccessTimeIcon color="primary" aria-hidden="true" />
+                                                        <Typography>{workshop.time}</Typography>
+                                                    </Stack>
 
-                                                        <Stack spacing={2} sx={{ mb: 3 }}>
-                                                            {/* Location */}
-                                                            <Stack direction="row" spacing={1} alignItems="flex-start">
-                                                                <LocationOnIcon color="primary" aria-hidden="true" />
+                                                    {/* Event Type */}
+                                                    <Typography>
+                                                        <strong>Type:</strong> {workshop.eventType}
+                                                    </Typography>
 
-                                                                <Typography>{workshop.address}</Typography>
-                                                            </Stack>
-
-                                                            {/* Date */}
-                                                            <Stack direction="row" spacing={1} alignItems="center">
-                                                                <CalendarMonthIcon color="primary" aria-hidden="true" />
-
-                                                                <Typography>{workshop.date}</Typography>
-                                                            </Stack>
-
-                                                            {/* Time */}
-                                                            <Stack direction="row" spacing={1} alignItems="center">
-                                                                <AccessTimeIcon color="primary" aria-hidden="true" />
-
-                                                                <Typography>{workshop.time}</Typography>
-                                                            </Stack>
-
-                                                            {/* Event Type */}
-                                                            <Typography>
-                                                                <strong>Type:</strong> {workshop.eventType}
-                                                            </Typography>
-
-                                                            {/* Distance 
-                                                    * Zip code is not set up to calculate distance yet
-                                                    *
-                                                    */}
+                                                    {/* Distance */}
                                                     {workshop.eventType !== "Virtual" && (
                                                         <Typography>
                                                             <strong>Distance:</strong> {workshop.distanceMiles} miles
@@ -418,16 +378,18 @@ function NeedHelp() {
                                                     )}
                                                 </Stack>
 
-                                                <Button variant="contained"
-                                                component={RouterLink}
-                                                to={`/workshops/${workshop.id}`}>
+                                                <Button
+                                                    variant="contained"
+                                                    component={RouterLink}
+                                                    to={`/workshops/${workshop.id}`}
+                                                >
                                                     View Workshop Details
                                                 </Button>
                                             </CardContent>
                                         </Card>
                                     </Grid>
-                                </>
-                            )}
+                                ))}
+                            </Grid>
                         </Box>
                     )}
                 </Container>

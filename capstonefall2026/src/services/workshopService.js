@@ -1,5 +1,4 @@
-import { workshops, workshopSummaries } from "../mocks/data/workshops.js";
-
+import { apiRequest } from "../mocks/APIClient";
 /**
  * Workshop service / adapter layer (Milestone-2 PBI-12).
  *
@@ -10,35 +9,32 @@ import { workshops, workshopSummaries } from "../mocks/data/workshops.js";
  * (src/mocks/handlers.js) can be swapped for Team #30's production API
  * later with no changes required in the pages that call these functions.
  */
-export async function getWorkshopsByZip(zipCode) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
+export async function getWorkshopsByZip(zipCode, eventType) {
+    const params = new URLSearchParams({ zip: zipCode });
 
-            if (zipCode === "88888") {
-                reject(new Error("Mock workshop service failure"));
-                return;
-            }
+    if (eventType) {
+        params.set("eventType", eventType);
+    }
 
-            if (zipCode === "99999") {
-                resolve({
-                    zipCode, workshops: [],
-                });
-                return;
-            }
+    const data = await apiRequest(`/workshops?${params.toString()}`, "GET");
 
-            resolve({
-                zipCode,
-                workshops: workshopSummaries,
-            });
-        }, 500);
-    });
+    return {
+        zipCode,
+         workshops: data.workshops,
+    };
 }
 
-export async function getWorkshopById(id) {
-    const workshop = workshops.find((item) => item.id === id);
-    
-    if (!workshop) {
-        throw new Error("Workshop not found");
-    }
-    return workshop;
+export async function getWorkshopById(workshopId) {
+    const data = await apiRequest(`/workshops/${workshopId}`, "GET");
+
+    return data.workshop;
+}
+
+/**
+ * Submits the Phase 1 sandbox workshop-registration demonstration
+ * (PBI-8 / PBI-12). This is NOT a production registration workflow — see
+ * the response `message` field and documentation/api-contract.md.
+ */
+export async function registerForWorkshop(workshopId, registration) {
+    return apiRequest(`/workshops/${workshopId}/registrations`, "POST", registration);
 }
