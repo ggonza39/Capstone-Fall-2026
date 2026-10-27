@@ -30,9 +30,7 @@ import { Link as RouterLink } from "react-router-dom";
  * sandbox/MSW /api/workshops* endpoints documented in
  * documentation/api-contract.md and mocks/README.md.
  */
-import { getWorkshopById, getWorkshopsByZip, registerForWorkshop } from "../services/workshopService";
-
-const EMPTY_REGISTRATION_FORM = { firstName: "", lastName: "", email: "", phone: "" };
+import { getWorkshopsByZip, registerForWorkshop } from "../services/workshopService";
 
 /**
  * PBI-8 workshop details and registration journey
@@ -66,33 +64,6 @@ function NeedHelp() {
 
     // Registration dialog state (PBI-12 sandbox registration journey). null = dialog closed.
     const [registration, setRegistration] = useState(null);
-
-    const openRegistrationDialog = async (workshopSummary) => {
-        setRegistration({
-            workshopId: workshopSummary.id,
-            workshopTitle: workshopSummary.title,
-            status: "loading",
-            detail: null,
-            formValues: EMPTY_REGISTRATION_FORM,
-            fieldErrors: {},
-            submitError: "",
-            result: null,
-        });
-
-        try {
-            const detail = await getWorkshopById(workshopSummary.id);
-
-            setRegistration((prev) =>
-                prev && prev.workshopId === workshopSummary.id
-                    ? { ...prev, detail, status: detail.seatAvailability > 0 ? "ready" : "full" }
-                    : prev
-            );
-        } catch (err) {
-            setRegistration((prev) =>
-                prev && prev.workshopId === workshopSummary.id ? { ...prev, status: "detail-error" } : prev
-            );
-        }
-    };
 
     const closeRegistrationDialog = () => setRegistration(null);
 
