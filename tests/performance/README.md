@@ -8,6 +8,8 @@ The subsequent [FCP optimization and local production verification](fcp-optimiza
 
 [LCP optimization and local production verification](lcp-optimization.md) records the next startup-code reduction, a fresh local before/after audit set, and ZIP-field visual/functional checks.
 
+[TBT analysis and optimization](tbt-optimization.md) records deferred mobile-menu loading, local before/after audits, and menu regression checks. The local TBT target remains unmet.
+
 ## Baseline, initial results, and final comparison
 
 The documented project baseline and targets come from PBI-14. Final results will be recorded after optimization using the same route and test conditions.

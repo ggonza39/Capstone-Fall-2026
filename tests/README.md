@@ -8,3 +8,4 @@ This folder contains test suites, automated scripts, and manual testing document
 - [Initial deployed performance measurement](performance/README.md) — five-run mobile Lighthouse results, raw reports, baseline/target comparison, and conditions to repeat for final measurement (PBI-14).
 - [FCP optimization](performance/fcp-optimization.md) — reduced homepage startup work, local production before/after audits, and routing/payment-loading regression verification.
 - [LCP optimization](performance/lcp-optimization.md) — smaller homepage input dependencies, local LCP audit comparison, and ZIP-field visual/functional verification.
+- [TBT analysis and optimization](performance/tbt-optimization.md) — on-demand mobile navigation, local blocking-time measurements, regression checks, and the remaining gap to the 200 ms target.

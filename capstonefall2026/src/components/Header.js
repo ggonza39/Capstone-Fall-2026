@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
@@ -8,12 +8,7 @@ import {
     Container,
     Box,
     Button,
-    IconButton,
-    Drawer,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemText,
+    CircularProgress,
     Typography,
 } from "@mui/material";
 
@@ -21,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 import logo from "../assets/techsmartLogo.png";
+import { loadMobileNavigation } from "./mobileNavigationLoader";
 
 const navigation = [
     {
@@ -51,15 +47,88 @@ const navigation = [
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [menuLoading, setMenuLoading] = useState(false);
+    const [menuError, setMenuError] = useState("");
+    const [MobileNavigationComponent, setMobileNavigationComponent] = useState(null);
+    const menuButtonRef = useRef(null);
+    const requestIdRef = useRef(0);
+    const mountedRef = useRef(true);
 
     const location = useLocation();
 
-    const toggleMenu = () => {
-        setMenuOpen((previous) => !previous);
+    const closeMenu = useCallback(() => {
+        requestIdRef.current += 1;
+        setMenuOpen(false);
+        setMenuLoading(false);
+        setMenuError("");
+    }, []);
+
+    useEffect(() => {
+        mountedRef.current = true;
+        return () => {
+            mountedRef.current = false;
+            requestIdRef.current += 1;
+        };
+    }, []);
+
+    useEffect(() => {
+        closeMenu();
+    }, [location.key, closeMenu]);
+
+    useEffect(() => {
+        if (!menuLoading && !menuError) {
+            return undefined;
+        }
+
+        const handleEscape = (event) => {
+            if (event.key === "Escape") {
+                event.preventDefault();
+                closeMenu();
+                menuButtonRef.current?.focus();
+            }
+        };
+
+        document.addEventListener("keydown", handleEscape);
+        return () => document.removeEventListener("keydown", handleEscape);
+    }, [menuLoading, menuError, closeMenu]);
+
+    const openMenu = async () => {
+        const requestId = ++requestIdRef.current;
+        menuButtonRef.current?.focus();
+        setMenuError("");
+        setMenuOpen(true);
+
+        if (MobileNavigationComponent) {
+            return;
+        }
+
+        setMenuLoading(true);
+
+        try {
+            const navigationModule = await loadMobileNavigation();
+            if (!mountedRef.current) {
+                return;
+            }
+
+            setMobileNavigationComponent(() => navigationModule.default);
+            if (requestId === requestIdRef.current) {
+                setMenuLoading(false);
+            }
+        } catch {
+            if (mountedRef.current && requestId === requestIdRef.current) {
+                setMenuLoading(false);
+                setMenuOpen(false);
+                setMenuError("The navigation menu could not load. Please try again.");
+            }
+        }
     };
 
-    const closeMenu = () => {
-        setMenuOpen(false);
+    const toggleMenu = () => {
+        if (menuOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     };
 
     return (
@@ -181,15 +250,22 @@ function Header() {
                         {/* MOBILE/TABLET MENU BUTTON */}
 
                         <Button
+                            ref={menuButtonRef}
                             onClick={toggleMenu}
-                            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+                            aria-label={menuLoading ? "Loading navigation menu" : menuOpen ? "Close navigation menu" : "Open navigation menu"}
+                            aria-busy={menuLoading}
                             aria-expanded={menuOpen}
                             aria-controls="mobile-navigation"
-                            startIcon={menuOpen ? <CloseIcon /> : <MenuIcon />}
+                            startIcon={menuLoading ? <CircularProgress size={20} color="inherit" aria-label="Loading navigation menu" /> : menuOpen ? <CloseIcon /> : <MenuIcon />}
                             variant="contained"
+                            data-uniform-size="false"
                             sx={{
                                 // Keep navigation compact beside the logo on small screens.
-                                '&&': { width: 'auto', minWidth: 48, minHeight: 48, flexShrink: 0 },
+                                width: "auto",
+                                minWidth: 48,
+                                minHeight: 48,
+                                flexShrink: 0,
+                                whiteSpace: "nowrap",
                                 display: {
                                     xs: "inline-flex",
                                     lg: "none",
@@ -200,95 +276,41 @@ function Header() {
                         </Button>
                     </Toolbar>
                 </Container>
+                {menuError && (
+                    <Box
+                        role="alert"
+                        sx={{
+                            position: "absolute",
+                            top: "100%",
+                            right: 2,
+                            width: 320,
+                            maxWidth: "calc(100vw - 32px)",
+                            p: 2,
+                            backgroundColor: "background.paper",
+                            color: "text.primary",
+                            boxShadow: 3,
+                        }}
+                    >
+                        <Typography>{menuError}</Typography>
+                        <Button onClick={openMenu}>Retry</Button>
+                        <Button onClick={() => {
+                            closeMenu();
+                            menuButtonRef.current?.focus();
+                        }}>Dismiss</Button>
+                    </Box>
+                )}
             </AppBar>
 
             {/* MOBILE/TABLET VIEW NAVIGATION LINKS */}
 
-            <Drawer
-                anchor="right"
-                open={menuOpen}
-                onClose={closeMenu}
-                PaperProps={{
-                    id: "mobile-navigation",
-
-                    sx: {
-                        width: {
-                            xs: "85%",
-                            sm: 360,
-                        },
-                    },
-                }}
-            >
-                <Box component="nav" aria-label="Mobile navigation">
-                    <Box
-                        sx={{
-                            display: "flex",
-
-                            alignItems: "center",
-
-                            justifyContent: "space-between",
-
-                            p: 2,
-
-                            borderBottom: "1px solid",
-
-                            borderColor: "divider",
-                        }}
-                    >
-                        <Typography variant="h3" component="p">
-                            Menu
-                        </Typography>
-
-                        <IconButton onClick={closeMenu} aria-label="Close navigation menu">
-                            <CloseIcon />
-                        </IconButton>
-                    </Box>
-
-                    <List>
-                        {navigation.map((item) => {
-                            const active = location.pathname === item.path;
-
-                            return (
-                                <ListItem key={item.path} disablePadding>
-                                    <ListItemButton
-                                        component={RouterLink}
-                                        to={item.path}
-                                        onClick={closeMenu}
-                                        selected={active}
-                                        aria-current={active ? "page" : undefined}
-                                        sx={{
-                                            minHeight: 56,
-
-                                            px: 3,
-
-                                            "&.Mui-selected": {
-                                                backgroundColor: "rgba(31, 112, 177, 0.12)",
-
-                                                borderLeft: "5px solid",
-
-                                                borderColor: "primary.main",
-                                            },
-
-                                            "&.Mui-selected:hover": {
-                                                backgroundColor: "rgba(31, 112, 177, 0.18)",
-                                            },
-                                        }}
-                                    >
-                                        <ListItemText
-                                            primary={item.label}
-                                            primaryTypographyProps={{
-                                                fontSize: "1.125rem",
-
-                                                fontWeight: active ? 700 : 500,
-                                            }}
-                                        />
-                                    </ListItemButton>
-                                </ListItem>
-                            );
-                        })}
-                    </List>
-                </Box>
-            </Drawer>
+            {MobileNavigationComponent && (
+                <MobileNavigationComponent
+                    open={menuOpen}
+                    onClose={closeMenu}
+                    navigation={navigation}
+                    pathname={location.pathname}
+                />
+            )}
         </>
     );
 }
