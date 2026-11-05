@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 
 import {
     Box, Button, Card, CardContent, Container, FormControl, FormHelperText,
@@ -106,7 +106,8 @@ function Home() {
                                 variant="contained"
                                 size="large"
                                 startIcon={<HelpOutlineIcon />}
-                                onClick={() => navigate("/need-help")}
+                                component={RouterLink}
+                                to="/need-help"
                             >
                                 I Need Technology Help
                             </Button>
@@ -115,7 +116,8 @@ function Home() {
                                 variant="outlined"
                                 size="large"
                                 startIcon={<VolunteerActivismIcon />}
-                                onClick={() => navigate("/want-to-help")}
+                                component={RouterLink}
+                                to="/want-to-help"
                             >
                                 I Want to Help
                             </Button>
@@ -173,7 +175,7 @@ function Home() {
                                         Find technology workshops and learning opportunities near you.
                                     </Typography>
 
-                                    <Button variant="contained" onClick={() => navigate("/need-help")}>
+                                    <Button variant="contained" component={RouterLink} to="/need-help">
                                         Find Workshops
                                     </Button>
                                 </CardContent>
@@ -211,7 +213,7 @@ function Home() {
                                         Explore simple technology guides and educational resources.
                                     </Typography>
 
-                                    <Button variant="contained" onClick={() => navigate("/resources")}>
+                                    <Button variant="contained" component={RouterLink} to="/resources">
                                         View Resources
                                     </Button>
                                 </CardContent>
@@ -249,7 +251,7 @@ function Home() {
                                         Find support when you need help using everyday technology.
                                     </Typography>
 
-                                    <Button variant="contained" onClick={() => navigate("/need-help")}>
+                                    <Button variant="contained" component={RouterLink} to="/need-help">
                                         Get Help
                                     </Button>
                                 </CardContent>
@@ -417,15 +419,15 @@ function Home() {
                         spacing={2}
                         justifyContent="center"
                     >
-                        <Button variant="contained" onClick={() => navigate("/want-to-help#donate")}>
+                        <Button variant="contained" component={RouterLink} to="/want-to-help#donate">
                             Donate
                         </Button>
 
-                        <Button variant="outlined" onClick={() => navigate("/want-to-help#volunteer")}>
+                        <Button variant="outlined" component={RouterLink} to="/want-to-help#volunteer">
                             Volunteer
                         </Button>
 
-                        <Button variant="outlined" onClick={() => navigate("/want-to-help#advocate")}>
+                        <Button variant="outlined" component={RouterLink} to="/want-to-help#advocate">
                             Advocate
                         </Button>
                     </Stack>

@@ -8,6 +8,7 @@ import {
 import MainLayout from "./layouts/MainLayout";
 
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 // Keep the homepage eager; other journeys load only when their route is visited.
 // In particular, loading Home must not initialize the donation page's Stripe SDK.
@@ -66,6 +67,8 @@ function App() {
             path="/contact"
             element={<Contact />}
           />
+
+          <Route path="*" element={<NotFound />} />
 
         </Route>
 

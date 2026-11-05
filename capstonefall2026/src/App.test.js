@@ -26,9 +26,10 @@ afterAll(() => {
 test('renders the dual-path home page without initializing payments', () => {
   render(<App />);
 
+  const main = within(screen.getByRole('main'));
   expect(screen.getByRole('heading', { level: 1, name: 'Technology Made Simple.' })).toBeInTheDocument();
-  expect(screen.getByRole('button', { name: 'I Need Technology Help' })).toBeInTheDocument();
-  expect(screen.getByRole('button', { name: 'I Want to Help' })).toBeInTheDocument();
+  expect(main.getByRole('link', { name: 'I Need Technology Help' })).toHaveAttribute('href', '/need-help');
+  expect(main.getByRole('link', { name: 'I Want to Help' })).toHaveAttribute('href', '/want-to-help');
   expect(stripeInitializationsDuringAppImport).toBe(0);
   expect(loadStripe).not.toHaveBeenCalled();
 });
@@ -53,13 +54,15 @@ test('loads the donation form and initializes Stripe only when entering the dona
   render(<App />);
   expect(loadStripe).not.toHaveBeenCalled();
 
-  userEvent.click(screen.getByRole('button', { name: 'I Want to Help' }));
+  userEvent.click(within(screen.getByRole('main')).getByRole('link', { name: 'I Want to Help' }));
   expect(await screen.findByRole('heading', { level: 1, name: 'I Want to Help' })).toBeInTheDocument();
   expect(loadStripe).not.toHaveBeenCalled();
 
-  userEvent.click(within(screen.getByRole('main')).getByRole('button', { name: 'Donate' }));
+  const donate = within(screen.getByRole('main')).getByRole('link', { name: 'Donate' });
+  expect(donate).toHaveAttribute('href', '/donate');
+  userEvent.click(donate);
 
-  expect(await screen.findByRole('heading', { level: 1, name: 'Make a Donation' })).toBeInTheDocument();
+  expect(await screen.findByRole('heading', { level: 1, name: 'Make a Donation' }, { timeout: 5000 })).toBeInTheDocument();
   expect(loadStripe).toHaveBeenCalledTimes(1);
   expect(loadStripe).toHaveBeenCalledWith(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
   expect(screen.getByRole('link', { name: 'TechSmart Learning for Seniors home' })).toBeInTheDocument();

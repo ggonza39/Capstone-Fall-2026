@@ -1,0 +1,574 @@
+{
+  "phase": "before",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "capturedAtUtc": "2026-11-05T11:55:22.474Z",
+  "purpose": "Production technical SEO and navigation checks; not a Lighthouse performance measurement",
+  "checks": [],
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "Technology Made Simple."
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Technology Made Simple."
+        },
+        {
+          "level": "H2",
+          "text": "How Can We Help?"
+        },
+        {
+          "level": "H3",
+          "text": "Find a Workshop"
+        },
+        {
+          "level": "H3",
+          "text": "Technology Resources"
+        },
+        {
+          "level": "H3",
+          "text": "Get Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        },
+        {
+          "level": "H2",
+          "text": "Want to Make a Difference?"
+        }
+      ],
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "links": [],
+      "buttons": [
+        {
+          "text": "I Need Technology Help",
+          "type": "button"
+        },
+        {
+          "text": "I Want to Help",
+          "type": "button"
+        },
+        {
+          "text": "Find Workshops",
+          "type": "button"
+        },
+        {
+          "text": "View Resources",
+          "type": "button"
+        },
+        {
+          "text": "Get Help",
+          "type": "button"
+        },
+        {
+          "text": "Find Workshops",
+          "type": "submit"
+        },
+        {
+          "text": "Donate",
+          "type": "button"
+        },
+        {
+          "text": "Volunteer",
+          "type": "button"
+        },
+        {
+          "text": "Advocate",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "route": "/need-help",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/need-help",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "I Need Technology Help"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "I Need Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        }
+      ],
+      "mainText": "I Need Technology Help\n\nFind technology workshops and resources designed to help you feel more comfortable using everyday technology.\n\nFind a Workshop Near You\n\nEnter your 5-digit ZIP code to search for nearby technology workshops.\n\nZIP Code\nZIP Code\n\nExample: 30301\n\nSearch",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Search",
+          "type": "submit"
+        }
+      ]
+    },
+    {
+      "route": "/want-to-help",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/want-to-help",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "I Want to Help"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "I Want to Help"
+        },
+        {
+          "level": "H2",
+          "text": "Making an Impact Together"
+        },
+        {
+          "level": "H2",
+          "text": "How Would You Like to Help?"
+        },
+        {
+          "level": "H3",
+          "text": "Donate"
+        },
+        {
+          "level": "H3",
+          "text": "Volunteer"
+        },
+        {
+          "level": "H3",
+          "text": "Advocate"
+        },
+        {
+          "level": "H2",
+          "text": "Our Community Partners & Supporters"
+        }
+      ],
+      "mainText": "I Want to Help\n\nYour support helps TechSmart provide technology education and resources for older adults.\n\nMaking an Impact Together\n\nSince 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta.\n\nThrough technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected.\n\n7,000+\n\nOlder adults educated since 2012\n\nTechnology Education\n\nHelping older adults learn everyday digital skills.\n\nStronger Communities\n\nSupporting confidence, independence, and connection through technology.\n\nAI-generated illustrations of senior technology learning.\nHow Would You Like to Help?\n\nDonate, volunteer your time, or learn how you can advocate for technology education.\n\nDonate\n\nSupport technology education and learning opportunities for older adults.\n\nDonate\nVolunteer\n\nShare your time and skills by helping older adults become more confident with technology.\n\nRegister with Hands on Atlanta\nAdvocate\n\nLearn about TechSmart's community impact and help spread awareness about technology education for older adults.\n\nLearn About Our Impact\nOur Community Partners & Supporters\n\nTechSmart Learning for Seniors is grateful for the organizations and individuals who support technology education for older adults.\n\nThrough financial contributions, volunteer time, and community resources, our supporters help older adults build digital skills, confidence, and meaningful connections.\n\nWaymo\n\n$5,000 and Above\n\nInsight Global\n\n$5,000 and Above\n\nCumberland Group\n\n$5,000 and Above\n\nHiller\n\n$5,000 and Above\n\nDelta Community Credit Union\n\n$2,500 and Above",
+      "links": [
+        {
+          "text": "Register with Hands on Atlanta",
+          "href": "https://volunteer.handsonatlanta.org/"
+        },
+        {
+          "text": "Learn About Our Impact",
+          "href": "#community-impact"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Donate",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "route": "/resources",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/resources",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "Technology Resources"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Technology Resources"
+        },
+        {
+          "level": "H2",
+          "text": "What Would You Like to Learn?"
+        },
+        {
+          "level": "H3",
+          "text": "Smartphone Help"
+        },
+        {
+          "level": "H3",
+          "text": "Computer Help"
+        },
+        {
+          "level": "H3",
+          "text": "Online Safety"
+        },
+        {
+          "level": "H3",
+          "text": "Video Tutorials"
+        }
+      ],
+      "mainText": "Technology Resources\n\nExplore simple guides and learning resources designed to help you use technology with confidence.\n\nWhat Would You Like to Learn?\nSmartphone Help\n\nLearn the basics of using smartphones, apps, settings, and common features.\n\nView Smartphone Help\nComputer Help\n\nFind simple guidance for using computers, the internet, email, and other tools.\n\nView Computer Help\nOnline Safety\n\nLearn how to recognize scams, protect your information, and stay safer online.\n\nView Online Safety\nVideo Tutorials\n\nWatch technology lessons and demonstrations at your own pace.\n\nView Video Tutorials",
+      "links": [],
+      "buttons": [
+        {
+          "text": "View Smartphone Help",
+          "type": "button"
+        },
+        {
+          "text": "View Computer Help",
+          "type": "button"
+        },
+        {
+          "text": "View Online Safety",
+          "type": "button"
+        },
+        {
+          "text": "View Video Tutorials",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/about",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "About TechSmart"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "About TechSmart"
+        },
+        {
+          "level": "H2",
+          "text": "Our Mission"
+        },
+        {
+          "level": "H3",
+          "text": "Learn"
+        },
+        {
+          "level": "H3",
+          "text": "Connect"
+        },
+        {
+          "level": "H3",
+          "text": "Community"
+        }
+      ],
+      "mainText": "About TechSmart\n\nLearn more about TechSmart Learning for Seniors and our work helping older adults build confidence with technology.\n\nOur Mission\n\nMission content will be added using sponsor-approved TechSmart content.\n\nLearn\n\nAccessible technology education designed for older adults.\n\nConnect\n\nBuild confidence using everyday technology and digital tools.\n\nCommunity\n\nConnect older adults with learning opportunities and support.",
+      "links": [],
+      "buttons": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/contact",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "Contact Us"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Contact Us"
+        },
+        {
+          "level": "H2",
+          "text": "Send Us a Message"
+        }
+      ],
+      "mainText": "Contact Us\n\nHave a question? Send us a message and let us know how we can help.\n\nSend Us a Message\nName *\nName *\nEmail Address *\nEmail Address *\nHow can we help? *\nHow can we help? *\nSend Message",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Send Message",
+          "type": "submit"
+        }
+      ]
+    },
+    {
+      "route": "/workshops/WS-1001",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/workshops/WS-1001",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 2,
+      "h1": [
+        "Smartphone Basics for Beginners"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Smartphone Basics for Beginners"
+        },
+        {
+          "level": "H2",
+          "text": "Workshop Information"
+        },
+        {
+          "level": "H2",
+          "text": "Accessibility Features"
+        }
+      ],
+      "mainText": "Smartphone Basics for Beginners\nWorkshop Information\n\nDate: 10/4/2026\n\nTime: 10:00 AM\n\nLocation: Marietta Senior Center, 123 Main St, Marietta, GA\n\nRoom: Room 2\n\nInstructor: John Carter\n\nSeats Available: 8\n\nAccessibility Features\nWheelchair accessible\nLarge-print handouts\nRegister for This Workshop",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Register for This Workshop",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "route": "/workshops/technical-seo-missing",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/workshops/technical-seo-missing",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [],
+      "headings": [],
+      "mainText": "We could not find this workshop. Please return to the workshop search.",
+      "links": [],
+      "buttons": []
+    },
+    {
+      "route": "/technical-seo-missing-page",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/technical-seo-missing-page",
+      "lang": "en",
+      "titles": [
+        "React App"
+      ],
+      "descriptions": [
+        "Web site created using create-react-app"
+      ],
+      "robots": [],
+      "canonicals": [],
+      "mainCount": 0,
+      "h1": [],
+      "headings": [],
+      "mainText": "",
+      "links": [],
+      "buttons": []
+    }
+  ],
+  "menuViewports": [
+    {
+      "viewport": {
+        "width": 412,
+        "height": 823
+      },
+      "text": "Menu",
+      "accessibleName": "Open navigation menu",
+      "geometry": {
+        "x": 285,
+        "y": 21.75,
+        "width": 111,
+        "height": 51.5
+      },
+      "styles": {
+        "fontSize": "18px",
+        "fontWeight": "700",
+        "lineHeight": "31.5px",
+        "paddingTop": "10px",
+        "paddingRight": "20px",
+        "paddingBottom": "10px",
+        "paddingLeft": "20px",
+        "backgroundColor": "rgb(31, 112, 177)",
+        "borderRadius": "6px"
+      },
+      "drawerLinks": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "escapeClosesMenu": true
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "text": "Menu",
+      "accessibleName": "Open navigation menu",
+      "geometry": {
+        "x": 633,
+        "y": 29.25,
+        "width": 111,
+        "height": 51.5
+      },
+      "styles": {
+        "fontSize": "18px",
+        "fontWeight": "700",
+        "lineHeight": "31.5px",
+        "paddingTop": "10px",
+        "paddingRight": "20px",
+        "paddingBottom": "10px",
+        "paddingLeft": "20px",
+        "backgroundColor": "rgb(31, 112, 177)",
+        "borderRadius": "6px"
+      },
+      "drawerLinks": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "escapeClosesMenu": true
+    }
+  ],
+  "navigation": [],
+  "pageErrors": [],
+  "paymentSubmitted": false,
+  "limitations": [
+    "The static SPA server returns HTTP 200 for unknown paths; client noindex does not create a server HTTP 404.",
+    "Route-specific metadata and content are absent from raw HTML, which contains the generic Create React App fallback.",
+    "No local Stripe publishable key is configured; donation payment readiness and submission are not tested."
+  ],
+  "browserVersion": "Chrome/156.0.8078.80",
+  "rawDocuments": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "React App",
+      "description": "Web site created using create-react-app",
+      "canonicalCount": 0,
+      "rootHasRenderedContent": false
+    },
+    {
+      "route": "/resources",
+      "status": 200,
+      "title": "React App",
+      "description": "Web site created using create-react-app",
+      "canonicalCount": 0,
+      "rootHasRenderedContent": false
+    },
+    {
+      "route": "/technical-seo-missing-page",
+      "status": 200,
+      "title": "React App",
+      "description": "Web site created using create-react-app",
+      "canonicalCount": 0,
+      "rootHasRenderedContent": false
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "body": "# https://www.robotstxt.org/robotstxt.html\r\nUser-agent: *\r\nDisallow:\r\n"
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "body": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"description\" content=\"Web site created using create-react-app\"/><link rel=\"apple-touch-icon\" href=\"/logo192.png\"/><link rel=\"manifest\" href=\"/manifest.json\"/><title>React App</title><script defer=\"defer\" src=\"/static/js/main.64238a2f.js\"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id=\"root\"></div></body></html>"
+    }
+  ],
+  "passed": true,
+  "browserClosed": true
+}

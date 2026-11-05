@@ -1,0 +1,940 @@
+diff --git a/capstonefall2026/package.json b/capstonefall2026/package.json
+index d3f56c0..06ab98a 100644
+--- a/capstonefall2026/package.json
++++ b/capstonefall2026/package.json
+@@ -25,7 +25,9 @@
+     "web-vitals": "^2.1.4"
+   },
+   "scripts": {
++    "prestart": "node scripts/generate-seo.cjs development",
+     "start": "react-scripts start",
++    "prebuild": "node scripts/generate-seo.cjs production",
+     "build": "react-scripts build",
+     "test": "react-scripts test",
+     "eject": "react-scripts eject",
+@@ -66,4 +68,4 @@
+       "public"
+     ]
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/capstonefall2026/public/index.html b/capstonefall2026/public/index.html
+index aa069f2..10ff4d3 100644
+--- a/capstonefall2026/public/index.html
++++ b/capstonefall2026/public/index.html
+@@ -7,37 +7,14 @@
+     <meta name="theme-color" content="#000000" />
+     <meta
+       name="description"
+-      content="Web site created using create-react-app"
++      content="Explore technology education, workshops, learning resources, and ways to support older adults with TechSmart Learning for Seniors."
+     />
+     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+-    <!--
+-      manifest.json provides metadata used when your web app is installed on a
+-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+-    -->
+     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+-    <!--
+-      Notice the use of %PUBLIC_URL% in the tags above.
+-      It will be replaced with the URL of the `public` folder during the build.
+-      Only files inside the `public` folder can be referenced from the HTML.
+-
+-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+-      work correctly both with client-side routing and a non-root public URL.
+-      Learn how to configure a non-root public URL by running `npm run build`.
+-    -->
+-    <title>React App</title>
++    <title>TechSmart Learning for Seniors | Technology Education</title>
+   </head>
+   <body>
+-    <noscript>You need to enable JavaScript to run this app.</noscript>
++    <noscript>Enable JavaScript to explore TechSmart Learning for Seniors technology education, workshops, and learning resources.</noscript>
+     <div id="root"></div>
+-    <!--
+-      This HTML file is a template.
+-      If you open it directly in the browser, you will see an empty page.
+-
+-      You can add webfonts, meta tags, or analytics to this file.
+-      The build step will place the bundled scripts into the <body> tag.
+-
+-      To begin the development, run `npm start` or `yarn start`.
+-      To create a production bundle, use `npm run build` or `yarn build`.
+-    -->
+   </body>
+ </html>
+diff --git a/capstonefall2026/public/manifest.json b/capstonefall2026/public/manifest.json
+index 080d6c7..bd9ede5 100644
+--- a/capstonefall2026/public/manifest.json
++++ b/capstonefall2026/public/manifest.json
+@@ -1,6 +1,6 @@
+ {
+-  "short_name": "React App",
+-  "name": "Create React App Sample",
++  "short_name": "TechSmart",
++  "name": "TechSmart Learning for Seniors",
+   "icons": [
+     {
+       "src": "favicon.ico",
+diff --git a/capstonefall2026/public/robots.txt b/capstonefall2026/public/robots.txt
+index e9e57dc..9d5ab14 100644
+--- a/capstonefall2026/public/robots.txt
++++ b/capstonefall2026/public/robots.txt
+@@ -1,3 +1,4 @@
+-# https://www.robotstxt.org/robotstxt.html
+ User-agent: *
+ Disallow:
++
++Sitemap: https://capstone-fall-2026.vercel.app/sitemap.xml
+diff --git a/capstonefall2026/src/App.js b/capstonefall2026/src/App.js
+index 40d3e86..319144b 100644
+--- a/capstonefall2026/src/App.js
++++ b/capstonefall2026/src/App.js
+@@ -8,6 +8,7 @@ import {
+ import MainLayout from "./layouts/MainLayout";
+ 
+ import Home from "./pages/Home";
++import NotFound from "./pages/NotFound";
+ 
+ // Keep the homepage eager; other journeys load only when their route is visited.
+ // In particular, loading Home must not initialize the donation page's Stripe SDK.
+@@ -67,6 +68,8 @@ function App() {
+             element={<Contact />}
+           />
+ 
++          <Route path="*" element={<NotFound />} />
++
+         </Route>
+ 
+       </Routes>
+diff --git a/capstonefall2026/src/App.test.js b/capstonefall2026/src/App.test.js
+index 514fe4c..f3a2701 100644
+--- a/capstonefall2026/src/App.test.js
++++ b/capstonefall2026/src/App.test.js
+@@ -26,9 +26,10 @@ afterAll(() => {
+ test('renders the dual-path home page without initializing payments', () => {
+   render(<App />);
+ 
++  const main = within(screen.getByRole('main'));
+   expect(screen.getByRole('heading', { level: 1, name: 'Technology Made Simple.' })).toBeInTheDocument();
+-  expect(screen.getByRole('button', { name: 'I Need Technology Help' })).toBeInTheDocument();
+-  expect(screen.getByRole('button', { name: 'I Want to Help' })).toBeInTheDocument();
++  expect(main.getByRole('link', { name: 'I Need Technology Help' })).toHaveAttribute('href', '/need-help');
++  expect(main.getByRole('link', { name: 'I Want to Help' })).toHaveAttribute('href', '/want-to-help');
+   expect(stripeInitializationsDuringAppImport).toBe(0);
+   expect(loadStripe).not.toHaveBeenCalled();
+ });
+@@ -53,13 +54,15 @@ test('loads the donation form and initializes Stripe only when entering the dona
+   render(<App />);
+   expect(loadStripe).not.toHaveBeenCalled();
+ 
+-  userEvent.click(screen.getByRole('button', { name: 'I Want to Help' }));
++  userEvent.click(within(screen.getByRole('main')).getByRole('link', { name: 'I Want to Help' }));
+   expect(await screen.findByRole('heading', { level: 1, name: 'I Want to Help' })).toBeInTheDocument();
+   expect(loadStripe).not.toHaveBeenCalled();
+ 
+-  userEvent.click(within(screen.getByRole('main')).getByRole('button', { name: 'Donate' }));
++  const donate = within(screen.getByRole('main')).getByRole('link', { name: 'Donate' });
++  expect(donate).toHaveAttribute('href', '/donate');
++  userEvent.click(donate);
+ 
+-  expect(await screen.findByRole('heading', { level: 1, name: 'Make a Donation' })).toBeInTheDocument();
++  expect(await screen.findByRole('heading', { level: 1, name: 'Make a Donation' }, { timeout: 5000 })).toBeInTheDocument();
+   expect(loadStripe).toHaveBeenCalledTimes(1);
+   expect(loadStripe).toHaveBeenCalledWith(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+   expect(screen.getByRole('link', { name: 'TechSmart Learning for Seniors home' })).toBeInTheDocument();
+diff --git a/capstonefall2026/src/layouts/MainLayout.js b/capstonefall2026/src/layouts/MainLayout.js
+index 7065a26..dc66670 100644
+--- a/capstonefall2026/src/layouts/MainLayout.js
++++ b/capstonefall2026/src/layouts/MainLayout.js
+@@ -8,6 +8,7 @@ import Header from "../components/Header";
+ import Footer from "../components/Footer";
+ import MobileBottomNav from "../components/MobileBottomNav";
+ import ScrollToTop from "../components/ScrollToTop";
++import RouteMetadata from "../seo/RouteMetadata";
+ 
+ /**
+  * PBI-6 Implement dual-path landing and navigation.
+@@ -41,6 +42,7 @@ function MainLayout() {
+                 },
+             }}
+         >
++            <RouteMetadata />
+             <ScrollToTop />{/* Scroll to top of page when selecting bottom navigation button */}
+ 
+             <SkipLink /> {/* Skip to main content link for accessibility */}
+diff --git a/capstonefall2026/src/pages/About.js b/capstonefall2026/src/pages/About.js
+index dd88e73..bd28aa5 100644
+--- a/capstonefall2026/src/pages/About.js
++++ b/capstonefall2026/src/pages/About.js
+@@ -54,7 +54,7 @@ function About() {
+                             <Stack spacing={2}>
+                                 <SchoolIcon color="primary" sx={{ fontSize: 48 }} aria-hidden="true" />
+ 
+-                                <Typography variant="h3" component="h3">
++                                <Typography variant="h3" component="h2">
+                                     Learn
+                                 </Typography>
+ 
+@@ -74,7 +74,7 @@ function About() {
+                             <Stack spacing={2}>
+                                 <DevicesIcon color="primary" sx={{ fontSize: 48 }} aria-hidden="true" />
+ 
+-                                <Typography variant="h3" component="h3">
++                                <Typography variant="h3" component="h2">
+                                     Connect
+                                 </Typography>
+ 
+@@ -94,7 +94,7 @@ function About() {
+                             <Stack spacing={2}>
+                                 <GroupsIcon color="primary" sx={{ fontSize: 48 }} aria-hidden="true" />
+ 
+-                                <Typography variant="h3" component="h3">
++                                <Typography variant="h3" component="h2">
+                                     Community
+                                 </Typography>
+ 
+diff --git a/capstonefall2026/src/pages/Home.js b/capstonefall2026/src/pages/Home.js
+index 4498849..c0ada35 100644
+--- a/capstonefall2026/src/pages/Home.js
++++ b/capstonefall2026/src/pages/Home.js
+@@ -1,5 +1,5 @@
+ import { useState } from "react";
+-import { useNavigate } from "react-router-dom";
++import { Link as RouterLink, useNavigate } from "react-router-dom";
+ 
+ import {
+     Box, Button, Card, CardContent, Container, FormControl, FormHelperText,
+@@ -106,7 +106,8 @@ function Home() {
+                                 variant="contained"
+                                 size="large"
+                                 startIcon={<HelpOutlineIcon />}
+-                                onClick={() => navigate("/need-help")}
++                                component={RouterLink}
++                                to="/need-help"
+                             >
+                                 I Need Technology Help
+                             </Button>
+@@ -115,7 +116,8 @@ function Home() {
+                                 variant="outlined"
+                                 size="large"
+                                 startIcon={<VolunteerActivismIcon />}
+-                                onClick={() => navigate("/want-to-help")}
++                                component={RouterLink}
++                                to="/want-to-help"
+                             >
+                                 I Want to Help
+                             </Button>
+@@ -173,7 +175,7 @@ function Home() {
+                                         Find technology workshops and learning opportunities near you.
+                                     </Typography>
+ 
+-                                    <Button variant="contained" onClick={() => navigate("/need-help")}>
++                                    <Button variant="contained" component={RouterLink} to="/need-help">
+                                         Find Workshops
+                                     </Button>
+                                 </CardContent>
+@@ -211,7 +213,7 @@ function Home() {
+                                         Explore simple technology guides and educational resources.
+                                     </Typography>
+ 
+-                                    <Button variant="contained" onClick={() => navigate("/resources")}>
++                                    <Button variant="contained" component={RouterLink} to="/resources">
+                                         View Resources
+                                     </Button>
+                                 </CardContent>
+@@ -249,7 +251,7 @@ function Home() {
+                                         Find support when you need help using everyday technology.
+                                     </Typography>
+ 
+-                                    <Button variant="contained" onClick={() => navigate("/need-help")}>
++                                    <Button variant="contained" component={RouterLink} to="/need-help">
+                                         Get Help
+                                     </Button>
+                                 </CardContent>
+@@ -417,15 +419,15 @@ function Home() {
+                         spacing={2}
+                         justifyContent="center"
+                     >
+-                        <Button variant="contained" onClick={() => navigate("/want-to-help#donate")}>
++                        <Button variant="contained" component={RouterLink} to="/want-to-help#donate">
+                             Donate
+                         </Button>
+ 
+-                        <Button variant="outlined" onClick={() => navigate("/want-to-help#volunteer")}>
++                        <Button variant="outlined" component={RouterLink} to="/want-to-help#volunteer">
+                             Volunteer
+                         </Button>
+ 
+-                        <Button variant="outlined" onClick={() => navigate("/want-to-help#advocate")}>
++                        <Button variant="outlined" component={RouterLink} to="/want-to-help#advocate">
+                             Advocate
+                         </Button>
+                     </Stack>
+diff --git a/capstonefall2026/src/pages/Home.test.js b/capstonefall2026/src/pages/Home.test.js
+index a26090d..1052007 100644
+--- a/capstonefall2026/src/pages/Home.test.js
++++ b/capstonefall2026/src/pages/Home.test.js
+@@ -28,8 +28,18 @@ test("renders the hero immediately and gives the ZIP field an accessible descrip
+     const { input } = renderHome();
+ 
+     expect(screen.getByRole("heading", { level: 1, name: "Technology Made Simple." })).toBeInTheDocument();
+-    expect(screen.getByRole("button", { name: "I Need Technology Help" })).toBeInTheDocument();
+-    expect(screen.getByRole("button", { name: "I Want to Help" })).toBeInTheDocument();
++    [
++        ["I Need Technology Help", "/need-help"],
++        ["I Want to Help", "/want-to-help"],
++        ["Find Workshops", "/need-help"],
++        ["View Resources", "/resources"],
++        ["Get Help", "/need-help"],
++        ["Donate", "/want-to-help#donate"],
++        ["Volunteer", "/want-to-help#volunteer"],
++        ["Advocate", "/want-to-help#advocate"],
++    ].forEach(([name, href]) => {
++        expect(screen.getByRole("link", { name })).toHaveAttribute("href", href);
++    });
+     expect(input).toHaveAttribute("inputmode", "numeric");
+     expect(input).toHaveAttribute("maxlength", "5");
+     expect(input).toHaveAttribute("aria-describedby", "home-zip-code-help");
+diff --git a/capstonefall2026/src/pages/WantToHelp.js b/capstonefall2026/src/pages/WantToHelp.js
+index 0c82245..3c89df7 100644
+--- a/capstonefall2026/src/pages/WantToHelp.js
++++ b/capstonefall2026/src/pages/WantToHelp.js
+@@ -1,5 +1,5 @@
+ import { Box, Button, Card, CardContent, Container, Grid, Typography } from "@mui/material";
+-import { useNavigate } from "react-router-dom";
++import { Link as RouterLink } from "react-router-dom";
+ 
+ import FavoriteIcon from "@mui/icons-material/Favorite";
+ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+@@ -16,7 +16,6 @@ import PartnersSection from "../components/PartnersSection";
+  *
+  */
+ function WantToHelp() {
+-    const navigate = useNavigate();
+     return (
+         <>
+             <Box
+@@ -117,9 +116,9 @@ function WantToHelp() {
+                                     </Typography>
+ 
+                                     {/* Sponsor wants users to use the organization's existing Stripe payment workflow. */}
+-                                    <Button variant="contained" 
+-                                        onClick={() => navigate("/donate")
+-                                        }>Donate</Button>
++                                    <Button variant="contained" component={RouterLink} to="/donate">
++                                        Donate
++                                    </Button>
+                                 </CardContent>
+                             </Card>
+                         </Grid>
+@@ -167,6 +166,7 @@ function WantToHelp() {
+                                     <Button
+                                         variant="contained"
+                                         target="_blank"
++                                        rel="noopener noreferrer"
+                                         href="https://volunteer.handsonatlanta.org/"
+                                         onClick={() => {
+                                             alert('You will now be redirected and external network.');
+diff --git a/capstonefall2026/src/pages/WorkshopDetail.js b/capstonefall2026/src/pages/WorkshopDetail.js
+index 2a9b5d3..c97409d 100644
+--- a/capstonefall2026/src/pages/WorkshopDetail.js
++++ b/capstonefall2026/src/pages/WorkshopDetail.js
+@@ -1,5 +1,5 @@
+ import { useEffect, useRef, useState } from "react";
+-import { useParams } from "react-router-dom";
++import { Link as RouterLink, useParams } from "react-router-dom";
+ import {
+     Alert,
+     Box,
+@@ -12,6 +12,7 @@ import {
+     Typography,
+ } from "@mui/material";
+ import { getWorkshopById } from "../services/workshopService";
++import { applyPageMetadata, getRouteMetadata } from "../seo/metadata";
+ 
+ function WorkshopDetail() {
+     const { id } = useParams();
+@@ -57,6 +58,25 @@ function WorkshopDetail() {
+         loadWorkshop();
+     }, [id]);
+ 
++    useEffect(() => {
++        if (loading || (!error && workshop && workshop.id !== id)) {
++            return;
++        }
++
++        const metadata = getRouteMetadata(`/workshops/${encodeURIComponent(id)}`);
++        applyPageMetadata(error || !workshop ? {
++            ...metadata,
++            title: "Workshop Not Found | TechSmart",
++            description: "This workshop could not be found. Return to technology workshop search.",
++            canonical: null,
++            robots: "noindex,follow",
++        } : {
++            ...metadata,
++            title: `${workshop.title} | TechSmart`,
++            description: `Details for ${workshop.title}, including location, accessibility information, and registration options.`,
++        });
++    }, [id, workshop, error, loading]);
++
+     const handleRegistrationSubmit = (event) => {
+         event.preventDefault();
+ 
+@@ -112,22 +132,24 @@ function WorkshopDetail() {
+         );
+     }
+ 
+-    if (error) {
++    if (error || !workshop) {
+         return (
+             <Container sx={{ py: 6 }}>
+-                <Alert severity="error">{error}</Alert>
++                <Typography component="h1" variant="h2" gutterBottom>Workshop Not Found</Typography>
++                <Alert severity="error">
++                    {error || "We could not find this workshop. Please return to the workshop search."}
++                </Alert>
++                <Button component={RouterLink} to="/need-help" variant="outlined" sx={{ mt: 3 }}>
++                    Find Workshops
++                </Button>
+             </Container>
+         );
+     }
+ 
+-    if (!workshop) {
+-        return null;
+-    }
+-
+     const workshopDate = new Date(workshop.dateTime);
+ 
+     return (
+-        <Container component="main" maxWidth="md" sx={{ py: 6 }}>
++        <Container component="article" maxWidth="md" sx={{ py: 6 }}>
+             <Typography component="h1" variant="h3" gutterBottom>
+                 {workshop.title}
+             </Typography>
+@@ -311,4 +333,4 @@ function WorkshopDetail() {
+     );
+ }
+ 
+-export default WorkshopDetail;
+\ No newline at end of file
++export default WorkshopDetail;
+diff --git a/capstonefall2026/public/sitemap.xml b/capstonefall2026/public/sitemap.xml
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/public/sitemap.xml
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url><loc>https://capstone-fall-2026.vercel.app/</loc></url>
++  <url><loc>https://capstone-fall-2026.vercel.app/need-help</loc></url>
++  <url><loc>https://capstone-fall-2026.vercel.app/want-to-help</loc></url>
++  <url><loc>https://capstone-fall-2026.vercel.app/resources</loc></url>
++  <url><loc>https://capstone-fall-2026.vercel.app/about</loc></url>
++  <url><loc>https://capstone-fall-2026.vercel.app/contact</loc></url>
++  <url><loc>https://capstone-fall-2026.vercel.app/donate</loc></url>
++</urlset>
+diff --git a/capstonefall2026/scripts/generate-seo.cjs b/capstonefall2026/scripts/generate-seo.cjs
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/scripts/generate-seo.cjs
+@@ -0,0 +1,47 @@
++const fs = require("node:fs");
++const path = require("node:path");
++const seoConfig = require("../src/seo/config.json");
++const { resolveSiteOrigin } = require("../src/seo/siteOrigin.js");
++
++function escapeXml(value) {
++    return value.replace(/[&<>"']/g, (character) => ({
++        "&": "&amp;",
++        "<": "&lt;",
++        ">": "&gt;",
++        '"': "&quot;",
++        "'": "&apos;",
++    }[character]));
++}
++
++function generateSeoFiles({
++    siteOrigin = process.env.REACT_APP_SITE_URL || seoConfig.siteOrigin,
++    outputDirectory = path.resolve(__dirname, "../public"),
++} = {}) {
++    const origin = resolveSiteOrigin(siteOrigin);
++    const urls = Object.keys(seoConfig.routes).map((pathname) => `${origin}${pathname}`);
++    const sitemap = [
++        '<?xml version="1.0" encoding="UTF-8"?>',
++        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
++        ...urls.map((url) => `  <url><loc>${escapeXml(url)}</loc></url>`),
++        "</urlset>",
++        "",
++    ].join("\n");
++    const robots = `User-agent: *\nDisallow:\n\nSitemap: ${origin}/sitemap.xml\n`;
++
++    fs.mkdirSync(outputDirectory, { recursive: true });
++    fs.writeFileSync(path.join(outputDirectory, "sitemap.xml"), sitemap);
++    fs.writeFileSync(path.join(outputDirectory, "robots.txt"), robots);
++
++    return { siteOrigin: origin, urls, sitemap, robots };
++}
++
++if (require.main === module) {
++    process.chdir(path.resolve(__dirname, ".."));
++    // Match CRA's .env precedence so runtime canonicals and the sitemap agree.
++    process.env.NODE_ENV = process.argv[2] || "production";
++    require("react-scripts/config/env");
++    const { urls } = generateSeoFiles();
++    process.stdout.write(`Generated SEO crawl files for ${urls.length} public routes.\n`);
++}
++
++module.exports = { generateSeoFiles };
+diff --git a/capstonefall2026/src/pages/NotFound.js b/capstonefall2026/src/pages/NotFound.js
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/src/pages/NotFound.js
+@@ -0,0 +1,21 @@
++import { Button, Container, Stack, Typography } from "@mui/material";
++import { Link as RouterLink } from "react-router-dom";
++
++function NotFound() {
++    return (
++        <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
++            <Typography component="h1" variant="h2" gutterBottom>
++                Page Not Found
++            </Typography>
++            <Typography sx={{ mb: 3 }}>
++                We could not find this page. Visit the home page or find technology help to continue.
++            </Typography>
++            <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
++                <Button component={RouterLink} to="/" variant="contained">Go to Home</Button>
++                <Button component={RouterLink} to="/need-help" variant="outlined">Find Technology Help</Button>
++            </Stack>
++        </Container>
++    );
++}
++
++export default NotFound;
+diff --git a/capstonefall2026/src/pages/WorkshopDetail.test.js b/capstonefall2026/src/pages/WorkshopDetail.test.js
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/src/pages/WorkshopDetail.test.js
+@@ -0,0 +1,75 @@
++import { render, screen, waitFor } from "@testing-library/react";
++import userEvent from "@testing-library/user-event";
++import { Link, MemoryRouter, Route, Routes } from "react-router-dom";
++import { workshops } from "../mocks/data/workshops";
++import seoConfig from "../seo/config.json";
++import { resolveSiteOrigin } from "../seo/metadata";
++import RouteMetadata from "../seo/RouteMetadata";
++import { getWorkshopById } from "../services/workshopService";
++import WorkshopDetail from "./WorkshopDetail";
++
++jest.mock("../services/workshopService", () => ({
++    getWorkshopById: jest.fn(),
++}));
++
++let originalHead;
++
++beforeEach(() => {
++    originalHead = document.head.innerHTML;
++    document.head.innerHTML = "";
++});
++
++afterEach(() => {
++    document.head.innerHTML = originalHead;
++});
++
++test("workshop client navigation removes stale canonical metadata on errors and restores it on return", async () => {
++    const workshop = workshops[0];
++    const validPath = `/workshops/${workshop.id}`;
++    const missingId = "technical-seo-missing";
++    const siteOrigin = resolveSiteOrigin(process.env.REACT_APP_SITE_URL || seoConfig.siteOrigin);
++    getWorkshopById
++        .mockResolvedValueOnce(workshop)
++        .mockRejectedValueOnce(new Error("Workshop not found"))
++        .mockResolvedValueOnce(workshop);
++
++    render(
++        <MemoryRouter initialEntries={[validPath]}>
++            <RouteMetadata />
++            <nav aria-label="Workshop test navigation">
++                <Link to={validPath}>Open known workshop</Link>
++                <Link to={`/workshops/${missingId}`}>Open missing workshop</Link>
++            </nav>
++            <main>
++                <Routes>
++                    <Route path="/workshops/:id" element={<WorkshopDetail />} />
++                </Routes>
++            </main>
++        </MemoryRouter>
++    );
++
++    async function expectKnownWorkshop() {
++        expect(await screen.findByRole("heading", { level: 1, name: workshop.title })).toBeInTheDocument();
++        await waitFor(() => expect(document.title).toBe(`${workshop.title} | TechSmart`));
++        expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute("content", "index,follow");
++        expect(document.head.querySelectorAll('link[rel="canonical"]')).toHaveLength(1);
++        expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute("href", `${siteOrigin}${validPath}`);
++        expect(screen.getAllByRole("main")).toHaveLength(1);
++        expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
++    }
++
++    await expectKnownWorkshop();
++    userEvent.click(screen.getByRole("link", { name: "Open missing workshop" }));
++    expect(await screen.findByRole("heading", { level: 1, name: "Workshop Not Found" })).toBeInTheDocument();
++    await waitFor(() => expect(document.title).toBe("Workshop Not Found | TechSmart"));
++    expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute("content", "noindex,follow");
++    expect(document.head.querySelector('link[rel="canonical"]')).toBeNull();
++    expect(document.head.querySelectorAll("title")).toHaveLength(1);
++    expect(document.head.querySelectorAll('meta[name="description"]')).toHaveLength(1);
++    expect(screen.getAllByRole("main")).toHaveLength(1);
++    expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
++
++    userEvent.click(screen.getByRole("link", { name: "Open known workshop" }));
++    await expectKnownWorkshop();
++    expect(getWorkshopById.mock.calls.map(([id]) => id)).toEqual([workshop.id, missingId, workshop.id]);
++});
+diff --git a/capstonefall2026/src/seo/config.json b/capstonefall2026/src/seo/config.json
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/src/seo/config.json
+@@ -0,0 +1,45 @@
++{
++  "siteOrigin": "https://capstone-fall-2026.vercel.app",
++  "fallback": {
++    "title": "TechSmart Learning for Seniors | Technology Education",
++    "description": "Explore technology education, workshops, learning resources, and ways to support older adults with TechSmart Learning for Seniors."
++  },
++  "routes": {
++    "/": {
++      "title": "Technology Help for Seniors | TechSmart",
++      "description": "Build confidence with everyday technology. Explore TechSmart Learning for Seniors workshops, learning resources, and opportunities to help older adults."
++    },
++    "/need-help": {
++      "title": "Technology Workshops & Help | TechSmart",
++      "description": "Explore technology help and the workshop search demonstration for older adults learning everyday digital skills with TechSmart Learning for Seniors."
++    },
++    "/want-to-help": {
++      "title": "Donate, Volunteer & Advocate | TechSmart",
++      "description": "Explore ways to support technology education for older adults through donations, volunteering, and advocacy with TechSmart Learning for Seniors."
++    },
++    "/resources": {
++      "title": "Technology Learning Resources | TechSmart",
++      "description": "Explore topics including smartphone and computer basics, online safety, and video tutorials for older adults learning technology with TechSmart."
++    },
++    "/about": {
++      "title": "About TechSmart Learning for Seniors",
++      "description": "Learn about TechSmart Learning for Seniors and its focus on accessible technology education, digital confidence, and community support for older adults."
++    },
++    "/contact": {
++      "title": "Contact TechSmart Learning for Seniors",
++      "description": "Contact TechSmart Learning for Seniors with questions about technology learning, workshops, resources, or ways to support older adults."
++    },
++    "/donate": {
++      "title": "Make a Donation | TechSmart",
++      "description": "Support technology education for older adults through TechSmart Learning for Seniors. View the donation form."
++    }
++  },
++  "workshop": {
++    "title": "Workshop Details | TechSmart",
++    "description": "View workshop information, accessibility features, and the registration demonstration with TechSmart Learning for Seniors."
++  },
++  "notFound": {
++    "title": "Page Not Found | TechSmart",
++    "description": "This TechSmart Learning for Seniors page could not be found. Explore technology help, learning resources, and ways to support older adults."
++  }
++}
+diff --git a/capstonefall2026/src/seo/metadata.js b/capstonefall2026/src/seo/metadata.js
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/src/seo/metadata.js
+@@ -0,0 +1,57 @@
++import seoConfig from "./config.json";
++import siteOriginHelpers from "./siteOrigin";
++
++export const { resolveSiteOrigin } = siteOriginHelpers;
++
++const siteOrigin = resolveSiteOrigin(process.env.REACT_APP_SITE_URL || seoConfig.siteOrigin);
++
++export function getRouteMetadata(pathname = "/") {
++    const pathWithoutSearch = pathname.split(/[?#]/, 1)[0] || "/";
++    const path = pathWithoutSearch.replace(/\/+$/, "") || "/";
++    const staticPath = path.toLowerCase();
++    const route = seoConfig.routes[staticPath];
++    const workshop = /^\/workshops\/([^/]+)$/i.exec(path);
++
++    if (!route && !workshop) {
++        return { ...seoConfig.notFound, canonical: null, robots: "noindex,follow" };
++    }
++
++    return {
++        ...(route || seoConfig.workshop),
++        canonical: `${siteOrigin}${route ? staticPath : `/workshops/${workshop[1]}`}`,
++        robots: "index,follow",
++    };
++}
++
++function singleHeadElement(selector, tagName) {
++    const [existing, ...duplicates] = document.head.querySelectorAll(selector);
++    duplicates.forEach((node) => node.remove());
++
++    if (existing) {
++        return existing;
++    }
++
++    const element = document.createElement(tagName);
++    document.head.appendChild(element);
++    return element;
++}
++
++export function applyPageMetadata({ title, description, canonical, robots }) {
++    singleHeadElement("title", "title").textContent = title;
++
++    const descriptionTag = singleHeadElement('meta[name="description" i]', "meta");
++    descriptionTag.setAttribute("name", "description");
++    descriptionTag.setAttribute("content", description);
++
++    const robotsTag = singleHeadElement('meta[name="robots" i]', "meta");
++    robotsTag.setAttribute("name", "robots");
++    robotsTag.setAttribute("content", robots);
++
++    if (canonical) {
++        const canonicalTag = singleHeadElement('link[rel~="canonical" i]', "link");
++        canonicalTag.setAttribute("rel", "canonical");
++        canonicalTag.setAttribute("href", canonical);
++    } else {
++        document.head.querySelectorAll('link[rel~="canonical" i]').forEach((node) => node.remove());
++    }
++}
+diff --git a/capstonefall2026/src/seo/metadata.test.js b/capstonefall2026/src/seo/metadata.test.js
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/src/seo/metadata.test.js
+@@ -0,0 +1,178 @@
++import { render, screen, waitFor } from "@testing-library/react";
++import userEvent from "@testing-library/user-event";
++import { Link, MemoryRouter } from "react-router-dom";
++import seoConfig from "./config.json";
++import RouteMetadata from "./RouteMetadata";
++import { applyPageMetadata, getRouteMetadata, resolveSiteOrigin } from "./metadata";
++
++let originalHead;
++const siteOrigin = resolveSiteOrigin(process.env.REACT_APP_SITE_URL || seoConfig.siteOrigin);
++
++beforeEach(() => {
++    originalHead = document.head.innerHTML;
++    document.head.innerHTML = "";
++});
++
++afterEach(() => {
++    document.head.innerHTML = originalHead;
++});
++
++test("all seven public pages have distinct descriptive titles, descriptions, and canonicals", () => {
++    const metadata = Object.keys(seoConfig.routes).map((route) => getRouteMetadata(route));
++
++    expect(metadata).toHaveLength(7);
++    expect(new Set(metadata.map((page) => page.title)).size).toBe(7);
++    expect(new Set(metadata.map((page) => page.description)).size).toBe(7);
++    expect(new Set(metadata.map((page) => page.canonical)).size).toBe(7);
++    metadata.forEach((page) => {
++        expect(page.title).toMatch(/TechSmart/);
++        expect(page.title).not.toMatch(/React App/);
++        expect(page.description.length).toBeGreaterThan(50);
++        expect(page.robots).toBe("index,follow");
++    });
++});
++
++test.each([
++    ["/?source=home#top", "/"],
++    ["/need-help/?zip=01234#workshops", "/need-help"],
++    ["/want-to-help#donate", "/want-to-help"],
++    ["/resources///?topic=smartphones", "/resources"],
++    ["/ABOUT/", "/about"],
++    ["/NEED-HELP?zip=01234", "/need-help"],
++])("%s canonicalizes to %s without query, fragment, or duplicate trailing slashes", (input, route) => {
++    expect(getRouteMetadata(input)).toEqual({
++        ...seoConfig.routes[route],
++        canonical: `${siteOrigin}${route}`,
++        robots: "index,follow",
++    });
++});
++
++test("workshop paths get a self canonical while missing routes stay out of the index", () => {
++    expect(getRouteMetadata("/workshops/WS-1001/?source=search#register")).toEqual({
++        ...seoConfig.workshop,
++        canonical: `${siteOrigin}/workshops/WS-1001`,
++        robots: "index,follow",
++    });
++    expect(getRouteMetadata("/WORKSHOPS/WS-1001")).toEqual({
++        ...seoConfig.workshop,
++        canonical: `${siteOrigin}/workshops/WS-1001`,
++        robots: "index,follow",
++    });
++    ["/not-a-page", "/workshops", "/workshops/WS-1001/extra"].forEach((route) => {
++        expect(getRouteMetadata(route)).toEqual({
++            ...seoConfig.notFound,
++            canonical: null,
++            robots: "noindex,follow",
++        });
++    });
++});
++
++test("metadata updates remove duplicate head tags and preserve unrelated metadata", () => {
++    document.head.innerHTML = `
++        <title>Old title</title><title>Duplicate title</title>
++        <meta name="Description" content="Old description"><meta name="description" content="Duplicate description">
++        <meta name="ROBOTS" content="noindex"><meta name="robots" content="nofollow">
++        <link rel="alternate canonical" href="https://old.example/"><link rel="CANONICAL" href="https://duplicate.example/">
++        <meta name="viewport" content="width=device-width, initial-scale=1">
++        <link rel="icon" href="/favicon.ico">
++    `;
++    const resources = getRouteMetadata("/resources");
++    applyPageMetadata(resources);
++    applyPageMetadata(resources);
++
++    expect(document.head.querySelectorAll("title")).toHaveLength(1);
++    expect(document.title).toBe(resources.title);
++    expect(document.head.querySelectorAll('meta[name="description" i]')).toHaveLength(1);
++    expect(document.head.querySelector('meta[name="description"]')).toHaveAttribute("content", resources.description);
++    expect(document.head.querySelectorAll('meta[name="robots" i]')).toHaveLength(1);
++    expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute("content", "index,follow");
++    expect(document.head.querySelectorAll('link[rel~="canonical" i]')).toHaveLength(1);
++    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute("href", resources.canonical);
++    expect(document.head.querySelector('meta[name="viewport"]')).toHaveAttribute("content", "width=device-width, initial-scale=1");
++    expect(document.head.querySelector('link[rel="icon"]')).toHaveAttribute("href", "/favicon.ico");
++
++    applyPageMetadata(getRouteMetadata("/not-a-page"));
++    expect(document.head.querySelectorAll('link[rel~="canonical" i]')).toHaveLength(0);
++    expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute("content", "noindex,follow");
++
++    applyPageMetadata(getRouteMetadata("/"));
++    expect(document.head.querySelectorAll('link[rel~="canonical" i]')).toHaveLength(1);
++    expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute("content", "index,follow");
++});
++
++test("client route changes replace metadata without retaining a previous page canonical", async () => {
++    render(
++        <MemoryRouter initialEntries={["/need-help?zip=01234#workshops"]}>
++            <RouteMetadata />
++            <Link to="/resources">Browse resources</Link>
++            <Link to="/not-a-page">Missing page</Link>
++        </MemoryRouter>
++    );
++
++    await waitFor(() => expect(document.title).toBe(seoConfig.routes["/need-help"].title));
++    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute("href", `${siteOrigin}/need-help`);
++
++    userEvent.click(screen.getByRole("link", { name: "Browse resources" }));
++    await waitFor(() => expect(document.title).toBe(seoConfig.routes["/resources"].title));
++    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute("href", `${siteOrigin}/resources`);
++
++    userEvent.click(screen.getByRole("link", { name: "Missing page" }));
++    await waitFor(() => expect(document.title).toBe(seoConfig.notFound.title));
++    expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute("content", "noindex,follow");
++    expect(document.head.querySelector('link[rel="canonical"]')).toBeNull();
++    expect(document.head.querySelectorAll("title")).toHaveLength(1);
++    expect(document.head.querySelectorAll('meta[name="description"]')).toHaveLength(1);
++});
++
++test.each([
++    ["  https://techsmart.example/  ", "https://techsmart.example"],
++    ["http://localhost:4173/", "http://localhost:4173"],
++    [seoConfig.siteOrigin, seoConfig.siteOrigin],
++])("site origin %s normalizes to %s", (input, expected) => {
++    expect(resolveSiteOrigin(input)).toBe(expected);
++});
++
++test.each([
++    undefined, "", "/relative", "ftp://techsmart.example", "https:techsmart.example",
++    "https://techsmart.example/resources", "https://techsmart.example/..",
++    "https://techsmart.example?zip=01234", "https://techsmart.example?",
++    "https://techsmart.example#home", "https://techsmart.example#",
++    "https://person:password@techsmart.example", "https://techsmart.example\\resources",
++])("site origin rejects %s so runtime canonicals and the sitemap cannot target an invalid base", (input) => {
++    expect(() => resolveSiteOrigin(input)).toThrow(/REACT_APP_SITE_URL/);
++});
++
++test("configured deployment origin is used by runtime canonical metadata", () => {
++    const previous = process.env.REACT_APP_SITE_URL;
++    process.env.REACT_APP_SITE_URL = "https://preview.techsmart.example/";
++    try {
++        jest.isolateModules(() => {
++            const { getRouteMetadata: getPreviewMetadata } = require("./metadata");
++            expect(getPreviewMetadata("/contact?ref=footer").canonical).toBe("https://preview.techsmart.example/contact");
++        });
++    } finally {
++        if (previous === undefined) delete process.env.REACT_APP_SITE_URL;
++        else process.env.REACT_APP_SITE_URL = previous;
++    }
++});
++
++test("crawl-file generation uses the configured public routes and excludes demonstration workshops", () => {
++    const fs = require("node:fs");
++    const { generateSeoFiles } = require("../../scripts/generate-seo.cjs");
++    const mkdir = jest.spyOn(fs, "mkdirSync").mockImplementation(() => undefined);
++    const write = jest.spyOn(fs, "writeFileSync").mockImplementation(() => undefined);
++    try {
++        const result = generateSeoFiles({ siteOrigin: "https://preview.techsmart.example/", outputDirectory: "seo-test-output" });
++        const expected = Object.keys(seoConfig.routes).map((route) => `https://preview.techsmart.example${route}`);
++        expect(result.urls).toEqual(expected);
++        expect(result.urls).toHaveLength(7);
++        expect(result.sitemap).not.toContain("/workshops/");
++        expected.forEach((url) => expect(result.sitemap).toContain(`<loc>${url}</loc>`));
++        expect(result.robots).toContain("User-agent: *\nDisallow:\n");
++        expect(result.robots).toContain("Sitemap: https://preview.techsmart.example/sitemap.xml");
++        expect(write).toHaveBeenCalledTimes(2);
++    } finally {
++        mkdir.mockRestore();
++        write.mockRestore();
++    }
++});
+diff --git a/capstonefall2026/src/seo/RouteMetadata.js b/capstonefall2026/src/seo/RouteMetadata.js
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/src/seo/RouteMetadata.js
+@@ -0,0 +1,15 @@
++import { useEffect } from "react";
++import { useLocation } from "react-router-dom";
++import { applyPageMetadata, getRouteMetadata } from "./metadata";
++
++function RouteMetadata() {
++    const { pathname } = useLocation();
++
++    useEffect(() => {
++        applyPageMetadata(getRouteMetadata(pathname));
++    }, [pathname]);
++
++    return null;
++}
++
++export default RouteMetadata;
+diff --git a/capstonefall2026/src/seo/siteOrigin.js b/capstonefall2026/src/seo/siteOrigin.js
+new file mode 100644
+--- /dev/null
++++ b/capstonefall2026/src/seo/siteOrigin.js
+@@ -0,0 +1,24 @@
++// Shared by the browser metadata and the build-time sitemap generator.
++function resolveSiteOrigin(value) {
++    const candidate = typeof value === "string" ? value.trim() : "";
++    let url;
++
++    try {
++        url = new URL(candidate);
++    } catch {
++        throw new Error("REACT_APP_SITE_URL must be an absolute HTTP or HTTPS site origin.");
++    }
++
++    if (
++        !/^https?:\/\/[^/?#\\\s]+\/?$/i.test(candidate) ||
++        !["http:", "https:"].includes(url.protocol) ||
++        url.username || url.password ||
++        url.pathname !== "/" || url.search || url.hash
++    ) {
++        throw new Error("REACT_APP_SITE_URL must contain only an HTTP or HTTPS origin, without a path, query, fragment, or credentials.");
++    }
++
++    return url.origin;
++}
++
++module.exports = { resolveSiteOrigin };

@@ -28,8 +28,18 @@ test("renders the hero immediately and gives the ZIP field an accessible descrip
     const { input } = renderHome();
 
     expect(screen.getByRole("heading", { level: 1, name: "Technology Made Simple." })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "I Need Technology Help" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "I Want to Help" })).toBeInTheDocument();
+    [
+        ["I Need Technology Help", "/need-help"],
+        ["I Want to Help", "/want-to-help"],
+        ["Find Workshops", "/need-help"],
+        ["View Resources", "/resources"],
+        ["Get Help", "/need-help"],
+        ["Donate", "/want-to-help#donate"],
+        ["Volunteer", "/want-to-help#volunteer"],
+        ["Advocate", "/want-to-help#advocate"],
+    ].forEach(([name, href]) => {
+        expect(screen.getByRole("link", { name })).toHaveAttribute("href", href);
+    });
     expect(input).toHaveAttribute("inputmode", "numeric");
     expect(input).toHaveAttribute("maxlength", "5");
     expect(input).toHaveAttribute("aria-describedby", "home-zip-code-help");

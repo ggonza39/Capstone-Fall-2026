@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MobileBottomNav from "../components/MobileBottomNav";
 import ScrollToTop from "../components/ScrollToTop";
+import RouteMetadata from "../seo/RouteMetadata";
 
 /**
  * PBI-6 Implement dual-path landing and navigation.
@@ -41,6 +42,7 @@ function MainLayout() {
                 },
             }}
         >
+            <RouteMetadata />
             <ScrollToTop />{/* Scroll to top of page when selecting bottom navigation button */}
 
             <SkipLink /> {/* Skip to main content link for accessibility */}

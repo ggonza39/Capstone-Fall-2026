@@ -168,6 +168,9 @@ const theme = createTheme({
                         whiteSpace: "normal",
                         overflowWrap: "anywhere",
                         textAlign: "center",
+                        "&.MuiButton-fullWidth": {
+                            width: "100%",
+                        },
                         "@media (max-width: 599.95px)": {
                             width: "100%",
                         },

@@ -12,6 +12,8 @@ The subsequent [FCP optimization and local production verification](fcp-optimiza
 
 [Speed Index optimization](speed-index-optimization.md) records lossless logo delivery, image sizing, paired local audits, and preserved header/Menu appearance. Speed Index remains below target; no timing improvement is established by this set.
 
+[Technical SEO optimization](technical-seo-optimization.md) records route metadata, canonicals, sitemap/robots, crawlable links, semantic fixes, and eight local SEO audits scoring 100. It also documents client-rendering and HTTP-status limits.
+
 ## Baseline, initial results, and final comparison
 
 The documented project baseline and targets come from PBI-14. Final results will be recorded after optimization using the same route and test conditions.
