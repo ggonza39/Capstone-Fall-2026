@@ -154,6 +154,24 @@ const theme = createTheme({
                     minWidth: "48px",
                     padding: "10px 20px",
                     fontWeight: 700,
+                    // Share dimensions across action variants, including large buttons.
+                    // A minimum height lets enlarged or wrapped labels remain readable.
+                    "&.MuiButton-contained:not([data-uniform-size='false']), &.MuiButton-outlined:not([data-uniform-size='false'])": {
+                        boxSizing: "border-box",
+                        width: "14rem",
+                        maxWidth: "100%",
+                        minWidth: 0,
+                        minHeight: "4.5rem",
+                        padding: "10px 20px",
+                        fontSize: "1.125rem",
+                        lineHeight: 1.4,
+                        whiteSpace: "normal",
+                        overflowWrap: "anywhere",
+                        textAlign: "center",
+                        "@media (max-width: 599.95px)": {
+                            width: "100%",
+                        },
+                    },
 
                     "&:focus-visible": {
                         outline: "3px solid #000000",

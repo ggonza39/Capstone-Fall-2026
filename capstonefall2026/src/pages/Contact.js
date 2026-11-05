@@ -153,7 +153,7 @@ function Contact() {
                             helperText={errors.message}
                         />
 
-                        <Button type="submit" variant="contained" size="large" startIcon={<SendIcon />}>
+                        <Button data-uniform-size="false" type="submit" variant="contained" size="large" startIcon={<SendIcon />}>
                             Send Message
                         </Button>
                     </Stack>

@@ -63,8 +63,8 @@ function Resources() {
                     <Grid container spacing={3}>
                         {resources.map((resource) => (
                             <Grid key={resource.id} size={{ xs: 12, sm: 6 }}>
-                                <Card variant="outlined" sx={{ height: "100%" }}>
-                                    <CardContent>
+                                <Card variant="outlined" sx={{ height: "100%", display: "flex" }}>
+                                    <CardContent sx={{ display: "flex", flexDirection: "column", flex: 1 }}>
                                         <Box
                                             sx={{
                                                 color: "primary.main",
@@ -87,7 +87,9 @@ function Resources() {
                                             {resource.description}
                                         </Typography>
 
-                                        <Button variant="outlined">View {resource.title}</Button>
+                                        <Button variant="outlined" sx={{ mt: "auto", alignSelf: "flex-start" }}>
+                                            View {resource.title}
+                                        </Button>
                                     </CardContent>
                                 </Card>
                             </Grid>

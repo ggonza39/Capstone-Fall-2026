@@ -188,6 +188,8 @@ function Header() {
                             startIcon={menuOpen ? <CloseIcon /> : <MenuIcon />}
                             variant="contained"
                             sx={{
+                                // Keep navigation compact beside the logo on small screens.
+                                '&&': { width: 'auto', minWidth: 48, minHeight: 48, flexShrink: 0 },
                                 display: {
                                     xs: "inline-flex",
                                     lg: "none",

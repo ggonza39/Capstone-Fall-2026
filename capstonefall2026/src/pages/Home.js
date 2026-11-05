@@ -87,6 +87,17 @@ function Home() {
                                 sm: "row",
                             }}
                             spacing={2}
+                            sx={{
+                                width: "100%",
+                                maxWidth: 600,
+                                "& .MuiButton-root": {
+                                    flex: { xs: "none", sm: 1 },
+                                    width: { xs: "100%", sm: "auto" },
+                                    minWidth: 0,
+                                    minHeight: 70,
+                                    px: 2,
+                                },
+                            }}
                         >
                             <Button
                                 variant="contained"
