@@ -1,0 +1,234 @@
+{
+  "phase": "Initial deployed implementation before final optimization",
+  "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+  "route": "/",
+  "aggregation": "Independent median for each metric across five sequential runs; timing values stored in milliseconds",
+  "baselineSource": "documentation/milestones/Milestone-3.md, PBI-14",
+  "baselineComparability": "Original baseline raw reports and conditions are unavailable; historical baseline comparisons are descriptive, not controlled before/after evidence.",
+  "lighthouseVersion": "12.8.2",
+  "settings": {
+    "output": [
+      "json",
+      "html"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "deployment": {
+    "capturedAtUtc": "2026-11-05T05:07:04.9653863Z",
+    "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+    "status": 200,
+    "etag": "\"15242512c434c10244ef47b001068dbf\"",
+    "lastModified": "Thu, 05 Nov 2026 03:01:35 GMT",
+    "vercelCache": "HIT",
+    "entryScript": "/static/js/main.178042f2.js",
+    "localReferenceCommit": "af2b9f7762a286880d02ca0cb70e63cd1033628d",
+    "deployedCommit": null,
+    "deployedCommitNote": "The public deployment does not expose a verified source commit. The local commit is a reference only.",
+    "nodeVersion": "v20.11.1",
+    "chromeVersion": "156.0.8078.80",
+    "operatingSystem": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "OSArchitecture": "64-bit"
+    },
+    "cpu": {
+      "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    },
+    "verifiedAtUtc": "2026-11-05T05:08:39.1576978Z",
+    "etagAfter": "\"15242512c434c10244ef47b001068dbf\"",
+    "entryScriptAfter": "/static/js/main.178042f2.js",
+    "unchangedDuringVerification": true
+  },
+  "runs": [
+    {
+      "run": 1,
+      "reportJson": "run-1.report.json",
+      "reportHtml": "run-1.report.html",
+      "fetchTimeUtc": "2026-11-05T05:06:13.658Z",
+      "FCP": 784.8565,
+      "LCP": 4515.223999999999,
+      "TBT": 1018.999999999999,
+      "Speed Index": 1111.4510471982821,
+      "seoScore": 100,
+      "performanceScore": 62,
+      "benchmarkIndex": 1885.5
+    },
+    {
+      "run": 2,
+      "reportJson": "run-2.report.json",
+      "reportHtml": "run-2.report.html",
+      "fetchTimeUtc": "2026-11-05T05:07:17.916Z",
+      "FCP": 839.9189999999999,
+      "LCP": 4635.164000000001,
+      "TBT": 1283,
+      "Speed Index": 1349.6160005854767,
+      "seoScore": 100,
+      "performanceScore": 59,
+      "benchmarkIndex": 1679
+    },
+    {
+      "run": 3,
+      "reportJson": "run-3.report.json",
+      "reportHtml": "run-3.report.html",
+      "fetchTimeUtc": "2026-11-05T05:07:38.431Z",
+      "FCP": 815.228,
+      "LCP": 4638.846,
+      "TBT": 1226,
+      "Speed Index": 1203.9091248460122,
+      "seoScore": 100,
+      "performanceScore": 60,
+      "benchmarkIndex": 1254.5
+    },
+    {
+      "run": 4,
+      "reportJson": "run-4.report.json",
+      "reportHtml": "run-4.report.html",
+      "fetchTimeUtc": "2026-11-05T05:08:03.908Z",
+      "FCP": 819.0665,
+      "LCP": 4445.904,
+      "TBT": 756,
+      "Speed Index": 1010.1006394818512,
+      "seoScore": 100,
+      "performanceScore": 66,
+      "benchmarkIndex": 2205.5
+    },
+    {
+      "run": 5,
+      "reportJson": "run-5.report.json",
+      "reportHtml": "run-5.report.html",
+      "fetchTimeUtc": "2026-11-05T05:08:24.916Z",
+      "FCP": 820.1525,
+      "LCP": 2099.8245,
+      "TBT": 876,
+      "Speed Index": 1089.1681056906614,
+      "seoScore": 100,
+      "performanceScore": 79,
+      "benchmarkIndex": 2104.5
+    }
+  ],
+  "comparisons": [
+    {
+      "metric": "FCP",
+      "unit": "ms",
+      "documentedProjectBaseline": 5700,
+      "initialMedian": 819.0665,
+      "minimum": 784.8565,
+      "maximum": 839.9189999999999,
+      "finalTargetExclusive": 2000,
+      "initialMeetsTarget": true,
+      "timingImprovementPercentVsDocumentedBaseline": 85.63041228070175,
+      "finalResult": null
+    },
+    {
+      "metric": "LCP",
+      "unit": "ms",
+      "documentedProjectBaseline": 21800,
+      "initialMedian": 4515.223999999999,
+      "minimum": 2099.8245,
+      "maximum": 4638.846,
+      "finalTargetExclusive": 2500,
+      "initialMeetsTarget": false,
+      "timingImprovementPercentVsDocumentedBaseline": 79.2879633027523,
+      "finalResult": null
+    },
+    {
+      "metric": "TBT",
+      "unit": "ms",
+      "documentedProjectBaseline": 700,
+      "initialMedian": 1018.999999999999,
+      "minimum": 756,
+      "maximum": 1283,
+      "finalTargetExclusive": 200,
+      "initialMeetsTarget": false,
+      "timingImprovementPercentVsDocumentedBaseline": -45.57142857142843,
+      "finalResult": null
+    },
+    {
+      "metric": "Speed Index",
+      "unit": "ms",
+      "documentedProjectBaseline": 8700,
+      "initialMedian": 1111.4510471982821,
+      "minimum": 1010.1006394818512,
+      "maximum": 1349.6160005854767,
+      "finalTargetExclusive": 3400,
+      "initialMeetsTarget": true,
+      "timingImprovementPercentVsDocumentedBaseline": 87.2247006069163,
+      "finalResult": null
+    },
+    {
+      "metric": "SEO",
+      "unit": "score/100",
+      "documentedProjectBaseline": 40,
+      "initialMedian": 100,
+      "minimum": 100,
+      "maximum": 100,
+      "finalTargetInclusive": [
+        90,
+        100
+      ],
+      "initialMeetsTarget": true,
+      "pointChangeVsDocumentedBaseline": 60,
+      "finalResult": null
+    }
+  ],
+  "validation": {
+    "runs": 5,
+    "runtimeErrors": 0,
+    "warnings": 0,
+    "settingsIdentical": true,
+    "entryScriptIdenticalAcrossRuns": true,
+    "homePageScreenshotManuallyVerified": true
+  }
+}

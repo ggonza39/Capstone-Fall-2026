@@ -1,0 +1,28 @@
+﻿{
+    "capturedAtUtc":  "2026-11-05T05:07:04.9653863Z",
+    "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+    "status":  200,
+    "etag":  "\"15242512c434c10244ef47b001068dbf\"",
+    "lastModified":  "Thu, 05 Nov 2026 03:01:35 GMT",
+    "vercelCache":  "HIT",
+    "entryScript":  "/static/js/main.178042f2.js",
+    "localReferenceCommit":  "af2b9f7762a286880d02ca0cb70e63cd1033628d",
+    "deployedCommit":  null,
+    "deployedCommitNote":  "The public deployment does not expose a verified source commit. The local commit is a reference only.",
+    "nodeVersion":  "v20.11.1",
+    "chromeVersion":  "156.0.8078.80",
+    "operatingSystem":  {
+                            "Caption":  "Microsoft Windows 11 Home",
+                            "Version":  "10.0.26200",
+                            "OSArchitecture":  "64-bit"
+                        },
+    "cpu":  {
+                "Name":  "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+                "NumberOfCores":  4,
+                "NumberOfLogicalProcessors":  8
+            },
+    "verifiedAtUtc":  "2026-11-05T05:08:39.1576978Z",
+    "etagAfter":  "\"15242512c434c10244ef47b001068dbf\"",
+    "entryScriptAfter":  "/static/js/main.178042f2.js",
+    "unchangedDuringVerification":  true
+}
