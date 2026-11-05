@@ -1,0 +1,1367 @@
+{
+  "generatedAtUtc": "2026-11-05T13:21:12.380Z",
+  "scope": "Local production asset-delivery verification; one Lighthouse diagnostic per route and phase. No repeated timing experiment or final deployed performance claim.",
+  "byteMethod": "Sum Resource Timing encodedBodySize for each selected image, after scrolling to decode all lazy images in fresh cache-disabled browser contexts. Body bytes exclude HTTP headers, scripts, and other resource types.",
+  "browserChecks": {
+    "before": 38,
+    "after": 90,
+    "capturesPerPhase": 10,
+    "bothPassed": true
+  },
+  "coverDensityChecks": [
+    {
+      "viewportWidth": 599,
+      "dpr": 2,
+      "alt": "Older adult receiving guidance while learning to use a tablet.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-1200.8abd9dce1b4b1fb45374.webp",
+      "width": 567,
+      "height": 220,
+      "sourceWidth": 1200,
+      "sourceHeight": 675,
+      "availableCoverDensity": 2.1164021164021163
+    },
+    {
+      "viewportWidth": 599,
+      "dpr": 2,
+      "alt": "Two older adults practicing computer skills together.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-1200.999236e97c30a64bcaa5.webp",
+      "width": 567,
+      "height": 220,
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "availableCoverDensity": 2.1164021164021163
+    },
+    {
+      "viewportWidth": 599,
+      "dpr": 2,
+      "alt": "Volunteer helping an older adult use a smartphone.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-1200.940b7cac408ace464a2d.webp",
+      "width": 567,
+      "height": 220,
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "availableCoverDensity": 2.1164021164021163
+    },
+    {
+      "viewportWidth": 599,
+      "dpr": 2,
+      "alt": "Older adults participating in a technology learning session.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-1200.7ce4951a7b08371b681d.webp",
+      "width": 567,
+      "height": 220,
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "availableCoverDensity": 2.1164021164021163
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 2,
+      "alt": "Older adult receiving guidance while learning to use a tablet.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-1200.8abd9dce1b4b1fb45374.webp",
+      "width": 232.15625,
+      "height": 245,
+      "sourceWidth": 1200,
+      "sourceHeight": 675,
+      "availableCoverDensity": 2.7551020408163267
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 2,
+      "alt": "Two older adults practicing computer skills together.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-800.9827d6e180781f50a338.webp",
+      "width": 232.15625,
+      "height": 245,
+      "sourceWidth": 800,
+      "sourceHeight": 533,
+      "availableCoverDensity": 2.1755102040816325
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 2,
+      "alt": "Volunteer helping an older adult use a smartphone.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-800.0fb02e34cb93762c7ecc.webp",
+      "width": 232.15625,
+      "height": 245,
+      "sourceWidth": 800,
+      "sourceHeight": 533,
+      "availableCoverDensity": 2.1755102040816325
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 2,
+      "alt": "Older adults participating in a technology learning session.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-800.353177e3782e40a39654.webp",
+      "width": 232.15625,
+      "height": 245,
+      "sourceWidth": 800,
+      "sourceHeight": 533,
+      "availableCoverDensity": 2.1755102040816325
+    },
+    {
+      "viewportWidth": 1280,
+      "dpr": 2,
+      "alt": "Older adult receiving guidance while learning to use a tablet.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-1200.8abd9dce1b4b1fb45374.webp",
+      "width": 319.65625,
+      "height": 245,
+      "sourceWidth": 1200,
+      "sourceHeight": 675,
+      "availableCoverDensity": 2.7551020408163267
+    },
+    {
+      "viewportWidth": 1280,
+      "dpr": 2,
+      "alt": "Two older adults practicing computer skills together.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-800.9827d6e180781f50a338.webp",
+      "width": 319.65625,
+      "height": 245,
+      "sourceWidth": 800,
+      "sourceHeight": 533,
+      "availableCoverDensity": 2.1755102040816325
+    },
+    {
+      "viewportWidth": 1280,
+      "dpr": 2,
+      "alt": "Volunteer helping an older adult use a smartphone.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-800.0fb02e34cb93762c7ecc.webp",
+      "width": 319.65625,
+      "height": 245,
+      "sourceWidth": 800,
+      "sourceHeight": 533,
+      "availableCoverDensity": 2.1755102040816325
+    },
+    {
+      "viewportWidth": 1280,
+      "dpr": 2,
+      "alt": "Older adults participating in a technology learning session.",
+      "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-800.353177e3782e40a39654.webp",
+      "width": 319.65625,
+      "height": 245,
+      "sourceWidth": 800,
+      "sourceHeight": 533,
+      "availableCoverDensity": 2.1755102040816325
+    }
+  ],
+  "browserComparisons": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1
+      },
+      "beforeImageBodyBytes": 19254,
+      "afterImageBodyBytes": 8302,
+      "savedBytes": 10952,
+      "savedPercent": 56.881686922197986,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-260.0f7f652f848bd3d06e5a.webp",
+          "widthCssPx": 190,
+          "heightCssPx": 95
+        }
+      ]
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1
+      },
+      "beforeImageBodyBytes": 2019962,
+      "afterImageBodyBytes": 126334,
+      "savedBytes": 1893628,
+      "savedPercent": 93.74572392946006,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-260.0f7f652f848bd3d06e5a.webp",
+          "widthCssPx": 190,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-480.5dc527b8e455c001fa4b.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-480.123ab25bc3df31dd0426.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-480.2eb9f1cbc99afbcdfdeb.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-480.00e18e9fed1bb65ad064.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Waymo logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo-210.fe7a3de757d540603645.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Insight Global logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo-210.54afe1331d1e048b4f61.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo-210.3b6c58c339595e3c91d4.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Hiller logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo-210.ebe4dc574501634ccfc3.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo-210.38e055c2275fa85fb07e.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "beforeImageBodyBytes": 19254,
+      "afterImageBodyBytes": 8302,
+      "savedBytes": 10952,
+      "savedPercent": 56.881686922197986,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-260.0f7f652f848bd3d06e5a.webp",
+          "widthCssPx": 220,
+          "heightCssPx": 110
+        }
+      ]
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "beforeImageBodyBytes": 2019962,
+      "afterImageBodyBytes": 126334,
+      "savedBytes": 1893628,
+      "savedPercent": 93.74572392946006,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-260.0f7f652f848bd3d06e5a.webp",
+          "widthCssPx": 220,
+          "heightCssPx": 110
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-480.5dc527b8e455c001fa4b.webp",
+          "widthCssPx": 352,
+          "heightCssPx": 230
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-480.123ab25bc3df31dd0426.webp",
+          "widthCssPx": 352,
+          "heightCssPx": 230
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-480.2eb9f1cbc99afbcdfdeb.webp",
+          "widthCssPx": 352,
+          "heightCssPx": 230
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-480.00e18e9fed1bb65ad064.webp",
+          "widthCssPx": 352,
+          "heightCssPx": 230
+        },
+        {
+          "alt": "Waymo logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo-210.fe7a3de757d540603645.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Insight Global logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo-210.54afe1331d1e048b4f61.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo-210.3b6c58c339595e3c91d4.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Hiller logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo-210.ebe4dc574501634ccfc3.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo-210.38e055c2275fa85fb07e.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "beforeImageBodyBytes": 19254,
+      "afterImageBodyBytes": 8302,
+      "savedBytes": 10952,
+      "savedPercent": 56.881686922197986,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-260.0f7f652f848bd3d06e5a.webp",
+          "widthCssPx": 260,
+          "heightCssPx": 130
+        }
+      ]
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "beforeImageBodyBytes": 2019962,
+      "afterImageBodyBytes": 126334,
+      "savedBytes": 1893628,
+      "savedPercent": 93.74572392946006,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-260.0f7f652f848bd3d06e5a.webp",
+          "widthCssPx": 260,
+          "heightCssPx": 130
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-480.5dc527b8e455c001fa4b.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-480.123ab25bc3df31dd0426.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-480.2eb9f1cbc99afbcdfdeb.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-480.00e18e9fed1bb65ad064.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Waymo logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo-210.fe7a3de757d540603645.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Insight Global logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo-210.54afe1331d1e048b4f61.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo-210.3b6c58c339595e3c91d4.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Hiller logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo-210.ebe4dc574501634ccfc3.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo-210.38e055c2275fa85fb07e.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 2
+      },
+      "beforeImageBodyBytes": 19254,
+      "afterImageBodyBytes": 12994,
+      "savedBytes": 6260,
+      "savedPercent": 32.51272462864859,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-380.4776d5af4ab27c953e6f.webp",
+          "widthCssPx": 190,
+          "heightCssPx": 95
+        }
+      ]
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 2
+      },
+      "beforeImageBodyBytes": 2019962,
+      "afterImageBodyBytes": 279512,
+      "savedBytes": 1740450,
+      "savedPercent": 86.16251196804691,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo-380.4776d5af4ab27c953e6f.webp",
+          "widthCssPx": 190,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-800.d3a2a539b52b78412179.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-800.9827d6e180781f50a338.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-800.0fb02e34cb93762c7ecc.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-800.353177e3782e40a39654.webp",
+          "widthCssPx": 380,
+          "heightCssPx": 220
+        },
+        {
+          "alt": "Waymo logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo-420.2814c02a36762f1e5231.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Insight Global logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo-420.47297f9b8ebdd86fb5aa.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo-420.843bba8fbf481eba192c.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Hiller logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo-420.b7aab2fe4eeb73696ace.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo-420.4b35a3fe0a5a63940fe0.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 2
+      },
+      "beforeImageBodyBytes": 19254,
+      "afterImageBodyBytes": 19254,
+      "savedBytes": 0,
+      "savedPercent": 0,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "widthCssPx": 260,
+          "heightCssPx": 130
+        }
+      ]
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 2
+      },
+      "beforeImageBodyBytes": 2019962,
+      "afterImageBodyBytes": 316492,
+      "savedBytes": 1703470,
+      "savedPercent": 84.3317844593116,
+      "selectedImages": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "widthCssPx": 260,
+          "heightCssPx": 130
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning-1200.8abd9dce1b4b1fb45374.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning-800.9827d6e180781f50a338.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning-800.0fb02e34cb93762c7ecc.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning-800.353177e3782e40a39654.webp",
+          "widthCssPx": 319.656,
+          "heightCssPx": 245
+        },
+        {
+          "alt": "Waymo logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo-420.2814c02a36762f1e5231.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Insight Global logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo-420.47297f9b8ebdd86fb5aa.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo-420.843bba8fbf481eba192c.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Hiller logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo-420.b7aab2fe4eeb73696ace.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo-420.4b35a3fe0a5a63940fe0.webp",
+          "widthCssPx": 210,
+          "heightCssPx": 95
+        }
+      ]
+    }
+  ],
+  "lighthouse": [
+    {
+      "phase": "before",
+      "route": "home",
+      "fetchTime": "2026-11-05T13:08:17.825Z",
+      "lighthouseVersion": "12.8.2",
+      "runtimeError": null,
+      "runWarnings": [],
+      "benchmarkIndex": 1720.5,
+      "entryScript": "static/js/main.b25e5a92.js",
+      "metricsMs": {
+        "first-contentful-paint": 611.31565,
+        "largest-contentful-paint": 1968.94695,
+        "total-blocking-time": 297,
+        "speed-index": 674.5917773243605
+      },
+      "cls": 0,
+      "seo": 100,
+      "totalTransferBytes": 173300,
+      "audits": {
+        "uses-responsive-images": {
+          "score": 0.5,
+          "potentialSavingsBytes": 10739,
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-26-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,HEADER,0,DIV,0,DIV,0,A,0,IMG",
+                "selector": "div.MuiContainer-root > div.MuiToolbar-root > a.MuiBox-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 95,
+                  "left": 16,
+                  "right": 206,
+                  "width": 190,
+                  "height": 95
+                },
+                "snippet": "<img class=\"MuiBox-root css-m67p3q\" alt=\"TechSmart Learning for Seniors\" width=\"500\" height=\"250\" loading=\"eager\" fetchpriority=\"high\" src=\"/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp\">",
+                "nodeLabel": "TechSmart Learning for Seniors"
+              },
+              "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+              "totalBytes": 19254,
+              "wastedBytes": 10739,
+              "wastedPercent": 55.7775
+            }
+          ]
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "uses-optimized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unsized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unused-javascript": {
+          "score": 0,
+          "potentialSavingsBytes": 54567,
+          "items": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+              "totalBytes": 141815,
+              "wastedBytes": 54567,
+              "wastedPercent": 38.4773630553155,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "source": "../node_modules/react-dom/cjs/react-dom-client.production.js",
+                    "sourceBytes": 55449,
+                    "sourceWastedBytes": 25911
+                  },
+                  {
+                    "source": "../node_modules/react-router/dist/development/chunk-OB3PAWPO.mjs",
+                    "sourceBytes": 14295,
+                    "sourceWastedBytes": 7813
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/styles/createThemeWithVars.mjs",
+                    "sourceBytes": 3991,
+                    "sourceWastedBytes": 3988
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/ButtonBase/TouchRipple.mjs",
+                    "sourceBytes": 1325,
+                    "sourceWastedBytes": 1203
+                  },
+                  {
+                    "source": "../node_modules/@mui/system/cssVars/createCssVarsProvider.mjs",
+                    "sourceBytes": 1166,
+                    "sourceWastedBytes": 1017
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "unused-css-rules": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "font-display": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        }
+      }
+    },
+    {
+      "phase": "before",
+      "route": "want-to-help",
+      "fetchTime": "2026-11-05T13:07:54.726Z",
+      "lighthouseVersion": "12.8.2",
+      "runtimeError": null,
+      "runWarnings": [],
+      "benchmarkIndex": 1384,
+      "entryScript": "static/js/main.b25e5a92.js",
+      "metricsMs": {
+        "first-contentful-paint": 615.484,
+        "largest-contentful-paint": 3251.452,
+        "total-blocking-time": 137.5,
+        "speed-index": 900.9565241706007
+      },
+      "cls": 0.3523693803159174,
+      "seo": 100,
+      "totalTransferBytes": 2025954,
+      "audits": {
+        "uses-responsive-images": {
+          "score": 0.5,
+          "potentialSavingsBytes": 1762406,
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-23-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,2,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1565,
+                  "bottom": 1785,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Volunteer helping an older adult use a smartphone.\" loading=\"lazy\" src=\"/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif\">",
+                "nodeLabel": "Volunteer helping an older adult use a smartphone."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+              "totalBytes": 1203110,
+              "wastedBytes": 1175996,
+              "wastedPercent": 97.74630959020641
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-22-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,1,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1329,
+                  "bottom": 1549,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Two older adults practicing computer skills together.\" loading=\"lazy\" src=\"/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif\">",
+                "nodeLabel": "Two older adults practicing computer skills together."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+              "totalBytes": 317727,
+              "wastedBytes": 299112,
+              "wastedPercent": 94.14119709285296
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-24-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,3,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1801,
+                  "bottom": 2021,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Older adults participating in a technology learning session.\" loading=\"lazy\" src=\"/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif\">",
+                "nodeLabel": "Older adults participating in a technology learning session."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+              "totalBytes": 235658,
+              "wastedBytes": 214075,
+              "wastedPercent": 90.84159655448718
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-21-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,0,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1093,
+                  "bottom": 1313,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Older adult receiving guidance while learning to use a tablet.\" loading=\"lazy\" src=\"/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif\">",
+                "nodeLabel": "Older adult receiving guidance while learning to use a tablet."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+              "totalBytes": 91362,
+              "wastedBytes": 62484,
+              "wastedPercent": 68.39197530864199
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-20-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,1,HEADER,0,DIV,0,DIV,0,A,0,IMG",
+                "selector": "div.MuiContainer-root > div.MuiToolbar-root > a.MuiBox-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 0,
+                  "bottom": 95,
+                  "left": 16,
+                  "right": 206,
+                  "width": 190,
+                  "height": 95
+                },
+                "snippet": "<img class=\"MuiBox-root css-m67p3q\" alt=\"TechSmart Learning for Seniors\" width=\"500\" height=\"250\" loading=\"eager\" fetchpriority=\"high\" src=\"/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp\">",
+                "nodeLabel": "TechSmart Learning for Seniors"
+              },
+              "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+              "totalBytes": 19254,
+              "wastedBytes": 10739,
+              "wastedPercent": 55.7775
+            }
+          ]
+        },
+        "modern-image-formats": {
+          "score": 0.5,
+          "potentialSavingsBytes": 508503.4,
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-23-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,2,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1565,
+                  "bottom": 1785,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Volunteer helping an older adult use a smartphone.\" loading=\"lazy\" src=\"/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif\">",
+                "nodeLabel": "Volunteer helping an older adult use a smartphone."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 1203110,
+              "wastedBytes": 272159.85,
+              "wastedWebpBytes": -129946
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-22-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,1,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1329,
+                  "bottom": 1549,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Two older adults practicing computer skills together.\" loading=\"lazy\" src=\"/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif\">",
+                "nodeLabel": "Two older adults practicing computer skills together."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 317727,
+              "wastedBytes": 118694.54999999999,
+              "wastedWebpBytes": 84239
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-24-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,3,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1801,
+                  "bottom": 2021,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Older adults participating in a technology learning session.\" loading=\"lazy\" src=\"/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif\">",
+                "nodeLabel": "Older adults participating in a technology learning session."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 235658,
+              "wastedBytes": 88191.35,
+              "wastedWebpBytes": 56862
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-21-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,0,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1093,
+                  "bottom": 1313,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" alt=\"Older adult receiving guidance while learning to use a tablet.\" loading=\"lazy\" src=\"/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif\">",
+                "nodeLabel": "Older adult receiving guidance while learning to use a tablet."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+              "fromProtocol": true,
+              "isCrossOrigin": false,
+              "totalBytes": 91362,
+              "wastedBytes": 29457.65,
+              "wastedWebpBytes": 8658
+            }
+          ]
+        },
+        "uses-optimized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unsized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unused-javascript": {
+          "score": 0,
+          "potentialSavingsBytes": 56198,
+          "items": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+              "totalBytes": 141815,
+              "wastedBytes": 56198,
+              "wastedPercent": 39.62792722942636,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "source": "../node_modules/react-dom/cjs/react-dom-client.production.js",
+                    "sourceBytes": 55449,
+                    "sourceWastedBytes": 22295
+                  },
+                  {
+                    "source": "../node_modules/react-router/dist/development/chunk-OB3PAWPO.mjs",
+                    "sourceBytes": 14295,
+                    "sourceWastedBytes": 7813
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/styles/createThemeWithVars.mjs",
+                    "sourceBytes": 3991,
+                    "sourceWastedBytes": 3988
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/InputBase/InputBase.mjs",
+                    "sourceBytes": 2052,
+                    "sourceWastedBytes": 1880
+                  },
+                  {
+                    "source": "pages/Home.js",
+                    "sourceBytes": 1720,
+                    "sourceWastedBytes": 1716
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "unused-css-rules": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "font-display": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        }
+      }
+    },
+    {
+      "phase": "after",
+      "route": "home",
+      "fetchTime": "2026-11-05T13:20:26.080Z",
+      "lighthouseVersion": "12.8.2",
+      "runtimeError": null,
+      "runWarnings": [],
+      "benchmarkIndex": 2341,
+      "entryScript": "static/js/main.c8c5464b.js",
+      "metricsMs": {
+        "first-contentful-paint": 608.77975,
+        "largest-contentful-paint": 1852.33925,
+        "total-blocking-time": 365.9999999999998,
+        "speed-index": 653.387319149432
+      },
+      "cls": 0,
+      "seo": 100,
+      "totalTransferBytes": 167167,
+      "audits": {
+        "uses-responsive-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "uses-optimized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unsized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unused-javascript": {
+          "score": 0,
+          "potentialSavingsBytes": 54585,
+          "items": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.c8c5464b.js",
+              "totalBytes": 141938,
+              "wastedBytes": 54585,
+              "wastedPercent": 38.45682438883585,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "source": "../node_modules/react-dom/cjs/react-dom-client.production.js",
+                    "sourceBytes": 55468,
+                    "sourceWastedBytes": 25919
+                  },
+                  {
+                    "source": "../node_modules/react-router/dist/development/chunk-OB3PAWPO.mjs",
+                    "sourceBytes": 14300,
+                    "sourceWastedBytes": 7815
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/styles/createThemeWithVars.mjs",
+                    "sourceBytes": 3992,
+                    "sourceWastedBytes": 3989
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/ButtonBase/TouchRipple.mjs",
+                    "sourceBytes": 1326,
+                    "sourceWastedBytes": 1203
+                  },
+                  {
+                    "source": "../node_modules/@mui/system/cssVars/createCssVarsProvider.mjs",
+                    "sourceBytes": 1166,
+                    "sourceWastedBytes": 1018
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "unused-css-rules": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "font-display": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        }
+      }
+    },
+    {
+      "phase": "after",
+      "route": "want-to-help",
+      "fetchTime": "2026-11-05T13:20:11.568Z",
+      "lighthouseVersion": "12.8.2",
+      "runtimeError": null,
+      "runWarnings": [],
+      "benchmarkIndex": 2209.5,
+      "entryScript": "static/js/main.c8c5464b.js",
+      "metricsMs": {
+        "first-contentful-paint": 614.51475,
+        "largest-contentful-paint": 2766.54425,
+        "total-blocking-time": 131,
+        "speed-index": 857.3943368723951
+      },
+      "cls": 0.3523693803159174,
+      "seo": 100,
+      "totalTransferBytes": 332626,
+      "audits": {
+        "uses-responsive-images": {
+          "score": 0.5,
+          "potentialSavingsBytes": 47666,
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-24-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,3,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1801,
+                  "bottom": 2021,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" sizes=\"(min-width: 900px) 368px, (min-width: 600px) max(345px, calc(50vw - 32px))…\" alt=\"Older adults participating in a technology learning session.\" width=\"1200\" height=\"800\" loading=\"lazy\" decoding=\"async\" srcset=\"/static/media/senior-group-learning-480.00e18e9fed1bb65ad064.webp 480w, /s…\" src=\"/static/media/senior-group-learning-800.353177e3782e40a39654.webp\">",
+                "nodeLabel": "Older adults participating in a technology learning session."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-group-learning-800.353177e3782e40a39654.webp",
+              "totalBytes": 47546,
+              "wastedBytes": 18998,
+              "wastedPercent": 39.95661350844277
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-23-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,2,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1565,
+                  "bottom": 1785,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" sizes=\"(min-width: 900px) 368px, (min-width: 600px) max(345px, calc(50vw - 32px))…\" alt=\"Volunteer helping an older adult use a smartphone.\" width=\"1200\" height=\"800\" loading=\"lazy\" decoding=\"async\" srcset=\"/static/media/senior-mobile-learning-480.2eb9f1cbc99afbcdfdeb.webp 480w, /…\" src=\"/static/media/senior-mobile-learning-800.0fb02e34cb93762c7ecc.webp\">",
+                "nodeLabel": "Volunteer helping an older adult use a smartphone."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning-800.0fb02e34cb93762c7ecc.webp",
+              "totalBytes": 38318,
+              "wastedBytes": 15311,
+              "wastedPercent": 39.95661350844277
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-22-IMG",
+                "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,1,SECTION,0,DIV,0,DIV,1,DIV,0,FIGURE,0,DIV,1,DIV,0,IMG",
+                "selector": "figure.MuiBox-root > div.MuiGrid-root > div.MuiGrid-root > img.MuiBox-root",
+                "boundingRect": {
+                  "top": 1329,
+                  "bottom": 1549,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 220
+                },
+                "snippet": "<img class=\"MuiBox-root css-1k42m9d\" sizes=\"(min-width: 900px) 368px, (min-width: 600px) max(345px, calc(50vw - 32px))…\" alt=\"Two older adults practicing computer skills together.\" width=\"1200\" height=\"800\" loading=\"lazy\" decoding=\"async\" srcset=\"/static/media/senior-laptop-learning-480.123ab25bc3df31dd0426.webp 480w, /…\" src=\"/static/media/senior-laptop-learning-800.9827d6e180781f50a338.webp\">",
+                "nodeLabel": "Two older adults practicing computer skills together."
+              },
+              "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning-800.9827d6e180781f50a338.webp",
+              "totalBytes": 33428,
+              "wastedBytes": 13357,
+              "wastedPercent": 39.95661350844277
+            }
+          ]
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "uses-optimized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unsized-images": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "unused-javascript": {
+          "score": 0,
+          "potentialSavingsBytes": 56217,
+          "items": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.c8c5464b.js",
+              "totalBytes": 141938,
+              "wastedBytes": 56217,
+              "wastedPercent": 39.60654572906721,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "source": "../node_modules/react-dom/cjs/react-dom-client.production.js",
+                    "sourceBytes": 55468,
+                    "sourceWastedBytes": 22303
+                  },
+                  {
+                    "source": "../node_modules/react-router/dist/development/chunk-OB3PAWPO.mjs",
+                    "sourceBytes": 14300,
+                    "sourceWastedBytes": 7815
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/styles/createThemeWithVars.mjs",
+                    "sourceBytes": 3992,
+                    "sourceWastedBytes": 3989
+                  },
+                  {
+                    "source": "../node_modules/@mui/material/InputBase/InputBase.mjs",
+                    "sourceBytes": 2053,
+                    "sourceWastedBytes": 1880
+                  },
+                  {
+                    "source": "pages/Home.js",
+                    "sourceBytes": 1720,
+                    "sourceWastedBytes": 1717
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "unused-css-rules": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        },
+        "font-display": {
+          "score": 1,
+          "potentialSavingsBytes": 0,
+          "items": []
+        }
+      }
+    }
+  ],
+  "lighthouseConfigSettings": {
+    "output": [
+      "json",
+      "html"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "imageEncodingEvidence": "image-encoding.json"
+}

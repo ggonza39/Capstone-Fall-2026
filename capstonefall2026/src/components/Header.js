@@ -16,6 +16,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 import logo from "../assets/techsmartLogo.webp";
+import logo260 from "../assets/optimized/techsmartLogo-260.webp";
+import logo380 from "../assets/optimized/techsmartLogo-380.webp";
 import { loadMobileNavigation } from "./mobileNavigationLoader";
 
 const navigation = [
@@ -174,6 +176,8 @@ function Header() {
                             <Box
                                 component="img"
                                 src={logo}
+                                srcSet={`${logo260} 260w, ${logo380} 380w, ${logo} 500w`}
+                                sizes="(min-width: 900px) 260px, (min-width: 600px) 220px, 190px"
                                 alt="TechSmart Learning for Seniors"
                                 width={500}
                                 height={250}

@@ -11,3 +11,4 @@ This folder contains test suites, automated scripts, and manual testing document
 - [TBT analysis and optimization](performance/tbt-optimization.md) — on-demand mobile navigation, local blocking-time measurements, regression checks, and the remaining gap to the 200 ms target.
 - [Speed Index optimization](performance/speed-index-optimization.md) — pixel-identical logo compression, explicit image dimensions, local Speed Index comparison, and header/Menu verification.
 - [Technical SEO optimization](performance/technical-seo-optimization.md) — titles/descriptions, canonicals, generated crawl files, links/headings, route audits, and indexing limitations.
+- [Frontend asset optimization](performance/frontend-asset-optimization.md) — responsive photo/logo delivery, script/style/font review, browser byte comparisons, Lighthouse diagnostics, and visual/functional verification.

@@ -14,6 +14,8 @@ The subsequent [FCP optimization and local production verification](fcp-optimiza
 
 [Technical SEO optimization](technical-seo-optimization.md) records route metadata, canonicals, sitemap/robots, crawlable links, semantic fixes, and eight local SEO audits scoring 100. It also documents client-rendering and HTTP-status limits.
 
+[Frontend asset optimization](frontend-asset-optimization.md) records responsive WebP photos/logos, a 93.7% image-body reduction on I Want to Help at tested DPR 1 widths, script/style/font review, Lighthouse diagnostics, and preserved layouts/navigation. Final deployed measurements remain separate.
+
 ## Baseline, initial results, and final comparison
 
 The documented project baseline and targets come from PBI-14. Final results will be recorded after optimization using the same route and test conditions.
