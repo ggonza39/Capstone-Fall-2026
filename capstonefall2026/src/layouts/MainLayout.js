@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Box } from "@mui/material";
 
 import { Outlet } from "react-router-dom";
@@ -54,7 +55,9 @@ function MainLayout() {
                     flexGrow: 1,
                 }}
             >
-                <Outlet />
+                <Suspense fallback={<Box role="status" sx={{ p: 4 }}>Loading page…</Box>}>
+                    <Outlet />
+                </Suspense>
             </Box>
 
             <Footer />

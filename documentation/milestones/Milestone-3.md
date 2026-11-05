@@ -48,7 +48,7 @@ This PBI performs final frontend performance and technical SEO optimization for 
 
 #### Acceptance Criteria
 - [x] **Initial Performance Measurement:** Run Lighthouse against the deployed TSLS-Web implementation before final optimization and record the measured FCP, LCP, TBT, Speed Index, and SEO score for comparison with the documented project baseline and final results. [Results and raw reports — November 5, 2026](../../tests/performance/README.md).
-- [ ] **First Contentful Paint (FCP) Optimization:** Identify and address frontend issues affecting FCP and work toward the established target of less than 2.0 seconds compared with the documented 5.7-second baseline.
+- [x] **First Contentful Paint (FCP) Optimization:** Identify and address frontend issues affecting FCP and work toward the established target of less than 2.0 seconds compared with the documented 5.7-second baseline. [Implementation and local production verification](../../tests/performance/fcp-optimization.md); final deployed measurement remains pending.
 - [ ] **Largest Contentful Paint (LCP) Optimization:** Identify and address frontend issues affecting LCP and work toward the established target of less than 2.5 seconds compared with the documented 21.8-second baseline.
 - [ ] **Total Blocking Time (TBT) Optimization:** Identify and address applicable scripts, rendering work, or other frontend behavior contributing to blocking time and work toward the established target of less than 200 milliseconds compared with the documented 700-millisecond baseline.
 - [ ] **Speed Index Optimization:** Address applicable frontend loading and rendering issues and work toward the established Speed Index target of less than 3.4 seconds compared with the documented 8.7-second baseline.

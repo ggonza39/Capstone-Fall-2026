@@ -4,6 +4,8 @@ Measured the [deployed TSLS-Web homepage](https://capstone-fall-2026.vercel.app/
 
 This completes the **Initial Performance Measurement** criterion in [Milestone 3, PBI-14](../../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo). Application code was not changed for this measurement. Final optimization and final measurements remain pending.
 
+The subsequent [FCP optimization and local production verification](fcp-optimization.md) documents deferred secondary-page/payment loading and a separate five-run before/after experiment. The initial deployed results below remain the reference for the final hosted comparison.
+
 ## Baseline, initial results, and final comparison
 
 The documented project baseline and targets come from PBI-14. Final results will be recorded after optimization using the same route and test conditions.
