@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   PaymentElement,
   ExpressCheckoutElement,
@@ -6,6 +6,22 @@ import {
   useElements,
 } from '@stripe/react-stripe-js';
 import { Box, Button, Container, Stack, Typography, TextField } from "@mui/material";
+
+function getDonorFieldError(name, value) {
+  const trimmedValue = value.trim();
+  const requiredMessages = {
+    firstName: 'Please enter your first name.',
+    lastName: 'Please enter your last name.',
+    email: 'Please enter your email address.',
+  };
+
+  if (!trimmedValue) return requiredMessages[name];
+  if (name === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedValue)) {
+    return 'Please enter a valid email address.';
+  }
+
+  return '';
+}
 
 // This was developed using ChatGPT (entered prompt given by Stripe website)
 export function CheckoutForm() {
@@ -18,95 +34,71 @@ export function CheckoutForm() {
     firstName: '',
     lastName: '',
     email: ''
-    });
-    
-    // Reference for these useStates and validation methods: https://dev.to/anthonyzhang220/form-validation-with-material-ui-text-field-component-and-react-23dl
-    // ChatGPT used to modify the validation methods
- const [valid, setValid] = useState({
-    firstNameIsValid: true,
-    lastNameIsValid: true,
-    emailIsValid: true
- });
-    
- const validateDonorFields = () => {
-  const firstNameIsValid =
-    /^[a-zA-Z\s'-]+$/.test(donor.firstName.trim());
+  });
+  const [formErrors, setFormErrors] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+  });
+  const firstNameInputRef = useRef(null);
+  const lastNameInputRef = useRef(null);
+  const emailInputRef = useRef(null);
 
-  const lastNameIsValid =
-    /^[a-zA-Z\s'-]+$/.test(donor.lastName.trim());
+  const validateDonorFields = () => {
+    const errors = {
+      firstName: getDonorFieldError('firstName', donor.firstName),
+      lastName: getDonorFieldError('lastName', donor.lastName),
+      email: getDonorFieldError('email', donor.email),
+    };
+    setFormErrors(errors);
 
-  const emailIsValid =
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(donor.email.trim());
+    const firstInvalidField = Object.keys(errors).find((name) => errors[name]);
+    if (firstInvalidField) {
+      const inputRefs = {
+        firstName: firstNameInputRef,
+        lastName: lastNameInputRef,
+        email: emailInputRef,
+      };
+      inputRefs[firstInvalidField].current?.focus();
+      return false;
+    }
 
-  const validation = {
-    firstNameIsValid,
-    lastNameIsValid,
-    emailIsValid
+    return true;
   };
 
-  setValid(validation);
+  const handleDonorFieldChange = (event) => {
+    const { name, value } = event.target;
+    setDonor((prev) => ({ ...prev, [name]: value }));
+    setFormErrors((prev) => ({
+      ...prev,
+      [name]: prev[name] ? getDonorFieldError(name, value) : '',
+    }));
+  };
 
-  return Object.values(validation).every(Boolean);
-};
-
-const handleDonorFieldChange = (e) => {
-  const { name, value } = e.target;
-
-  // Update donor information
-  setDonor((prev) => ({
-    ...prev,
-    [name]: value
-  }));
-
-  // Define regex based on field
-  let reg = /^[a-zA-Z\s'-]+$/;
-
-  if (name === "email") {
-    reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  }
-
-  // Update validation for the specific field
-  setValid((prev) => ({
-    ...prev,
-    [`${name}IsValid`]: reg.test(value.trim())
-  }));
-};
+  const handleDonorFieldBlur = (event) => {
+    const { name, value } = event.target;
+    setFormErrors((prev) => ({
+      ...prev,
+      [name]: getDonorFieldError(name, value),
+    }));
+  };
     
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!stripe || !elements) return;
+    setMessage('');
+    if (!validateDonorFields()) return;
+    if (!stripe || !elements || loading) return;
 
     setLoading(true);
-    setMessage('');
 
     try {
       // Validate payment fields with Stripe.
-      // Error message code was implemented with help of ChatGPT and Stack Overflow: https://stackoverflow.com/questions/61149020/react-js-how-to-display-multiple-error-messages
-    const { error: paymentError } = await elements.submit();
-
-    const errors = [
-      {
-        type: "donorValidationError",
-        message: !validateDonorFields()
-          ? "Please enter a valid name and email."
-          : ""
-      },
-      {
-        type: "paymentValidationError",
-        message: paymentError ? paymentError.message : ""
+      const { error: paymentError } = await elements.submit();
+      if (paymentError) {
+        setMessage(paymentError.message);
+        return;
       }
-    ];
-
-    const errorMessage = errors
-      .filter(error => error.message)
-      .map(error => error.message)
-      .join(" ");
-
-    if (errorMessage) {
-      setMessage(errorMessage);
-      return;
-    }
 
       // Only send non-sensitive donation data.
       const response = await fetch('/api/v1/donor-inquiries', {
@@ -115,9 +107,9 @@ const handleDonorFieldChange = (e) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          firstName: donor.firstName,
-          lastName: donor.lastName,
-          email: donor.email,
+          firstName: donor.firstName.trim(),
+          lastName: donor.lastName.trim(),
+          email: donor.email.trim(),
           phone: '111-111-1111' // test phone number
         }),
       });
@@ -154,7 +146,7 @@ const handleDonorFieldChange = (e) => {
                         Make a Donation
                     </Typography>
                     
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} noValidate>
                         <Box
                         component="div"
                         sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
@@ -162,31 +154,47 @@ const handleDonorFieldChange = (e) => {
                         >
                             
                         <TextField
+                            id="donor-first-name"
                             name="firstName"
                             label="First Name"
+                            autoComplete="given-name"
                             variant="outlined"
                             value={donor.firstName}
-                            onChange={(e) => handleDonorFieldChange(e)}
-                            error={!valid.firstNameIsValid}
+                            onChange={handleDonorFieldChange}
+                            onBlur={handleDonorFieldBlur}
+                            inputRef={firstNameInputRef}
+                            error={Boolean(formErrors.firstName)}
+                            helperText={formErrors.firstName}
                             required={true}
                         />
                         <TextField
+                        id="donor-last-name"
                         name="lastName"
                         label="Last Name"
+                        autoComplete="family-name"
                         variant="outlined"
                         value={donor.lastName}
-                        onChange={(e) => handleDonorFieldChange(e)}
-                        error={!valid.lastNameIsValid}
+                        onChange={handleDonorFieldChange}
+                        onBlur={handleDonorFieldBlur}
+                        inputRef={lastNameInputRef}
+                        error={Boolean(formErrors.lastName)}
+                        helperText={formErrors.lastName}
                         required={true}
                         />
 
                         <TextField
+                        id="donor-email"
                         name="email"
                         label="Email"
+                        type="email"
+                        autoComplete="email"
                         variant="outlined"
                         value={donor.email}
-                        onChange={(e) => handleDonorFieldChange(e)}
-                        error={!valid.emailIsValid}
+                        onChange={handleDonorFieldChange}
+                        onBlur={handleDonorFieldBlur}
+                        inputRef={emailInputRef}
+                        error={Boolean(formErrors.email)}
+                        helperText={formErrors.email}
                         required={true}
                         />
                         </Box>
@@ -218,6 +226,7 @@ const handleDonorFieldChange = (e) => {
                                 variant="contained"
                                 size="large"
                                 type="submit"
+                                fullWidth
                                 disabled={!stripe || !elements || loading}
                             >
                                 {loading ? 'Processing...' : 'Donate'}

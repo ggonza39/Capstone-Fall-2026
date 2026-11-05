@@ -1,0 +1,75 @@
+{
+  "capturedAtUtc": "2026-11-05T13:07:44.836Z",
+  "sourceCommit": "961895a4998578c4c0c2df50a23fe7387a1214de",
+  "node": "v20.11.1",
+  "chrome": "156.0.8078.80",
+  "lighthouse": "12.8.2",
+  "server": "serve14.2.4 http://127.0.0.1:4173/",
+  "mocks": "unset",
+  "stripeKeyConfigured": false,
+  "sourceFiles": [
+    {
+      "path": "capstonefall2026/src/components/Header.js",
+      "sha256": "cb20b103a647adff58672aeb790d3ffdefa3ff3a2c8f8c9cc2b384e1f4b20ebe"
+    },
+    {
+      "path": "capstonefall2026/src/components/ImpactSection.js",
+      "sha256": "70dc20a8842529723e78cf8f75791a4e7a35410b2371ef4de9d002288d1cd8f1"
+    },
+    {
+      "path": "capstonefall2026/src/components/PartnersSection.js",
+      "sha256": "dca9f4b85e9f9d6c9a0143ce5910bd5287a66f7569796545367b4fc223bae189"
+    },
+    {
+      "path": "capstonefall2026/src/App.js",
+      "sha256": "843cc1f1c024112b3a10bd1c3357481d787f2e884f6c01a8ccfa2e167c1a4359"
+    },
+    {
+      "path": "capstonefall2026/src/theme/theme.js",
+      "sha256": "229331237fbdcff14147a9eddee5b4a1c1262a78cea8d686c4794e03ed09ad57"
+    },
+    {
+      "path": "capstonefall2026/public/index.html",
+      "sha256": "e31231fae1fb75e57792ec2db4f67409dae761e6314da8773fcea1e162cd6670"
+    }
+  ],
+  "beforeEntry": [
+    "static/js/main.b25e5a92.js"
+  ],
+  "afterSourceFiles": [
+    {
+      "path": "capstonefall2026/src/components/Header.js",
+      "sha256": "f9605f96f8e72857ba3c7ba6593edd9fc2bc44754f4de0d69ef52989ac1ec3a0"
+    },
+    {
+      "path": "capstonefall2026/src/components/ImpactSection.js",
+      "sha256": "0c681dd0c83c3f431879542e31e3b22c1b45b6d59afe3f0f8eb5c2ed663eb680"
+    },
+    {
+      "path": "capstonefall2026/src/components/PartnersSection.js",
+      "sha256": "3a6a2a43abf246544c02c6005b79fa655d52e268ed0a9ed8caaf6e97ca4dd646"
+    },
+    {
+      "path": "capstonefall2026/src/App.js",
+      "sha256": "843cc1f1c024112b3a10bd1c3357481d787f2e884f6c01a8ccfa2e167c1a4359"
+    },
+    {
+      "path": "capstonefall2026/src/theme/theme.js",
+      "sha256": "229331237fbdcff14147a9eddee5b4a1c1262a78cea8d686c4794e03ed09ad57"
+    },
+    {
+      "path": "capstonefall2026/public/index.html",
+      "sha256": "e31231fae1fb75e57792ec2db4f67409dae761e6314da8773fcea1e162cd6670"
+    }
+  ],
+  "afterEntry": [
+    "static/js/main.c8c5464b.js"
+  ],
+  "generatedImagesEmitted": 24,
+  "afterMain": {
+    "rawBytes": 450370,
+    "gzipBytes": 141824,
+    "sha256": "8e3153a0dd317ff8cfce8ed4fbe93c5686abaf174a177a452a784fd1591055fb"
+  },
+  "afterAuditCompletedAtUtc": "2026-11-05T13:21:12.524Z"
+}

@@ -7,41 +7,51 @@ import {
   Typography,
 } from "@mui/material";
 
-import waymoLogo from "../assets/waymoLogo.jfif";
-import insightGlobalLogo from "../assets/insightGlobalLogo.jfif";
-import cumberlandLogo from "../assets/cumberlandLogo.jfif";
-import hillerLogo from "../assets/hillerLogo.jfif";
-import deltaCommunityLogo from "../assets/deltaCommunityLogo.jfif";
+import waymo210 from "../assets/optimized/waymoLogo-210.webp";
+import waymo420 from "../assets/optimized/waymoLogo-420.webp";
+import insight210 from "../assets/optimized/insightGlobalLogo-210.webp";
+import insight420 from "../assets/optimized/insightGlobalLogo-420.webp";
+import cumberland210 from "../assets/optimized/cumberlandLogo-210.webp";
+import cumberland420 from "../assets/optimized/cumberlandLogo-420.webp";
+import hiller210 from "../assets/optimized/hillerLogo-210.webp";
+import hiller420 from "../assets/optimized/hillerLogo-420.webp";
+import delta210 from "../assets/optimized/deltaCommunityLogo-210.webp";
+import delta420 from "../assets/optimized/deltaCommunityLogo-420.webp";
 
 const partners = [
   {
     id: 1,
     name: "Waymo",
-    logo: waymoLogo,
+    logo: waymo420,
+    srcSet: `${waymo210} 210w, ${waymo420} 420w`,
     tier: "$5,000 and Above",
   },
   {
     id: 2,
     name: "Insight Global",
-    logo: insightGlobalLogo,
+    logo: insight420,
+    srcSet: `${insight210} 210w, ${insight420} 420w`,
     tier: "$5,000 and Above",
   },
   {
     id: 3,
     name: "Cumberland Group",
-    logo: cumberlandLogo,
+    logo: cumberland420,
+    srcSet: `${cumberland210} 210w, ${cumberland420} 420w`,
     tier: "$5,000 and Above",
   },
   {
     id: 4,
     name: "Hiller",
-    logo: hillerLogo,
+    logo: hiller420,
+    srcSet: `${hiller210} 210w, ${hiller420} 420w`,
     tier: "$5,000 and Above",
   },
   {
     id: 5,
     name: "Delta Community Credit Union",
-    logo: deltaCommunityLogo,
+    logo: delta420,
+    srcSet: `${delta210} 210w, ${delta420} 420w`,
     tier: "$2,500 and Above",
   },
 ];
@@ -118,8 +128,13 @@ function PartnersSection() {
                 <Box
                   component="img"
                   src={partner.logo}
+                  srcSet={partner.srcSet}
+                  sizes="210px"
                   alt={`${partner.name} logo`}
+                  width={210}
+                  height={95}
                   loading="lazy"
+                  decoding="async"
                   sx={{
                     width: "100%",
                     maxWidth: 210,

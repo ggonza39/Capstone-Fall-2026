@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Box } from "@mui/material";
 
 import { Outlet } from "react-router-dom";
@@ -7,6 +8,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MobileBottomNav from "../components/MobileBottomNav";
 import ScrollToTop from "../components/ScrollToTop";
+import RouteMetadata from "../seo/RouteMetadata";
 
 /**
  * PBI-6 Implement dual-path landing and navigation.
@@ -40,6 +42,7 @@ function MainLayout() {
                 },
             }}
         >
+            <RouteMetadata />
             <ScrollToTop />{/* Scroll to top of page when selecting bottom navigation button */}
 
             <SkipLink /> {/* Skip to main content link for accessibility */}
@@ -54,7 +57,9 @@ function MainLayout() {
                     flexGrow: 1,
                 }}
             >
-                <Outlet />
+                <Suspense fallback={<Box role="status" sx={{ p: 4 }}>Loading page…</Box>}>
+                    <Outlet />
+                </Suspense>
             </Box>
 
             <Footer />

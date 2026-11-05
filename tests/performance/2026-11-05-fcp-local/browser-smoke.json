@@ -1,0 +1,76 @@
+{
+  "measuredAtUtc": "2026-11-05T05:35:31.219Z",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "purpose": "Production route-loading smoke check; not a Lighthouse performance measurement",
+  "viewport": {
+    "width": 412,
+    "height": 823
+  },
+  "checks": [
+    {
+      "name": "Home renders without a secondary route chunk",
+      "passed": true,
+      "heading": "Technology Made Simple.",
+      "secondaryChunkRequests": []
+    },
+    {
+      "name": "Home makes zero Stripe requests",
+      "passed": true,
+      "requestCount": 0
+    },
+    {
+      "name": "Delayed route chunk shows status and preserves layout",
+      "passed": true,
+      "delayedChunk": "http://127.0.0.1:4173/static/js/788.4f2f231b.chunk.js",
+      "statusText": "Loading page…",
+      "headerPresent": true,
+      "mainPresent": true,
+      "footerPresent": true,
+      "mobileNavigationPresent": true
+    },
+    {
+      "name": "Resources renders after the delayed chunk is released",
+      "passed": true,
+      "url": "http://127.0.0.1:4173/resources"
+    },
+    {
+      "name": "Direct lazy route preserves ZIP query parameter",
+      "passed": true,
+      "url": "http://127.0.0.1:4173/need-help?zip=30301",
+      "zipValue": "30301"
+    },
+    {
+      "name": "Unknown workshop ID reaches existing not-found feedback",
+      "passed": true,
+      "url": "http://127.0.0.1:4173/workshops/test-id",
+      "note": "Current workshop adapter uses static fixtures; no API interception is needed."
+    },
+    {
+      "name": "Direct lazy route preserves a valid workshop path parameter",
+      "passed": true,
+      "url": "http://127.0.0.1:4173/workshops/WS-1001",
+      "heading": "Smartphone Basics for Beginners"
+    },
+    {
+      "name": "Other tested routes do not initialize Stripe",
+      "passed": true,
+      "requestCount": 0
+    },
+    {
+      "name": "Donate renders the form and initiates Stripe",
+      "passed": true,
+      "url": "http://127.0.0.1:4173/donate",
+      "stripeRequestCount": 1,
+      "firstStripeScript": "https://js.stripe.com/endive/stripe.js",
+      "limitation": "No local publishable key is configured; payment readiness or completion is not asserted."
+    }
+  ],
+  "pageErrors": [
+    "Expected publishable key to be of type string, got type undefined instead.",
+    "Expected publishable key to be of type string, got type undefined instead."
+  ],
+  "paymentSubmitted": false,
+  "browserVersion": "Chrome/156.0.8078.80",
+  "passed": true,
+  "browserClosed": true
+}

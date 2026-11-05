@@ -1,0 +1,45 @@
+{
+  "siteOrigin": "https://capstone-fall-2026.vercel.app",
+  "fallback": {
+    "title": "TechSmart Learning for Seniors | Technology Education",
+    "description": "Explore technology education, workshops, learning resources, and ways to support older adults with TechSmart Learning for Seniors."
+  },
+  "routes": {
+    "/": {
+      "title": "Technology Help for Seniors | TechSmart",
+      "description": "Build confidence with everyday technology. Explore TechSmart Learning for Seniors workshops, learning resources, and opportunities to help older adults."
+    },
+    "/need-help": {
+      "title": "Technology Workshops & Help | TechSmart",
+      "description": "Explore technology help and the workshop search demonstration for older adults learning everyday digital skills with TechSmart Learning for Seniors."
+    },
+    "/want-to-help": {
+      "title": "Donate, Volunteer & Advocate | TechSmart",
+      "description": "Explore ways to support technology education for older adults through donations, volunteering, and advocacy with TechSmart Learning for Seniors."
+    },
+    "/resources": {
+      "title": "Technology Learning Resources | TechSmart",
+      "description": "Explore topics including smartphone and computer basics, online safety, and video tutorials for older adults learning technology with TechSmart."
+    },
+    "/about": {
+      "title": "About TechSmart Learning for Seniors",
+      "description": "Learn about TechSmart Learning for Seniors and its focus on accessible technology education, digital confidence, and community support for older adults."
+    },
+    "/contact": {
+      "title": "Contact TechSmart Learning for Seniors",
+      "description": "Contact TechSmart Learning for Seniors with questions about technology learning, workshops, resources, or ways to support older adults."
+    },
+    "/donate": {
+      "title": "Make a Donation | TechSmart",
+      "description": "Support technology education for older adults through TechSmart Learning for Seniors. View the donation form."
+    }
+  },
+  "workshop": {
+    "title": "Workshop Details | TechSmart",
+    "description": "View workshop information, accessibility features, and the registration demonstration with TechSmart Learning for Seniors."
+  },
+  "notFound": {
+    "title": "Page Not Found | TechSmart",
+    "description": "This TechSmart Learning for Seniors page could not be found. Explore technology help, learning resources, and ways to support older adults."
+  }
+}

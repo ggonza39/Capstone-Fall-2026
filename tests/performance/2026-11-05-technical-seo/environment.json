@@ -1,0 +1,90 @@
+{
+  "localReferenceCommit": "4889069316dbd9a287bd42b120ac320e86f75d7b",
+  "nodeVersion": "v20.11.1",
+  "lighthouseVersion": "12.8.2",
+  "chromeVersion": "156.0.8078.80",
+  "hostUrl": "http://127.0.0.1:4173",
+  "productionOrigin": "https://capstone-fall-2026.vercel.app",
+  "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+  "categories": [
+    "seo"
+  ],
+  "profile": "mobile",
+  "productionBuild": true,
+  "stripePublishableKeyConfigured": false,
+  "sandboxMocksEnabled": false,
+  "capturedAtUtc": "2026-11-05T11:49:43.4927032Z",
+  "sourcePatch": "technical-seo.patch",
+  "optimizedSourceSha256": [
+    {
+      "path": "capstonefall2026/package.json",
+      "sha256": "5cefa1f255bab3bd3dff02489fbb1a36ca66ecbbda39014e2fa22a4d630db0f0"
+    },
+    {
+      "path": "capstonefall2026/public/index.html",
+      "sha256": "e31231fae1fb75e57792ec2db4f67409dae761e6314da8773fcea1e162cd6670"
+    },
+    {
+      "path": "capstonefall2026/public/manifest.json",
+      "sha256": "057fd049ee73de3563f4333fc943c459c367b2ad2db859048fee6340dbd8a3fe"
+    },
+    {
+      "path": "capstonefall2026/public/robots.txt",
+      "sha256": "2571512e1b1a2ed1a7b9ba1bef111a53c12dc7eb392c29e6e6531e902d585953"
+    },
+    {
+      "path": "capstonefall2026/src/App.js",
+      "sha256": "843cc1f1c024112b3a10bd1c3357481d787f2e884f6c01a8ccfa2e167c1a4359"
+    },
+    {
+      "path": "capstonefall2026/src/layouts/MainLayout.js",
+      "sha256": "cba9e1b1450445157915bd19cde0f19c9cc90befeee27cab7313e26879bc5fc3"
+    },
+    {
+      "path": "capstonefall2026/src/pages/About.js",
+      "sha256": "2bd10a1963b86860ce06fc761842933565c99b73a6d735b1c37ab31b1500c81c"
+    },
+    {
+      "path": "capstonefall2026/src/pages/Home.js",
+      "sha256": "0d51a70ac1f22ba470dfdd58632d10be7379f5beec174bcd05d560286ed26f8d"
+    },
+    {
+      "path": "capstonefall2026/src/pages/WantToHelp.js",
+      "sha256": "badc2adc72f2b75bd1c1ccf25afc9c8f4d7d759b36c2ff20a1ec58333b8eb333"
+    },
+    {
+      "path": "capstonefall2026/src/pages/WorkshopDetail.js",
+      "sha256": "31620672673146245ab3c6213fda6dcbb9035d3dbc1f9122820c7881faeeb9ae"
+    },
+    {
+      "path": "capstonefall2026/public/sitemap.xml",
+      "sha256": "00e44861aba170e46e08da53f13d5fe558aa6a69d2ec0177ff18b2f8cd2722b3"
+    },
+    {
+      "path": "capstonefall2026/scripts/generate-seo.cjs",
+      "sha256": "9e09b3033f2f78a69e583b8655eebbd89316bb0284305a34ca7161f837c5945c"
+    },
+    {
+      "path": "capstonefall2026/src/pages/NotFound.js",
+      "sha256": "2676979d189c6ccb5de3133baeb92f81446b5ae0eacd7f937ae4f963c3060bbe"
+    },
+    {
+      "path": "capstonefall2026/src/seo/config.json",
+      "sha256": "b92538732eac545d541ecc476f102865645df2d72ff327ee3f3057423e7f33a9"
+    },
+    {
+      "path": "capstonefall2026/src/seo/metadata.js",
+      "sha256": "e076cd7dde8e130f6b6c7da6e817412adbf4c6505151cdc9d8e7a2776713d858"
+    },
+    {
+      "path": "capstonefall2026/src/seo/RouteMetadata.js",
+      "sha256": "9a7503482ac3f4e9c3c49853f3fad9c575d40c7abc5966e3a5fad3a40a4665fd"
+    },
+    {
+      "path": "capstonefall2026/src/seo/siteOrigin.js",
+      "sha256": "7256feac56f9708bce59bde58a901440ac778c34e5a5ecc2e3379c116ad2adfd"
+    }
+  ],
+  "beforeAuditConcurrency": 1,
+  "finalAfterAuditConcurrency": 2
+}

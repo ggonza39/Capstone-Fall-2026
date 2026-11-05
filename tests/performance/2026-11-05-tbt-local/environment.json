@@ -1,0 +1,37 @@
+{
+  "localReferenceCommit": "9cd3d4862a69202698fa8af45a9385f9337936f4",
+  "nodeVersion": "v20.11.1",
+  "lighthouseVersion": "12.8.2",
+  "chromeVersion": "156.0.8078.80",
+  "hostUrl": "http://127.0.0.1:4173/",
+  "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+  "productionBuild": true,
+  "stripePublishableKeyConfigured": false,
+  "sandboxMocksEnabled": false,
+  "capturedAtUtc": "2026-11-05T06:29:11.2439295Z",
+  "operatingSystem": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26200",
+    "OSArchitecture": "64-bit"
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+    "NumberOfCores": 4,
+    "NumberOfLogicalProcessors": 8
+  },
+  "optimizedSourceDiff": "tbt-optimization.patch",
+  "optimizedSourceSha256": [
+    {
+      "path": "capstonefall2026/src/components/Header.js",
+      "sha256": "149596cf5686187d94b013c13d94485c7bb8cf89afaf4edbd8023e6478077c16"
+    },
+    {
+      "path": "capstonefall2026/src/components/MobileNavigation.js",
+      "sha256": "94337150198014887ab414ea66852508116b3ee419f6544707d16f4e99cda383"
+    },
+    {
+      "path": "capstonefall2026/src/components/mobileNavigationLoader.js",
+      "sha256": "86b003fc25e53d652bdc679ba8ff9f94361255360333ca54534752643c7ad779"
+    }
+  ]
+}

@@ -1,0 +1,1392 @@
+{
+  "phase": "after",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "capturedAtUtc": "2026-11-05T12:24:10.852Z",
+  "purpose": "Production technical SEO and navigation checks; not a Lighthouse performance measurement",
+  "checks": [
+    {
+      "name": "One descriptive title and description on /",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /",
+      "passed": true
+    },
+    {
+      "name": "Rendered content has one main and H1 on /",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /need-help",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /need-help",
+      "passed": true
+    },
+    {
+      "name": "Rendered content has one main and H1 on /need-help",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /want-to-help",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /want-to-help",
+      "passed": true
+    },
+    {
+      "name": "Rendered content has one main and H1 on /want-to-help",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /resources",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /resources",
+      "passed": true
+    },
+    {
+      "name": "Rendered content has one main and H1 on /resources",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /about",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /about",
+      "passed": true
+    },
+    {
+      "name": "Rendered content has one main and H1 on /about",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /contact",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /contact",
+      "passed": true
+    },
+    {
+      "name": "Rendered content has one main and H1 on /contact",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /donate",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /donate",
+      "passed": true
+    },
+    {
+      "name": "Rendered content has one main and H1 on /donate",
+      "passed": true
+    },
+    {
+      "name": "Public page titles and descriptions are unique",
+      "passed": true
+    },
+    {
+      "name": "Known workshop metadata describes its actual title",
+      "passed": true
+    },
+    {
+      "name": "Missing content has one heading and noindex without canonical on /workshops/technical-seo-missing",
+      "passed": true
+    },
+    {
+      "name": "Missing content has one heading and noindex without canonical on /technical-seo-missing-page",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /need-help/?zip=01234#workshops",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /need-help/?zip=01234#workshops",
+      "passed": true
+    },
+    {
+      "name": "One descriptive title and description on /ABOUT/",
+      "passed": true
+    },
+    {
+      "name": "One indexable canonical on /ABOUT/",
+      "passed": true
+    },
+    {
+      "name": "Home I Need Technology Help is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Home I Want to Help is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Home Find Workshops is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Home View Resources is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Home Get Help is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Home Donate is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Home Volunteer is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Home Advocate is a crawlable navigation anchor",
+      "passed": true
+    },
+    {
+      "name": "Want to Help donation navigation has a real href",
+      "passed": true
+    },
+    {
+      "name": "Donate renders its form without submitting a payment",
+      "passed": true
+    },
+    {
+      "name": "Menu button size and style are preserved at 412px",
+      "passed": true,
+      "differences": [],
+      "before": {
+        "x": 285,
+        "y": 21.75,
+        "width": 111,
+        "height": 51.5
+      },
+      "after": {
+        "x": 285,
+        "y": 21.75,
+        "width": 111,
+        "height": 51.5
+      }
+    },
+    {
+      "name": "Menu button size and style are preserved at 768px",
+      "passed": true,
+      "differences": [],
+      "before": {
+        "x": 633,
+        "y": 29.25,
+        "width": 111,
+        "height": 51.5
+      },
+      "after": {
+        "x": 633,
+        "y": 29.25,
+        "width": 111,
+        "height": 51.5
+      }
+    },
+    {
+      "name": "Raw HTML fallback is branded on /",
+      "passed": true
+    },
+    {
+      "name": "Raw HTML fallback is branded on /resources",
+      "passed": true
+    },
+    {
+      "name": "Raw HTML fallback is branded on /technical-seo-missing-page",
+      "passed": true
+    },
+    {
+      "name": "Served sitemap contains exactly the seven public routes",
+      "passed": true,
+      "locations": [
+        "https://capstone-fall-2026.vercel.app/",
+        "https://capstone-fall-2026.vercel.app/about",
+        "https://capstone-fall-2026.vercel.app/contact",
+        "https://capstone-fall-2026.vercel.app/donate",
+        "https://capstone-fall-2026.vercel.app/need-help",
+        "https://capstone-fall-2026.vercel.app/resources",
+        "https://capstone-fall-2026.vercel.app/want-to-help"
+      ]
+    },
+    {
+      "name": "Served robots allows crawling and references the sitemap",
+      "passed": true
+    },
+    {
+      "name": "Help link uses client navigation and updates metadata",
+      "passed": true
+    },
+    {
+      "name": "ZIP remains in navigation but is excluded from canonical",
+      "passed": true
+    },
+    {
+      "name": "Head tags stay unique after Home help link",
+      "passed": true
+    },
+    {
+      "name": "Head tags stay unique after Browser Back",
+      "passed": true
+    },
+    {
+      "name": "Head tags stay unique after ZIP form navigation",
+      "passed": true
+    },
+    {
+      "name": "Known workshop updates title and indexing metadata",
+      "passed": true,
+      "title": [
+        "Smartphone Basics for Beginners | TechSmart"
+      ],
+      "canonical": [
+        "https://capstone-fall-2026.vercel.app/workshops/WS-1001"
+      ],
+      "robots": [
+        "index,follow"
+      ]
+    },
+    {
+      "name": "Known workshop preserves the document and semantic landmarks",
+      "passed": true
+    },
+    {
+      "name": "Known to missing workshop updates title and indexing metadata",
+      "passed": true,
+      "title": [
+        "Workshop Not Found | TechSmart"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex,follow"
+      ]
+    },
+    {
+      "name": "Known to missing workshop preserves the document and semantic landmarks",
+      "passed": true
+    },
+    {
+      "name": "Missing to known workshop updates title and indexing metadata",
+      "passed": true,
+      "title": [
+        "Smartphone Basics for Beginners | TechSmart"
+      ],
+      "canonical": [
+        "https://capstone-fall-2026.vercel.app/workshops/WS-1001"
+      ],
+      "robots": [
+        "index,follow"
+      ]
+    },
+    {
+      "name": "Missing to known workshop preserves the document and semantic landmarks",
+      "passed": true
+    },
+    {
+      "name": "No unexpected production JavaScript errors",
+      "passed": true,
+      "unexpectedErrors": []
+    }
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/",
+      "lang": "en",
+      "titles": [
+        "Technology Help for Seniors | TechSmart"
+      ],
+      "descriptions": [
+        "Build confidence with everyday technology. Explore TechSmart Learning for Seniors workshops, learning resources, and opportunities to help older adults."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Technology Made Simple."
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Technology Made Simple."
+        },
+        {
+          "level": "H2",
+          "text": "How Can We Help?"
+        },
+        {
+          "level": "H3",
+          "text": "Find a Workshop"
+        },
+        {
+          "level": "H3",
+          "text": "Technology Resources"
+        },
+        {
+          "level": "H3",
+          "text": "Get Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        },
+        {
+          "level": "H2",
+          "text": "Want to Make a Difference?"
+        }
+      ],
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "links": [
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        },
+        {
+          "text": "View Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "Get Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "Donate",
+          "href": "/want-to-help#donate"
+        },
+        {
+          "text": "Volunteer",
+          "href": "/want-to-help#volunteer"
+        },
+        {
+          "text": "Advocate",
+          "href": "/want-to-help#advocate"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Find Workshops",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "route": "/need-help",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/need-help",
+      "lang": "en",
+      "titles": [
+        "Technology Workshops & Help | TechSmart"
+      ],
+      "descriptions": [
+        "Explore technology help and the workshop search demonstration for older adults learning everyday digital skills with TechSmart Learning for Seniors."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/need-help"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "I Need Technology Help"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "I Need Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        }
+      ],
+      "mainText": "I Need Technology Help\n\nFind technology workshops and resources designed to help you feel more comfortable using everyday technology.\n\nFind a Workshop Near You\n\nEnter your 5-digit ZIP code to search for nearby technology workshops.\n\nZIP Code\nZIP Code\n\nExample: 30301\n\nSearch",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Search",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "route": "/want-to-help",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/want-to-help",
+      "lang": "en",
+      "titles": [
+        "Donate, Volunteer & Advocate | TechSmart"
+      ],
+      "descriptions": [
+        "Explore ways to support technology education for older adults through donations, volunteering, and advocacy with TechSmart Learning for Seniors."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/want-to-help"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "I Want to Help"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "I Want to Help"
+        },
+        {
+          "level": "H2",
+          "text": "Making an Impact Together"
+        },
+        {
+          "level": "H2",
+          "text": "How Would You Like to Help?"
+        },
+        {
+          "level": "H3",
+          "text": "Donate"
+        },
+        {
+          "level": "H3",
+          "text": "Volunteer"
+        },
+        {
+          "level": "H3",
+          "text": "Advocate"
+        },
+        {
+          "level": "H2",
+          "text": "Our Community Partners & Supporters"
+        }
+      ],
+      "mainText": "I Want to Help\n\nYour support helps TechSmart provide technology education and resources for older adults.\n\nMaking an Impact Together\n\nSince 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta.\n\nThrough technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected.\n\n7,000+\n\nOlder adults educated since 2012\n\nTechnology Education\n\nHelping older adults learn everyday digital skills.\n\nStronger Communities\n\nSupporting confidence, independence, and connection through technology.\n\nAI-generated illustrations of senior technology learning.\nHow Would You Like to Help?\n\nDonate, volunteer your time, or learn how you can advocate for technology education.\n\nDonate\n\nSupport technology education and learning opportunities for older adults.\n\nDonate\nVolunteer\n\nShare your time and skills by helping older adults become more confident with technology.\n\nRegister with Hands on Atlanta\nAdvocate\n\nLearn about TechSmart's community impact and help spread awareness about technology education for older adults.\n\nLearn About Our Impact\nOur Community Partners & Supporters\n\nTechSmart Learning for Seniors is grateful for the organizations and individuals who support technology education for older adults.\n\nThrough financial contributions, volunteer time, and community resources, our supporters help older adults build digital skills, confidence, and meaningful connections.\n\nWaymo\n\n$5,000 and Above\n\nInsight Global\n\n$5,000 and Above\n\nCumberland Group\n\n$5,000 and Above\n\nHiller\n\n$5,000 and Above\n\nDelta Community Credit Union\n\n$2,500 and Above",
+      "links": [
+        {
+          "text": "Donate",
+          "href": "/donate"
+        },
+        {
+          "text": "Register with Hands on Atlanta",
+          "href": "https://volunteer.handsonatlanta.org/"
+        },
+        {
+          "text": "Learn About Our Impact",
+          "href": "#community-impact"
+        }
+      ],
+      "buttons": [],
+      "formFieldNames": []
+    },
+    {
+      "route": "/resources",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/resources",
+      "lang": "en",
+      "titles": [
+        "Technology Learning Resources | TechSmart"
+      ],
+      "descriptions": [
+        "Explore topics including smartphone and computer basics, online safety, and video tutorials for older adults learning technology with TechSmart."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/resources"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Technology Resources"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Technology Resources"
+        },
+        {
+          "level": "H2",
+          "text": "What Would You Like to Learn?"
+        },
+        {
+          "level": "H3",
+          "text": "Smartphone Help"
+        },
+        {
+          "level": "H3",
+          "text": "Computer Help"
+        },
+        {
+          "level": "H3",
+          "text": "Online Safety"
+        },
+        {
+          "level": "H3",
+          "text": "Video Tutorials"
+        }
+      ],
+      "mainText": "Technology Resources\n\nExplore simple guides and learning resources designed to help you use technology with confidence.\n\nWhat Would You Like to Learn?\nSmartphone Help\n\nLearn the basics of using smartphones, apps, settings, and common features.\n\nView Smartphone Help\nComputer Help\n\nFind simple guidance for using computers, the internet, email, and other tools.\n\nView Computer Help\nOnline Safety\n\nLearn how to recognize scams, protect your information, and stay safer online.\n\nView Online Safety\nVideo Tutorials\n\nWatch technology lessons and demonstrations at your own pace.\n\nView Video Tutorials",
+      "links": [],
+      "buttons": [
+        {
+          "text": "View Smartphone Help",
+          "type": "button"
+        },
+        {
+          "text": "View Computer Help",
+          "type": "button"
+        },
+        {
+          "text": "View Online Safety",
+          "type": "button"
+        },
+        {
+          "text": "View Video Tutorials",
+          "type": "button"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/about",
+      "lang": "en",
+      "titles": [
+        "About TechSmart Learning for Seniors"
+      ],
+      "descriptions": [
+        "Learn about TechSmart Learning for Seniors and its focus on accessible technology education, digital confidence, and community support for older adults."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/about"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "About TechSmart"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "About TechSmart"
+        },
+        {
+          "level": "H2",
+          "text": "Our Mission"
+        },
+        {
+          "level": "H2",
+          "text": "Learn"
+        },
+        {
+          "level": "H2",
+          "text": "Connect"
+        },
+        {
+          "level": "H2",
+          "text": "Community"
+        }
+      ],
+      "mainText": "About TechSmart\n\nLearn more about TechSmart Learning for Seniors and our work helping older adults build confidence with technology.\n\nOur Mission\n\nMission content will be added using sponsor-approved TechSmart content.\n\nLearn\n\nAccessible technology education designed for older adults.\n\nConnect\n\nBuild confidence using everyday technology and digital tools.\n\nCommunity\n\nConnect older adults with learning opportunities and support.",
+      "links": [],
+      "buttons": [],
+      "formFieldNames": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/contact",
+      "lang": "en",
+      "titles": [
+        "Contact TechSmart Learning for Seniors"
+      ],
+      "descriptions": [
+        "Contact TechSmart Learning for Seniors with questions about technology learning, workshops, resources, or ways to support older adults."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/contact"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Contact Us"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Contact Us"
+        },
+        {
+          "level": "H2",
+          "text": "Send Us a Message"
+        }
+      ],
+      "mainText": "Contact Us\n\nHave a question? Send us a message and let us know how we can help.\n\nSend Us a Message\nName *\nName *\nEmail Address *\nEmail Address *\nHow can we help? *\nHow can we help? *\nSend Message",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Send Message",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": [
+        "name",
+        "email"
+      ]
+    },
+    {
+      "route": "/donate",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/donate",
+      "lang": "en",
+      "titles": [
+        "Make a Donation | TechSmart"
+      ],
+      "descriptions": [
+        "Support technology education for older adults through TechSmart Learning for Seniors. View the donation form."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/donate"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Make a Donation"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Make a Donation"
+        }
+      ],
+      "mainText": "Make a Donation\nFirst Name *\nFirst Name *\nLast Name *\nLast Name *\nEmail *\nEmail *\nDonate",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Donate",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": [
+        "firstName",
+        "lastName",
+        "email"
+      ]
+    },
+    {
+      "route": "/workshops/WS-1001",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/workshops/WS-1001",
+      "lang": "en",
+      "titles": [
+        "Smartphone Basics for Beginners | TechSmart"
+      ],
+      "descriptions": [
+        "Details for Smartphone Basics for Beginners, including location, accessibility information, and registration options."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/workshops/WS-1001"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Smartphone Basics for Beginners"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Smartphone Basics for Beginners"
+        },
+        {
+          "level": "H2",
+          "text": "Workshop Information"
+        },
+        {
+          "level": "H2",
+          "text": "Accessibility Features"
+        }
+      ],
+      "mainText": "Smartphone Basics for Beginners\nWorkshop Information\n\nDate: 10/4/2026\n\nTime: 10:00 AM\n\nLocation: Marietta Senior Center, 123 Main St, Marietta, GA\n\nRoom: Room 2\n\nInstructor: John Carter\n\nSeats Available: 8\n\nAccessibility Features\nWheelchair accessible\nLarge-print handouts\nRegister for This Workshop",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Register for This Workshop",
+          "type": "button"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "route": "/workshops/technical-seo-missing",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/workshops/technical-seo-missing",
+      "lang": "en",
+      "titles": [
+        "Workshop Not Found | TechSmart"
+      ],
+      "descriptions": [
+        "This workshop could not be found. Return to technology workshop search."
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "Workshop Not Found"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Workshop Not Found"
+        }
+      ],
+      "mainText": "Workshop Not Found\nWe could not find this workshop. Please return to the workshop search.\nFind Workshops",
+      "links": [
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        }
+      ],
+      "buttons": [],
+      "formFieldNames": []
+    },
+    {
+      "route": "/technical-seo-missing-page",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/technical-seo-missing-page",
+      "lang": "en",
+      "titles": [
+        "Page Not Found | TechSmart"
+      ],
+      "descriptions": [
+        "This TechSmart Learning for Seniors page could not be found. Explore technology help, learning resources, and ways to support older adults."
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "Page Not Found"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Page Not Found"
+        }
+      ],
+      "mainText": "Page Not Found\n\nWe could not find this page. Visit the home page or find technology help to continue.\n\nGo to Home\nFind Technology Help",
+      "links": [
+        {
+          "text": "Go to Home",
+          "href": "/"
+        },
+        {
+          "text": "Find Technology Help",
+          "href": "/need-help"
+        }
+      ],
+      "buttons": [],
+      "formFieldNames": []
+    },
+    {
+      "route": "/need-help/?zip=01234#workshops",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/need-help/?zip=01234#workshops",
+      "lang": "en",
+      "titles": [
+        "Technology Workshops & Help | TechSmart"
+      ],
+      "descriptions": [
+        "Explore technology help and the workshop search demonstration for older adults learning everyday digital skills with TechSmart Learning for Seniors."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/need-help"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "I Need Technology Help"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "I Need Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        },
+        {
+          "level": "H2",
+          "text": "Workshops Near 01234"
+        }
+      ],
+      "mainText": "I Need Technology Help\n\nFind technology workshops and resources designed to help you feel more comfortable using everyday technology.\n\nFind a Workshop Near You\n\nEnter your 5-digit ZIP code to search for nearby technology workshops.\n\nZIP Code\nZIP Code\n\nExample: 30301\n\nSearch\nWorkshops Near 01234\nThese are sample workshop results for frontend testing.\nNo workshops were found near 01234. Try a different ZIP code or check back later.",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Search",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "route": "/ABOUT/",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/ABOUT/",
+      "lang": "en",
+      "titles": [
+        "About TechSmart Learning for Seniors"
+      ],
+      "descriptions": [
+        "Learn about TechSmart Learning for Seniors and its focus on accessible technology education, digital confidence, and community support for older adults."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/about"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "About TechSmart"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "About TechSmart"
+        },
+        {
+          "level": "H2",
+          "text": "Our Mission"
+        },
+        {
+          "level": "H2",
+          "text": "Learn"
+        },
+        {
+          "level": "H2",
+          "text": "Connect"
+        },
+        {
+          "level": "H2",
+          "text": "Community"
+        }
+      ],
+      "mainText": "About TechSmart\n\nLearn more about TechSmart Learning for Seniors and our work helping older adults build confidence with technology.\n\nOur Mission\n\nMission content will be added using sponsor-approved TechSmart content.\n\nLearn\n\nAccessible technology education designed for older adults.\n\nConnect\n\nBuild confidence using everyday technology and digital tools.\n\nCommunity\n\nConnect older adults with learning opportunities and support.",
+      "links": [],
+      "buttons": [],
+      "formFieldNames": []
+    }
+  ],
+  "menuViewports": [
+    {
+      "viewport": {
+        "width": 412,
+        "height": 823
+      },
+      "text": "Menu",
+      "accessibleName": "Open navigation menu",
+      "geometry": {
+        "x": 285,
+        "y": 21.75,
+        "width": 111,
+        "height": 51.5
+      },
+      "styles": {
+        "fontSize": "18px",
+        "fontWeight": "700",
+        "lineHeight": "31.5px",
+        "paddingTop": "10px",
+        "paddingRight": "20px",
+        "paddingBottom": "10px",
+        "paddingLeft": "20px",
+        "backgroundColor": "rgb(31, 112, 177)",
+        "borderRadius": "6px"
+      },
+      "drawerLinks": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "escapeClosesMenu": true
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "text": "Menu",
+      "accessibleName": "Open navigation menu",
+      "geometry": {
+        "x": 633,
+        "y": 29.25,
+        "width": 111,
+        "height": 51.5
+      },
+      "styles": {
+        "fontSize": "18px",
+        "fontWeight": "700",
+        "lineHeight": "31.5px",
+        "paddingTop": "10px",
+        "paddingRight": "20px",
+        "paddingBottom": "10px",
+        "paddingLeft": "20px",
+        "backgroundColor": "rgb(31, 112, 177)",
+        "borderRadius": "6px"
+      },
+      "drawerLinks": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "escapeClosesMenu": true
+    }
+  ],
+  "navigation": [
+    {
+      "action": "Home help link",
+      "url": "http://127.0.0.1:4173/need-help",
+      "lang": "en",
+      "titles": [
+        "Technology Workshops & Help | TechSmart"
+      ],
+      "descriptions": [
+        "Explore technology help and the workshop search demonstration for older adults learning everyday digital skills with TechSmart Learning for Seniors."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/need-help"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "I Need Technology Help"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "I Need Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        }
+      ],
+      "mainText": "I Need Technology Help\n\nFind technology workshops and resources designed to help you feel more comfortable using everyday technology.\n\nFind a Workshop Near You\n\nEnter your 5-digit ZIP code to search for nearby technology workshops.\n\nZIP Code\nZIP Code\n\nExample: 30301\n\nSearch",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Search",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "action": "Browser Back",
+      "url": "http://127.0.0.1:4173/",
+      "lang": "en",
+      "titles": [
+        "Technology Help for Seniors | TechSmart"
+      ],
+      "descriptions": [
+        "Build confidence with everyday technology. Explore TechSmart Learning for Seniors workshops, learning resources, and opportunities to help older adults."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Technology Made Simple."
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Technology Made Simple."
+        },
+        {
+          "level": "H2",
+          "text": "How Can We Help?"
+        },
+        {
+          "level": "H3",
+          "text": "Find a Workshop"
+        },
+        {
+          "level": "H3",
+          "text": "Technology Resources"
+        },
+        {
+          "level": "H3",
+          "text": "Get Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        },
+        {
+          "level": "H2",
+          "text": "Want to Make a Difference?"
+        }
+      ],
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "links": [
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        },
+        {
+          "text": "View Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "Get Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "Donate",
+          "href": "/want-to-help#donate"
+        },
+        {
+          "text": "Volunteer",
+          "href": "/want-to-help#volunteer"
+        },
+        {
+          "text": "Advocate",
+          "href": "/want-to-help#advocate"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Find Workshops",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "action": "ZIP form navigation",
+      "url": "http://127.0.0.1:4173/need-help?zip=01234",
+      "lang": "en",
+      "titles": [
+        "Technology Workshops & Help | TechSmart"
+      ],
+      "descriptions": [
+        "Explore technology help and the workshop search demonstration for older adults learning everyday digital skills with TechSmart Learning for Seniors."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/need-help"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "I Need Technology Help"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "I Need Technology Help"
+        },
+        {
+          "level": "H2",
+          "text": "Find a Workshop Near You"
+        },
+        {
+          "level": "H2",
+          "text": "Workshops Near 01234"
+        }
+      ],
+      "mainText": "I Need Technology Help\n\nFind technology workshops and resources designed to help you feel more comfortable using everyday technology.\n\nFind a Workshop Near You\n\nEnter your 5-digit ZIP code to search for nearby technology workshops.\n\nZIP Code\nZIP Code\n\nExample: 30301\n\nSearch\nWorkshops Near 01234\nThese are sample workshop results for frontend testing.\nNo workshops were found near 01234. Try a different ZIP code or check back later.",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Search",
+          "type": "submit"
+        }
+      ],
+      "formFieldNames": []
+    }
+  ],
+  "workshopNavigation": [
+    {
+      "action": "Known workshop",
+      "url": "http://127.0.0.1:4173/workshops/WS-1001",
+      "lang": "en",
+      "titles": [
+        "Smartphone Basics for Beginners | TechSmart"
+      ],
+      "descriptions": [
+        "Details for Smartphone Basics for Beginners, including location, accessibility information, and registration options."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/workshops/WS-1001"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Smartphone Basics for Beginners"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Smartphone Basics for Beginners"
+        },
+        {
+          "level": "H2",
+          "text": "Workshop Information"
+        },
+        {
+          "level": "H2",
+          "text": "Accessibility Features"
+        }
+      ],
+      "mainText": "Smartphone Basics for Beginners\nWorkshop Information\n\nDate: 10/4/2026\n\nTime: 10:00 AM\n\nLocation: Marietta Senior Center, 123 Main St, Marietta, GA\n\nRoom: Room 2\n\nInstructor: John Carter\n\nSeats Available: 8\n\nAccessibility Features\nWheelchair accessible\nLarge-print handouts\nRegister for This Workshop",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Register for This Workshop",
+          "type": "button"
+        }
+      ],
+      "formFieldNames": []
+    },
+    {
+      "action": "Known to missing workshop",
+      "url": "http://127.0.0.1:4173/workshops/technical-seo-missing",
+      "lang": "en",
+      "titles": [
+        "Workshop Not Found | TechSmart"
+      ],
+      "descriptions": [
+        "This workshop could not be found. Return to technology workshop search."
+      ],
+      "robots": [
+        "noindex,follow"
+      ],
+      "canonicals": [],
+      "mainCount": 1,
+      "h1": [
+        "Workshop Not Found"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Workshop Not Found"
+        }
+      ],
+      "mainText": "Workshop Not Found\nWe could not find this workshop. Please return to the workshop search.\nFind Workshops",
+      "links": [
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        }
+      ],
+      "buttons": [],
+      "formFieldNames": []
+    },
+    {
+      "action": "Missing to known workshop",
+      "url": "http://127.0.0.1:4173/workshops/WS-1001",
+      "lang": "en",
+      "titles": [
+        "Smartphone Basics for Beginners | TechSmart"
+      ],
+      "descriptions": [
+        "Details for Smartphone Basics for Beginners, including location, accessibility information, and registration options."
+      ],
+      "robots": [
+        "index,follow"
+      ],
+      "canonicals": [
+        "https://capstone-fall-2026.vercel.app/workshops/WS-1001"
+      ],
+      "mainCount": 1,
+      "h1": [
+        "Smartphone Basics for Beginners"
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Smartphone Basics for Beginners"
+        },
+        {
+          "level": "H2",
+          "text": "Workshop Information"
+        },
+        {
+          "level": "H2",
+          "text": "Accessibility Features"
+        }
+      ],
+      "mainText": "Smartphone Basics for Beginners\nWorkshop Information\n\nDate: 10/4/2026\n\nTime: 10:00 AM\n\nLocation: Marietta Senior Center, 123 Main St, Marietta, GA\n\nRoom: Room 2\n\nInstructor: John Carter\n\nSeats Available: 8\n\nAccessibility Features\nWheelchair accessible\nLarge-print handouts\nRegister for This Workshop",
+      "links": [],
+      "buttons": [
+        {
+          "text": "Register for This Workshop",
+          "type": "button"
+        }
+      ],
+      "formFieldNames": []
+    }
+  ],
+  "pageErrors": [
+    {
+      "url": "http://127.0.0.1:4173/donate",
+      "message": "Expected publishable key to be of type string, got type undefined instead.",
+      "stack": "Error: Expected publishable key to be of type string, got type undefined instead.\n    at <anonymous> (http://127.0.0.1:4173/static/js/124.bad90540.chunk.js:2:19417)\n    at <anonymous> (http://127.0.0.1:4173/static/js/124.bad90540.chunk.js:2:19998)"
+    },
+    {
+      "url": "http://127.0.0.1:4173/donate",
+      "message": "Expected publishable key to be of type string, got type undefined instead.",
+      "stack": "Error: Expected publishable key to be of type string, got type undefined instead.\n    at <anonymous> (http://127.0.0.1:4173/static/js/124.bad90540.chunk.js:2:19417)\n    at <anonymous> (http://127.0.0.1:4173/static/js/124.bad90540.chunk.js:2:19998)"
+    },
+    {
+      "url": "http://127.0.0.1:4173/donate",
+      "message": "Expected publishable key to be of type string, got type undefined instead.",
+      "stack": "Error: Expected publishable key to be of type string, got type undefined instead.\n    at <anonymous> (http://127.0.0.1:4173/static/js/124.bad90540.chunk.js:2:19417)\n    at <anonymous> (http://127.0.0.1:4173/static/js/124.bad90540.chunk.js:2:19998)"
+    }
+  ],
+  "paymentSubmitted": false,
+  "limitations": [
+    "The static SPA server returns HTTP 200 for unknown paths; client noindex does not create a server HTTP 404.",
+    "Route-specific metadata and content require JavaScript. Raw HTML has a shared branded fallback.",
+    "No local Stripe publishable key is configured; donation payment readiness and submission are not tested."
+  ],
+  "browserVersion": "Chrome/156.0.8078.80",
+  "rawDocuments": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "TechSmart Learning for Seniors | Technology Education",
+      "description": "Explore technology education, workshops, learning resources, and ways to support older adults with TechSmart Learning for Seniors.",
+      "canonicalCount": 0,
+      "rootHasRenderedContent": false
+    },
+    {
+      "route": "/resources",
+      "status": 200,
+      "title": "TechSmart Learning for Seniors | Technology Education",
+      "description": "Explore technology education, workshops, learning resources, and ways to support older adults with TechSmart Learning for Seniors.",
+      "canonicalCount": 0,
+      "rootHasRenderedContent": false
+    },
+    {
+      "route": "/technical-seo-missing-page",
+      "status": 200,
+      "title": "TechSmart Learning for Seniors | Technology Education",
+      "description": "Explore technology education, workshops, learning resources, and ways to support older adults with TechSmart Learning for Seniors.",
+      "canonicalCount": 0,
+      "rootHasRenderedContent": false
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "body": "User-agent: *\nDisallow:\n\nSitemap: https://capstone-fall-2026.vercel.app/sitemap.xml\n"
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://capstone-fall-2026.vercel.app/</loc></url>\n  <url><loc>https://capstone-fall-2026.vercel.app/need-help</loc></url>\n  <url><loc>https://capstone-fall-2026.vercel.app/want-to-help</loc></url>\n  <url><loc>https://capstone-fall-2026.vercel.app/resources</loc></url>\n  <url><loc>https://capstone-fall-2026.vercel.app/about</loc></url>\n  <url><loc>https://capstone-fall-2026.vercel.app/contact</loc></url>\n  <url><loc>https://capstone-fall-2026.vercel.app/donate</loc></url>\n</urlset>\n"
+    }
+  ],
+  "passed": true,
+  "browserClosed": true
+}

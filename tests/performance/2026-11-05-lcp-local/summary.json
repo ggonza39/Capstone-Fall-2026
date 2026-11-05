@@ -1,0 +1,645 @@
+{
+  "phase": "LCP optimization: local production before/after verification",
+  "documentedProjectLcpBaselineMs": 21800,
+  "lcpTargetExclusiveMs": 2500,
+  "initialDeployedLcpMedianMs": 4515.223999999999,
+  "limitation": "Localhost production comparison; not a final deployed audit. All ten runs retain Lighthouse slow-CPU calibration warnings. Small timing differences do not establish a statistically significant improvement.",
+  "environment": {
+    "localReferenceCommit": "7e400b4a3bcf408bf412f15d176bcf6df0703c2d",
+    "nodeVersion": "v20.11.1",
+    "lighthouseVersion": "12.8.2",
+    "chromeVersion": "156.0.8078.80",
+    "hostUrl": "http://127.0.0.1:4173/",
+    "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+    "productionBuild": true,
+    "stripePublishableKeyConfigured": false,
+    "sandboxMocksEnabled": false,
+    "capturedAtUtc": "2026-11-05T06:00:03.1077161Z",
+    "operatingSystem": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "OSArchitecture": "64-bit"
+    },
+    "cpu": {
+      "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    },
+    "optimizedSourceDiff": "lcp-optimization.patch",
+    "optimizedSourceSha256": [
+      {
+        "path": "capstonefall2026/src/pages/Home.js",
+        "sha256": "d212d33f5437bbc1945d8326848a557a4f94568f5abe5440f67ab62cdab793f0"
+      }
+    ]
+  },
+  "phases": {
+    "before": {
+      "entryScript": "/static/js/main.71f543d3.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "before/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T06:01:27.206Z",
+          "FCP": 644.2116,
+          "LCP": 2273.4231999999997,
+          "TBT": 1251.9999999999998,
+          "SpeedIndex": 1536.172538825193,
+          "seoScore": 100,
+          "performanceScore": 74,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 474.2116,
+              "percent": "21%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1799.2115999999996,
+              "percent": "79%"
+            }
+          ],
+          "renderDelayMs": 1799.2115999999996,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "totalTransferredBytes": 210090,
+          "unusedJsEstimatedBytes": 74166,
+          "mainThreadWorkMs": 2065.267999999996,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 529,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 2,
+          "reportJson": "before/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T06:02:05.018Z",
+          "FCP": 630.5633,
+          "LCP": 2558.1266000000005,
+          "TBT": 2112,
+          "SpeedIndex": 1819.1644217102291,
+          "seoScore": 100,
+          "performanceScore": 69,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 466.5633,
+              "percent": "18%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 2091.5633000000007,
+              "percent": "82%"
+            }
+          ],
+          "renderDelayMs": 2091.5633000000007,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "totalTransferredBytes": 210090,
+          "unusedJsEstimatedBytes": 74166,
+          "mainThreadWorkMs": 3076.9039999999923,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 554,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 3,
+          "reportJson": "before/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T06:02:39.264Z",
+          "FCP": 628.10895,
+          "LCP": 2224.32685,
+          "TBT": 1248.9999999999995,
+          "SpeedIndex": 1321.0240902420014,
+          "seoScore": 100,
+          "performanceScore": 74,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 463.10895,
+              "percent": "21%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1761.2178999999999,
+              "percent": "79%"
+            }
+          ],
+          "renderDelayMs": 1761.2178999999999,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "totalTransferredBytes": 210090,
+          "unusedJsEstimatedBytes": 74166,
+          "mainThreadWorkMs": 2012.1279999999942,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 877,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 4,
+          "reportJson": "before/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T06:03:07.503Z",
+          "FCP": 625.96755,
+          "LCP": 2574.9350999999997,
+          "TBT": 2118,
+          "SpeedIndex": 1823.5581944905543,
+          "seoScore": 100,
+          "performanceScore": 69,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 465.96755,
+              "percent": "18%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 2108.96755,
+              "percent": "82%"
+            }
+          ],
+          "renderDelayMs": 2108.96755,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "totalTransferredBytes": 210090,
+          "unusedJsEstimatedBytes": 74166,
+          "mainThreadWorkMs": 3127.747999999996,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 425,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 5,
+          "reportJson": "before/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T06:03:45.516Z",
+          "FCP": 626.06595,
+          "LCP": 2387.1319,
+          "TBT": 1539,
+          "SpeedIndex": 1397.0044816249922,
+          "seoScore": 100,
+          "performanceScore": 72,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 460.06595,
+              "percent": "19%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1927.06595,
+              "percent": "81%"
+            }
+          ],
+          "renderDelayMs": 1927.06595,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "totalTransferredBytes": 210090,
+          "unusedJsEstimatedBytes": 74166,
+          "mainThreadWorkMs": 2290.735999999996,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 632,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ],
+      "medians": {
+        "FCP": 628.10895,
+        "LCP": 2387.1319,
+        "TBT": 1539,
+        "SpeedIndex": 1536.172538825193,
+        "seoScore": 100,
+        "performanceScore": 72,
+        "renderDelayMs": 1927.06595,
+        "mainDecodedBytes": 527148,
+        "mainTransferredBytes": 163362,
+        "totalTransferredBytes": 210090,
+        "unusedJsEstimatedBytes": 74166,
+        "mainThreadWorkMs": 2290.735999999996
+      },
+      "lcpRangeMs": [
+        2224.32685,
+        2574.9350999999997
+      ],
+      "lcpRunsBelowTarget": 3,
+      "benchmarkRange": [
+        425,
+        877
+      ],
+      "runtimeErrors": 0,
+      "runWarningCount": 5
+    },
+    "after": {
+      "entryScript": "/static/js/main.7cab76a2.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "after/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T06:09:01.997Z",
+          "FCP": 625.15635,
+          "LCP": 2214.4690499999997,
+          "TBT": 1149.9999999999998,
+          "SpeedIndex": 1276.5993460035747,
+          "seoScore": 100,
+          "performanceScore": 75,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 463.15635,
+              "percent": "21%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1751.3126999999997,
+              "percent": "79%"
+            }
+          ],
+          "renderDelayMs": 1751.3126999999997,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "unusedJsEstimatedBytes": 62972,
+          "mainThreadWorkMs": 1981.147999999996,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 981.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 2,
+          "reportJson": "after/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T06:09:32.060Z",
+          "FCP": 622.7526,
+          "LCP": 2352.5052000000005,
+          "TBT": 1374.0000000000002,
+          "SpeedIndex": 1410.8815324530938,
+          "seoScore": 100,
+          "performanceScore": 73,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 460.7526,
+              "percent": "20%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1891.7526000000005,
+              "percent": "80%"
+            }
+          ],
+          "renderDelayMs": 1891.7526000000005,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "unusedJsEstimatedBytes": 62972,
+          "mainThreadWorkMs": 2234.571999999993,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 900,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 3,
+          "reportJson": "after/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T06:09:58.632Z",
+          "FCP": 621.53905,
+          "LCP": 2281.0781,
+          "TBT": 1157,
+          "SpeedIndex": 1277.4721199989258,
+          "seoScore": 100,
+          "performanceScore": 75,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 459.53905,
+              "percent": "20%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1821.5390500000003,
+              "percent": "80%"
+            }
+          ],
+          "renderDelayMs": 1821.5390500000003,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "unusedJsEstimatedBytes": 62972,
+          "mainThreadWorkMs": 1987.8759999999947,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 835,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 4,
+          "reportJson": "after/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T06:10:24.866Z",
+          "FCP": 626.56105,
+          "LCP": 2371.1220999999996,
+          "TBT": 1591.9999999999998,
+          "SpeedIndex": 1575.976057851347,
+          "seoScore": 100,
+          "performanceScore": 72,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 463.56105,
+              "percent": "20%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1907.5610499999996,
+              "percent": "80%"
+            }
+          ],
+          "renderDelayMs": 1907.5610499999996,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "unusedJsEstimatedBytes": 62972,
+          "mainThreadWorkMs": 2495.6999999999944,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 682.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 5,
+          "reportJson": "after/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T06:10:52.289Z",
+          "FCP": 626.12505,
+          "LCP": 2432.2500999999997,
+          "TBT": 1556,
+          "SpeedIndex": 1483.7632610433384,
+          "seoScore": 100,
+          "performanceScore": 72,
+          "lcpModeledPhases": [
+            {
+              "phase": "TTFB",
+              "timing": 461.12505,
+              "percent": "19%"
+            },
+            {
+              "phase": "Load Delay",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Load Time",
+              "timing": 0,
+              "percent": "0%"
+            },
+            {
+              "phase": "Render Delay",
+              "timing": 1971.1250499999996,
+              "percent": "81%"
+            }
+          ],
+          "renderDelayMs": 1971.1250499999996,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "unusedJsEstimatedBytes": 62972,
+          "mainThreadWorkMs": 2479.039999999996,
+          "stripeRequests": 0,
+          "secondaryRouteChunks": 0,
+          "benchmarkIndex": 671,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ],
+      "medians": {
+        "FCP": 625.15635,
+        "LCP": 2352.5052000000005,
+        "TBT": 1374.0000000000002,
+        "SpeedIndex": 1410.8815324530938,
+        "seoScore": 100,
+        "performanceScore": 73,
+        "renderDelayMs": 1891.7526000000005,
+        "mainDecodedBytes": 483236,
+        "mainTransferredBytes": 151409,
+        "totalTransferredBytes": 198137,
+        "unusedJsEstimatedBytes": 62972,
+        "mainThreadWorkMs": 2234.571999999993
+      },
+      "lcpRangeMs": [
+        2214.4690499999997,
+        2432.2500999999997
+      ],
+      "lcpRunsBelowTarget": 5,
+      "benchmarkRange": [
+        671,
+        981.5
+      ],
+      "runtimeErrors": 0,
+      "runWarningCount": 5
+    }
+  },
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "lcpCandidate": {
+    "type": "node",
+    "lhId": "page-1-P",
+    "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+    "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+    "boundingRect": {
+      "top": 245,
+      "bottom": 360,
+      "left": 16,
+      "right": 396,
+      "width": 380,
+      "height": 115
+    },
+    "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+    "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+  },
+  "localChanges": {
+    "lcpMedianReductionMs": 34.626699999999346,
+    "lcpMedianReductionPercent": 1.4505566282281823,
+    "mainDecodedBytesReduction": 43912,
+    "mainDecodedBytesReductionPercent": 8.330108432546456,
+    "mainTransferredBytesReduction": 11953,
+    "mainTransferredBytesReductionPercent": 7.3168790783658375
+  },
+  "validation": {
+    "allTenConfigurationsIdentical": true,
+    "sameHeroParagraphAndBoundsInEveryRun": true,
+    "allTenRuntimeErrorFree": true,
+    "noStripeOrSecondaryRouteRequestsInAnyRun": true,
+    "bundleCheck": "after/bundle-check.json",
+    "browserBefore": "browser-before.json",
+    "browserAfter": "browser-after.json",
+    "browserChecksPassed": 15,
+    "tests": {
+      "passed": 28,
+      "failed": 4,
+      "appAndHomeTestsPassed": 11,
+      "failureNote": "Four unchanged NeedHelp workshop-registration tests fail; see test-results.json."
+    },
+    "finalDeployedAudit": "Pending deployment and measurement"
+  }
+}

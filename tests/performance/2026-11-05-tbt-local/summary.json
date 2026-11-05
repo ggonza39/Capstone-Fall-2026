@@ -1,0 +1,981 @@
+{
+  "phase": "TBT optimization: local production before/after verification",
+  "documentedProjectTbtBaselineMs": 700,
+  "tbtTargetExclusiveMs": 200,
+  "initialDeployedTbtMedianMs": 1018.999999999999,
+  "limitation": "Local production lab measurements, not a final deployed audit. All ten reports contain slow-CPU warnings; CPU load and overlapping ranges limit causal comparisons.",
+  "environment": {
+    "localReferenceCommit": "9cd3d4862a69202698fa8af45a9385f9337936f4",
+    "nodeVersion": "v20.11.1",
+    "lighthouseVersion": "12.8.2",
+    "chromeVersion": "156.0.8078.80",
+    "hostUrl": "http://127.0.0.1:4173/",
+    "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+    "productionBuild": true,
+    "stripePublishableKeyConfigured": false,
+    "sandboxMocksEnabled": false,
+    "capturedAtUtc": "2026-11-05T06:29:11.2439295Z",
+    "operatingSystem": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "OSArchitecture": "64-bit"
+    },
+    "cpu": {
+      "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    },
+    "optimizedSourceDiff": "tbt-optimization.patch",
+    "optimizedSourceSha256": [
+      {
+        "path": "capstonefall2026/src/components/Header.js",
+        "sha256": "149596cf5686187d94b013c13d94485c7bb8cf89afaf4edbd8023e6478077c16"
+      },
+      {
+        "path": "capstonefall2026/src/components/MobileNavigation.js",
+        "sha256": "94337150198014887ab414ea66852508116b3ee419f6544707d16f4e99cda383"
+      },
+      {
+        "path": "capstonefall2026/src/components/mobileNavigationLoader.js",
+        "sha256": "86b003fc25e53d652bdc679ba8ff9f94361255360333ca54534752643c7ad779"
+      }
+    ]
+  },
+  "phases": {
+    "before": {
+      "entryScript": "/static/js/main.7cab76a2.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "before/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T06:30:20.225Z",
+          "FCP": 636.39485,
+          "LCP": 2292.7897000000003,
+          "TBT": 1282,
+          "SpeedIndex": 1633.933090286131,
+          "seoScore": 100,
+          "performanceScore": 74,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "lighthouseMainThreadWorkMs": 2343.4359999999942,
+          "lighthouseScriptBootupMs": 1098.3559999999939,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 700,
+              "startTime": 2292.7897000000003
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 428.0000000000001,
+              "startTime": 738.39485
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 336,
+              "startTime": 1956.7897000000003
+            },
+            {
+              "url": "Unattributable",
+              "duration": 102,
+              "startTime": 627.39485
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 245,
+            "numTasksOver10ms": 5,
+            "numTasksOver25ms": 4,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 2,
+            "numTasksOver500ms": 0,
+            "rtt": 0.31215,
+            "throughput": 23648266.471401792,
+            "maxRtt": 0.31215,
+            "maxServerLatency": 27.394850000000005,
+            "totalByteWeight": 198137,
+            "totalTaskTime": 585.8589999999992,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 852.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 2,
+          "reportJson": "before/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T06:30:53.334Z",
+          "FCP": 634.2355,
+          "LCP": 2446.4710000000005,
+          "TBT": 2319,
+          "SpeedIndex": 2095.6010306550543,
+          "seoScore": 100,
+          "performanceScore": 69,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "lighthouseMainThreadWorkMs": 3647.755999999999,
+          "lighthouseScriptBootupMs": 1931.4839999999988,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 1244,
+              "startTime": 2596.4710000000005
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 618.0000000000005,
+              "startTime": 1978.471
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 610,
+              "startTime": 768.2355
+            },
+            {
+              "url": "Unattributable",
+              "duration": 134,
+              "startTime": 622.2355
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 50,
+              "startTime": 3840.4710000000005
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 242,
+            "numTasksOver10ms": 6,
+            "numTasksOver25ms": 4,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 3,
+            "numTasksOver500ms": 0,
+            "rtt": 0.8999999999999999,
+            "throughput": 6467535.751305557,
+            "maxRtt": 0.8999999999999999,
+            "maxServerLatency": 22.235500000000002,
+            "totalByteWeight": 198137,
+            "totalTaskTime": 911.9389999999999,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 485.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 3,
+          "reportJson": "before/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T06:31:37.667Z",
+          "FCP": 626.8116,
+          "LCP": 2214.4348,
+          "TBT": 989,
+          "SpeedIndex": 1215.590472679386,
+          "seoScore": 100,
+          "performanceScore": 77,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "lighthouseMainThreadWorkMs": 1782.0639999999973,
+          "lighthouseScriptBootupMs": 1018.2599999999976,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 657,
+              "startTime": 2213.6232
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 314,
+              "startTime": 1899.6232
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 235,
+              "startTime": 696.8116
+            },
+            {
+              "url": "Unattributable",
+              "duration": 70,
+              "startTime": 614.8116
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 241,
+            "numTasksOver10ms": 4,
+            "numTasksOver25ms": 3,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 2,
+            "numTasksOver500ms": 0,
+            "rtt": 0.3969,
+            "throughput": 24472310.07099083,
+            "maxRtt": 0.3969,
+            "maxServerLatency": 14.811600000000002,
+            "totalByteWeight": 198137,
+            "totalTaskTime": 445.51599999999985,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 686.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 4,
+          "reportJson": "before/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T06:32:13.710Z",
+          "FCP": 636.8878,
+          "LCP": 2615.7756,
+          "TBT": 2104,
+          "SpeedIndex": 1833.876974158855,
+          "seoScore": 100,
+          "performanceScore": 69,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "lighthouseMainThreadWorkMs": 3155.971999999995,
+          "lighthouseScriptBootupMs": 1957.8159999999955,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 1213,
+              "startTime": 2615.7756
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 682,
+              "startTime": 1933.7756
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 404,
+              "startTime": 736.8878
+            },
+            {
+              "url": "Unattributable",
+              "duration": 100,
+              "startTime": 616.8878
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 247,
+            "numTasksOver10ms": 5,
+            "numTasksOver25ms": 3,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 3,
+            "numTasksOver500ms": 0,
+            "rtt": 0.3252,
+            "throughput": 16010262.056786476,
+            "maxRtt": 0.3252,
+            "maxServerLatency": 16.8878,
+            "totalByteWeight": 198137,
+            "totalTaskTime": 788.9929999999996,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 568.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 5,
+          "reportJson": "before/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T06:32:42.008Z",
+          "FCP": 627.805,
+          "LCP": 2383.61,
+          "TBT": 1567.9999999999998,
+          "SpeedIndex": 1534.4940664921573,
+          "seoScore": 100,
+          "performanceScore": 72,
+          "mainDecodedBytes": 483236,
+          "mainTransferredBytes": 151409,
+          "totalTransferredBytes": 198137,
+          "lighthouseMainThreadWorkMs": 2490.0719999999906,
+          "lighthouseScriptBootupMs": 1477.61599999999,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 978,
+              "startTime": 2383.61
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.7cab76a2.js",
+              "duration": 458.0000000000002,
+              "startTime": 1925.61
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 320.9999999999999,
+              "startTime": 729.805
+            },
+            {
+              "url": "Unattributable",
+              "duration": 102,
+              "startTime": 611.805
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 245,
+            "numTasksOver10ms": 4,
+            "numTasksOver25ms": 4,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 3,
+            "numTasksOver500ms": 0,
+            "rtt": 0.8999999999999999,
+            "throughput": 19262784.440857377,
+            "maxRtt": 0.8999999999999999,
+            "maxServerLatency": 11.805,
+            "totalByteWeight": 198137,
+            "totalTaskTime": 622.5179999999997,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 593.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ],
+      "medians": {
+        "FCP": 634.2355,
+        "LCP": 2383.61,
+        "TBT": 1567.9999999999998,
+        "SpeedIndex": 1633.933090286131,
+        "seoScore": 100,
+        "performanceScore": 72,
+        "mainDecodedBytes": 483236,
+        "mainTransferredBytes": 151409,
+        "totalTransferredBytes": 198137,
+        "lighthouseMainThreadWorkMs": 2490.0719999999906,
+        "lighthouseScriptBootupMs": 1477.61599999999
+      },
+      "tbtRangeMs": [
+        989,
+        2319
+      ],
+      "tbtRunsBelowTarget": 0,
+      "benchmarkRange": [
+        485.5,
+        852.5
+      ],
+      "runtimeErrors": 0,
+      "runWarningCount": 5
+    },
+    "after": {
+      "entryScript": "/static/js/main.db9eb488.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "after/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T06:40:53.970Z",
+          "FCP": 626.55375,
+          "LCP": 2082.1075,
+          "TBT": 1228,
+          "SpeedIndex": 1282.6483495104449,
+          "seoScore": 100,
+          "performanceScore": 75,
+          "mainDecodedBytes": 444110,
+          "mainTransferredBytes": 140593,
+          "totalTransferredBytes": 187321,
+          "lighthouseMainThreadWorkMs": 1996.0639999999976,
+          "lighthouseScriptBootupMs": 1157.115999999997,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 783,
+              "startTime": 2082.1075
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 331,
+              "startTime": 1751.1075
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 251,
+              "startTime": 704.55375
+            },
+            {
+              "url": "Unattributable",
+              "duration": 78,
+              "startTime": 611.55375
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 239,
+            "numTasksOver10ms": 4,
+            "numTasksOver25ms": 3,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 2,
+            "numTasksOver500ms": 0,
+            "rtt": 0.33675,
+            "throughput": 24507629.179159094,
+            "maxRtt": 0.33675,
+            "maxServerLatency": 11.55375,
+            "totalByteWeight": 187321,
+            "totalTaskTime": 499.0160000000001,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 872,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 2,
+          "reportJson": "after/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T06:41:20.329Z",
+          "FCP": 620.8285,
+          "LCP": 2147.6569999999997,
+          "TBT": 1467.9999999999998,
+          "SpeedIndex": 1376.7360030792136,
+          "seoScore": 100,
+          "performanceScore": 73,
+          "mainDecodedBytes": 444110,
+          "mainTransferredBytes": 140593,
+          "totalTransferredBytes": 187321,
+          "lighthouseMainThreadWorkMs": 2221.047999999993,
+          "lighthouseScriptBootupMs": 1440.4279999999926,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 963,
+              "startTime": 2147.6569999999997
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 410.9999999999998,
+              "startTime": 1736.657
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 238,
+              "startTime": 687.8285
+            },
+            {
+              "url": "Unattributable",
+              "duration": 67,
+              "startTime": 609.8285
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 236,
+            "numTasksOver10ms": 4,
+            "numTasksOver25ms": 3,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 3,
+            "numTasksOver500ms": 0,
+            "rtt": 0.8999999999999999,
+            "throughput": 20179200.96714221,
+            "maxRtt": 0.8999999999999999,
+            "maxServerLatency": 9.828499999999998,
+            "totalByteWeight": 187321,
+            "totalTaskTime": 555.2620000000001,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 763.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 3,
+          "reportJson": "after/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T06:41:45.538Z",
+          "FCP": 624.3432,
+          "LCP": 2136.6863999999996,
+          "TBT": 1140.9999999999995,
+          "SpeedIndex": 1244.4936469208005,
+          "seoScore": 100,
+          "performanceScore": 75,
+          "mainDecodedBytes": 444110,
+          "mainTransferredBytes": 140593,
+          "totalTransferredBytes": 187321,
+          "lighthouseMainThreadWorkMs": 1898.7039999999974,
+          "lighthouseScriptBootupMs": 1099.5919999999976,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 662,
+              "startTime": 2136.6863999999996
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 375.99999999999955,
+              "startTime": 1760.6864
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 229,
+              "startTime": 710.3432
+            },
+            {
+              "url": "Unattributable",
+              "duration": 86,
+              "startTime": 612.3432
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 237,
+            "numTasksOver10ms": 5,
+            "numTasksOver25ms": 3,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 2,
+            "numTasksOver500ms": 0,
+            "rtt": 0.42179999999999995,
+            "throughput": 24438088.099184737,
+            "maxRtt": 0.42179999999999995,
+            "maxServerLatency": 12.3432,
+            "totalByteWeight": 187321,
+            "totalTaskTime": 474.67599999999976,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 672.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 4,
+          "reportJson": "after/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T06:42:12.440Z",
+          "FCP": 626.1011,
+          "LCP": 2335.2021999999997,
+          "TBT": 1895,
+          "SpeedIndex": 1641.0369653225578,
+          "seoScore": 100,
+          "performanceScore": 71,
+          "mainDecodedBytes": 444110,
+          "mainTransferredBytes": 140593,
+          "totalTransferredBytes": 187321,
+          "lighthouseMainThreadWorkMs": 2739.347999999999,
+          "lighthouseScriptBootupMs": 1759.4519999999977,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 1131,
+              "startTime": 2335.2021999999997
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 569,
+              "startTime": 1766.2021999999997
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 315.9999999999999,
+              "startTime": 720.1011
+            },
+            {
+              "url": "Unattributable",
+              "duration": 94,
+              "startTime": 611.1011
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 240,
+            "numTasksOver10ms": 5,
+            "numTasksOver25ms": 3,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 3,
+            "numTasksOver500ms": 0,
+            "rtt": 0.31889999999999996,
+            "throughput": 16751263.2128437,
+            "maxRtt": 0.31889999999999996,
+            "maxServerLatency": 11.101099999999999,
+            "totalByteWeight": 187321,
+            "totalTaskTime": 684.8369999999992,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 699.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 5,
+          "reportJson": "after/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T06:42:38.256Z",
+          "FCP": 622.67395,
+          "LCP": 2079.3479,
+          "TBT": 1206,
+          "SpeedIndex": 1241.9535543060033,
+          "seoScore": 100,
+          "performanceScore": 75,
+          "mainDecodedBytes": 444110,
+          "mainTransferredBytes": 140593,
+          "totalTransferredBytes": 187321,
+          "lighthouseMainThreadWorkMs": 1933.6799999999948,
+          "lighthouseScriptBootupMs": 1160.6959999999947,
+          "lighthouseReportedLongTasks": [
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 786,
+              "startTime": 2079.3479
+            },
+            {
+              "url": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+              "duration": 317.0000000000002,
+              "startTime": 1762.3479
+            },
+            {
+              "url": "http://127.0.0.1:4173/",
+              "duration": 224,
+              "startTime": 713.67395
+            },
+            {
+              "url": "Unattributable",
+              "duration": 91,
+              "startTime": 610.67395
+            }
+          ],
+          "observedTraceDiagnostics": {
+            "numRequests": 6,
+            "numScripts": 1,
+            "numStylesheets": 0,
+            "numFonts": 0,
+            "numTasks": 242,
+            "numTasksOver10ms": 4,
+            "numTasksOver25ms": 3,
+            "numTasksOver50ms": 3,
+            "numTasksOver100ms": 2,
+            "numTasksOver500ms": 0,
+            "rtt": 0.27854999999999996,
+            "throughput": 24476806.549097843,
+            "maxRtt": 0.27854999999999996,
+            "maxServerLatency": 10.673950000000001,
+            "totalByteWeight": 187321,
+            "totalTaskTime": 483.41999999999996,
+            "mainDocumentTransferSize": 895
+          },
+          "lcpCandidate": {
+            "type": "node",
+            "lhId": "page-1-P",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,2,MAIN,0,SECTION,0,DIV,0,DIV,1,P",
+            "selector": "section.MuiBox-root > div.MuiContainer-root > div.MuiStack-root > p.MuiTypography-root",
+            "boundingRect": {
+              "top": 245,
+              "bottom": 360,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 115
+            },
+            "snippet": "<p class=\"MuiTypography-root MuiTypography-body1 css-bhpabv\">",
+            "nodeLabel": "TechSmart Learning for Seniors is a non-profit organization committed to teachi…"
+          },
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 779.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ],
+      "medians": {
+        "FCP": 624.3432,
+        "LCP": 2136.6863999999996,
+        "TBT": 1228,
+        "SpeedIndex": 1282.6483495104449,
+        "seoScore": 100,
+        "performanceScore": 75,
+        "mainDecodedBytes": 444110,
+        "mainTransferredBytes": 140593,
+        "totalTransferredBytes": 187321,
+        "lighthouseMainThreadWorkMs": 1996.0639999999976,
+        "lighthouseScriptBootupMs": 1160.6959999999947
+      },
+      "tbtRangeMs": [
+        1140.9999999999995,
+        1895
+      ],
+      "tbtRunsBelowTarget": 0,
+      "benchmarkRange": [
+        672.5,
+        872
+      ],
+      "runtimeErrors": 0,
+      "runWarningCount": 5
+    }
+  },
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "localChanges": {
+    "tbtMedianReductionMs": 339.9999999999998,
+    "tbtMedianReductionPercent": 21.68367346938774,
+    "mainDecodedBytesReduction": 39126,
+    "mainDecodedBytesReductionPercent": 8.096664983569104,
+    "mainTransferredBytesReductionPercent": 7.1435647814859085,
+    "targetMet": false,
+    "targetGapMs": 1028
+  },
+  "validation": {
+    "allTenConfigurationsIdentical": true,
+    "allTenRuntimeErrorFree": true,
+    "noStripeOrInitialChunkRequestsInAnyRun": true,
+    "bundleBefore": "before/bundle-check.json",
+    "bundleAfter": "after/bundle-check.json",
+    "browserBefore": "browser-before.json",
+    "browserAfter": "browser-after.json",
+    "browserChecksPassed": 27,
+    "tests": {
+      "passed": 35,
+      "failed": 4,
+      "relevantAppHomeHeaderPassed": 18,
+      "failureNote": "Four unchanged NeedHelp registration tests fail; see test-results.json."
+    },
+    "finalDeployedAudit": "Pending deployment and measurement"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "phase": "after",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "capturedAtUtc": "2026-11-05T11:59:36.890Z",
+  "purpose": "Production technical SEO and navigation checks; not a Lighthouse performance measurement",
+  "checks": [],
+  "routes": [],
+  "menuViewports": [],
+  "navigation": [],
+  "pageErrors": [
+    {
+      "url": "http://127.0.0.1:4173/",
+      "message": "a is not a function"
+    }
+  ],
+  "paymentSubmitted": false,
+  "limitations": [
+    "The static SPA server returns HTTP 200 for unknown paths; client noindex does not create a server HTTP 404.",
+    "Route-specific metadata and content require JavaScript. Raw HTML has a shared branded fallback.",
+    "No local Stripe publishable key is configured; donation payment readiness and submission are not tested."
+  ],
+  "browserVersion": "Chrome/156.0.8078.80",
+  "passed": false,
+  "failure": "Waiting failed: 20000ms exceeded",
+  "browserClosed": true
+}

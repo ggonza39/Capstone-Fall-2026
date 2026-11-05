@@ -1,0 +1,38 @@
+{
+  "entryScript": "/static/js/main.7cab76a2.js",
+  "entryDecodedBytes": 483236,
+  "entrySha256": "3ff42adbc94e44a6303b0b77357927e031c820fbcd110f85f5d4ea055dbaa1a9",
+  "moduleChecks": {
+    "TextField": [],
+    "Select": [
+      "../node_modules/@mui/material/Select/selectClasses.mjs"
+    ],
+    "FilledInput": [],
+    "Input": [],
+    "OutlinedInput": [
+      "../node_modules/@mui/material/OutlinedInput/NotchedOutline.mjs",
+      "../node_modules/@mui/material/OutlinedInput/outlinedInputClasses.mjs",
+      "../node_modules/@mui/material/OutlinedInput/OutlinedInput.mjs"
+    ],
+    "FormControl": [
+      "../node_modules/@mui/material/FormControl/formControlClasses.mjs",
+      "../node_modules/@mui/material/FormControl/FormControl.mjs",
+      "../node_modules/@mui/material/FormControl/FormControlContext.mjs",
+      "../node_modules/@mui/material/FormControl/useFormControl.mjs"
+    ],
+    "FormHelperText": [
+      "../node_modules/@mui/material/FormHelperText/formHelperTextClasses.mjs",
+      "../node_modules/@mui/material/FormHelperText/FormHelperText.mjs"
+    ],
+    "Drawer": [
+      "../node_modules/@mui/material/Drawer/drawerClasses.mjs",
+      "../node_modules/@mui/material/Drawer/Drawer.mjs"
+    ]
+  },
+  "homeRemainsEager": true,
+  "homeSources": [
+    "pages/Home.js"
+  ],
+  "selectImplementationsAbsent": true,
+  "selectUtilityClassesNote": "OutlinedInput still shares Select/selectClasses.mjs; the Select and SelectInput component implementations are absent."
+}

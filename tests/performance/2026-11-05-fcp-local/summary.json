@@ -1,0 +1,364 @@
+{
+  "phase": "FCP optimization: local production before/after validation",
+  "limitation": "Localhost results do not replace the deployed initial measurements and are not a final deployed audit. No Stripe publishable key was configured for either local build.",
+  "documentedProjectFcpBaselineMs": 5700,
+  "fcpTargetExclusiveMs": 2000,
+  "initialDeployedFcpMedianMs": 819.0665,
+  "initialDeployedReport": "../2026-11-05-initial-mobile/summary.json",
+  "environment": {
+    "localReferenceCommit": "bb313b9a6f5dbe8734cfef6e922113477dad5d45",
+    "nodeVersion": "v20.11.1",
+    "lighthouseVersion": "12.8.2",
+    "chromeVersion": "156.0.8078.80",
+    "hostUrl": "http://127.0.0.1:4173/",
+    "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+    "productionBuild": true,
+    "stripePublishableKeyConfigured": false,
+    "sandboxMocksEnabled": false,
+    "beforeCapturedAtUtc": "2026-11-05T05:29:16.3395468Z",
+    "sourceChanges": "After-phase working tree changes relative to localReferenceCommit; see source diff in fcp-optimization.patch",
+    "operatingSystem": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "OSArchitecture": "64-bit"
+    },
+    "cpu": {
+      "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    },
+    "optimizedSourceSha256": [
+      {
+        "path": "capstonefall2026/src/App.js",
+        "sha256": "548ba37d7a01080cb1ff7a5658c9b518b19fc1f5d910ab3bd81968c6c8b262c7"
+      },
+      {
+        "path": "capstonefall2026/src/layouts/MainLayout.js",
+        "sha256": "06b3ca8379974b44b50e606661942faa1918d6d86010ab760265416b4157653e"
+      }
+    ]
+  },
+  "phases": {
+    "before": {
+      "entryScript": "/static/js/main.a1056268.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "before/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T05:29:38.599Z",
+          "FCP": 623.4383,
+          "LCP": 4429.7979,
+          "TBT": 695,
+          "Speed Index": 860.378422341538,
+          "seoScore": 100,
+          "performanceScore": 68,
+          "mainDecodedBytes": 576652,
+          "mainTransferredBytes": 175758,
+          "stripeRequests": 6,
+          "stripeTransferredBytes": 285081,
+          "totalTransferredBytes": 507567,
+          "benchmarkIndex": 2217.5,
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "reportJson": "before/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T05:29:57.794Z",
+          "FCP": 619.0727,
+          "LCP": 4640.7366,
+          "TBT": 994.0000000000003,
+          "Speed Index": 1336.4149260291526,
+          "seoScore": 100,
+          "performanceScore": 62,
+          "mainDecodedBytes": 576652,
+          "mainTransferredBytes": 175758,
+          "stripeRequests": 6,
+          "stripeTransferredBytes": 285556,
+          "totalTransferredBytes": 508042,
+          "benchmarkIndex": 2151,
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "reportJson": "before/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T05:30:18.151Z",
+          "FCP": 616.52985,
+          "LCP": 4591.751899999999,
+          "TBT": 566.9999999999998,
+          "Speed Index": 757.087535248109,
+          "seoScore": 100,
+          "performanceScore": 69,
+          "mainDecodedBytes": 576652,
+          "mainTransferredBytes": 175758,
+          "stripeRequests": 6,
+          "stripeTransferredBytes": 304969,
+          "totalTransferredBytes": 527455,
+          "benchmarkIndex": 1792.5,
+          "warnings": []
+        },
+        {
+          "run": 4,
+          "reportJson": "before/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T05:30:40.936Z",
+          "FCP": 615.4972,
+          "LCP": 4838.2851,
+          "TBT": 1540,
+          "Speed Index": 1409.4931930311166,
+          "seoScore": 100,
+          "performanceScore": 56.00000000000001,
+          "mainDecodedBytes": 576652,
+          "mainTransferredBytes": 175758,
+          "stripeRequests": 6,
+          "stripeTransferredBytes": 285115,
+          "totalTransferredBytes": 507601,
+          "benchmarkIndex": 1224,
+          "warnings": []
+        },
+        {
+          "run": 5,
+          "reportJson": "before/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T05:31:07.531Z",
+          "FCP": 633.2122,
+          "LCP": 2255.6366,
+          "TBT": 1492.5,
+          "Speed Index": 1179.3176243472544,
+          "seoScore": 100,
+          "performanceScore": 73,
+          "mainDecodedBytes": 576652,
+          "mainTransferredBytes": 175758,
+          "stripeRequests": 6,
+          "stripeTransferredBytes": 285139,
+          "totalTransferredBytes": 507625,
+          "benchmarkIndex": 851,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ],
+      "medians": {
+        "FCP": 619.0727,
+        "LCP": 4591.751899999999,
+        "TBT": 994.0000000000003,
+        "Speed Index": 1179.3176243472544,
+        "seoScore": 100,
+        "performanceScore": 68,
+        "mainDecodedBytes": 576652,
+        "mainTransferredBytes": 175758,
+        "stripeRequests": 6,
+        "stripeTransferredBytes": 285139,
+        "totalTransferredBytes": 507625
+      },
+      "fcpRangeMs": [
+        615.4972,
+        633.2122
+      ],
+      "allFcpRunsMeetTarget": true,
+      "runtimeErrors": 0,
+      "warnings": [
+        {
+          "run": 5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ]
+    },
+    "after": {
+      "entryScript": "/static/js/main.71f543d3.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "after/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T05:36:13.373Z",
+          "FCP": 621.34145,
+          "LCP": 2173.02435,
+          "TBT": 498,
+          "Speed Index": 812.0399235499096,
+          "seoScore": 100,
+          "performanceScore": 86,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "stripeRequests": 0,
+          "stripeTransferredBytes": 0,
+          "totalTransferredBytes": 210090,
+          "benchmarkIndex": 2213.5,
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "reportJson": "after/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T05:36:30.758Z",
+          "FCP": 612.49725,
+          "LCP": 2172.49175,
+          "TBT": 350,
+          "Speed Index": 717.80242396923,
+          "seoScore": 100,
+          "performanceScore": 91,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "stripeRequests": 0,
+          "stripeTransferredBytes": 0,
+          "totalTransferredBytes": 210090,
+          "benchmarkIndex": 2148.5,
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "reportJson": "after/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T05:36:48.230Z",
+          "FCP": 612.4288,
+          "LCP": 2269.2864000000004,
+          "TBT": 333.0000000000002,
+          "Speed Index": 727.9831119795524,
+          "seoScore": 100,
+          "performanceScore": 91,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "stripeRequests": 0,
+          "stripeTransferredBytes": 0,
+          "totalTransferredBytes": 210090,
+          "benchmarkIndex": 2168.5,
+          "warnings": []
+        },
+        {
+          "run": 4,
+          "reportJson": "after/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T05:37:05.305Z",
+          "FCP": 612.93815,
+          "LCP": 2267.81445,
+          "TBT": 314.469075,
+          "Speed Index": 704.464040106039,
+          "seoScore": 100,
+          "performanceScore": 92,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "stripeRequests": 0,
+          "stripeTransferredBytes": 0,
+          "totalTransferredBytes": 210090,
+          "benchmarkIndex": 2131.5,
+          "warnings": []
+        },
+        {
+          "run": 5,
+          "reportJson": "after/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T05:37:22.207Z",
+          "FCP": 614.053,
+          "LCP": 2268.1589999999997,
+          "TBT": 295.0264999999997,
+          "Speed Index": 698.7114803985369,
+          "seoScore": 100,
+          "performanceScore": 92,
+          "mainDecodedBytes": 527148,
+          "mainTransferredBytes": 163362,
+          "stripeRequests": 0,
+          "stripeTransferredBytes": 0,
+          "totalTransferredBytes": 210090,
+          "benchmarkIndex": 2196.5,
+          "warnings": []
+        }
+      ],
+      "medians": {
+        "FCP": 612.93815,
+        "LCP": 2267.81445,
+        "TBT": 333.0000000000002,
+        "Speed Index": 717.80242396923,
+        "seoScore": 100,
+        "performanceScore": 91,
+        "mainDecodedBytes": 527148,
+        "mainTransferredBytes": 163362,
+        "stripeRequests": 0,
+        "stripeTransferredBytes": 0,
+        "totalTransferredBytes": 210090
+      },
+      "fcpRangeMs": [
+        612.4288,
+        621.34145
+      ],
+      "allFcpRunsMeetTarget": true,
+      "runtimeErrors": 0,
+      "warnings": []
+    }
+  },
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "localChanges": {
+    "fcpMedianReductionMs": 6.134550000000104,
+    "fcpMedianReductionPercent": 0.9909256214981057,
+    "mainDecodedBytesReduction": 49504,
+    "mainDecodedBytesReductionPercent": 8.584727010397952,
+    "mainTransferredBytesReductionPercent": 7.052879527532174,
+    "totalTransferredBytesReductionPercent": 58.61314947057375
+  },
+  "validation": {
+    "allTenReportsHaveIdenticalSettings": true,
+    "allTenRuntimeErrorFree": true,
+    "optimizedHomeHasZeroStripeRequestsInAllRuns": true,
+    "optimizedHomeHasZeroSecondaryRouteChunkRequestsInAllRuns": true,
+    "browserSmoke": "browser-smoke.json",
+    "browserSmokePassed": true,
+    "appRegressionTests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "completeSuite": {
+      "passed": 24,
+      "failed": 4,
+      "note": "Four existing NeedHelp registration tests fail; NeedHelp.js, NeedHelp.test.js, and workshopService.js are unchanged from the reference commit."
+    },
+    "finalDeployedAudit": "Pending deployment and measurement"
+  }
+}
