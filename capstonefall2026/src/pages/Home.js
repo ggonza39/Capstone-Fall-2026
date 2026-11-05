@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Box, Button, Card, CardContent, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import {
+    Box, Button, Card, CardContent, Container, FormControl, FormHelperText,
+    Grid, OutlinedInput, Stack, Typography,
+} from "@mui/material";
 
 import HelpOutlineIcon from "@mui/icons-material/HelpOutlineOutlined";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
@@ -304,26 +307,10 @@ function Home() {
                             spacing={2}
                             alignItems="flex-start"
                         >
-                            <TextField
-                                id="home-zip-code"
-                                placeholder="ZIP Code"
-                                value={zipCode}
-                                onChange={(event) => {
-                                    const value = event.target.value.replace(/\D/g, "");
-
-                                    setZipCode(value.slice(0, 5));
-
-                                    if (zipError) {
-                                        setZipError(false);
-                                    }
-                                }}
+                            <FormControl
+                                variant="outlined"
+                                fullWidth
                                 error={zipError}
-                                helperText={zipError ? "Enter a valid 5-digit ZIP code." : "Example: 30301"}
-                                inputProps={{
-                                    "aira-label": "ZIP Code", 
-                                    inputMode: "numeric",
-                                    maxLength: 5,
-                                }}
                                 sx={{
                                     backgroundColor: "#FFFFFF",
 
@@ -341,7 +328,34 @@ function Home() {
                                         paddingTop: 1,
                                     },
                                 }}
-                            />
+                            >
+                                {/* Avoid loading TextField's unused select and input variants on Home. */}
+                                <OutlinedInput
+                                    id="home-zip-code"
+                                    fullWidth
+                                    aria-label="ZIP Code"
+                                    aria-describedby="home-zip-code-help"
+                                    placeholder="ZIP Code"
+                                    value={zipCode}
+                                    onChange={(event) => {
+                                        const value = event.target.value.replace(/\D/g, "");
+                                        setZipCode(value.slice(0, 5));
+
+                                        if (zipError) {
+                                            setZipError(false);
+                                        }
+                                    }}
+                                    slotProps={{
+                                        input: {
+                                            inputMode: "numeric",
+                                            maxLength: 5,
+                                        },
+                                    }}
+                                />
+                                <FormHelperText id="home-zip-code-help" role={zipError ? "alert" : undefined}>
+                                    {zipError ? "Enter a valid 5-digit ZIP code." : "Example: 30301"}
+                                </FormHelperText>
+                            </FormControl>
 
                             <Button
                                 type="submit"

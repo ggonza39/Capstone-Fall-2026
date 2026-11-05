@@ -7,3 +7,4 @@ This folder contains test suites, automated scripts, and manual testing document
 - `usability-performance-evaluation-plan.md` — evaluation plan defining representative senior-user participants, usability test tasks, success measurement, and consistent performance-testing conditions (addresses professor/Gonzalez Testing Document feedback).
 - [Initial deployed performance measurement](performance/README.md) — five-run mobile Lighthouse results, raw reports, baseline/target comparison, and conditions to repeat for final measurement (PBI-14).
 - [FCP optimization](performance/fcp-optimization.md) — reduced homepage startup work, local production before/after audits, and routing/payment-loading regression verification.
+- [LCP optimization](performance/lcp-optimization.md) — smaller homepage input dependencies, local LCP audit comparison, and ZIP-field visual/functional verification.

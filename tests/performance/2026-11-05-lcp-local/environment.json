@@ -1,0 +1,29 @@
+﻿{
+    "localReferenceCommit":  "7e400b4a3bcf408bf412f15d176bcf6df0703c2d",
+    "nodeVersion":  "v20.11.1",
+    "lighthouseVersion":  "12.8.2",
+    "chromeVersion":  "156.0.8078.80",
+    "hostUrl":  "http://127.0.0.1:4173/",
+    "server":  "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+    "productionBuild":  true,
+    "stripePublishableKeyConfigured":  false,
+    "sandboxMocksEnabled":  false,
+    "capturedAtUtc":  "2026-11-05T06:00:03.1077161Z",
+    "operatingSystem":  {
+                            "Caption":  "Microsoft Windows 11 Home",
+                            "Version":  "10.0.26200",
+                            "OSArchitecture":  "64-bit"
+                        },
+    "cpu":  {
+                "Name":  "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+                "NumberOfCores":  4,
+                "NumberOfLogicalProcessors":  8
+            },
+    "optimizedSourceDiff":  "lcp-optimization.patch",
+    "optimizedSourceSha256":  [
+                                  {
+                                      "path":  "capstonefall2026/src/pages/Home.js",
+                                      "sha256":  "d212d33f5437bbc1945d8326848a557a4f94568f5abe5440f67ab62cdab793f0"
+                                  }
+                              ]
+}

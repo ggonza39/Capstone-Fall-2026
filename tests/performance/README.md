@@ -6,6 +6,8 @@ This completes the **Initial Performance Measurement** criterion in [Milestone 3
 
 The subsequent [FCP optimization and local production verification](fcp-optimization.md) documents deferred secondary-page/payment loading and a separate five-run before/after experiment. The initial deployed results below remain the reference for the final hosted comparison.
 
+[LCP optimization and local production verification](lcp-optimization.md) records the next startup-code reduction, a fresh local before/after audit set, and ZIP-field visual/functional checks.
+
 ## Baseline, initial results, and final comparison
 
 The documented project baseline and targets come from PBI-14. Final results will be recorded after optimization using the same route and test conditions.
