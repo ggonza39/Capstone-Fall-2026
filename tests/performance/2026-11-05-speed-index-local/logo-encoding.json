@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-11-05T07:10:11.114Z",
+  "tool": {
+    "node": "v20.11.1",
+    "sharp": "0.34.5",
+    "libvips": "8.17.3",
+    "libwebp": "1.6.0"
+  },
+  "encoding": {
+    "format": "webp",
+    "options": {
+      "lossless": true,
+      "effort": 6
+    },
+    "resize": false
+  },
+  "input": {
+    "path": "capstonefall2026/src/assets/techsmartLogo.png",
+    "bytes": 35072,
+    "sha256": "b21ae482634c9ff4c7b61666be8e3b232c536e21aa67a3b8ea28986a667746d7",
+    "width": 500,
+    "height": 250,
+    "format": "png",
+    "colorSpace": "srgb",
+    "hasAlpha": true,
+    "decodedRgbaSha256": "067da77c863e6d88391899de831b06aa842b19406e677db595abb0067688ecc6"
+  },
+  "output": {
+    "path": "capstonefall2026/src/assets/techsmartLogo.webp",
+    "bytes": 19254,
+    "sha256": "72f67108ade107c6384fee0ed5fbd72e161753559663e29d92a67cdc8e4579f3",
+    "width": 500,
+    "height": 250,
+    "format": "webp",
+    "colorSpace": "srgb",
+    "hasAlpha": false,
+    "decodedRgbaSha256": "067da77c863e6d88391899de831b06aa842b19406e677db595abb0067688ecc6"
+  },
+  "savings": {
+    "bytes": 15818,
+    "percent": 45.1
+  },
+  "comparison": {
+    "method": "Decode both files with sharp 0.34.5 to unpremultiplied RGBA, compare all channels; also flatten both onto white and compare decoded RGB bytes.",
+    "pixelsCompared": 125000,
+    "rawRgbaEqual": true,
+    "differingBytes": 0,
+    "differingPixels": 0,
+    "differingVisiblePixels": 0,
+    "differingAlphaSamples": 0,
+    "visiblePixelsEqual": true,
+    "alphaEqual": true,
+    "compositedWhiteEqual": true,
+    "explanation": "All decoded RGBA bytes are identical."
+  }
+}

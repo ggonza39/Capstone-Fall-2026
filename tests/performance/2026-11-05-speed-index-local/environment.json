@@ -1,0 +1,33 @@
+{
+  "localReferenceCommit": "732d84c83d79e6644a7dcb99689cea714127ac7a",
+  "nodeVersion": "v20.11.1",
+  "lighthouseVersion": "12.8.2",
+  "chromeVersion": "156.0.8078.80",
+  "hostUrl": "http://127.0.0.1:4173/",
+  "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+  "productionBuild": true,
+  "stripePublishableKeyConfigured": false,
+  "sandboxMocksEnabled": false,
+  "capturedAtUtc": "2026-11-05T07:09:48.7607843Z",
+  "operatingSystem": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26200",
+    "OSArchitecture": "64-bit"
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+    "NumberOfCores": 4,
+    "NumberOfLogicalProcessors": 8
+  },
+  "optimizedSourceSha256": [
+    {
+      "path": "capstonefall2026/src/components/Header.js",
+      "sha256": "cb20b103a647adff58672aeb790d3ffdefa3ff3a2c8f8c9cc2b384e1f4b20ebe"
+    },
+    {
+      "path": "capstonefall2026/src/assets/techsmartLogo.webp",
+      "sha256": "72f67108ade107c6384fee0ed5fbd72e161753559663e29d92a67cdc8e4579f3"
+    }
+  ],
+  "sourceChanges": "header-logo.patch plus new techsmartLogo.webp; logo-encoding.json and optimize-logo.cjs record reproducible binary encoding."
+}

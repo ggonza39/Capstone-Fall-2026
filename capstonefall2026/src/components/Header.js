@@ -15,7 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import logo from "../assets/techsmartLogo.png";
+import logo from "../assets/techsmartLogo.webp";
 import { loadMobileNavigation } from "./mobileNavigationLoader";
 
 const navigation = [
@@ -175,6 +175,10 @@ function Header() {
                                 component="img"
                                 src={logo}
                                 alt="TechSmart Learning for Seniors"
+                                width={500}
+                                height={250}
+                                loading="eager"
+                                fetchPriority="high"
                                 sx={{
                                     width: {
                                         xs: 190,

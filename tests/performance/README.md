@@ -10,6 +10,8 @@ The subsequent [FCP optimization and local production verification](fcp-optimiza
 
 [TBT analysis and optimization](tbt-optimization.md) records deferred mobile-menu loading, local before/after audits, and menu regression checks. The local TBT target remains unmet.
 
+[Speed Index optimization](speed-index-optimization.md) records lossless logo delivery, image sizing, paired local audits, and preserved header/Menu appearance. Speed Index remains below target; no timing improvement is established by this set.
+
 ## Baseline, initial results, and final comparison
 
 The documented project baseline and targets come from PBI-14. Final results will be recorded after optimization using the same route and test conditions.

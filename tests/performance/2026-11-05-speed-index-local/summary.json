@@ -1,0 +1,576 @@
+{
+  "phase": "Speed Index optimization: local production before/after verification",
+  "documentedProjectSpeedIndexBaselineMs": 8700,
+  "speedIndexTargetExclusiveMs": 3400,
+  "initialDeployedSpeedIndexMedianMs": 1111.4510471982821,
+  "limitation": "Local production measurements, not final deployed results. All runs contain slow-CPU warnings. Paired median differences are descriptive, not causal proof.",
+  "environment": {
+    "localReferenceCommit": "732d84c83d79e6644a7dcb99689cea714127ac7a",
+    "nodeVersion": "v20.11.1",
+    "lighthouseVersion": "12.8.2",
+    "chromeVersion": "156.0.8078.80",
+    "hostUrl": "http://127.0.0.1:4173/",
+    "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+    "productionBuild": true,
+    "stripePublishableKeyConfigured": false,
+    "sandboxMocksEnabled": false,
+    "capturedAtUtc": "2026-11-05T07:09:48.7607843Z",
+    "operatingSystem": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "OSArchitecture": "64-bit"
+    },
+    "cpu": {
+      "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    },
+    "optimizedSourceSha256": [
+      {
+        "path": "capstonefall2026/src/components/Header.js",
+        "sha256": "cb20b103a647adff58672aeb790d3ffdefa3ff3a2c8f8c9cc2b384e1f4b20ebe"
+      },
+      {
+        "path": "capstonefall2026/src/assets/techsmartLogo.webp",
+        "sha256": "72f67108ade107c6384fee0ed5fbd72e161753559663e29d92a67cdc8e4579f3"
+      }
+    ],
+    "sourceChanges": "header-logo.patch plus new techsmartLogo.webp; logo-encoding.json and optimize-logo.cjs record reproducible binary encoding."
+  },
+  "logoEncoding": "logo-encoding.json",
+  "phases": {
+    "before": {
+      "entryScript": "/static/js/main.a622ae2e.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "before/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T07:11:30.062Z",
+          "SpeedIndex": 2710.778289387342,
+          "FCP": 737.56225,
+          "LCP": 2536.1245,
+          "TBT": 2436,
+          "CLS": 0.01678421338229932,
+          "seoScore": 100,
+          "performanceScore": 68,
+          "observedSpeedIndexMs": 1581,
+          "observedFirstVisualChangeMs": 1577,
+          "observedLastVisualChangeMs": 1620,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.3c52cff984312619e817.png",
+            "resourceSize": 35072,
+            "transferSize": 35375,
+            "priority": "High",
+            "mimeType": "image/png"
+          },
+          "logoBytes": 35072,
+          "logoTransferredBytes": 35375,
+          "mainDecodedBytes": 444151,
+          "mainTransferredBytes": 140598,
+          "totalTransferredBytes": 187326,
+          "imageAuditScores": {
+            "unsized-images": 0.5,
+            "modern-image-formats": 0.5,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 19562,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 377.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 2,
+          "reportJson": "before/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T07:12:08.800Z",
+          "SpeedIndex": 1494.525081504111,
+          "FCP": 628.9684,
+          "LCP": 2158.9368000000004,
+          "TBT": 1594.0000000000002,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 72,
+          "observedSpeedIndexMs": 784,
+          "observedFirstVisualChangeMs": 779,
+          "observedLastVisualChangeMs": 832,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.3c52cff984312619e817.png",
+            "resourceSize": 35072,
+            "transferSize": 35375,
+            "priority": "High",
+            "mimeType": "image/png"
+          },
+          "logoBytes": 35072,
+          "logoTransferredBytes": 35375,
+          "mainDecodedBytes": 444151,
+          "mainTransferredBytes": 140598,
+          "totalTransferredBytes": 187326,
+          "imageAuditScores": {
+            "unsized-images": 0.5,
+            "modern-image-formats": 0.5,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 19562,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 663,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 3,
+          "reportJson": "before/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T07:12:35.239Z",
+          "SpeedIndex": 1345.7556399733826,
+          "FCP": 624.8276,
+          "LCP": 2139.6551999999997,
+          "TBT": 1429.9999999999998,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 73,
+          "observedSpeedIndexMs": 709,
+          "observedFirstVisualChangeMs": 705,
+          "observedLastVisualChangeMs": 746,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.3c52cff984312619e817.png",
+            "resourceSize": 35072,
+            "transferSize": 35375,
+            "priority": "High",
+            "mimeType": "image/png"
+          },
+          "logoBytes": 35072,
+          "logoTransferredBytes": 35375,
+          "mainDecodedBytes": 444151,
+          "mainTransferredBytes": 140598,
+          "totalTransferredBytes": 187326,
+          "imageAuditScores": {
+            "unsized-images": 0.5,
+            "modern-image-formats": 0.5,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 19562,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 671,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 4,
+          "reportJson": "before/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T07:13:03.397Z",
+          "SpeedIndex": 1751.49461031485,
+          "FCP": 631.417,
+          "LCP": 2280.834,
+          "TBT": 2013.5,
+          "CLS": 0.01678421338229932,
+          "seoScore": 100,
+          "performanceScore": 70,
+          "observedSpeedIndexMs": 951,
+          "observedFirstVisualChangeMs": 946,
+          "observedLastVisualChangeMs": 996,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.3c52cff984312619e817.png",
+            "resourceSize": 35072,
+            "transferSize": 35375,
+            "priority": "High",
+            "mimeType": "image/png"
+          },
+          "logoBytes": 35072,
+          "logoTransferredBytes": 35375,
+          "mainDecodedBytes": 444151,
+          "mainTransferredBytes": 140598,
+          "totalTransferredBytes": 187326,
+          "imageAuditScores": {
+            "unsized-images": 0.5,
+            "modern-image-formats": 0.5,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 19562,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 608.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 5,
+          "reportJson": "before/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T07:13:30.343Z",
+          "SpeedIndex": 1256.7833907094314,
+          "FCP": 621.2538,
+          "LCP": 2107.5076,
+          "TBT": 1306,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 74,
+          "observedSpeedIndexMs": 648,
+          "observedFirstVisualChangeMs": 645,
+          "observedLastVisualChangeMs": 704,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.3c52cff984312619e817.png",
+            "resourceSize": 35072,
+            "transferSize": 35375,
+            "priority": "High",
+            "mimeType": "image/png"
+          },
+          "logoBytes": 35072,
+          "logoTransferredBytes": 35375,
+          "mainDecodedBytes": 444151,
+          "mainTransferredBytes": 140598,
+          "totalTransferredBytes": 187326,
+          "imageAuditScores": {
+            "unsized-images": 0.5,
+            "modern-image-formats": 0.5,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 19562,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 731.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ],
+      "medians": {
+        "SpeedIndex": 1494.525081504111,
+        "FCP": 628.9684,
+        "LCP": 2158.9368000000004,
+        "TBT": 1594.0000000000002,
+        "CLS": 0,
+        "seoScore": 100,
+        "performanceScore": 72,
+        "logoBytes": 35072,
+        "logoTransferredBytes": 35375,
+        "mainDecodedBytes": 444151,
+        "mainTransferredBytes": 140598,
+        "totalTransferredBytes": 187326,
+        "responsiveImageEstimatedSavingsBytes": 19562
+      },
+      "speedIndexRangeMs": [
+        1256.7833907094314,
+        2710.778289387342
+      ],
+      "runsBelowSpeedIndexTarget": 5,
+      "benchmarkRange": [
+        377.5,
+        731.5
+      ],
+      "runWarningCount": 5,
+      "runtimeErrors": 0
+    },
+    "after": {
+      "entryScript": "/static/js/main.64238a2f.js",
+      "runs": [
+        {
+          "run": 1,
+          "reportJson": "after/run-1.report.json",
+          "fetchTimeUtc": "2026-11-05T07:18:13.245Z",
+          "SpeedIndex": 1226.5663172515642,
+          "FCP": 643.6001,
+          "LCP": 2059.2001999999998,
+          "TBT": 1094.9999999999998,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 76,
+          "observedSpeedIndexMs": 622,
+          "observedFirstVisualChangeMs": 619,
+          "observedLastVisualChangeMs": 709,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+            "resourceSize": 19254,
+            "transferSize": 19559,
+            "priority": "High",
+            "mimeType": "image/webp"
+          },
+          "logoBytes": 19254,
+          "logoTransferredBytes": 19559,
+          "mainDecodedBytes": 444210,
+          "mainTransferredBytes": 140625,
+          "totalTransferredBytes": 171537,
+          "imageAuditScores": {
+            "unsized-images": 1,
+            "modern-image-formats": 1,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 10739,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 911,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 2,
+          "reportJson": "after/run-2.report.json",
+          "fetchTimeUtc": "2026-11-05T07:18:42.549Z",
+          "SpeedIndex": 1417.0982895367854,
+          "FCP": 628.19365,
+          "LCP": 2189.3873,
+          "TBT": 1498.5,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 73,
+          "observedSpeedIndexMs": 740,
+          "observedFirstVisualChangeMs": 738,
+          "observedLastVisualChangeMs": 774,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+            "resourceSize": 19254,
+            "transferSize": 19559,
+            "priority": "High",
+            "mimeType": "image/webp"
+          },
+          "logoBytes": 19254,
+          "logoTransferredBytes": 19559,
+          "mainDecodedBytes": 444210,
+          "mainTransferredBytes": 140625,
+          "totalTransferredBytes": 171537,
+          "imageAuditScores": {
+            "unsized-images": 1,
+            "modern-image-formats": 1,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 10739,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 594.5,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 3,
+          "reportJson": "after/run-3.report.json",
+          "fetchTimeUtc": "2026-11-05T07:19:18.958Z",
+          "SpeedIndex": 1984.7368827750536,
+          "FCP": 648.97335,
+          "LCP": 2445.9467,
+          "TBT": 2114,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 70,
+          "observedSpeedIndexMs": 1070,
+          "observedFirstVisualChangeMs": 1068,
+          "observedLastVisualChangeMs": 1112,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+            "resourceSize": 19254,
+            "transferSize": 19559,
+            "priority": "High",
+            "mimeType": "image/webp"
+          },
+          "logoBytes": 19254,
+          "logoTransferredBytes": 19559,
+          "mainDecodedBytes": 444210,
+          "mainTransferredBytes": 140625,
+          "totalTransferredBytes": 171537,
+          "imageAuditScores": {
+            "unsized-images": 1,
+            "modern-image-formats": 1,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 10739,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 532,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 4,
+          "reportJson": "after/run-4.report.json",
+          "fetchTimeUtc": "2026-11-05T07:19:50.137Z",
+          "SpeedIndex": 1650.0610769402733,
+          "FCP": 660.8565,
+          "LCP": 2178.7129999999997,
+          "TBT": 1781,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 72,
+          "observedSpeedIndexMs": 868,
+          "observedFirstVisualChangeMs": 866,
+          "observedLastVisualChangeMs": 909,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+            "resourceSize": 19254,
+            "transferSize": 19559,
+            "priority": "High",
+            "mimeType": "image/webp"
+          },
+          "logoBytes": 19254,
+          "logoTransferredBytes": 19559,
+          "mainDecodedBytes": 444210,
+          "mainTransferredBytes": 140625,
+          "totalTransferredBytes": 171537,
+          "imageAuditScores": {
+            "unsized-images": 1,
+            "modern-image-formats": 1,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 10739,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 798,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        },
+        {
+          "run": 5,
+          "reportJson": "after/run-5.report.json",
+          "fetchTimeUtc": "2026-11-05T07:20:24.716Z",
+          "SpeedIndex": 1520.3172002812187,
+          "FCP": 656.3125,
+          "LCP": 2300.625,
+          "TBT": 1652,
+          "CLS": 0,
+          "seoScore": 100,
+          "performanceScore": 72,
+          "observedSpeedIndexMs": 796,
+          "observedFirstVisualChangeMs": 794,
+          "observedLastVisualChangeMs": 826,
+          "logo": {
+            "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+            "resourceSize": 19254,
+            "transferSize": 19559,
+            "priority": "High",
+            "mimeType": "image/webp"
+          },
+          "logoBytes": 19254,
+          "logoTransferredBytes": 19559,
+          "mainDecodedBytes": 444210,
+          "mainTransferredBytes": 140625,
+          "totalTransferredBytes": 171537,
+          "imageAuditScores": {
+            "unsized-images": 1,
+            "modern-image-formats": 1,
+            "uses-responsive-images": 0.5
+          },
+          "responsiveImageEstimatedSavingsBytes": 10739,
+          "stripeRequests": 0,
+          "initialChunkRequests": 0,
+          "benchmarkIndex": 664,
+          "warnings": [
+            "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+          ]
+        }
+      ],
+      "medians": {
+        "SpeedIndex": 1520.3172002812187,
+        "FCP": 648.97335,
+        "LCP": 2189.3873,
+        "TBT": 1652,
+        "CLS": 0,
+        "seoScore": 100,
+        "performanceScore": 72,
+        "logoBytes": 19254,
+        "logoTransferredBytes": 19559,
+        "mainDecodedBytes": 444210,
+        "mainTransferredBytes": 140625,
+        "totalTransferredBytes": 171537,
+        "responsiveImageEstimatedSavingsBytes": 10739
+      },
+      "speedIndexRangeMs": [
+        1226.5663172515642,
+        1984.7368827750536
+      ],
+      "runsBelowSpeedIndexTarget": 5,
+      "benchmarkRange": [
+        532,
+        911
+      ],
+      "runWarningCount": 5,
+      "runtimeErrors": 0
+    }
+  },
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "localChanges": {
+    "speedIndexMedianChangeMs": 25.79211877710759,
+    "speedIndexMedianChangePercent": 1.7257735648805599,
+    "speedIndexTargetMet": true,
+    "logoBytesReduction": 15818,
+    "logoBytesReductionPercent": 45.10150547445255,
+    "totalTransferredBytesReductionPercent": 8.428621760994202,
+    "claim": "Definite lossless payload reduction; Speed Index remains below target but the after median is slightly higher, so no Speed Index timing improvement is established."
+  },
+  "validation": {
+    "allTenSettingsIdentical": true,
+    "allTenRuntimeErrorFree": true,
+    "noStripeOrInitialChunksInAnyRun": true,
+    "logoRgbaPixelEquality": true,
+    "browserChecksPassed": 33,
+    "browserBefore": "browser-before.json",
+    "browserAfter": "browser-after.json",
+    "tests": {
+      "passed": 35,
+      "failed": 4,
+      "relevantAppHomeHeaderPassed": 18,
+      "failureNote": "Four existing NeedHelp registration tests fail."
+    },
+    "finalDeployedAudit": "Pending deployment and measurement"
+  }
+}
