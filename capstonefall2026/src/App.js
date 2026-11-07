@@ -9,6 +9,7 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import NeedHelp from "./pages/NeedHelp";
 import WantToHelp from "./pages/WantToHelp";
+import Advocate from "./pages/Advocate";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -41,6 +42,11 @@ function App() {
           <Route
             path="/want-to-help"
             element={<WantToHelp />}
+          />
+
+          <Route
+            path="/advocate"
+            element={<Advocate />}
           />
 
           <Route
