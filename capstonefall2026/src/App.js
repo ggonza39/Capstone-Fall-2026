@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 // In particular, loading Home must not initialize the donation page's Stripe SDK.
 const NeedHelp = lazy(() => import("./pages/NeedHelp"));
 const WantToHelp = lazy(() => import("./pages/WantToHelp"));
+const Advocate = lazy(() => import("./pages/Advocate"));
 const Resources = lazy(() => import("./pages/Resources"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -46,6 +47,11 @@ function App() {
           <Route
             path="/want-to-help"
             element={<WantToHelp />}
+          />
+
+          <Route
+            path="/advocate"
+            element={<Advocate />}
           />
 
           <Route
