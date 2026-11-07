@@ -1,0 +1,5526 @@
+{
+  "phase": "before",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "capturedAtUtc": "2026-11-05T13:04:45.638Z",
+  "routes": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1
+      },
+      "title": "Technology Help for Seniors | TechSmart",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "headerText": "Menu",
+      "links": [
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        },
+        {
+          "text": "View Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "Get Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "Donate",
+          "href": "/want-to-help#donate"
+        },
+        {
+          "text": "Volunteer",
+          "href": "/want-to-help#volunteer"
+        },
+        {
+          "text": "Advocate",
+          "href": "/want-to-help#advocate"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          },
+          "styles": {
+            "width": "190px",
+            "height": "95px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 96
+        },
+        "main": {
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 2497.922
+        },
+        "headings": [
+          {
+            "x": 16,
+            "y": 144,
+            "width": 380,
+            "height": 76.781
+          },
+          {
+            "x": 16,
+            "y": 639.969,
+            "width": 380,
+            "height": 35
+          },
+          {
+            "x": 33,
+            "y": 774.563,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 1106.531,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 1438.5,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 16,
+            "y": 1752.672,
+            "width": 380,
+            "height": 35
+          },
+          {
+            "x": 16,
+            "y": 2163.531,
+            "width": 380,
+            "height": 35
+          }
+        ],
+        "images": [
+          {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          }
+        ],
+        "actions": [
+          {
+            "x": 16,
+            "y": 383.969,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 471.969,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 895.734,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 1227.703,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 1559.672,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 1887.063,
+            "width": 380,
+            "height": 58.875
+          },
+          {
+            "x": 16,
+            "y": 1995.531,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 2297.922,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 2385.922,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 2473.922,
+            "width": 380,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        },
+        "visible": true
+      },
+      "documentWidth": 412,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "menuInteraction": {
+        "expanded": "false",
+        "focusReturned": true
+      },
+      "screenshot": "tests/performance/2026-11-05-assets-local/before-home-412.png"
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1
+      },
+      "title": "Donate, Volunteer & Advocate | TechSmart",
+      "mainText": "I Want to Help\n\nYour support helps TechSmart provide technology education and resources for older adults.\n\nMaking an Impact Together\n\nSince 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta.\n\nThrough technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected.\n\n7,000+\n\nOlder adults educated since 2012\n\nTechnology Education\n\nHelping older adults learn everyday digital skills.\n\nStronger Communities\n\nSupporting confidence, independence, and connection through technology.\n\nAI-generated illustrations of senior technology learning.\nHow Would You Like to Help?\n\nDonate, volunteer your time, or learn how you can advocate for technology education.\n\nDonate\n\nSupport technology education and learning opportunities for older adults.\n\nDonate\nVolunteer\n\nShare your time and skills by helping older adults become more confident with technology.\n\nRegister with Hands on Atlanta\nAdvocate\n\nLearn about TechSmart's community impact and help spread awareness about technology education for older adults.\n\nLearn About Our Impact\nOur Community Partners & Supporters\n\nTechSmart Learning for Seniors is grateful for the organizations and individuals who support technology education for older adults.\n\nThrough financial contributions, volunteer time, and community resources, our supporters help older adults build digital skills, confidence, and meaningful connections.\n\nWaymo\n\n$5,000 and Above\n\nInsight Global\n\n$5,000 and Above\n\nCumberland Group\n\n$5,000 and Above\n\nHiller\n\n$5,000 and Above\n\nDelta Community Credit Union\n\n$2,500 and Above",
+      "headerText": "Menu",
+      "links": [
+        {
+          "text": "Donate",
+          "href": "/donate"
+        },
+        {
+          "text": "Register with Hands on Atlanta",
+          "href": "https://volunteer.handsonatlanta.org/"
+        },
+        {
+          "text": "Learn About Our Impact",
+          "href": "#community-impact"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          },
+          "styles": {
+            "width": "190px",
+            "height": "95px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "src": "/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 675,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1092.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "src": "/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2560,
+          "naturalHeight": 1707,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1328.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "src": "/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 4128,
+          "naturalHeight": 2752,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1564.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "src": "/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2048,
+          "naturalHeight": 1365,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1800.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Waymo logo",
+          "src": "/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1225,
+          "naturalHeight": 792,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 3881.328,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Insight Global logo",
+          "src": "/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1790,
+          "naturalHeight": 500,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4116.719,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "src": "/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1024,
+          "naturalHeight": 512,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4352.109,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Hiller logo",
+          "src": "/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1462,
+          "naturalHeight": 428,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4587.5,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "src": "/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 344,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4822.891,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 96
+        },
+        "main": {
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 5009.281
+        },
+        "headings": [
+          {
+            "x": 16,
+            "y": 136,
+            "width": 380,
+            "height": 38.391
+          },
+          {
+            "x": 16,
+            "y": 359.969,
+            "width": 380,
+            "height": 70
+          },
+          {
+            "x": 16,
+            "y": 2184.063,
+            "width": 380,
+            "height": 70
+          },
+          {
+            "x": 33,
+            "y": 2455.25,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 2815.219,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 3179.984,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 16,
+            "y": 3522.953,
+            "width": 380,
+            "height": 70
+          }
+        ],
+        "images": [
+          {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          },
+          {
+            "x": 16,
+            "y": 1092.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 16,
+            "y": 1328.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 16,
+            "y": 1564.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 16,
+            "y": 1800.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 101,
+            "y": 3881.328,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4116.719,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4352.109,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4587.5,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4822.891,
+            "width": 210,
+            "height": 95
+          }
+        ],
+        "actions": [
+          {
+            "x": 33,
+            "y": 2600.422,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 2965.188,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 3329.953,
+            "width": 346,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        },
+        "visible": true
+      },
+      "documentWidth": 412,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "initiatorType": "script",
+          "transferSize": 3559,
+          "encodedBodySize": 3259,
+          "decodedBodySize": 9990
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "initiatorType": "img",
+          "transferSize": 91662,
+          "encodedBodySize": 91362,
+          "decodedBodySize": 91362
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "initiatorType": "img",
+          "transferSize": 318027,
+          "encodedBodySize": 317727,
+          "decodedBodySize": 317727
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "initiatorType": "img",
+          "transferSize": 1203410,
+          "encodedBodySize": 1203110,
+          "decodedBodySize": 1203110
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "initiatorType": "img",
+          "transferSize": 235958,
+          "encodedBodySize": 235658,
+          "decodedBodySize": 235658
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "initiatorType": "img",
+          "transferSize": 27253,
+          "encodedBodySize": 26953,
+          "decodedBodySize": 26953
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "initiatorType": "img",
+          "transferSize": 35900,
+          "encodedBodySize": 35600,
+          "decodedBodySize": 35600
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "initiatorType": "img",
+          "transferSize": 18923,
+          "encodedBodySize": 18623,
+          "decodedBodySize": 18623
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "initiatorType": "img",
+          "transferSize": 43762,
+          "encodedBodySize": 43462,
+          "decodedBodySize": 43462
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "initiatorType": "img",
+          "transferSize": 28513,
+          "encodedBodySize": 28213,
+          "decodedBodySize": 28213
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 27228
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 35883
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 18903
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 43738
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 28497
+        }
+      ],
+      "menuInteraction": {
+        "expanded": "false",
+        "focusReturned": true
+      },
+      "screenshot": "tests/performance/2026-11-05-assets-local/before-want-to-help-412.png"
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "title": "Technology Help for Seniors | TechSmart",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "headerText": "Menu",
+      "links": [
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        },
+        {
+          "text": "View Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "Get Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "Donate",
+          "href": "/want-to-help#donate"
+        },
+        {
+          "text": "Volunteer",
+          "href": "/want-to-help#volunteer"
+        },
+        {
+          "text": "Advocate",
+          "href": "/want-to-help#advocate"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 24,
+            "y": 0,
+            "width": 220,
+            "height": 110
+          },
+          "styles": {
+            "width": "220px",
+            "height": "110px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 111
+        },
+        "main": {
+          "x": 0,
+          "y": 111,
+          "width": 768,
+          "height": 1955.469
+        },
+        "headings": [
+          {
+            "x": 24,
+            "y": 159,
+            "width": 720,
+            "height": 46.078
+          },
+          {
+            "x": 24,
+            "y": 507.469,
+            "width": 720,
+            "height": 38.391
+          },
+          {
+            "x": 41,
+            "y": 646.406,
+            "width": 686,
+            "height": 31.188
+          },
+          {
+            "x": 41,
+            "y": 949.578,
+            "width": 686,
+            "height": 31.188
+          },
+          {
+            "x": 41,
+            "y": 1252.75,
+            "width": 686,
+            "height": 31.188
+          },
+          {
+            "x": 24,
+            "y": 1538.125,
+            "width": 720,
+            "height": 38.391
+          },
+          {
+            "x": 24,
+            "y": 1836.531,
+            "width": 720,
+            "height": 38.391
+          }
+        ],
+        "images": [
+          {
+            "x": 24,
+            "y": 0,
+            "width": 220,
+            "height": 110
+          }
+        ],
+        "actions": [
+          {
+            "x": 24,
+            "y": 339.469,
+            "width": 291,
+            "height": 72
+          },
+          {
+            "x": 331,
+            "y": 339.469,
+            "width": 293,
+            "height": 72
+          },
+          {
+            "x": 41,
+            "y": 738.781,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 41,
+            "y": 1041.953,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 41,
+            "y": 1345.125,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 24,
+            "y": 1648.063,
+            "width": 480,
+            "height": 58.875
+          },
+          {
+            "x": 520,
+            "y": 1648.063,
+            "width": 224,
+            "height": 92.469
+          },
+          {
+            "x": 24,
+            "y": 1946.469,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 264,
+            "y": 1946.469,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 504,
+            "y": 1946.469,
+            "width": 224,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 633,
+          "y": 29.25,
+          "width": 111,
+          "height": 51.5
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 633,
+          "y": 29.25,
+          "width": 111,
+          "height": 51.5
+        },
+        "visible": true
+      },
+      "documentWidth": 768,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "menuInteraction": {
+        "expanded": "false",
+        "focusReturned": true
+      }
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "title": "Donate, Volunteer & Advocate | TechSmart",
+      "mainText": "I Want to Help\n\nYour support helps TechSmart provide technology education and resources for older adults.\n\nMaking an Impact Together\n\nSince 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta.\n\nThrough technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected.\n\n7,000+\n\nOlder adults educated since 2012\n\nTechnology Education\n\nHelping older adults learn everyday digital skills.\n\nStronger Communities\n\nSupporting confidence, independence, and connection through technology.\n\nAI-generated illustrations of senior technology learning.\nHow Would You Like to Help?\n\nDonate, volunteer your time, or learn how you can advocate for technology education.\n\nDonate\n\nSupport technology education and learning opportunities for older adults.\n\nDonate\nVolunteer\n\nShare your time and skills by helping older adults become more confident with technology.\n\nRegister with Hands on Atlanta\nAdvocate\n\nLearn about TechSmart's community impact and help spread awareness about technology education for older adults.\n\nLearn About Our Impact\nOur Community Partners & Supporters\n\nTechSmart Learning for Seniors is grateful for the organizations and individuals who support technology education for older adults.\n\nThrough financial contributions, volunteer time, and community resources, our supporters help older adults build digital skills, confidence, and meaningful connections.\n\nWaymo\n\n$5,000 and Above\n\nInsight Global\n\n$5,000 and Above\n\nCumberland Group\n\n$5,000 and Above\n\nHiller\n\n$5,000 and Above\n\nDelta Community Credit Union\n\n$2,500 and Above",
+      "headerText": "Menu",
+      "links": [
+        {
+          "text": "Donate",
+          "href": "/donate"
+        },
+        {
+          "text": "Register with Hands on Atlanta",
+          "href": "https://volunteer.handsonatlanta.org/"
+        },
+        {
+          "text": "Learn About Our Impact",
+          "href": "#community-impact"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 24,
+            "y": 0,
+            "width": 220,
+            "height": 110
+          },
+          "styles": {
+            "width": "220px",
+            "height": "110px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "src": "/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 675,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 24,
+            "y": 920.781,
+            "width": 352,
+            "height": 230
+          },
+          "styles": {
+            "width": "352px",
+            "height": "230px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "src": "/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2560,
+          "naturalHeight": 1707,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 392,
+            "y": 920.781,
+            "width": 352,
+            "height": 230
+          },
+          "styles": {
+            "width": "352px",
+            "height": "230px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "src": "/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 4128,
+          "naturalHeight": 2752,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 24,
+            "y": 1166.781,
+            "width": 352,
+            "height": 230
+          },
+          "styles": {
+            "width": "352px",
+            "height": "230px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "src": "/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2048,
+          "naturalHeight": 1365,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 392,
+            "y": 1166.781,
+            "width": 352,
+            "height": 230
+          },
+          "styles": {
+            "width": "352px",
+            "height": "230px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Waymo logo",
+          "src": "/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1225,
+          "naturalHeight": 792,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 94,
+            "y": 2968.75,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Insight Global logo",
+          "src": "/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1790,
+          "naturalHeight": 500,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 464,
+            "y": 2968.75,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "src": "/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1024,
+          "naturalHeight": 512,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 94,
+            "y": 3204.141,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Hiller logo",
+          "src": "/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1462,
+          "naturalHeight": 428,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 464,
+            "y": 3204.141,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "src": "/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 344,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 94,
+            "y": 3439.531,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 111
+        },
+        "main": {
+          "x": 0,
+          "y": 111,
+          "width": 768,
+          "height": 3610.922
+        },
+        "headings": [
+          {
+            "x": 24,
+            "y": 151,
+            "width": 720,
+            "height": 46.078
+          },
+          {
+            "x": 24,
+            "y": 356.109,
+            "width": 720,
+            "height": 38.391
+          },
+          {
+            "x": 24,
+            "y": 1534.375,
+            "width": 720,
+            "height": 38.391
+          },
+          {
+            "x": 41,
+            "y": 1746.109,
+            "width": 686,
+            "height": 31.188
+          },
+          {
+            "x": 41,
+            "y": 2077.281,
+            "width": 686,
+            "height": 31.188
+          },
+          {
+            "x": 41,
+            "y": 2413.25,
+            "width": 686,
+            "height": 31.188
+          },
+          {
+            "x": 24,
+            "y": 2727.422,
+            "width": 720,
+            "height": 38.391
+          }
+        ],
+        "images": [
+          {
+            "x": 24,
+            "y": 0,
+            "width": 220,
+            "height": 110
+          },
+          {
+            "x": 24,
+            "y": 920.781,
+            "width": 352,
+            "height": 230
+          },
+          {
+            "x": 392,
+            "y": 920.781,
+            "width": 352,
+            "height": 230
+          },
+          {
+            "x": 24,
+            "y": 1166.781,
+            "width": 352,
+            "height": 230
+          },
+          {
+            "x": 392,
+            "y": 1166.781,
+            "width": 352,
+            "height": 230
+          },
+          {
+            "x": 94,
+            "y": 2968.75,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 464,
+            "y": 2968.75,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 94,
+            "y": 3204.141,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 464,
+            "y": 3204.141,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 94,
+            "y": 3439.531,
+            "width": 210,
+            "height": 95
+          }
+        ],
+        "actions": [
+          {
+            "x": 41,
+            "y": 1862.484,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 41,
+            "y": 2198.453,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 41,
+            "y": 2534.422,
+            "width": 224,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 633,
+          "y": 29.25,
+          "width": 111,
+          "height": 51.5
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 633,
+          "y": 29.25,
+          "width": 111,
+          "height": 51.5
+        },
+        "visible": true
+      },
+      "documentWidth": 768,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "initiatorType": "script",
+          "transferSize": 3559,
+          "encodedBodySize": 3259,
+          "decodedBodySize": 9990
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "initiatorType": "img",
+          "transferSize": 91662,
+          "encodedBodySize": 91362,
+          "decodedBodySize": 91362
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "initiatorType": "img",
+          "transferSize": 318027,
+          "encodedBodySize": 317727,
+          "decodedBodySize": 317727
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "initiatorType": "img",
+          "transferSize": 1203410,
+          "encodedBodySize": 1203110,
+          "decodedBodySize": 1203110
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "initiatorType": "img",
+          "transferSize": 235958,
+          "encodedBodySize": 235658,
+          "decodedBodySize": 235658
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "initiatorType": "img",
+          "transferSize": 27253,
+          "encodedBodySize": 26953,
+          "decodedBodySize": 26953
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "initiatorType": "img",
+          "transferSize": 35900,
+          "encodedBodySize": 35600,
+          "decodedBodySize": 35600
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "initiatorType": "img",
+          "transferSize": 18923,
+          "encodedBodySize": 18623,
+          "decodedBodySize": 18623
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "initiatorType": "img",
+          "transferSize": 43762,
+          "encodedBodySize": 43462,
+          "decodedBodySize": 43462
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "initiatorType": "img",
+          "transferSize": 28513,
+          "encodedBodySize": 28213,
+          "decodedBodySize": 28213
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 27228
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 35883
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 18903
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 43738
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 28497
+        }
+      ],
+      "menuInteraction": {
+        "expanded": "false",
+        "focusReturned": true
+      }
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "title": "Technology Help for Seniors | TechSmart",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "headerText": "Home\nI Need Technology Help\nI Want to Help\nResources\nAbout\nContact",
+      "links": [
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        },
+        {
+          "text": "View Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "Get Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "Donate",
+          "href": "/want-to-help#donate"
+        },
+        {
+          "text": "Volunteer",
+          "href": "/want-to-help#volunteer"
+        },
+        {
+          "text": "Advocate",
+          "href": "/want-to-help#advocate"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          },
+          "styles": {
+            "width": "260px",
+            "height": "130px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 131
+        },
+        "main": {
+          "x": 0,
+          "y": 131,
+          "width": 1280,
+          "height": 1584.406
+        },
+        "headings": [
+          {
+            "x": 64,
+            "y": 211,
+            "width": 760,
+            "height": 57.594
+          },
+          {
+            "x": 64,
+            "y": 628.594,
+            "width": 1152,
+            "height": 45
+          },
+          {
+            "x": 81,
+            "y": 775.984,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 472.984,
+            "y": 775.984,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 864.969,
+            "y": 775.984,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 214,
+            "y": 1122.156,
+            "width": 852,
+            "height": 45
+          },
+          {
+            "x": 64,
+            "y": 1461.016,
+            "width": 1152,
+            "height": 45
+          }
+        ],
+        "images": [
+          {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          }
+        ],
+        "actions": [
+          {
+            "x": 64,
+            "y": 412.594,
+            "width": 291,
+            "height": 72
+          },
+          {
+            "x": 371,
+            "y": 412.594,
+            "width": 293,
+            "height": 72
+          },
+          {
+            "x": 81,
+            "y": 897.156,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 472.984,
+            "y": 897.156,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 864.969,
+            "y": 897.156,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 214,
+            "y": 1240.547,
+            "width": 612,
+            "height": 58.875
+          },
+          {
+            "x": 842,
+            "y": 1240.547,
+            "width": 224,
+            "height": 92.469
+          },
+          {
+            "x": 64,
+            "y": 1579.406,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 304,
+            "y": 1579.406,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 544,
+            "y": 1579.406,
+            "width": 224,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "visible": false
+      },
+      "documentWidth": 1280,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "screenshot": "tests/performance/2026-11-05-assets-local/before-home-1280.png"
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 1
+      },
+      "title": "Donate, Volunteer & Advocate | TechSmart",
+      "mainText": "I Want to Help\n\nYour support helps TechSmart provide technology education and resources for older adults.\n\nMaking an Impact Together\n\nSince 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta.\n\nThrough technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected.\n\n7,000+\n\nOlder adults educated since 2012\n\nTechnology Education\n\nHelping older adults learn everyday digital skills.\n\nStronger Communities\n\nSupporting confidence, independence, and connection through technology.\n\nAI-generated illustrations of senior technology learning.\nHow Would You Like to Help?\n\nDonate, volunteer your time, or learn how you can advocate for technology education.\n\nDonate\n\nSupport technology education and learning opportunities for older adults.\n\nDonate\nVolunteer\n\nShare your time and skills by helping older adults become more confident with technology.\n\nRegister with Hands on Atlanta\nAdvocate\n\nLearn about TechSmart's community impact and help spread awareness about technology education for older adults.\n\nLearn About Our Impact\nOur Community Partners & Supporters\n\nTechSmart Learning for Seniors is grateful for the organizations and individuals who support technology education for older adults.\n\nThrough financial contributions, volunteer time, and community resources, our supporters help older adults build digital skills, confidence, and meaningful connections.\n\nWaymo\n\n$5,000 and Above\n\nInsight Global\n\n$5,000 and Above\n\nCumberland Group\n\n$5,000 and Above\n\nHiller\n\n$5,000 and Above\n\nDelta Community Credit Union\n\n$2,500 and Above",
+      "headerText": "Home\nI Need Technology Help\nI Want to Help\nResources\nAbout\nContact",
+      "links": [
+        {
+          "text": "Donate",
+          "href": "/donate"
+        },
+        {
+          "text": "Register with Hands on Atlanta",
+          "href": "https://volunteer.handsonatlanta.org/"
+        },
+        {
+          "text": "Learn About Our Impact",
+          "href": "#community-impact"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          },
+          "styles": {
+            "width": "260px",
+            "height": "130px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "src": "/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 675,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 560.656,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "src": "/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2560,
+          "naturalHeight": 1707,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 896.313,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "src": "/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 4128,
+          "naturalHeight": 2752,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 560.656,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "src": "/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2048,
+          "naturalHeight": 1365,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 896.313,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Waymo logo",
+          "src": "/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1225,
+          "naturalHeight": 792,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 144.328,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Insight Global logo",
+          "src": "/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1790,
+          "naturalHeight": 500,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 534.984,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "src": "/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1024,
+          "naturalHeight": 512,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 925.641,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Hiller logo",
+          "src": "/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1462,
+          "naturalHeight": 428,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 144.328,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "src": "/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 344,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 534.984,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 131
+        },
+        "main": {
+          "x": 0,
+          "y": 131,
+          "width": 1280,
+          "height": 2512.813
+        },
+        "headings": [
+          {
+            "x": 64,
+            "y": 187,
+            "width": 1152,
+            "height": 57.594
+          },
+          {
+            "x": 64,
+            "y": 438.984,
+            "width": 456.656,
+            "height": 90
+          },
+          {
+            "x": 64,
+            "y": 1265.094,
+            "width": 1152,
+            "height": 45
+          },
+          {
+            "x": 81,
+            "y": 1485.281,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 472.984,
+            "y": 1485.281,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 864.969,
+            "y": 1485.281,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 64,
+            "y": 1860.25,
+            "width": 1152,
+            "height": 45
+          }
+        ],
+        "images": [
+          {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          },
+          {
+            "x": 560.656,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 896.313,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 560.656,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 896.313,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 144.328,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 534.984,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 925.641,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 144.328,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 534.984,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          }
+        ],
+        "actions": [
+          {
+            "x": 81,
+            "y": 1630.453,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 472.984,
+            "y": 1635.25,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 864.969,
+            "y": 1635.25,
+            "width": 224,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "visible": false
+      },
+      "documentWidth": 1280,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "initiatorType": "script",
+          "transferSize": 3559,
+          "encodedBodySize": 3259,
+          "decodedBodySize": 9990
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "initiatorType": "img",
+          "transferSize": 91662,
+          "encodedBodySize": 91362,
+          "decodedBodySize": 91362
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "initiatorType": "img",
+          "transferSize": 318027,
+          "encodedBodySize": 317727,
+          "decodedBodySize": 317727
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "initiatorType": "img",
+          "transferSize": 1203410,
+          "encodedBodySize": 1203110,
+          "decodedBodySize": 1203110
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "initiatorType": "img",
+          "transferSize": 235958,
+          "encodedBodySize": 235658,
+          "decodedBodySize": 235658
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "initiatorType": "img",
+          "transferSize": 27253,
+          "encodedBodySize": 26953,
+          "decodedBodySize": 26953
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "initiatorType": "img",
+          "transferSize": 35900,
+          "encodedBodySize": 35600,
+          "decodedBodySize": 35600
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "initiatorType": "img",
+          "transferSize": 18923,
+          "encodedBodySize": 18623,
+          "decodedBodySize": 18623
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "initiatorType": "img",
+          "transferSize": 43762,
+          "encodedBodySize": 43462,
+          "decodedBodySize": 43462
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "initiatorType": "img",
+          "transferSize": 28513,
+          "encodedBodySize": 28213,
+          "decodedBodySize": 28213
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 27228
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 35883
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 18903
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 27228
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 35883
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 18903
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 43738
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 28497
+        }
+      ],
+      "screenshot": "tests/performance/2026-11-05-assets-local/before-want-to-help-1280.png"
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 2
+      },
+      "title": "Technology Help for Seniors | TechSmart",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "headerText": "Menu",
+      "links": [
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        },
+        {
+          "text": "View Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "Get Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "Donate",
+          "href": "/want-to-help#donate"
+        },
+        {
+          "text": "Volunteer",
+          "href": "/want-to-help#volunteer"
+        },
+        {
+          "text": "Advocate",
+          "href": "/want-to-help#advocate"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          },
+          "styles": {
+            "width": "190px",
+            "height": "95px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 96
+        },
+        "main": {
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 2497.922
+        },
+        "headings": [
+          {
+            "x": 16,
+            "y": 144,
+            "width": 380,
+            "height": 76.781
+          },
+          {
+            "x": 16,
+            "y": 639.969,
+            "width": 380,
+            "height": 35
+          },
+          {
+            "x": 33,
+            "y": 774.563,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 1106.531,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 1438.5,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 16,
+            "y": 1752.672,
+            "width": 380,
+            "height": 35
+          },
+          {
+            "x": 16,
+            "y": 2163.531,
+            "width": 380,
+            "height": 35
+          }
+        ],
+        "images": [
+          {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          }
+        ],
+        "actions": [
+          {
+            "x": 16,
+            "y": 383.969,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 471.969,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 895.734,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 1227.703,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 1559.672,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 1887.063,
+            "width": 380,
+            "height": 58.875
+          },
+          {
+            "x": 16,
+            "y": 1995.531,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 2297.922,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 2385.922,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 2473.922,
+            "width": 380,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        },
+        "visible": true
+      },
+      "documentWidth": 412,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "menuInteraction": {
+        "expanded": "false",
+        "focusReturned": true
+      }
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 2
+      },
+      "title": "Donate, Volunteer & Advocate | TechSmart",
+      "mainText": "I Want to Help\n\nYour support helps TechSmart provide technology education and resources for older adults.\n\nMaking an Impact Together\n\nSince 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta.\n\nThrough technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected.\n\n7,000+\n\nOlder adults educated since 2012\n\nTechnology Education\n\nHelping older adults learn everyday digital skills.\n\nStronger Communities\n\nSupporting confidence, independence, and connection through technology.\n\nAI-generated illustrations of senior technology learning.\nHow Would You Like to Help?\n\nDonate, volunteer your time, or learn how you can advocate for technology education.\n\nDonate\n\nSupport technology education and learning opportunities for older adults.\n\nDonate\nVolunteer\n\nShare your time and skills by helping older adults become more confident with technology.\n\nRegister with Hands on Atlanta\nAdvocate\n\nLearn about TechSmart's community impact and help spread awareness about technology education for older adults.\n\nLearn About Our Impact\nOur Community Partners & Supporters\n\nTechSmart Learning for Seniors is grateful for the organizations and individuals who support technology education for older adults.\n\nThrough financial contributions, volunteer time, and community resources, our supporters help older adults build digital skills, confidence, and meaningful connections.\n\nWaymo\n\n$5,000 and Above\n\nInsight Global\n\n$5,000 and Above\n\nCumberland Group\n\n$5,000 and Above\n\nHiller\n\n$5,000 and Above\n\nDelta Community Credit Union\n\n$2,500 and Above",
+      "headerText": "Menu",
+      "links": [
+        {
+          "text": "Donate",
+          "href": "/donate"
+        },
+        {
+          "text": "Register with Hands on Atlanta",
+          "href": "https://volunteer.handsonatlanta.org/"
+        },
+        {
+          "text": "Learn About Our Impact",
+          "href": "#community-impact"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          },
+          "styles": {
+            "width": "190px",
+            "height": "95px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "src": "/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 675,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1092.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "src": "/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2560,
+          "naturalHeight": 1707,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1328.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "src": "/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 4128,
+          "naturalHeight": 2752,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1564.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "src": "/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2048,
+          "naturalHeight": 1365,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 16,
+            "y": 1800.875,
+            "width": 380,
+            "height": 220
+          },
+          "styles": {
+            "width": "380px",
+            "height": "220px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Waymo logo",
+          "src": "/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1225,
+          "naturalHeight": 792,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 3881.328,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Insight Global logo",
+          "src": "/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1790,
+          "naturalHeight": 500,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4116.719,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "src": "/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1024,
+          "naturalHeight": 512,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4352.109,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Hiller logo",
+          "src": "/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1462,
+          "naturalHeight": 428,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4587.5,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "src": "/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 344,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 101,
+            "y": 4822.891,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 96
+        },
+        "main": {
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 5009.281
+        },
+        "headings": [
+          {
+            "x": 16,
+            "y": 136,
+            "width": 380,
+            "height": 38.391
+          },
+          {
+            "x": 16,
+            "y": 359.969,
+            "width": 380,
+            "height": 70
+          },
+          {
+            "x": 16,
+            "y": 2184.063,
+            "width": 380,
+            "height": 70
+          },
+          {
+            "x": 33,
+            "y": 2455.25,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 2815.219,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 33,
+            "y": 3179.984,
+            "width": 346,
+            "height": 31.188
+          },
+          {
+            "x": 16,
+            "y": 3522.953,
+            "width": 380,
+            "height": 70
+          }
+        ],
+        "images": [
+          {
+            "x": 16,
+            "y": 0,
+            "width": 190,
+            "height": 95
+          },
+          {
+            "x": 16,
+            "y": 1092.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 16,
+            "y": 1328.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 16,
+            "y": 1564.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 16,
+            "y": 1800.875,
+            "width": 380,
+            "height": 220
+          },
+          {
+            "x": 101,
+            "y": 3881.328,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4116.719,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4352.109,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4587.5,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 101,
+            "y": 4822.891,
+            "width": 210,
+            "height": 95
+          }
+        ],
+        "actions": [
+          {
+            "x": 33,
+            "y": 2600.422,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 2965.188,
+            "width": 346,
+            "height": 72
+          },
+          {
+            "x": 33,
+            "y": 3329.953,
+            "width": 346,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        },
+        "visible": true
+      },
+      "documentWidth": 412,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "initiatorType": "script",
+          "transferSize": 3559,
+          "encodedBodySize": 3259,
+          "decodedBodySize": 9990
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "initiatorType": "img",
+          "transferSize": 91662,
+          "encodedBodySize": 91362,
+          "decodedBodySize": 91362
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "initiatorType": "img",
+          "transferSize": 318027,
+          "encodedBodySize": 317727,
+          "decodedBodySize": 317727
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "initiatorType": "img",
+          "transferSize": 1203410,
+          "encodedBodySize": 1203110,
+          "decodedBodySize": 1203110
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "initiatorType": "img",
+          "transferSize": 235958,
+          "encodedBodySize": 235658,
+          "decodedBodySize": 235658
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "initiatorType": "img",
+          "transferSize": 27253,
+          "encodedBodySize": 26953,
+          "decodedBodySize": 26953
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "initiatorType": "img",
+          "transferSize": 35900,
+          "encodedBodySize": 35600,
+          "decodedBodySize": 35600
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "initiatorType": "img",
+          "transferSize": 18923,
+          "encodedBodySize": 18623,
+          "decodedBodySize": 18623
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "initiatorType": "img",
+          "transferSize": 43762,
+          "encodedBodySize": 43462,
+          "decodedBodySize": 43462
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "initiatorType": "img",
+          "transferSize": 28513,
+          "encodedBodySize": 28213,
+          "decodedBodySize": 28213
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 27228
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 35883
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 18903
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 43738
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 28497
+        }
+      ],
+      "menuInteraction": {
+        "expanded": "false",
+        "focusReturned": true
+      }
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 2
+      },
+      "title": "Technology Help for Seniors | TechSmart",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "headerText": "Home\nI Need Technology Help\nI Want to Help\nResources\nAbout\nContact",
+      "links": [
+        {
+          "text": "I Need Technology Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "I Want to Help",
+          "href": "/want-to-help"
+        },
+        {
+          "text": "Find Workshops",
+          "href": "/need-help"
+        },
+        {
+          "text": "View Resources",
+          "href": "/resources"
+        },
+        {
+          "text": "Get Help",
+          "href": "/need-help"
+        },
+        {
+          "text": "Donate",
+          "href": "/want-to-help#donate"
+        },
+        {
+          "text": "Volunteer",
+          "href": "/want-to-help#volunteer"
+        },
+        {
+          "text": "Advocate",
+          "href": "/want-to-help#advocate"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          },
+          "styles": {
+            "width": "260px",
+            "height": "130px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 131
+        },
+        "main": {
+          "x": 0,
+          "y": 131,
+          "width": 1280,
+          "height": 1584.406
+        },
+        "headings": [
+          {
+            "x": 64,
+            "y": 211,
+            "width": 760,
+            "height": 57.594
+          },
+          {
+            "x": 64,
+            "y": 628.594,
+            "width": 1152,
+            "height": 45
+          },
+          {
+            "x": 81,
+            "y": 775.984,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 472.984,
+            "y": 775.984,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 864.969,
+            "y": 775.984,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 214,
+            "y": 1122.156,
+            "width": 852,
+            "height": 45
+          },
+          {
+            "x": 64,
+            "y": 1461.016,
+            "width": 1152,
+            "height": 45
+          }
+        ],
+        "images": [
+          {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          }
+        ],
+        "actions": [
+          {
+            "x": 64,
+            "y": 412.594,
+            "width": 291,
+            "height": 72
+          },
+          {
+            "x": 371,
+            "y": 412.594,
+            "width": 293,
+            "height": 72
+          },
+          {
+            "x": 81,
+            "y": 897.156,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 472.984,
+            "y": 897.156,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 864.969,
+            "y": 897.156,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 214,
+            "y": 1240.547,
+            "width": 612,
+            "height": 58.875
+          },
+          {
+            "x": 842,
+            "y": 1240.547,
+            "width": 224,
+            "height": 92.469
+          },
+          {
+            "x": 64,
+            "y": 1579.406,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 304,
+            "y": 1579.406,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 544,
+            "y": 1579.406,
+            "width": 224,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "visible": false
+      },
+      "documentWidth": 1280,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        }
+      ]
+    },
+    {
+      "route": "/want-to-help",
+      "viewport": {
+        "width": 1280,
+        "height": 900,
+        "deviceScaleFactor": 2
+      },
+      "title": "Donate, Volunteer & Advocate | TechSmart",
+      "mainText": "I Want to Help\n\nYour support helps TechSmart provide technology education and resources for older adults.\n\nMaking an Impact Together\n\nSince 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta.\n\nThrough technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected.\n\n7,000+\n\nOlder adults educated since 2012\n\nTechnology Education\n\nHelping older adults learn everyday digital skills.\n\nStronger Communities\n\nSupporting confidence, independence, and connection through technology.\n\nAI-generated illustrations of senior technology learning.\nHow Would You Like to Help?\n\nDonate, volunteer your time, or learn how you can advocate for technology education.\n\nDonate\n\nSupport technology education and learning opportunities for older adults.\n\nDonate\nVolunteer\n\nShare your time and skills by helping older adults become more confident with technology.\n\nRegister with Hands on Atlanta\nAdvocate\n\nLearn about TechSmart's community impact and help spread awareness about technology education for older adults.\n\nLearn About Our Impact\nOur Community Partners & Supporters\n\nTechSmart Learning for Seniors is grateful for the organizations and individuals who support technology education for older adults.\n\nThrough financial contributions, volunteer time, and community resources, our supporters help older adults build digital skills, confidence, and meaningful connections.\n\nWaymo\n\n$5,000 and Above\n\nInsight Global\n\n$5,000 and Above\n\nCumberland Group\n\n$5,000 and Above\n\nHiller\n\n$5,000 and Above\n\nDelta Community Credit Union\n\n$2,500 and Above",
+      "headerText": "Home\nI Need Technology Help\nI Want to Help\nResources\nAbout\nContact",
+      "links": [
+        {
+          "text": "Donate",
+          "href": "/donate"
+        },
+        {
+          "text": "Register with Hands on Atlanta",
+          "href": "https://volunteer.handsonatlanta.org/"
+        },
+        {
+          "text": "Learn About Our Impact",
+          "href": "#community-impact"
+        }
+      ],
+      "images": [
+        {
+          "alt": "TechSmart Learning for Seniors",
+          "src": "/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 500,
+          "naturalHeight": 250,
+          "widthAttribute": "500",
+          "heightAttribute": "250",
+          "loading": "eager",
+          "fetchPriority": "high",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          },
+          "styles": {
+            "width": "260px",
+            "height": "130px",
+            "objectFit": "fill",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adult receiving guidance while learning to use a tablet.",
+          "src": "/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 675,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 560.656,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Two older adults practicing computer skills together.",
+          "src": "/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2560,
+          "naturalHeight": 1707,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 896.313,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Volunteer helping an older adult use a smartphone.",
+          "src": "/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 4128,
+          "naturalHeight": 2752,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 560.656,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Older adults participating in a technology learning session.",
+          "src": "/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 2048,
+          "naturalHeight": 1365,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 896.313,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          "styles": {
+            "width": "319.656px",
+            "height": "245px",
+            "objectFit": "cover",
+            "borderRadius": "12px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Waymo logo",
+          "src": "/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1225,
+          "naturalHeight": 792,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 144.328,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Insight Global logo",
+          "src": "/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1790,
+          "naturalHeight": 500,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 534.984,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Cumberland Group logo",
+          "src": "/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1024,
+          "naturalHeight": 512,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 925.641,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Hiller logo",
+          "src": "/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1462,
+          "naturalHeight": 428,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 144.328,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        },
+        {
+          "alt": "Delta Community Credit Union logo",
+          "src": "/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "currentSrc": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "srcSet": null,
+          "sizes": null,
+          "naturalWidth": 1200,
+          "naturalHeight": 344,
+          "widthAttribute": null,
+          "heightAttribute": null,
+          "loading": "lazy",
+          "fetchPriority": "auto",
+          "decoding": "auto",
+          "complete": true,
+          "geometry": {
+            "x": 534.984,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          },
+          "styles": {
+            "width": "210px",
+            "height": "95px",
+            "objectFit": "contain",
+            "borderRadius": "0px",
+            "fontFamily": "Bilo, Arial, sans-serif",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28.8px"
+          }
+        }
+      ],
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 131
+        },
+        "main": {
+          "x": 0,
+          "y": 131,
+          "width": 1280,
+          "height": 2512.813
+        },
+        "headings": [
+          {
+            "x": 64,
+            "y": 187,
+            "width": 1152,
+            "height": 57.594
+          },
+          {
+            "x": 64,
+            "y": 438.984,
+            "width": 456.656,
+            "height": 90
+          },
+          {
+            "x": 64,
+            "y": 1265.094,
+            "width": 1152,
+            "height": 45
+          },
+          {
+            "x": 81,
+            "y": 1485.281,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 472.984,
+            "y": 1485.281,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 864.969,
+            "y": 1485.281,
+            "width": 333.984,
+            "height": 31.188
+          },
+          {
+            "x": 64,
+            "y": 1860.25,
+            "width": 1152,
+            "height": 45
+          }
+        ],
+        "images": [
+          {
+            "x": 64,
+            "y": 0,
+            "width": 260,
+            "height": 130
+          },
+          {
+            "x": 560.656,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 896.313,
+            "y": 514.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 560.656,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 896.313,
+            "y": 775.234,
+            "width": 319.656,
+            "height": 245
+          },
+          {
+            "x": 144.328,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 534.984,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 925.641,
+            "y": 2110.031,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 144.328,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          },
+          {
+            "x": 534.984,
+            "y": 2345.422,
+            "width": 210,
+            "height": 95
+          }
+        ],
+        "actions": [
+          {
+            "x": 81,
+            "y": 1630.453,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 472.984,
+            "y": 1635.25,
+            "width": 224,
+            "height": 72
+          },
+          {
+            "x": 864.969,
+            "y": 1635.25,
+            "width": 224,
+            "height": 72
+          }
+        ],
+        "menu": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "menu": {
+        "text": "Menu",
+        "geometry": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "visible": false
+      },
+      "documentWidth": 1280,
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "initiatorType": "script",
+          "transferSize": 142001,
+          "encodedBodySize": 141701,
+          "decodedBodySize": 450127
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "initiatorType": "script",
+          "transferSize": 3559,
+          "encodedBodySize": 3259,
+          "decodedBodySize": 9990
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "initiatorType": "img",
+          "transferSize": 19554,
+          "encodedBodySize": 19254,
+          "decodedBodySize": 19254
+        },
+        {
+          "name": "http://127.0.0.1:4173/favicon.ico",
+          "initiatorType": "other",
+          "transferSize": 3950,
+          "encodedBodySize": 3650,
+          "decodedBodySize": 3870
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "initiatorType": "img",
+          "transferSize": 91662,
+          "encodedBodySize": 91362,
+          "decodedBodySize": 91362
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "initiatorType": "img",
+          "transferSize": 318027,
+          "encodedBodySize": 317727,
+          "decodedBodySize": 317727
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "initiatorType": "img",
+          "transferSize": 1203410,
+          "encodedBodySize": 1203110,
+          "decodedBodySize": 1203110
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "initiatorType": "img",
+          "transferSize": 235958,
+          "encodedBodySize": 235658,
+          "decodedBodySize": 235658
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "initiatorType": "img",
+          "transferSize": 27253,
+          "encodedBodySize": 26953,
+          "decodedBodySize": 26953
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "initiatorType": "img",
+          "transferSize": 35900,
+          "encodedBodySize": 35600,
+          "decodedBodySize": 35600
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "initiatorType": "img",
+          "transferSize": 18923,
+          "encodedBodySize": 18623,
+          "decodedBodySize": 18623
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "initiatorType": "img",
+          "transferSize": 43762,
+          "encodedBodySize": 43462,
+          "decodedBodySize": 43462
+        },
+        {
+          "name": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "initiatorType": "img",
+          "transferSize": 28513,
+          "encodedBodySize": 28213,
+          "decodedBodySize": 28213
+        }
+      ],
+      "initialRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 27228
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 35883
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 18903
+        }
+      ],
+      "fullyLoadedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/want-to-help",
+          "type": "Document",
+          "status": 200,
+          "mimeType": "text/html",
+          "encodedDataLength": 1100
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/main.b25e5a92.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 142176
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/js/334.c85e8784.chunk.js",
+          "type": "Script",
+          "status": 200,
+          "mimeType": "application/javascript",
+          "encodedDataLength": 3642
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/webp",
+          "encodedDataLength": 19559
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.ico",
+          "type": "Other",
+          "status": 200,
+          "mimeType": "image/x-icon",
+          "encodedDataLength": 3998
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 91650
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 318016
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 1203400
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 235946
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 27228
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 35883
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 18903
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 43738
+        },
+        {
+          "url": "http://127.0.0.1:4173/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+          "type": "Image",
+          "status": 200,
+          "mimeType": "image/jpeg",
+          "encodedDataLength": 28497
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "All images decode / at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests / at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Home has no initial lazy route/menu chunks / at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu retains original size / at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape returns focus / at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "All images decode /want-to-help at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests /want-to-help at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu retains original size /want-to-help at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape returns focus /want-to-help at 412px DPR1",
+      "passed": true
+    },
+    {
+      "name": "All images decode / at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests / at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Home has no initial lazy route/menu chunks / at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu retains original size / at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape returns focus / at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "All images decode /want-to-help at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests /want-to-help at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu retains original size /want-to-help at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape returns focus /want-to-help at 768px DPR1",
+      "passed": true
+    },
+    {
+      "name": "All images decode / at 1280px DPR1",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests / at 1280px DPR1",
+      "passed": true
+    },
+    {
+      "name": "Home has no initial lazy route/menu chunks / at 1280px DPR1",
+      "passed": true
+    },
+    {
+      "name": "All images decode /want-to-help at 1280px DPR1",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests /want-to-help at 1280px DPR1",
+      "passed": true
+    },
+    {
+      "name": "All images decode / at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests / at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "Home has no initial lazy route/menu chunks / at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "Menu retains original size / at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape returns focus / at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "All images decode /want-to-help at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests /want-to-help at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "Menu retains original size /want-to-help at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape returns focus /want-to-help at 412px DPR2",
+      "passed": true
+    },
+    {
+      "name": "All images decode / at 1280px DPR2",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests / at 1280px DPR2",
+      "passed": true
+    },
+    {
+      "name": "Home has no initial lazy route/menu chunks / at 1280px DPR2",
+      "passed": true
+    },
+    {
+      "name": "All images decode /want-to-help at 1280px DPR2",
+      "passed": true
+    },
+    {
+      "name": "No Stripe or font requests /want-to-help at 1280px DPR2",
+      "passed": true
+    },
+    {
+      "name": "No uncaught browser errors",
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "pageErrors": [],
+  "browserVersion": "Chrome/156.0.8078.80",
+  "passed": true,
+  "browserClosed": true
+}

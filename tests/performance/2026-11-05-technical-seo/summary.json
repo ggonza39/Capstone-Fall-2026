@@ -1,0 +1,1150 @@
+{
+  "phase": "Technical SEO frontend optimization and production verification",
+  "documentedProjectBaselineSeoScore": 40,
+  "initialDeployedSeoScore": 100,
+  "targetScoreRange": [
+    90,
+    100
+  ],
+  "method": "One SEO-only navigation per audited route; before Home/About sequentially and final after seven public static pages plus one workshop in two independent groups. Not a performance-timing comparison or final deployed audit.",
+  "lighthouseVersion": "12.8.2",
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "environment": {
+    "localReferenceCommit": "4889069316dbd9a287bd42b120ac320e86f75d7b",
+    "nodeVersion": "v20.11.1",
+    "lighthouseVersion": "12.8.2",
+    "chromeVersion": "156.0.8078.80",
+    "hostUrl": "http://127.0.0.1:4173",
+    "productionOrigin": "https://capstone-fall-2026.vercel.app",
+    "server": "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+    "categories": [
+      "seo"
+    ],
+    "profile": "mobile",
+    "productionBuild": true,
+    "stripePublishableKeyConfigured": false,
+    "sandboxMocksEnabled": false,
+    "capturedAtUtc": "2026-11-05T11:49:43.4927032Z",
+    "sourcePatch": "technical-seo.patch",
+    "optimizedSourceSha256": [
+      {
+        "path": "capstonefall2026/package.json",
+        "sha256": "5cefa1f255bab3bd3dff02489fbb1a36ca66ecbbda39014e2fa22a4d630db0f0"
+      },
+      {
+        "path": "capstonefall2026/public/index.html",
+        "sha256": "e31231fae1fb75e57792ec2db4f67409dae761e6314da8773fcea1e162cd6670"
+      },
+      {
+        "path": "capstonefall2026/public/manifest.json",
+        "sha256": "057fd049ee73de3563f4333fc943c459c367b2ad2db859048fee6340dbd8a3fe"
+      },
+      {
+        "path": "capstonefall2026/public/robots.txt",
+        "sha256": "2571512e1b1a2ed1a7b9ba1bef111a53c12dc7eb392c29e6e6531e902d585953"
+      },
+      {
+        "path": "capstonefall2026/src/App.js",
+        "sha256": "843cc1f1c024112b3a10bd1c3357481d787f2e884f6c01a8ccfa2e167c1a4359"
+      },
+      {
+        "path": "capstonefall2026/src/layouts/MainLayout.js",
+        "sha256": "cba9e1b1450445157915bd19cde0f19c9cc90befeee27cab7313e26879bc5fc3"
+      },
+      {
+        "path": "capstonefall2026/src/pages/About.js",
+        "sha256": "2bd10a1963b86860ce06fc761842933565c99b73a6d735b1c37ab31b1500c81c"
+      },
+      {
+        "path": "capstonefall2026/src/pages/Home.js",
+        "sha256": "0d51a70ac1f22ba470dfdd58632d10be7379f5beec174bcd05d560286ed26f8d"
+      },
+      {
+        "path": "capstonefall2026/src/pages/WantToHelp.js",
+        "sha256": "badc2adc72f2b75bd1c1ccf25afc9c8f4d7d759b36c2ff20a1ec58333b8eb333"
+      },
+      {
+        "path": "capstonefall2026/src/pages/WorkshopDetail.js",
+        "sha256": "31620672673146245ab3c6213fda6dcbb9035d3dbc1f9122820c7881faeeb9ae"
+      },
+      {
+        "path": "capstonefall2026/public/sitemap.xml",
+        "sha256": "00e44861aba170e46e08da53f13d5fe558aa6a69d2ec0177ff18b2f8cd2722b3"
+      },
+      {
+        "path": "capstonefall2026/scripts/generate-seo.cjs",
+        "sha256": "9e09b3033f2f78a69e583b8655eebbd89316bb0284305a34ca7161f837c5945c"
+      },
+      {
+        "path": "capstonefall2026/src/pages/NotFound.js",
+        "sha256": "2676979d189c6ccb5de3133baeb92f81446b5ae0eacd7f937ae4f963c3060bbe"
+      },
+      {
+        "path": "capstonefall2026/src/seo/config.json",
+        "sha256": "b92538732eac545d541ecc476f102865645df2d72ff327ee3f3057423e7f33a9"
+      },
+      {
+        "path": "capstonefall2026/src/seo/metadata.js",
+        "sha256": "e076cd7dde8e130f6b6c7da6e817412adbf4c6505151cdc9d8e7a2776713d858"
+      },
+      {
+        "path": "capstonefall2026/src/seo/RouteMetadata.js",
+        "sha256": "9a7503482ac3f4e9c3c49853f3fad9c575d40c7abc5966e3a5fad3a40a4665fd"
+      },
+      {
+        "path": "capstonefall2026/src/seo/siteOrigin.js",
+        "sha256": "7256feac56f9708bce59bde58a901440ac778c34e5a5ecc2e3379c116ad2adfd"
+      }
+    ],
+    "beforeAuditConcurrency": 1,
+    "finalAfterAuditConcurrency": 2
+  },
+  "before": [
+    {
+      "name": "home",
+      "route": "/",
+      "reportFile": "before/home.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/",
+      "fetchTimeUtc": "2026-11-05T11:52:02.730Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": null,
+          "scoreDisplayMode": "notApplicable"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "React App"
+        ],
+        "descriptions": [
+          "Web site created using create-react-app"
+        ],
+        "robots": [],
+        "canonicals": [],
+        "mainCount": 1,
+        "h1": [
+          "Technology Made Simple."
+        ]
+      }
+    },
+    {
+      "name": "about",
+      "route": "/about",
+      "reportFile": "before/about.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/about",
+      "fetchTimeUtc": "2026-11-05T11:52:24.776Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": null,
+          "scoreDisplayMode": "notApplicable"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "React App"
+        ],
+        "descriptions": [
+          "Web site created using create-react-app"
+        ],
+        "robots": [],
+        "canonicals": [],
+        "mainCount": 1,
+        "h1": [
+          "About TechSmart"
+        ]
+      }
+    }
+  ],
+  "after": [
+    {
+      "name": "home",
+      "route": "/",
+      "reportFile": "after/home.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/",
+      "fetchTimeUtc": "2026-11-05T12:25:36.478Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "Technology Help for Seniors | TechSmart"
+        ],
+        "descriptions": [
+          "Build confidence with everyday technology. Explore TechSmart Learning for Seniors workshops, learning resources, and opportunities to help older adults."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "Technology Made Simple."
+        ]
+      }
+    },
+    {
+      "name": "need-help",
+      "route": "/need-help",
+      "reportFile": "after/need-help.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/need-help",
+      "fetchTimeUtc": "2026-11-05T12:25:57.299Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "Technology Workshops & Help | TechSmart"
+        ],
+        "descriptions": [
+          "Explore technology help and the workshop search demonstration for older adults learning everyday digital skills with TechSmart Learning for Seniors."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/need-help"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "I Need Technology Help"
+        ]
+      }
+    },
+    {
+      "name": "want-to-help",
+      "route": "/want-to-help",
+      "reportFile": "after/want-to-help.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/want-to-help",
+      "fetchTimeUtc": "2026-11-05T12:26:17.252Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "Donate, Volunteer & Advocate | TechSmart"
+        ],
+        "descriptions": [
+          "Explore ways to support technology education for older adults through donations, volunteering, and advocacy with TechSmart Learning for Seniors."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/want-to-help"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "I Want to Help"
+        ]
+      }
+    },
+    {
+      "name": "resources",
+      "route": "/resources",
+      "reportFile": "after/resources.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/resources",
+      "fetchTimeUtc": "2026-11-05T12:26:35.784Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "Technology Learning Resources | TechSmart"
+        ],
+        "descriptions": [
+          "Explore topics including smartphone and computer basics, online safety, and video tutorials for older adults learning technology with TechSmart."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/resources"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "Technology Resources"
+        ]
+      }
+    },
+    {
+      "name": "about",
+      "route": "/about",
+      "reportFile": "after/about.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/about",
+      "fetchTimeUtc": "2026-11-05T12:25:36.384Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "About TechSmart Learning for Seniors"
+        ],
+        "descriptions": [
+          "Learn about TechSmart Learning for Seniors and its focus on accessible technology education, digital confidence, and community support for older adults."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/about"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "About TechSmart"
+        ]
+      }
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "reportFile": "after/contact.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/contact",
+      "fetchTimeUtc": "2026-11-05T12:25:57.360Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "Contact TechSmart Learning for Seniors"
+        ],
+        "descriptions": [
+          "Contact TechSmart Learning for Seniors with questions about technology learning, workshops, resources, or ways to support older adults."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/contact"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "Contact Us"
+        ]
+      }
+    },
+    {
+      "name": "donate",
+      "route": "/donate",
+      "reportFile": "after/donate.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/donate",
+      "fetchTimeUtc": "2026-11-05T12:26:17.250Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "Make a Donation | TechSmart"
+        ],
+        "descriptions": [
+          "Support technology education for older adults through TechSmart Learning for Seniors. View the donation form."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/donate"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "Make a Donation"
+        ]
+      }
+    },
+    {
+      "name": "workshop",
+      "route": "/workshops/WS-1001",
+      "reportFile": "after/workshop.report.json",
+      "requestedUrl": "http://127.0.0.1:4173/workshops/WS-1001",
+      "fetchTimeUtc": "2026-11-05T12:26:35.771Z",
+      "seoScore": 100,
+      "audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn’t blocked from indexing",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "scoreDisplayMode": "binary"
+        },
+        {
+          "id": "structured-data",
+          "title": "Structured data is valid",
+          "score": null,
+          "scoreDisplayMode": "manual"
+        }
+      ],
+      "scoredFailures": [],
+      "warnings": [],
+      "renderedMetadata": {
+        "titles": [
+          "Smartphone Basics for Beginners | TechSmart"
+        ],
+        "descriptions": [
+          "Details for Smartphone Basics for Beginners, including location, accessibility information, and registration options."
+        ],
+        "robots": [
+          "index,follow"
+        ],
+        "canonicals": [
+          "https://capstone-fall-2026.vercel.app/workshops/WS-1001"
+        ],
+        "mainCount": 1,
+        "h1": [
+          "Smartphone Basics for Beginners"
+        ]
+      }
+    }
+  ],
+  "comparison": {
+    "beforeHomeScore": 100,
+    "afterHomeScore": 100,
+    "homeScoreChange": 0,
+    "allAfterRoutesMeetTarget": true,
+    "claim": "Score already100 before; fixes address real metadata/discovery/semantic gaps beyond scored Lighthouse checks."
+  },
+  "validation": {
+    "browserAssertionsPassed": 58,
+    "browserRouteCaptures": 12,
+    "browserEvidence": "browser-after.json",
+    "unexpectedBrowserErrors": [],
+    "expectedStripeKeyErrors": 3,
+    "tests": {
+      "passed": 64,
+      "failed": 4,
+      "metadataTestsPassed": 28,
+      "failureNote": "Four unchanged NeedHelp registration tests fail.",
+      "workshopMetadataTransitionTestsPassed": 1
+    },
+    "sitemapUrls": [
+      "https://capstone-fall-2026.vercel.app/",
+      "https://capstone-fall-2026.vercel.app/need-help",
+      "https://capstone-fall-2026.vercel.app/want-to-help",
+      "https://capstone-fall-2026.vercel.app/resources",
+      "https://capstone-fall-2026.vercel.app/about",
+      "https://capstone-fall-2026.vercel.app/contact",
+      "https://capstone-fall-2026.vercel.app/donate"
+    ],
+    "supersededDiagnostic": "browser-after-initial-runtime-error.json: earlier .cjs asset integration failure fixed before these final audits; not included in passing verification.",
+    "finalDeployedAudit": "Pending deployment and measurement",
+    "workshopKnownMissingKnownTransitionVerified": true
+  },
+  "limitations": [
+    "The static SPA server returns HTTP 200 for unknown paths; client noindex does not create a server HTTP 404.",
+    "Route-specific metadata and content require JavaScript. Raw HTML has a shared branded fallback.",
+    "No local Stripe publishable key is configured; donation payment readiness and submission are not tested."
+  ]
+}

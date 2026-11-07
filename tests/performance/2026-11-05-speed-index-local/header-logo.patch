@@ -1,0 +1,24 @@
+diff --git a/capstonefall2026/src/components/Header.js b/capstonefall2026/src/components/Header.js
+index 3a495d0..3564ff0 100644
+--- a/capstonefall2026/src/components/Header.js
++++ b/capstonefall2026/src/components/Header.js
+@@ -15,7 +15,7 @@ import {
+ import MenuIcon from "@mui/icons-material/Menu";
+ import CloseIcon from "@mui/icons-material/Close";
+ 
+-import logo from "../assets/techsmartLogo.png";
++import logo from "../assets/techsmartLogo.webp";
+ import { loadMobileNavigation } from "./mobileNavigationLoader";
+ 
+ const navigation = [
+@@ -175,6 +175,10 @@ function Header() {
+                                 component="img"
+                                 src={logo}
+                                 alt="TechSmart Learning for Seniors"
++                                width={500}
++                                height={250}
++                                loading="eager"
++                                fetchPriority="high"
+                                 sx={{
+                                     width: {
+                                         xs: 190,

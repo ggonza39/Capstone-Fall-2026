@@ -1,0 +1,33 @@
+﻿{
+    "localReferenceCommit":  "bb313b9a6f5dbe8734cfef6e922113477dad5d45",
+    "nodeVersion":  "v20.11.1",
+    "lighthouseVersion":  "12.8.2",
+    "chromeVersion":  "156.0.8078.80",
+    "hostUrl":  "http://127.0.0.1:4173/",
+    "server":  "serve@14.2.4 -s build -l tcp://127.0.0.1:4173 --no-clipboard",
+    "productionBuild":  true,
+    "stripePublishableKeyConfigured":  false,
+    "sandboxMocksEnabled":  false,
+    "beforeCapturedAtUtc":  "2026-11-05T05:29:16.3395468Z",
+    "sourceChanges":  "After-phase working tree changes relative to localReferenceCommit; see source diff in fcp-optimization.patch",
+    "operatingSystem":  {
+                            "Caption":  "Microsoft Windows 11 Home",
+                            "Version":  "10.0.26200",
+                            "OSArchitecture":  "64-bit"
+                        },
+    "cpu":  {
+                "Name":  "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+                "NumberOfCores":  4,
+                "NumberOfLogicalProcessors":  8
+            },
+    "optimizedSourceSha256":  [
+                                  {
+                                      "path":  "capstonefall2026/src/App.js",
+                                      "sha256":  "548ba37d7a01080cb1ff7a5658c9b518b19fc1f5d910ab3bd81968c6c8b262c7"
+                                  },
+                                  {
+                                      "path":  "capstonefall2026/src/layouts/MainLayout.js",
+                                      "sha256":  "06b3ca8379974b44b50e606661942faa1918d6d86010ab760265416b4157653e"
+                                  }
+                              ]
+}

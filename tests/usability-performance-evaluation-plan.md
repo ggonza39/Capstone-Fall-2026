@@ -5,7 +5,7 @@ This document addresses professor/Gonzalez feedback on the project's Testing Doc
 
 > "Make the evaluation plan more specific. Describe how representative senior users will participate in usability testing, which tasks they will perform, and how success will be measured. Also define consistent conditions for performance testing and explain how the 50% improvement target relates to the individual performance thresholds."
 
-**Note on source document:** No pre-existing Testing Document or evaluation plan containing a numeric "50% improvement target" or individual performance thresholds was found anywhere in this repository (`documentation/`, `tests/`, `design/`, or `mocks/`) at the time this plan was written. If that content exists in a separate sponsor/professor-facing document (e.g., a Google Doc not committed to this repository), this plan should be merged with it rather than treated as a replacement. Where a specific number is not available from approved project documentation, this plan defines the **procedure** to produce and apply it rather than inventing a figure.
+**Note on source document:** [Milestone 3, PBI-14](../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo) now documents the performance baseline values and final targets listed in Section 5. The original baseline Lighthouse reports and measurement conditions, and the authoritative Testing Document explaining the "50% improvement target," are not supplied in this repository. If that Testing Document exists separately (e.g., a Google Doc), this plan should be merged with it rather than treated as a replacement. The [initial deployed performance measurement](performance/README.md) records the implemented site's results separately from the documented project baseline and future final results.
 
 This plan only references participants, tasks, and requirements that are already documented elsewhere in this repository (see Sources below), per the Milestone-1/Milestone-2 scope and the `documentation/29-Project Description` requirements document.
 
@@ -13,6 +13,7 @@ This plan only references participants, tasks, and requirements that are already
 - `design/README.md` — approved user personas (Cindy, Thomas, John, Alex, Patricia) and user journeys.
 - `documentation/29-Project Description` — Milestone 2/3 deliverables requiring "initial usability testing" and "usability testing"; accessibility requirements (WCAG-aligned, keyboard, screen-reader, color contrast, scalable text).
 - `documentation/milestones/Milestone-2.md` — PBI-6 (navigation), PBI-7 (ZIP search), PBI-8 (workshop details/registration), PBI-10 (150% zoom), PBI-11 (accessibility remediation), PBI-12 (sandbox integration).
+- [Milestone 3, PBI-14](../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo) — documented performance baseline values, final targets, and initial/final Lighthouse measurement requirements.
 - `tests/api-integration-test-plan.md` — existing contract-level test cases (not duplicated here).
 
 ---
@@ -84,20 +85,32 @@ To ensure performance results are comparable across test runs and across before/
 
 ## 5. The 50% Improvement Target and Its Relationship to Individual Thresholds
 
-A 50% overall improvement target is referenced in professor/Gonzalez feedback, but no approved project document currently on file in this repository states the specific baseline numbers, the specific metrics in scope, or specific individual performance thresholds. **This plan does not fabricate those numbers.** Instead, it defines the baseline-measurement procedure and the formula to apply once the authoritative source (the sponsor-approved Testing Document, wherever it is maintained) confirms the individual metrics and thresholds.
+A 50% overall improvement target is referenced in professor/Gonzalez feedback. [Milestone 3, PBI-14](../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo) supplies the following documented baseline values and final targets; these targets are project goals to measure and report, rather than guaranteed outcomes.
+
+| Metric | Documented project baseline | Final target |
+|---|---:|---:|
+| First Contentful Paint (FCP) | 5.7 seconds | <2.0 seconds |
+| Largest Contentful Paint (LCP) | 21.8 seconds | <2.5 seconds |
+| Total Blocking Time (TBT) | 700 milliseconds | <200 milliseconds |
+| Speed Index | 8.7 seconds | <3.4 seconds |
+| Lighthouse SEO score | 40/100 | 90–100/100 |
+
+The original baseline reports and their tool, device, network, route, and build conditions are not supplied, so equivalent conditions cannot be verified. Comparisons with these values must identify them as the **documented project baseline**. Keep the [initial deployed implementation measurements](performance/README.md) separate from that baseline and from the final post-optimization measurements. The intended interpretation of the overall 50% target remains unconfirmed.
 
 ### Baseline-measurement procedure
-1. Identify the individual metrics in scope (e.g., page load time / Largest Contentful Paint for Home and "I Need Help", time to first workshop search result, time to complete the sandbox registration journey).
-2. Measure each metric against the **original/legacy Tech Smart Learning for Seniors website** (or, if that is unavailable for testing, the earliest measurable prototype build) using the fixed conditions in Section 4. This is the **baseline**.
-3. Record each baseline value and the exact conditions (build, environment, tooling) used to produce it, so later comparisons are apples-to-apples.
+1. Use FCP, LCP, TBT, Speed Index, and Lighthouse SEO for PBI-14, with the documented project baseline and targets above.
+2. Measure the deployed implementation before final optimization using the fixed conditions in Section 4, and retain the raw reports. Repeat the same procedure after optimization for the final results.
+3. Record the route, build/version, environment, tooling, device, network conditions, run count, and median results for each measurement set. If original/legacy baseline reports become available, record their conditions and assess comparability; do not replace the documented baseline silently with a new measurement.
 
 ### Improvement formula
-For each individual metric:
+For each timing metric (FCP, LCP, TBT, and Speed Index):
 
 $$\text{Improvement \%} = \frac{\text{baseline} - \text{current}}{\text{baseline}} \times 100$$
 
+Report Lighthouse SEO as a score out of 100 and its point change from the baseline; a higher score is better, so the timing improvement formula does not apply.
+
 ### Relating individual thresholds to the overall 50% target
-Once the sponsor/professor-approved individual performance thresholds are available, each metric should be evaluated against its own threshold using the formula above. The overall 50% target should then be treated as the **aggregate (e.g., mean) improvement percentage across all defined individual metrics**, not a number each metric must independently hit in isolation — unless the authoritative Testing Document instead specifies that every individual metric must independently meet 50%. This plan flags that distinction explicitly because the feedback indicates it was previously ambiguous:
+Evaluate each PBI-14 metric against its own target above. The authoritative Testing Document must clarify whether the overall 50% target is an **aggregate (e.g., mean) improvement percentage across defined timing metrics** or a minimum every timing metric must independently meet. Do not claim that the overall target is satisfied until that interpretation and the included metrics are confirmed:
 
 - If the overall 50% is an **aggregate/average** target: an individual metric may fall short of 50% as long as the mean across all defined metrics reaches 50%, and this should be stated plainly in the final Testing Document.
 - If the overall 50% is a **floor** that every metric must meet: every individual threshold must itself be set at (or the formula must demonstrate) at least 50% improvement, and any metric below that is a reportable gap, not an average smoothed over.
@@ -108,5 +121,5 @@ This plan recommends confirming which interpretation the sponsor/professor inten
 
 ## 6. Open Items
 - Confirm the location/existence of the authoritative Testing Document referenced in the professor's feedback, and merge this plan into it if it exists outside this repository.
-- Confirm specific numeric baseline values and individual performance thresholds with the sponsor/professor; this plan intentionally does not invent them.
+- Obtain the original Lighthouse reports and measurement conditions supporting the PBI-14 documented project baseline, if available, so comparison limits can be assessed.
 - Confirm whether the 50% target is an aggregate or per-metric floor (Section 5).

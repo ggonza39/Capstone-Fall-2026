@@ -1,0 +1,880 @@
+{
+  "phase": "after",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "capturedAtUtc": "2026-11-05T07:17:18.008Z",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 412,
+        "height": 823
+      },
+      "headerText": "Menu",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "entryScript": "http://127.0.0.1:4173/static/js/main.64238a2f.js",
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 96
+        },
+        "logoLink": {
+          "x": 16,
+          "y": 0,
+          "width": 190,
+          "height": 95
+        },
+        "logo": {
+          "x": 16,
+          "y": 0,
+          "width": 190,
+          "height": 95
+        },
+        "menu": {
+          "x": 285,
+          "y": 21.75,
+          "width": 111,
+          "height": 51.5
+        },
+        "hero": {
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 495.969
+        },
+        "heading": {
+          "x": 16,
+          "y": 144,
+          "width": 380,
+          "height": 76.781
+        },
+        "paragraph": {
+          "x": 16,
+          "y": 244.781,
+          "width": 380,
+          "height": 115.188
+        },
+        "heroButtons": [
+          {
+            "x": 16,
+            "y": 383.969,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 471.969,
+            "width": 380,
+            "height": 72
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "display": "flex",
+          "width": "412px",
+          "height": "96px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "logoLink": {
+          "display": "flex",
+          "width": "190px",
+          "height": "95px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(0, 0, 238)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "logo": {
+          "display": "block",
+          "width": "190px",
+          "height": "95px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "100%",
+          "flexShrink": "1",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(0, 0, 238)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "menu": {
+          "display": "flex",
+          "width": "111px",
+          "height": "51.5px",
+          "minWidth": "48px",
+          "minHeight": "48px",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "lineHeight": "31.5px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(31, 112, 177)",
+          "paddingTop": "10px",
+          "paddingRight": "20px",
+          "paddingBottom": "10px",
+          "paddingLeft": "20px",
+          "borderTopWidth": "0px",
+          "borderRadius": "6px",
+          "boxSizing": "border-box"
+        },
+        "hero": {
+          "display": "block",
+          "width": "412px",
+          "height": "495.969px",
+          "minWidth": "0px",
+          "minHeight": "0px",
+          "maxWidth": "none",
+          "flexShrink": "1",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(244, 248, 252)",
+          "paddingTop": "48px",
+          "paddingRight": "0px",
+          "paddingBottom": "48px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        }
+      },
+      "logo": {
+        "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+        "alt": "TechSmart Learning for Seniors",
+        "linkHref": "/",
+        "linkLabel": "TechSmart Learning for Seniors home",
+        "naturalWidth": 500,
+        "naturalHeight": 250,
+        "complete": true,
+        "decoded": true,
+        "widthAttribute": "500",
+        "heightAttribute": "250",
+        "loadingAttribute": "eager",
+        "fetchPriorityAttribute": "high"
+      },
+      "menu": {
+        "text": "Menu",
+        "uniformSize": "false",
+        "expanded": "false"
+      },
+      "documentWidth": 412,
+      "initialRequests": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/static/js/main.64238a2f.js",
+        "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+        "http://127.0.0.1:4173/favicon.ico"
+      ],
+      "menuInteraction": {
+        "openButtonSize": {
+          "width": 111,
+          "height": 51.5
+        },
+        "expandedWhenOpen": "true",
+        "focusInsideDrawer": true,
+        "links": [
+          {
+            "text": "Home",
+            "href": "/"
+          },
+          {
+            "text": "I Need Technology Help",
+            "href": "/need-help"
+          },
+          {
+            "text": "I Want to Help",
+            "href": "/want-to-help"
+          },
+          {
+            "text": "Resources",
+            "href": "/resources"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Contact",
+            "href": "/contact"
+          }
+        ],
+        "requestsAfterActivation": [
+          "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+          "http://127.0.0.1:4173/static/js/332.88cf9730.chunk.js",
+          "http://127.0.0.1:4173/static/js/77.41dfeb49.chunk.js"
+        ],
+        "escape": {
+          "expanded": "false",
+          "focusReturned": true,
+          "buttonSize": {
+            "width": 111,
+            "height": 51.5
+          }
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "headerText": "Menu",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "entryScript": "http://127.0.0.1:4173/static/js/main.64238a2f.js",
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 111
+        },
+        "logoLink": {
+          "x": 24,
+          "y": 0,
+          "width": 220,
+          "height": 110
+        },
+        "logo": {
+          "x": 24,
+          "y": 0,
+          "width": 220,
+          "height": 110
+        },
+        "menu": {
+          "x": 633,
+          "y": 29.25,
+          "width": 111,
+          "height": 51.5
+        },
+        "hero": {
+          "x": 0,
+          "y": 111,
+          "width": 768,
+          "height": 348.469
+        },
+        "heading": {
+          "x": 24,
+          "y": 159,
+          "width": 720,
+          "height": 46.078
+        },
+        "paragraph": {
+          "x": 24,
+          "y": 229.078,
+          "width": 600.641,
+          "height": 86.391
+        },
+        "heroButtons": [
+          {
+            "x": 24,
+            "y": 339.469,
+            "width": 291,
+            "height": 72
+          },
+          {
+            "x": 331,
+            "y": 339.469,
+            "width": 293,
+            "height": 72
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "display": "flex",
+          "width": "768px",
+          "height": "111px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "logoLink": {
+          "display": "flex",
+          "width": "220px",
+          "height": "110px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(0, 0, 238)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "logo": {
+          "display": "block",
+          "width": "220px",
+          "height": "110px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "100%",
+          "flexShrink": "1",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(0, 0, 238)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "menu": {
+          "display": "flex",
+          "width": "111px",
+          "height": "51.5px",
+          "minWidth": "48px",
+          "minHeight": "48px",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "lineHeight": "31.5px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(31, 112, 177)",
+          "paddingTop": "10px",
+          "paddingRight": "20px",
+          "paddingBottom": "10px",
+          "paddingLeft": "20px",
+          "borderTopWidth": "0px",
+          "borderRadius": "6px",
+          "boxSizing": "border-box"
+        },
+        "hero": {
+          "display": "block",
+          "width": "768px",
+          "height": "348.469px",
+          "minWidth": "0px",
+          "minHeight": "0px",
+          "maxWidth": "none",
+          "flexShrink": "1",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(244, 248, 252)",
+          "paddingTop": "48px",
+          "paddingRight": "0px",
+          "paddingBottom": "48px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        }
+      },
+      "logo": {
+        "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+        "alt": "TechSmart Learning for Seniors",
+        "linkHref": "/",
+        "linkLabel": "TechSmart Learning for Seniors home",
+        "naturalWidth": 500,
+        "naturalHeight": 250,
+        "complete": true,
+        "decoded": true,
+        "widthAttribute": "500",
+        "heightAttribute": "250",
+        "loadingAttribute": "eager",
+        "fetchPriorityAttribute": "high"
+      },
+      "menu": {
+        "text": "Menu",
+        "uniformSize": "false",
+        "expanded": "false"
+      },
+      "documentWidth": 768,
+      "initialRequests": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/static/js/main.64238a2f.js",
+        "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+        "http://127.0.0.1:4173/favicon.ico"
+      ],
+      "menuInteraction": {
+        "openButtonSize": {
+          "width": 111,
+          "height": 51.5
+        },
+        "expandedWhenOpen": "true",
+        "focusInsideDrawer": true,
+        "links": [
+          {
+            "text": "Home",
+            "href": "/"
+          },
+          {
+            "text": "I Need Technology Help",
+            "href": "/need-help"
+          },
+          {
+            "text": "I Want to Help",
+            "href": "/want-to-help"
+          },
+          {
+            "text": "Resources",
+            "href": "/resources"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Contact",
+            "href": "/contact"
+          }
+        ],
+        "requestsAfterActivation": [
+          "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+          "http://127.0.0.1:4173/static/js/332.88cf9730.chunk.js",
+          "http://127.0.0.1:4173/static/js/77.41dfeb49.chunk.js"
+        ],
+        "escape": {
+          "expanded": "false",
+          "focusReturned": true,
+          "buttonSize": {
+            "width": 111,
+            "height": 51.5
+          }
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "headerText": "Home\nI Need Technology Help\nI Want to Help\nResources\nAbout\nContact",
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "entryScript": "http://127.0.0.1:4173/static/js/main.64238a2f.js",
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 131
+        },
+        "logoLink": {
+          "x": 64,
+          "y": 0,
+          "width": 260,
+          "height": 130
+        },
+        "logo": {
+          "x": 64,
+          "y": 0,
+          "width": 260,
+          "height": 130
+        },
+        "menu": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hero": {
+          "x": 0,
+          "y": 131,
+          "width": 1280,
+          "height": 433.594
+        },
+        "heading": {
+          "x": 64,
+          "y": 211,
+          "width": 760,
+          "height": 57.594
+        },
+        "paragraph": {
+          "x": 64,
+          "y": 292.594,
+          "width": 667.375,
+          "height": 96
+        },
+        "heroButtons": [
+          {
+            "x": 64,
+            "y": 412.594,
+            "width": 291,
+            "height": 72
+          },
+          {
+            "x": 371,
+            "y": 412.594,
+            "width": 293,
+            "height": 72
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "display": "flex",
+          "width": "1280px",
+          "height": "131px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "logoLink": {
+          "display": "flex",
+          "width": "260px",
+          "height": "130px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(0, 0, 238)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "logo": {
+          "display": "block",
+          "width": "260px",
+          "height": "130px",
+          "minWidth": "auto",
+          "minHeight": "auto",
+          "maxWidth": "100%",
+          "flexShrink": "1",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(0, 0, 238)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        },
+        "menu": {
+          "display": "none",
+          "width": "auto",
+          "height": "auto",
+          "minWidth": "48px",
+          "minHeight": "48px",
+          "maxWidth": "none",
+          "flexShrink": "0",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "lineHeight": "31.5px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(31, 112, 177)",
+          "paddingTop": "10px",
+          "paddingRight": "20px",
+          "paddingBottom": "10px",
+          "paddingLeft": "20px",
+          "borderTopWidth": "0px",
+          "borderRadius": "6px",
+          "boxSizing": "border-box"
+        },
+        "hero": {
+          "display": "block",
+          "width": "1280px",
+          "height": "433.594px",
+          "minWidth": "0px",
+          "minHeight": "0px",
+          "maxWidth": "none",
+          "flexShrink": "1",
+          "objectFit": "fill",
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28.8px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgb(244, 248, 252)",
+          "paddingTop": "80px",
+          "paddingRight": "0px",
+          "paddingBottom": "80px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        }
+      },
+      "logo": {
+        "currentSrc": "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+        "alt": "TechSmart Learning for Seniors",
+        "linkHref": "/",
+        "linkLabel": "TechSmart Learning for Seniors home",
+        "naturalWidth": 500,
+        "naturalHeight": 250,
+        "complete": true,
+        "decoded": true,
+        "widthAttribute": "500",
+        "heightAttribute": "250",
+        "loadingAttribute": "eager",
+        "fetchPriorityAttribute": "high"
+      },
+      "menu": {
+        "text": "Menu",
+        "uniformSize": "false",
+        "expanded": "false"
+      },
+      "documentWidth": 1280,
+      "initialRequests": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/static/js/main.64238a2f.js",
+        "http://127.0.0.1:4173/static/media/techsmartLogo.11ceb0d3890d06c34aaf.webp",
+        "http://127.0.0.1:4173/favicon.ico"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Logo decodes at its original dimensions at 412px",
+      "passed": true
+    },
+    {
+      "name": "Logo retains accessible home link at 412px",
+      "passed": true
+    },
+    {
+      "name": "No lazy chunks or Stripe before interaction at 412px",
+      "passed": true
+    },
+    {
+      "name": "Menu retains its theme styling exemption at 412px",
+      "passed": true
+    },
+    {
+      "name": "Visible Home and header text preserved at 412px",
+      "passed": true
+    },
+    {
+      "name": "Header, logo, hero and Menu geometry preserved at 412px",
+      "passed": true,
+      "toleranceCssPx": 0.01,
+      "differences": []
+    },
+    {
+      "name": "Header, logo, hero and Menu styles preserved at 412px",
+      "passed": true
+    },
+    {
+      "name": "Optimized logo URL and rendering hints reach the image at 412px",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape restores focus at 412px",
+      "passed": true
+    },
+    {
+      "name": "Restored Menu size stays unchanged through interaction at 412px",
+      "passed": true,
+      "toleranceCssPx": 0.01,
+      "differences": []
+    },
+    {
+      "name": "Menu chunks load on activation at 412px",
+      "passed": true
+    },
+    {
+      "name": "Menu activation does not load Stripe at 412px",
+      "passed": true
+    },
+    {
+      "name": "Logo decodes at its original dimensions at 768px",
+      "passed": true
+    },
+    {
+      "name": "Logo retains accessible home link at 768px",
+      "passed": true
+    },
+    {
+      "name": "No lazy chunks or Stripe before interaction at 768px",
+      "passed": true
+    },
+    {
+      "name": "Menu retains its theme styling exemption at 768px",
+      "passed": true
+    },
+    {
+      "name": "Visible Home and header text preserved at 768px",
+      "passed": true
+    },
+    {
+      "name": "Header, logo, hero and Menu geometry preserved at 768px",
+      "passed": true,
+      "toleranceCssPx": 0.01,
+      "differences": []
+    },
+    {
+      "name": "Header, logo, hero and Menu styles preserved at 768px",
+      "passed": true
+    },
+    {
+      "name": "Optimized logo URL and rendering hints reach the image at 768px",
+      "passed": true
+    },
+    {
+      "name": "Menu opens and Escape restores focus at 768px",
+      "passed": true
+    },
+    {
+      "name": "Restored Menu size stays unchanged through interaction at 768px",
+      "passed": true,
+      "toleranceCssPx": 0.01,
+      "differences": []
+    },
+    {
+      "name": "Menu chunks load on activation at 768px",
+      "passed": true
+    },
+    {
+      "name": "Menu activation does not load Stripe at 768px",
+      "passed": true
+    },
+    {
+      "name": "Logo decodes at its original dimensions at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Logo retains accessible home link at 1280px",
+      "passed": true
+    },
+    {
+      "name": "No lazy chunks or Stripe before interaction at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Menu retains its theme styling exemption at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Visible Home and header text preserved at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Header, logo, hero and Menu geometry preserved at 1280px",
+      "passed": true,
+      "toleranceCssPx": 0.01,
+      "differences": []
+    },
+    {
+      "name": "Header, logo, hero and Menu styles preserved at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Optimized logo URL and rendering hints reach the image at 1280px",
+      "passed": true
+    },
+    {
+      "name": "No uncaught browser errors",
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "pageErrors": [],
+  "browserVersion": "Chrome/156.0.8078.80",
+  "passed": true,
+  "browserClosed": true
+}

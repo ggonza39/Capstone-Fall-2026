@@ -1,0 +1,1108 @@
+{
+  "generatedAtUtc": "2026-11-05T13:09:10.753Z",
+  "tool": {
+    "node": "v20.11.1",
+    "sharp": "0.34.5",
+    "libvips": "8.17.3",
+    "libwebp": "1.6.0"
+  },
+  "originalsPreserved": true,
+  "aspectRatiosPreserved": "Width-only resizing; height is rounded to the nearest output pixel by sharp.",
+  "noEnlargement": true,
+  "metadataPolicy": "Default sharp encoding strips source metadata; sRGB pixel comparisons are recorded below.",
+  "images": [
+    {
+      "kind": "photo",
+      "original": {
+        "path": "capstonefall2026/src/assets/senior-tablet-learning.jfif",
+        "bytes": 91362,
+        "sha256": "5405876813d6d5669d4653e31849e66936e78749dcfb884e868a7081728d94de",
+        "width": 1200,
+        "height": 675,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-tablet-learning-480.webp",
+          "bytes": 19294,
+          "sha256": "cfd8cb75460d45dcab77fdcc259df4796547b555a4ef0640baa95f7012ef7ddc",
+          "width": 480,
+          "height": 270,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 480,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 72068,
+            "percent": 78.88181081850222
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 480,
+            "height": 270,
+            "channels": 3,
+            "samplesCompared": 388800,
+            "mse": 12.686172839506172,
+            "psnrDb": 37.09749736832443,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "c4566fe64ea42c91b4c58e27c992758384d6526188f9250672de2bf27a8fc08c",
+            "decodedRgbSha256": "54a417ab3390b23f01f8931c4a0ed5b53f79482df11fffd8420758d308fc9282"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-tablet-learning-800.webp",
+          "bytes": 40674,
+          "sha256": "3b8c4c8346d3b120d44be4a78acb6fc6808c7fbfe25c69723a8bc5b4c5c89d65",
+          "width": 800,
+          "height": 450,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 800,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 50688,
+            "percent": 55.480396663820855
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 800,
+            "height": 450,
+            "channels": 3,
+            "samplesCompared": 1080000,
+            "mse": 9.26732962962963,
+            "psnrDb": 38.46125750152481,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "cafd09779671aa5f7380ab040b9f572ba48ab4ccd822c1d18bce116128e0b5e4",
+            "decodedRgbSha256": "afd2330ef397462b28c5eaef5a3d2237815597aba2649c71580597d51c0381bd"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-tablet-learning-1200.webp",
+          "bytes": 71394,
+          "sha256": "d1ee2e4acab88c42489a5efaeafeb199b9ca1226f0630899f6833afe0882e133",
+          "width": 1200,
+          "height": 675,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 1200,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 19968,
+            "percent": 21.855913837262754
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 1200,
+            "height": 675,
+            "channels": 3,
+            "samplesCompared": 2430000,
+            "mse": 6.928295473251029,
+            "psnrDb": 39.724539599668574,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "00be20f1c9a1c816ce2feddaef0b968d54b0c5198afd301098c69497825a3419",
+            "decodedRgbSha256": "874f19a6293238aa78e3b02e7b21a491c86d978f286822f215bac83bbc857c89"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "photo",
+      "original": {
+        "path": "capstonefall2026/src/assets/senior-laptop-learning.jfif",
+        "bytes": 317727,
+        "sha256": "18489b5e1c5e51c9f92bd11c42bd1b51f900140b82a8f613600bdbbb7a617e68",
+        "width": 2560,
+        "height": 1707,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-laptop-learning-480.webp",
+          "bytes": 17152,
+          "sha256": "9c5046aefccfc77dbbf4386882a419d3ec0be92321efef6add7664a83dda0581",
+          "width": 480,
+          "height": 320,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 480,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 300575,
+            "percent": 94.60165487981821
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 480,
+            "height": 320,
+            "channels": 3,
+            "samplesCompared": 460800,
+            "mse": 11.86337673611111,
+            "psnrDb": 37.388720386919815,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "e3b78863f2ca43015f1a09c4b1fff216200332df8637cec671fbb782fc929448",
+            "decodedRgbSha256": "8c450d0f81b2ce9e3918e0130abdaf69da179b16e0880da7092bf8dabaa0a8b9"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-laptop-learning-800.webp",
+          "bytes": 33428,
+          "sha256": "9dd2ade7c9f8c21eae698634ce5dd55144d1de9abc6c035476f4da1b84d186ad",
+          "width": 800,
+          "height": 533,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 800,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 284299,
+            "percent": 89.47901815080242
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 800,
+            "height": 533,
+            "channels": 3,
+            "samplesCompared": 1279200,
+            "mse": 8.741410256410257,
+            "psnrDb": 38.71498857619136,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "643a64ba69a53edb682ae89cccf35296fb87a76fb6f7e4d906b8000f26564418",
+            "decodedRgbSha256": "4c2e3021931351430b755b8c356e83450e89b871010328419269f4b1a42387c9"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-laptop-learning-1200.webp",
+          "bytes": 58210,
+          "sha256": "aabdbe8c9dd803f42ddcb091aebf5e1b2d65dbc07b96c7b698cec418a004af40",
+          "width": 1200,
+          "height": 800,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 1200,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 259517,
+            "percent": 81.6792403541405
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 1200,
+            "height": 800,
+            "channels": 3,
+            "samplesCompared": 2880000,
+            "mse": 6.8670253472222225,
+            "psnrDb": 39.76311710424567,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "cb77fae126c5e0910058197defcdbde055445c82d910d171b04c755a4dd65320",
+            "decodedRgbSha256": "ec302d3894e645f8184d0bcd97ddc79ecaf6159a8f12830a6e5d02710342f15b"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "photo",
+      "original": {
+        "path": "capstonefall2026/src/assets/senior-mobile-learning.jfif",
+        "bytes": 1203110,
+        "sha256": "1c695329a37e85a5e19082c17e058de183b3f57c69717638169cb479e1f3abbc",
+        "width": 4128,
+        "height": 2752,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-mobile-learning-480.webp",
+          "bytes": 17708,
+          "sha256": "2e05cb323d4d94adf2b9bf437885aa3314e12a2d7837b2e6185c85dfb8324092",
+          "width": 480,
+          "height": 320,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 480,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 1185402,
+            "percent": 98.52814788340218
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 480,
+            "height": 320,
+            "channels": 3,
+            "samplesCompared": 460800,
+            "mse": 16.83212890625,
+            "psnrDb": 35.869413124045614,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "cf97652169d5cc71e57a8185272602d2c0763ba690aa43e9971625c69118564a",
+            "decodedRgbSha256": "92680989d3a9c83d63ddc7bf3c0d6995ed18e946d6c942c967f19482a72d052e"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-mobile-learning-800.webp",
+          "bytes": 38318,
+          "sha256": "59fafca028c4fa6dc609790394384e44298f309608e0efed11de3ef62479b211",
+          "width": 800,
+          "height": 533,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 800,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 1164792,
+            "percent": 96.81508756472807
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 800,
+            "height": 533,
+            "channels": 3,
+            "samplesCompared": 1279200,
+            "mse": 13.90393918073796,
+            "psnrDb": 36.699425014704296,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "d053d8ab0853816c2b334afb631e5862a43e550f1febcb778627593a303b1627",
+            "decodedRgbSha256": "dcebdf0ce2bb806e945e7b0151ef9c2434092bcc58e2a12c3b2a3b9e8c8c61aa"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-mobile-learning-1200.webp",
+          "bytes": 81172,
+          "sha256": "f32eaa405e84049dc8a8c735f6848150efba77af00dd8f003b2f442648c2d67b",
+          "width": 1200,
+          "height": 800,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 1200,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 1121938,
+            "percent": 93.25315224709296
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 1200,
+            "height": 800,
+            "channels": 3,
+            "samplesCompared": 2880000,
+            "mse": 13.066777777777778,
+            "psnrDb": 36.969118556025286,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "2ff8cfa4ee96992ba9ab0c5048a9f80f1c1ee3cc86b75246815f06a46518b2e6",
+            "decodedRgbSha256": "d1165d8fe1e36259258d5b7c793a7935b9dd59f5d3028c16fe15a5ef2fbb585b"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "photo",
+      "original": {
+        "path": "capstonefall2026/src/assets/senior-group-learning.jfif",
+        "bytes": 235658,
+        "sha256": "188215c6e34aa3c0f952adfcef6c6617dca024a488cc9d4a8dc56ad36a4a565c",
+        "width": 2048,
+        "height": 1365,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-group-learning-480.webp",
+          "bytes": 25048,
+          "sha256": "5af78b4c3bf155a399705e5f40a4b118c17deedd7b5b810ca93970e78fbabedc",
+          "width": 480,
+          "height": 320,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 480,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 210610,
+            "percent": 89.37103769021209
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 480,
+            "height": 320,
+            "channels": 3,
+            "samplesCompared": 460800,
+            "mse": 17.898072916666667,
+            "psnrDb": 35.6027408780488,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "7596314d4f86cd9a502191b43bec19868aa170bacf8175305b3997475dd6ba7e",
+            "decodedRgbSha256": "d0bb5e19505338dc37a42d3963f871ce5726095120def3eff9c6b4fe84f11898"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-group-learning-800.webp",
+          "bytes": 47546,
+          "sha256": "c574df8c3fc11d25e29d7c232195f91a3f4d0b3978111e63572589c9a5c25904",
+          "width": 800,
+          "height": 533,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 800,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 188112,
+            "percent": 79.82415194901085
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 800,
+            "height": 533,
+            "channels": 3,
+            "samplesCompared": 1279200,
+            "mse": 11.23156425891182,
+            "psnrDb": 37.626401146951586,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "5753828627dded541098a73cdeace2861450951e3d902f906f16ecdaec226a4a",
+            "decodedRgbSha256": "b3bbe24c777679ddc7d04f4423dab94caf5aba8759d1f874c6f3821b0bccbc16"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/senior-group-learning-1200.webp",
+          "bytes": 76618,
+          "sha256": "40e7637ce7610633f76060f886d2ba917ebaec7323c94ac5895639cafb9fbfb4",
+          "width": 1200,
+          "height": 800,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "quality": 82,
+              "effort": 6
+            },
+            "resize": {
+              "width": 1200,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 159040,
+            "percent": 67.48763037961791
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGB8; compute channel-wise mean squared error and PSNR with peak sample value 255.",
+            "reference": "Resized original at the output dimensions; no comparison with a differently sized original.",
+            "width": 1200,
+            "height": 800,
+            "channels": 3,
+            "samplesCompared": 2880000,
+            "mse": 8.214193055555555,
+            "psnrDb": 38.98515455145845,
+            "identical": false,
+            "zeroErrorPsnr": "A null PSNR denotes zero MSE (positive infinity).",
+            "referenceRgbSha256": "71bc09f51dfd6f19d663d70b3699a92d49520e8d6cd8137c3a7f3eb71f98934f",
+            "decodedRgbSha256": "7411f95e14c88db7c594241e414bdcf1f4c36b3711d8452d4a83cffdc8bb7fd0"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "partner-logo",
+      "original": {
+        "path": "capstonefall2026/src/assets/waymoLogo.jfif",
+        "bytes": 26953,
+        "sha256": "5705176d7da7237e258d11177a504e97671c01dd84b8ec4aaedadd6f782e288d",
+        "width": 1225,
+        "height": 792,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/waymoLogo-210.webp",
+          "bytes": 9272,
+          "sha256": "efee0bac3d1d0fce981f31b4bd25c89ea54d3a8d11f2251434977c1b4c7fc5cb",
+          "width": 210,
+          "height": 136,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 210,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 17681,
+            "percent": 65.59937669276148
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 210,
+            "height": 136,
+            "channels": 4,
+            "pixelsCompared": 28560,
+            "samplesCompared": 114240,
+            "identical": true,
+            "referenceRgbaSha256": "06b4eaf5149872db645382b40d958e47c019701f56b52a697f3476c00d5677c7",
+            "decodedRgbaSha256": "06b4eaf5149872db645382b40d958e47c019701f56b52a697f3476c00d5677c7"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/waymoLogo-420.webp",
+          "bytes": 24426,
+          "sha256": "a9f591ce11a769ce384ca22ceb64daee153a35974ce9cdab3937178cf2a89f6e",
+          "width": 420,
+          "height": 272,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 420,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 2527,
+            "percent": 9.37557971283345
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 420,
+            "height": 272,
+            "channels": 4,
+            "pixelsCompared": 114240,
+            "samplesCompared": 456960,
+            "identical": true,
+            "referenceRgbaSha256": "38800d75fa0da386a232e9f7b8148cbe99d7da9462b16e90d3b704531b35a23f",
+            "decodedRgbaSha256": "38800d75fa0da386a232e9f7b8148cbe99d7da9462b16e90d3b704531b35a23f"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "partner-logo",
+      "original": {
+        "path": "capstonefall2026/src/assets/insightGlobalLogo.jfif",
+        "bytes": 35600,
+        "sha256": "2376ff70bec7d5a494302e7620332f4ea889c4e9fbec6a491af65e98cb4e46af",
+        "width": 1790,
+        "height": 500,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/insightGlobalLogo-210.webp",
+          "bytes": 6434,
+          "sha256": "bd51ea970033b6adfafd72c0a7b53eba7f97b25670fdf40b0fc292db077e992e",
+          "width": 210,
+          "height": 59,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 210,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 29166,
+            "percent": 81.92696629213484
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 210,
+            "height": 59,
+            "channels": 4,
+            "pixelsCompared": 12390,
+            "samplesCompared": 49560,
+            "identical": true,
+            "referenceRgbaSha256": "f7926d248e81e5c0780638147c796feacb67c4ec3eb976d8140d44cf5376a16f",
+            "decodedRgbaSha256": "f7926d248e81e5c0780638147c796feacb67c4ec3eb976d8140d44cf5376a16f"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/insightGlobalLogo-420.webp",
+          "bytes": 15300,
+          "sha256": "ac97391f3b0a1fe0dcb5ea7c00831e1d0645eef4b7040836adc5f82b1f9972e6",
+          "width": 420,
+          "height": 117,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 420,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 20300,
+            "percent": 57.02247191011236
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 420,
+            "height": 117,
+            "channels": 4,
+            "pixelsCompared": 49140,
+            "samplesCompared": 196560,
+            "identical": true,
+            "referenceRgbaSha256": "ed5f118cf4977fc4976197d5c77f05f88155467083c20932fed5897c4ba62526",
+            "decodedRgbaSha256": "ed5f118cf4977fc4976197d5c77f05f88155467083c20932fed5897c4ba62526"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "partner-logo",
+      "original": {
+        "path": "capstonefall2026/src/assets/cumberlandLogo.jfif",
+        "bytes": 18623,
+        "sha256": "13b53473dd2e4bfc86b50103f58a759ec1b64b7a71c62fe30369ab39db302e58",
+        "width": 1024,
+        "height": 512,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/cumberlandLogo-210.webp",
+          "bytes": 4474,
+          "sha256": "173e523f9e5ae53f2ee5e30fe291d7ee13a233b8c72c786e175ff5b6536e2473",
+          "width": 210,
+          "height": 105,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 210,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 14149,
+            "percent": 75.97594372550073
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 210,
+            "height": 105,
+            "channels": 4,
+            "pixelsCompared": 22050,
+            "samplesCompared": 88200,
+            "identical": true,
+            "referenceRgbaSha256": "0fc3542754140c5898024a66095ff8b6470ed9c581370d8f5aba6c597e4fa934",
+            "decodedRgbaSha256": "0fc3542754140c5898024a66095ff8b6470ed9c581370d8f5aba6c597e4fa934"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/cumberlandLogo-420.webp",
+          "bytes": 14104,
+          "sha256": "f4d9eb895c707f74b5bb9aea33065abf4d8f4d53f55069b0462ac7ff158c30a1",
+          "width": 420,
+          "height": 210,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 420,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 4519,
+            "percent": 24.265692960317885
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 420,
+            "height": 210,
+            "channels": 4,
+            "pixelsCompared": 88200,
+            "samplesCompared": 352800,
+            "identical": true,
+            "referenceRgbaSha256": "8c2a34bffc5e7a0ed55c793933ed3d1668f6b5fb3a8f6c58a1bc8a4667181a9e",
+            "decodedRgbaSha256": "8c2a34bffc5e7a0ed55c793933ed3d1668f6b5fb3a8f6c58a1bc8a4667181a9e"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "partner-logo",
+      "original": {
+        "path": "capstonefall2026/src/assets/hillerLogo.jfif",
+        "bytes": 43462,
+        "sha256": "1151c158a828b4115d0595c5f57869503fce00c5e434dbd8cf91e2ad7844f9e7",
+        "width": 1462,
+        "height": 428,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/hillerLogo-210.webp",
+          "bytes": 10452,
+          "sha256": "50dbd22613e01fad1ffa07621311bf2fef9a194b508c14458827764ce19c8cac",
+          "width": 210,
+          "height": 62,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 210,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 33010,
+            "percent": 75.95140582577883
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 210,
+            "height": 62,
+            "channels": 4,
+            "pixelsCompared": 13020,
+            "samplesCompared": 52080,
+            "identical": true,
+            "referenceRgbaSha256": "ad5b16d0687570da0006bbc9dc327f2d015d92d1e3f6ab773d5a6a25fa318911",
+            "decodedRgbaSha256": "ad5b16d0687570da0006bbc9dc327f2d015d92d1e3f6ab773d5a6a25fa318911"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/hillerLogo-420.webp",
+          "bytes": 28806,
+          "sha256": "baea325a8ee6b47c56b7c8a7f02c1bef1f1e85c0a965ee9ac442f1a01a7b3b35",
+          "width": 420,
+          "height": 123,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 420,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 14656,
+            "percent": 33.7214118080162
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 420,
+            "height": 123,
+            "channels": 4,
+            "pixelsCompared": 51660,
+            "samplesCompared": 206640,
+            "identical": true,
+            "referenceRgbaSha256": "b58881959c8801c9a60bbad3e73f79a1f14a710d9ab5a3a841a6bdc249f579a6",
+            "decodedRgbaSha256": "b58881959c8801c9a60bbad3e73f79a1f14a710d9ab5a3a841a6bdc249f579a6"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "partner-logo",
+      "original": {
+        "path": "capstonefall2026/src/assets/deltaCommunityLogo.jfif",
+        "bytes": 28213,
+        "sha256": "845e7f36e59dd8982039636f8f128be1edb6114718fd7e8b5761841e91ecbbe4",
+        "width": 1200,
+        "height": 344,
+        "format": "jpeg",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/deltaCommunityLogo-210.webp",
+          "bytes": 8198,
+          "sha256": "cf959c2b72ad9bcaa85dbef79ad411b1a53b85dd9a78e8296e943892c4647a1c",
+          "width": 210,
+          "height": 60,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 210,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 20015,
+            "percent": 70.9424733278985
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 210,
+            "height": 60,
+            "channels": 4,
+            "pixelsCompared": 12600,
+            "samplesCompared": 50400,
+            "identical": true,
+            "referenceRgbaSha256": "bd46e4af9fac5aa3646f47c9055958271005f8524ba651566de0ec623157f5c2",
+            "decodedRgbaSha256": "bd46e4af9fac5aa3646f47c9055958271005f8524ba651566de0ec623157f5c2"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/deltaCommunityLogo-420.webp",
+          "bytes": 23916,
+          "sha256": "6375ef130182449bea21f04ea25531636c5f70920b497abcc69b10d02aeec441",
+          "width": 420,
+          "height": 120,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 420,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 4297,
+            "percent": 15.230567468897316
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 420,
+            "height": 120,
+            "channels": 4,
+            "pixelsCompared": 50400,
+            "samplesCompared": 201600,
+            "identical": true,
+            "referenceRgbaSha256": "26af5275622b27bd94c95f5fa810e42394c38de0581fa8219f83b313ad8eb0fc",
+            "decodedRgbaSha256": "26af5275622b27bd94c95f5fa810e42394c38de0581fa8219f83b313ad8eb0fc"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "header-logo",
+      "original": {
+        "path": "capstonefall2026/src/assets/techsmartLogo.webp",
+        "bytes": 19254,
+        "sha256": "72f67108ade107c6384fee0ed5fbd72e161753559663e29d92a67cdc8e4579f3",
+        "width": 500,
+        "height": 250,
+        "format": "webp",
+        "colorSpace": "srgb",
+        "hasAlpha": false
+      },
+      "outputs": [
+        {
+          "path": "capstonefall2026/src/assets/optimized/techsmartLogo-260.webp",
+          "bytes": 8302,
+          "sha256": "4732701d3257fa6efccb5811d813212a6e31e21f587b04f6bba4fe34cea90ba5",
+          "width": 260,
+          "height": 130,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 260,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 10952,
+            "percent": 56.881686922197986
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 260,
+            "height": 130,
+            "channels": 4,
+            "pixelsCompared": 33800,
+            "samplesCompared": 135200,
+            "identical": true,
+            "referenceRgbaSha256": "0b4200bfc545a799064f09524cf385d9acdb46803539e925257e7283b7526dc8",
+            "decodedRgbaSha256": "0b4200bfc545a799064f09524cf385d9acdb46803539e925257e7283b7526dc8"
+          }
+        },
+        {
+          "path": "capstonefall2026/src/assets/optimized/techsmartLogo-380.webp",
+          "bytes": 12994,
+          "sha256": "c6d02da42f74172393abb32f8e7bae306a2e52dd6fdb9869769b2af98cccfa6f",
+          "width": 380,
+          "height": 190,
+          "format": "webp",
+          "colorSpace": "srgb",
+          "hasAlpha": false,
+          "encoding": {
+            "format": "webp",
+            "options": {
+              "lossless": true,
+              "effort": 6
+            },
+            "resize": {
+              "width": 380,
+              "withoutEnlargement": true,
+              "kernel": "lanczos3"
+            }
+          },
+          "savingsFromOriginal": {
+            "bytes": 6260,
+            "percent": 32.51272462864859
+          },
+          "comparison": {
+            "method": "Decode the WebP and the same-size Lanczos3-resized original to sRGB RGBA8; compare every channel, including alpha.",
+            "reference": "Resized original, not the original full-resolution raster; resizing changes the source pixels.",
+            "width": 380,
+            "height": 190,
+            "channels": 4,
+            "pixelsCompared": 72200,
+            "samplesCompared": 288800,
+            "identical": true,
+            "referenceRgbaSha256": "153e6e4e636b4b0cdf3dd7d9760db49fb02c5e59b4d6d47ea43f8ce3bda5319c",
+            "decodedRgbaSha256": "153e6e4e636b4b0cdf3dd7d9760db49fb02c5e59b4d6d47ea43f8ce3bda5319c"
+          }
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "originalImages": 10,
+    "originalBytes": 2019962,
+    "generatedImages": 24,
+    "generatedBytes": 693240,
+    "explanation": "Generated bytes include every responsive variant; a browser chooses a candidate per image. These totals are disk inventory, not page-transfer savings."
+  }
+}

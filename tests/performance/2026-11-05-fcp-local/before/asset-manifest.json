@@ -1,0 +1,24 @@
+﻿{
+    "files":  {
+                  "main.js":  "/static/js/main.a1056268.js",
+                  "static/js/839.d63a8e12.chunk.js":  "/static/js/839.d63a8e12.chunk.js",
+                  "static/js/913.19ebb3c8.chunk.js":  "/static/js/913.19ebb3c8.chunk.js",
+                  "static/media/senior-mobile-learning.jfif":  "/static/media/senior-mobile-learning.dae7a5a2cbf2829cfcb9.jfif",
+                  "static/media/senior-laptop-learning.jfif":  "/static/media/senior-laptop-learning.5eeed3416329d83297c8.jfif",
+                  "static/media/senior-group-learning.jfif":  "/static/media/senior-group-learning.5053a4e87b0d3ffafab4.jfif",
+                  "static/media/senior-tablet-learning.jfif":  "/static/media/senior-tablet-learning.85303abf092cbc99efcc.jfif",
+                  "static/media/hillerLogo.jfif":  "/static/media/hillerLogo.632b595be1a40047e9db.jfif",
+                  "static/media/insightGlobalLogo.jfif":  "/static/media/insightGlobalLogo.7d98d326045d595056c1.jfif",
+                  "static/media/techsmartLogo.png":  "/static/media/techsmartLogo.3c52cff984312619e817.png",
+                  "static/media/deltaCommunityLogo.jfif":  "/static/media/deltaCommunityLogo.a5d07defd2af3a7041d1.jfif",
+                  "static/media/waymoLogo.jfif":  "/static/media/waymoLogo.4e14507837dc26fb6c04.jfif",
+                  "static/media/cumberlandLogo.jfif":  "/static/media/cumberlandLogo.1d27c5fe1eb865a99e29.jfif",
+                  "index.html":  "/index.html",
+                  "main.a1056268.js.map":  "/static/js/main.a1056268.js.map",
+                  "839.d63a8e12.chunk.js.map":  "/static/js/839.d63a8e12.chunk.js.map",
+                  "913.19ebb3c8.chunk.js.map":  "/static/js/913.19ebb3c8.chunk.js.map"
+              },
+    "entrypoints":  [
+                        "static/js/main.a1056268.js"
+                    ]
+}

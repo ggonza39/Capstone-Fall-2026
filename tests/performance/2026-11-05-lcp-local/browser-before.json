@@ -1,0 +1,274 @@
+{
+  "phase": "before",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "capturedAtUtc": "2026-11-05T06:05:28.144Z",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 412,
+        "height": 823
+      },
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "entryScript": "http://127.0.0.1:4173/static/js/main.71f543d3.js",
+      "geometry": {
+        "hero": {
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 495.969
+        },
+        "heading": {
+          "x": 16,
+          "y": 144,
+          "width": 380,
+          "height": 76.781
+        },
+        "paragraph": {
+          "x": 16,
+          "y": 244.781,
+          "width": 380,
+          "height": 115.188
+        },
+        "heroButtons": [
+          {
+            "x": 16,
+            "y": 383.969,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 471.969,
+            "width": 380,
+            "height": 72
+          }
+        ],
+        "form": {
+          "x": 16,
+          "y": 1887.063,
+          "width": 380,
+          "height": 180.469
+        },
+        "control": {
+          "x": 16,
+          "y": 1887.063,
+          "width": 380,
+          "height": 92.469
+        },
+        "outlined": {
+          "x": 16,
+          "y": 1887.063,
+          "width": 380,
+          "height": 58.875
+        },
+        "input": {
+          "x": 16,
+          "y": 1887.063,
+          "width": 380,
+          "height": 58.875
+        },
+        "helper": {
+          "x": 16,
+          "y": 1945.938,
+          "width": 380,
+          "height": 33.594
+        },
+        "submit": {
+          "x": 16,
+          "y": 1995.531,
+          "width": 380,
+          "height": 72
+        }
+      },
+      "styles": {
+        "input": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "25.875px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "16.5px",
+          "paddingRight": "14px",
+          "paddingBottom": "16.5px",
+          "paddingLeft": "14px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "content-box"
+        },
+        "outlined": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "25.875px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "6px",
+          "boxSizing": "border-box"
+        },
+        "helper": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "15.4286px",
+          "fontWeight": "400",
+          "lineHeight": "25.6114px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(31, 112, 177)",
+          "paddingTop": "8px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        }
+      },
+      "inputAttributes": {
+        "ariaLabel": null,
+        "ariaDescribedby": "home-zip-code-helper-text",
+        "inputMode": "",
+        "maxLength": -1
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "entryScript": "http://127.0.0.1:4173/static/js/main.71f543d3.js",
+      "geometry": {
+        "hero": {
+          "x": 0,
+          "y": 131,
+          "width": 1280,
+          "height": 433.594
+        },
+        "heading": {
+          "x": 64,
+          "y": 211,
+          "width": 760,
+          "height": 57.594
+        },
+        "paragraph": {
+          "x": 64,
+          "y": 292.594,
+          "width": 667.375,
+          "height": 96
+        },
+        "heroButtons": [
+          {
+            "x": 64,
+            "y": 412.594,
+            "width": 291,
+            "height": 72
+          },
+          {
+            "x": 371,
+            "y": 412.594,
+            "width": 293,
+            "height": 72
+          }
+        ],
+        "form": {
+          "x": 214,
+          "y": 1240.547,
+          "width": 852,
+          "height": 92.469
+        },
+        "control": {
+          "x": 214,
+          "y": 1240.547,
+          "width": 612,
+          "height": 92.469
+        },
+        "outlined": {
+          "x": 214,
+          "y": 1240.547,
+          "width": 612,
+          "height": 58.875
+        },
+        "input": {
+          "x": 214,
+          "y": 1240.547,
+          "width": 612,
+          "height": 58.875
+        },
+        "helper": {
+          "x": 214,
+          "y": 1299.422,
+          "width": 612,
+          "height": 33.594
+        },
+        "submit": {
+          "x": 842,
+          "y": 1240.547,
+          "width": 224,
+          "height": 92.469
+        }
+      },
+      "styles": {
+        "input": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "25.875px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "16.5px",
+          "paddingRight": "14px",
+          "paddingBottom": "16.5px",
+          "paddingLeft": "14px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "content-box"
+        },
+        "outlined": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "25.875px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "6px",
+          "boxSizing": "border-box"
+        },
+        "helper": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "15.4286px",
+          "fontWeight": "400",
+          "lineHeight": "25.6114px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(31, 112, 177)",
+          "paddingTop": "8px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "border-box"
+        }
+      },
+      "inputAttributes": {
+        "ariaLabel": null,
+        "ariaDescribedby": "home-zip-code-helper-text",
+        "inputMode": "",
+        "maxLength": -1
+      }
+    }
+  ],
+  "checks": [],
+  "pageErrors": [],
+  "browserVersion": "Chrome/156.0.8078.80",
+  "passed": true,
+  "browserClosed": true
+}

@@ -1,3 +1,4 @@
+import { lazy } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -7,14 +8,18 @@ import {
 import MainLayout from "./layouts/MainLayout";
 
 import Home from "./pages/Home";
-import NeedHelp from "./pages/NeedHelp";
-import WantToHelp from "./pages/WantToHelp";
-import Advocate from "./pages/Advocate";
-import Resources from "./pages/Resources";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import WorkshopDetail from "./pages/WorkshopDetail";
-import Donate from "./pages/Donate";
+import NotFound from "./pages/NotFound";
+
+// Keep the homepage eager; other journeys load only when their route is visited.
+// In particular, loading Home must not initialize the donation page's Stripe SDK.
+const NeedHelp = lazy(() => import("./pages/NeedHelp"));
+const WantToHelp = lazy(() => import("./pages/WantToHelp"));
+const Advocate = lazy(() => import("./pages/Advocate"));
+const Resources = lazy(() => import("./pages/Resources"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const WorkshopDetail = lazy(() => import("./pages/WorkshopDetail"));
+const Donate = lazy(() => import("./pages/Donate"));
 
 function App() {
   return (
@@ -68,6 +73,8 @@ function App() {
             path="/contact"
             element={<Contact />}
           />
+
+          <Route path="*" element={<NotFound />} />
 
         </Route>
 

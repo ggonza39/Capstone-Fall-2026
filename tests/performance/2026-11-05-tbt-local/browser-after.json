@@ -1,0 +1,426 @@
+{
+  "phase": "after",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "capturedAtUtc": "2026-11-05T06:39:42.128Z",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 412,
+        "height": 823
+      },
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "entryScript": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 96
+        },
+        "hero": {
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 495.969
+        },
+        "paragraph": {
+          "x": 16,
+          "y": 244.781,
+          "width": 380,
+          "height": 115.188
+        },
+        "heroButtons": [
+          {
+            "x": 16,
+            "y": 383.969,
+            "width": 380,
+            "height": 72
+          },
+          {
+            "x": 16,
+            "y": 471.969,
+            "width": 380,
+            "height": 72
+          }
+        ],
+        "form": {
+          "x": 16,
+          "y": 1887.063,
+          "width": 380,
+          "height": 180.469
+        },
+        "input": {
+          "x": 16,
+          "y": 1887.063,
+          "width": 380,
+          "height": 58.875
+        },
+        "menuButton": {
+          "x": 222,
+          "y": 11.5,
+          "width": 380,
+          "height": 72
+        }
+      },
+      "styles": {
+        "menuButton": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "lineHeight": "25.2px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(31, 112, 177)",
+          "paddingTop": "10px",
+          "paddingRight": "20px",
+          "paddingBottom": "10px",
+          "paddingLeft": "20px",
+          "borderTopWidth": "0px",
+          "borderRadius": "6px",
+          "boxSizing": "border-box"
+        },
+        "input": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "25.875px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "16.5px",
+          "paddingRight": "14px",
+          "paddingBottom": "16.5px",
+          "paddingLeft": "14px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "content-box"
+        }
+      },
+      "initialRequests": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+        "http://127.0.0.1:4173/manifest.json",
+        "http://127.0.0.1:4173/static/media/techsmartLogo.3c52cff984312619e817.png",
+        "http://127.0.0.1:4173/favicon.ico",
+        "http://127.0.0.1:4173/logo192.png"
+      ],
+      "drawer": {
+        "geometry": {
+          "x": 173.203,
+          "y": 0,
+          "width": 238.797,
+          "height": 823
+        },
+        "links": [
+          {
+            "text": "Home",
+            "href": "/",
+            "current": "page"
+          },
+          {
+            "text": "I Need Technology Help",
+            "href": "/need-help",
+            "current": null
+          },
+          {
+            "text": "I Want to Help",
+            "href": "/want-to-help",
+            "current": null
+          },
+          {
+            "text": "Resources",
+            "href": "/resources",
+            "current": null
+          },
+          {
+            "text": "About",
+            "href": "/about",
+            "current": null
+          },
+          {
+            "text": "Contact",
+            "href": "/contact",
+            "current": null
+          }
+        ],
+        "focusInside": true,
+        "activeElement": "<div class=\"MuiPaper-root MuiPaper-elevation MuiPaper-elevation16 MuiDrawer-paper css-19wliw0\" role=\"dialog\" aria-modal=\"true\" data-mui-focusable=\"\" tabindex=\"-1\" style=\"--Paper-shadow: 0px 8px 10px -"
+      },
+      "drawerRequests": [
+        "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+        "http://127.0.0.1:4173/static/js/332.88cf9730.chunk.js",
+        "http://127.0.0.1:4173/static/js/77.41dfeb49.chunk.js"
+      ],
+      "escape": {
+        "restoredToMenuButton": true,
+        "expanded": "false"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "mainText": "Technology Made Simple.\n\nTechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives.\n\nI Need Technology Help\nI Want to Help\nHow Can We Help?\nFind a Workshop\n\nFind technology workshops and learning opportunities near you.\n\nFind Workshops\nTechnology Resources\n\nExplore simple technology guides and educational resources.\n\nView Resources\nGet Technology Help\n\nFind support when you need help using everyday technology.\n\nGet Help\nFind a Workshop Near You\n\nEnter your ZIP code to find technology workshops in your area.\n\n​\n\nExample: 30301\n\nFind Workshops\nWant to Make a Difference?\n\nHelp TechSmart support older adults as they learn to use technology.\n\nDonate\nVolunteer\nAdvocate",
+      "entryScript": "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 131
+        },
+        "hero": {
+          "x": 0,
+          "y": 131,
+          "width": 1280,
+          "height": 433.594
+        },
+        "paragraph": {
+          "x": 64,
+          "y": 292.594,
+          "width": 667.375,
+          "height": 96
+        },
+        "heroButtons": [
+          {
+            "x": 64,
+            "y": 412.594,
+            "width": 291,
+            "height": 72
+          },
+          {
+            "x": 371,
+            "y": 412.594,
+            "width": 293,
+            "height": 72
+          }
+        ],
+        "form": {
+          "x": 214,
+          "y": 1240.547,
+          "width": 852,
+          "height": 92.469
+        },
+        "input": {
+          "x": 214,
+          "y": 1240.547,
+          "width": 612,
+          "height": 58.875
+        },
+        "menuButton": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "styles": {
+        "menuButton": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "lineHeight": "25.2px",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(31, 112, 177)",
+          "paddingTop": "10px",
+          "paddingRight": "20px",
+          "paddingBottom": "10px",
+          "paddingLeft": "20px",
+          "borderTopWidth": "0px",
+          "borderRadius": "6px",
+          "boxSizing": "border-box"
+        },
+        "input": {
+          "fontFamily": "Bilo, Arial, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "25.875px",
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "paddingTop": "16.5px",
+          "paddingRight": "14px",
+          "paddingBottom": "16.5px",
+          "paddingLeft": "14px",
+          "borderTopWidth": "0px",
+          "borderRadius": "0px",
+          "boxSizing": "content-box"
+        }
+      },
+      "initialRequests": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/static/js/main.db9eb488.js",
+        "http://127.0.0.1:4173/manifest.json",
+        "http://127.0.0.1:4173/static/media/techsmartLogo.3c52cff984312619e817.png",
+        "http://127.0.0.1:4173/logo192.png"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Homepage text preserved at 412px",
+      "passed": true
+    },
+    {
+      "name": "Homepage input and menu styles preserved at 412px",
+      "passed": true
+    },
+    {
+      "name": "Homepage geometry preserved at 412px",
+      "passed": true,
+      "toleranceCssPx": 0.51,
+      "differences": []
+    },
+    {
+      "name": "No menu chunk requested before activation at 412px",
+      "passed": true,
+      "initialChunkRequests": []
+    },
+    {
+      "name": "Drawer links and geometry preserved",
+      "passed": true,
+      "differences": []
+    },
+    {
+      "name": "Drawer code is requested on menu activation",
+      "passed": true,
+      "chunkRequests": [
+        "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+        "http://127.0.0.1:4173/static/js/332.88cf9730.chunk.js",
+        "http://127.0.0.1:4173/static/js/77.41dfeb49.chunk.js"
+      ]
+    },
+    {
+      "name": "Homepage text preserved at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Homepage input and menu styles preserved at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Homepage geometry preserved at 1280px",
+      "passed": true,
+      "toleranceCssPx": 0.51,
+      "differences": []
+    },
+    {
+      "name": "No menu chunk requested before activation at 1280px",
+      "passed": true,
+      "initialChunkRequests": []
+    },
+    {
+      "name": "Delayed menu gives stable loading feedback (Escape)",
+      "passed": true,
+      "chunkUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+      "feedback": {
+        "text": "Menu",
+        "busy": "true",
+        "spinnerName": "Loading navigation menu",
+        "navPresent": false
+      }
+    },
+    {
+      "name": "Pending menu can be cancelled (Escape)",
+      "passed": true
+    },
+    {
+      "name": "Cancelled menu does not open after chunk resolves (Escape)",
+      "passed": true
+    },
+    {
+      "name": "Menu opens after cancellation (Escape)",
+      "passed": true
+    },
+    {
+      "name": "Delayed menu gives stable loading feedback (repeat click)",
+      "passed": true,
+      "chunkUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+      "feedback": {
+        "text": "Menu",
+        "busy": "true",
+        "spinnerName": "Loading navigation menu",
+        "navPresent": false
+      }
+    },
+    {
+      "name": "Pending menu can be cancelled (repeat click)",
+      "passed": true
+    },
+    {
+      "name": "Cancelled menu does not open after chunk resolves (repeat click)",
+      "passed": true
+    },
+    {
+      "name": "Menu opens after cancellation (repeat click)",
+      "passed": true
+    },
+    {
+      "name": "Failed menu load exposes recoverable alert (Retry)",
+      "passed": true
+    },
+    {
+      "name": "Menu recovers after failed chunk (Retry)",
+      "passed": true,
+      "failedUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+      "attempts": 2
+    },
+    {
+      "name": "Failed menu load exposes recoverable alert (Dismiss)",
+      "passed": true
+    },
+    {
+      "name": "Dismiss keeps the homepage available",
+      "passed": true
+    },
+    {
+      "name": "Menu recovers after failed chunk (Dismiss)",
+      "passed": true,
+      "failedUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js",
+      "attempts": 2
+    },
+    {
+      "name": "Keyboard activation moves focus into the Drawer",
+      "passed": true
+    },
+    {
+      "name": "Drawer traps forward and backward keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "Escape closes Drawer and restores opener focus",
+      "passed": true,
+      "restoredToMenuButton": true,
+      "expanded": "false"
+    },
+    {
+      "name": "Drawer link navigates and closes the menu",
+      "passed": true,
+      "finalUrl": "http://127.0.0.1:4173/resources"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "delayed cancellation",
+      "method": "Escape",
+      "chunkUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js"
+    },
+    {
+      "type": "delayed cancellation",
+      "method": "repeat click",
+      "chunkUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js"
+    },
+    {
+      "type": "simulated chunk failure",
+      "action": "Retry",
+      "failedUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js"
+    },
+    {
+      "type": "simulated chunk failure",
+      "action": "Dismiss",
+      "failedUrl": "http://127.0.0.1:4173/static/js/541.362ba681.chunk.js"
+    }
+  ],
+  "pageErrors": [],
+  "browserVersion": "Chrome/156.0.8078.80",
+  "passed": true,
+  "browserClosed": true
+}

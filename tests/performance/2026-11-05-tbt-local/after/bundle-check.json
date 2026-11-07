@@ -1,0 +1,32 @@
+{
+  "entryScript": "/static/js/main.db9eb488.js",
+  "entryDecodedBytes": 444110,
+  "entrySha256": "97a2bdfce1f4323378908ccfc4016ed2e402f8826067111d31ad2495b280ae59",
+  "moduleChecks": {
+    "Drawer": [],
+    "Modal": [],
+    "Slide": [],
+    "Portal": [],
+    "Backdrop": [],
+    "List": [],
+    "ListItem": [],
+    "ListItemButton": [],
+    "ListItemText": [],
+    "IconButton": []
+  },
+  "componentImplementations": {
+    "Drawer": [],
+    "Modal": [],
+    "Slide": [],
+    "Portal": [],
+    "Backdrop": [],
+    "List": [],
+    "ListItem": [],
+    "ListItemButton": [],
+    "ListItemText": [],
+    "IconButton": []
+  },
+  "allDrawerImplementationsAbsent": true,
+  "homeRemainsEager": true,
+  "headerRemainsEager": true
+}

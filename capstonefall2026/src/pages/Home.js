@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 
-import { Box, Button, Card, CardContent, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import {
+    Box, Button, Card, CardContent, Container, FormControl, FormHelperText,
+    Grid, OutlinedInput, Stack, Typography,
+} from "@mui/material";
 
 import HelpOutlineIcon from "@mui/icons-material/HelpOutlineOutlined";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
@@ -87,12 +90,24 @@ function Home() {
                                 sm: "row",
                             }}
                             spacing={2}
+                            sx={{
+                                width: "100%",
+                                maxWidth: 600,
+                                "& .MuiButton-root": {
+                                    flex: { xs: "none", sm: 1 },
+                                    width: { xs: "100%", sm: "auto" },
+                                    minWidth: 0,
+                                    minHeight: 70,
+                                    px: 2,
+                                },
+                            }}
                         >
                             <Button
                                 variant="contained"
                                 size="large"
                                 startIcon={<HelpOutlineIcon />}
-                                onClick={() => navigate("/need-help")}
+                                component={RouterLink}
+                                to="/need-help"
                             >
                                 I Need Technology Help
                             </Button>
@@ -101,7 +116,8 @@ function Home() {
                                 variant="outlined"
                                 size="large"
                                 startIcon={<VolunteerActivismIcon />}
-                                onClick={() => navigate("/want-to-help")}
+                                component={RouterLink}
+                                to="/want-to-help"
                             >
                                 I Want to Help
                             </Button>
@@ -159,7 +175,7 @@ function Home() {
                                         Find technology workshops and learning opportunities near you.
                                     </Typography>
 
-                                    <Button variant="contained" onClick={() => navigate("/need-help")}>
+                                    <Button variant="contained" component={RouterLink} to="/need-help">
                                         Find Workshops
                                     </Button>
                                 </CardContent>
@@ -197,7 +213,7 @@ function Home() {
                                         Explore simple technology guides and educational resources.
                                     </Typography>
 
-                                    <Button variant="contained" onClick={() => navigate("/resources")}>
+                                    <Button variant="contained" component={RouterLink} to="/resources">
                                         View Resources
                                     </Button>
                                 </CardContent>
@@ -235,7 +251,7 @@ function Home() {
                                         Find support when you need help using everyday technology.
                                     </Typography>
 
-                                    <Button variant="contained" onClick={() => navigate("/need-help")}>
+                                    <Button variant="contained" component={RouterLink} to="/need-help">
                                         Get Help
                                     </Button>
                                 </CardContent>
@@ -293,26 +309,10 @@ function Home() {
                             spacing={2}
                             alignItems="flex-start"
                         >
-                            <TextField
-                                id="home-zip-code"
-                                placeholder="ZIP Code"
-                                value={zipCode}
-                                onChange={(event) => {
-                                    const value = event.target.value.replace(/\D/g, "");
-
-                                    setZipCode(value.slice(0, 5));
-
-                                    if (zipError) {
-                                        setZipError(false);
-                                    }
-                                }}
+                            <FormControl
+                                variant="outlined"
+                                fullWidth
                                 error={zipError}
-                                helperText={zipError ? "Enter a valid 5-digit ZIP code." : "Example: 30301"}
-                                inputProps={{
-                                    "aira-label": "ZIP Code", 
-                                    inputMode: "numeric",
-                                    maxLength: 5,
-                                }}
                                 sx={{
                                     backgroundColor: "#FFFFFF",
 
@@ -330,7 +330,34 @@ function Home() {
                                         paddingTop: 1,
                                     },
                                 }}
-                            />
+                            >
+                                {/* Avoid loading TextField's unused select and input variants on Home. */}
+                                <OutlinedInput
+                                    id="home-zip-code"
+                                    fullWidth
+                                    aria-label="ZIP Code"
+                                    aria-describedby="home-zip-code-help"
+                                    placeholder="ZIP Code"
+                                    value={zipCode}
+                                    onChange={(event) => {
+                                        const value = event.target.value.replace(/\D/g, "");
+                                        setZipCode(value.slice(0, 5));
+
+                                        if (zipError) {
+                                            setZipError(false);
+                                        }
+                                    }}
+                                    slotProps={{
+                                        input: {
+                                            inputMode: "numeric",
+                                            maxLength: 5,
+                                        },
+                                    }}
+                                />
+                                <FormHelperText id="home-zip-code-help" role={zipError ? "alert" : undefined}>
+                                    {zipError ? "Enter a valid 5-digit ZIP code." : "Example: 30301"}
+                                </FormHelperText>
+                            </FormControl>
 
                             <Button
                                 type="submit"
@@ -392,15 +419,15 @@ function Home() {
                         spacing={2}
                         justifyContent="center"
                     >
-                        <Button variant="contained" onClick={() => navigate("/want-to-help#donate")}>
+                        <Button variant="contained" component={RouterLink} to="/want-to-help#donate">
                             Donate
                         </Button>
 
-                        <Button variant="outlined" onClick={() => navigate("/want-to-help#volunteer")}>
+                        <Button variant="outlined" component={RouterLink} to="/want-to-help#volunteer">
                             Volunteer
                         </Button>
 
-                        <Button variant="outlined" onClick={() => navigate("/want-to-help#advocate")}>
+                        <Button variant="outlined" component={RouterLink} to="/want-to-help#advocate">
                             Advocate
                         </Button>
                     </Stack>

@@ -1,0 +1,47 @@
+{
+  "entryScript": "/static/js/main.7cab76a2.js",
+  "entryDecodedBytes": 483236,
+  "moduleChecks": {
+    "Drawer": [
+      "../node_modules/@mui/material/Drawer/drawerClasses.mjs",
+      "../node_modules/@mui/material/Drawer/Drawer.mjs"
+    ],
+    "Modal": [
+      "../node_modules/@mui/material/Modal/ModalManager.mjs",
+      "../node_modules/@mui/material/Modal/useModal.mjs",
+      "../node_modules/@mui/material/Modal/modalClasses.mjs",
+      "../node_modules/@mui/material/Modal/Modal.mjs"
+    ],
+    "Slide": [
+      "../node_modules/@mui/material/Slide/Slide.mjs"
+    ],
+    "Portal": [
+      "../node_modules/@mui/material/Portal/Portal.mjs"
+    ],
+    "Backdrop": [
+      "../node_modules/@mui/material/Backdrop/backdropClasses.mjs",
+      "../node_modules/@mui/material/Backdrop/Backdrop.mjs"
+    ],
+    "List": [
+      "../node_modules/@mui/material/List/listClasses.mjs",
+      "../node_modules/@mui/material/List/List.mjs",
+      "../node_modules/@mui/material/List/ListContext.mjs"
+    ],
+    "ListItem": [
+      "../node_modules/@mui/material/ListItem/listItemClasses.mjs",
+      "../node_modules/@mui/material/ListItem/ListItem.mjs"
+    ],
+    "ListItemButton": [
+      "../node_modules/@mui/material/ListItemButton/listItemButtonClasses.mjs",
+      "../node_modules/@mui/material/ListItemButton/ListItemButton.mjs"
+    ],
+    "ListItemText": [
+      "../node_modules/@mui/material/ListItemText/listItemTextClasses.mjs",
+      "../node_modules/@mui/material/ListItemText/ListItemText.mjs"
+    ],
+    "IconButton": [
+      "../node_modules/@mui/material/IconButton/iconButtonClasses.mjs",
+      "../node_modules/@mui/material/IconButton/IconButton.mjs"
+    ]
+  }
+}

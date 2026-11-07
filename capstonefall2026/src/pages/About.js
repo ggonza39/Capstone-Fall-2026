@@ -54,7 +54,7 @@ function About() {
                             <Stack spacing={2}>
                                 <SchoolIcon color="primary" sx={{ fontSize: 48 }} aria-hidden="true" />
 
-                                <Typography variant="h3" component="h3">
+                                <Typography variant="h3" component="h2">
                                     Learn
                                 </Typography>
 
@@ -74,7 +74,7 @@ function About() {
                             <Stack spacing={2}>
                                 <DevicesIcon color="primary" sx={{ fontSize: 48 }} aria-hidden="true" />
 
-                                <Typography variant="h3" component="h3">
+                                <Typography variant="h3" component="h2">
                                     Connect
                                 </Typography>
 
@@ -94,7 +94,7 @@ function About() {
                             <Stack spacing={2}>
                                 <GroupsIcon color="primary" sx={{ fontSize: 48 }} aria-hidden="true" />
 
-                                <Typography variant="h3" component="h3">
+                                <Typography variant="h3" component="h2">
                                     Community
                                 </Typography>
 

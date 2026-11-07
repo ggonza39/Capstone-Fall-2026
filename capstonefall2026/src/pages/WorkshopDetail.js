@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link as RouterLink, useParams } from "react-router-dom";
 import {
     Alert,
     Box,
@@ -12,6 +12,7 @@ import {
     Typography,
 } from "@mui/material";
 import { getWorkshopById } from "../services/workshopService";
+import { applyPageMetadata, getRouteMetadata } from "../seo/metadata";
 
 function WorkshopDetail() {
     const { id } = useParams();
@@ -56,6 +57,25 @@ function WorkshopDetail() {
 
         loadWorkshop();
     }, [id]);
+
+    useEffect(() => {
+        if (loading || (!error && workshop && workshop.id !== id)) {
+            return;
+        }
+
+        const metadata = getRouteMetadata(`/workshops/${encodeURIComponent(id)}`);
+        applyPageMetadata(error || !workshop ? {
+            ...metadata,
+            title: "Workshop Not Found | TechSmart",
+            description: "This workshop could not be found. Return to technology workshop search.",
+            canonical: null,
+            robots: "noindex,follow",
+        } : {
+            ...metadata,
+            title: `${workshop.title} | TechSmart`,
+            description: `Details for ${workshop.title}, including location, accessibility information, and registration options.`,
+        });
+    }, [id, workshop, error, loading]);
 
     const handleRegistrationSubmit = (event) => {
         event.preventDefault();
@@ -112,22 +132,24 @@ function WorkshopDetail() {
         );
     }
 
-    if (error) {
+    if (error || !workshop) {
         return (
             <Container sx={{ py: 6 }}>
-                <Alert severity="error">{error}</Alert>
+                <Typography component="h1" variant="h2" gutterBottom>Workshop Not Found</Typography>
+                <Alert severity="error">
+                    {error || "We could not find this workshop. Please return to the workshop search."}
+                </Alert>
+                <Button component={RouterLink} to="/need-help" variant="outlined" sx={{ mt: 3 }}>
+                    Find Workshops
+                </Button>
             </Container>
         );
-    }
-
-    if (!workshop) {
-        return null;
     }
 
     const workshopDate = new Date(workshop.dateTime);
 
     return (
-        <Container component="main" maxWidth="md" sx={{ py: 6 }}>
+        <Container component="article" maxWidth="md" sx={{ py: 6 }}>
             <Typography component="h1" variant="h3" gutterBottom>
                 {workshop.title}
             </Typography>
@@ -184,6 +206,7 @@ function WorkshopDetail() {
                     <Button
                         variant="contained"
                         size="large"
+                        fullWidth
                         onClick={() => setShowRegistration(true)}
                     >
                         Register for This Workshop
@@ -270,6 +293,7 @@ function WorkshopDetail() {
                                 type="submit"
                                 variant="contained"
                                 size="large"
+                                fullWidth
                             >
                                 Submit Registration
                             </Button>
