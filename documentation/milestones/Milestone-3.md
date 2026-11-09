@@ -2,7 +2,7 @@
 
 **Target Completion Date:** December 4, 2026  
 **Total Points:** 21 Story Points  
-**Progress:** 0 of 3 PBIs Completed (0 / 21 Points)  
+**Progress:** 1 of 3 PBIs Completed (8 / 21 Points)  
 
 ---
 
@@ -12,7 +12,7 @@ Prepare the TSLS-Web application for final release and project handover by build
 
 | PBI # | Title | Points | Status |
 | :--- | :--- | :---: | :---: |
-| **PBI 13** | Refine public forms and validate production integration boundaries | 8 | To Do |
+| **PBI 13** | Refine public forms and validate production integration boundaries | 8 | In Review |
 | **PBI 14** | Optimize frontend performance and technical SEO | 8 | To Do |
 | **PBI 15** | Implement and validate lightweight sandbox administration interface | 5 | To Do |
 
@@ -22,20 +22,20 @@ Prepare the TSLS-Web application for final release and project handover by build
 
 ### [PBI-13] Refine public forms and validate production integration boundaries
 
-* **Status:** To Do
+* **Status:** In Review — all acceptance criteria below have been implemented, tested, and documented by the Integration Engineer / Backend API Specialist; pending team/sponsor sign-off before marking Done.
 * **Story Points:** 8
 
 #### Description
 This PBI refines the applicable TSLS-Web public form experiences developed or represented during the interactive prototype and validates their relationship with the project's approved production integration boundaries. The work will ensure that applicable forms provide clear labels, accessible validation, understandable success and error feedback, and appropriate submission behavior while preserving established production workflows such as Gravity Forms/Salesforce where applicable. Sandbox or mock behavior may continue to be used where production services are unavailable for independent testing, but simulated behavior must remain clearly separated from the final production integration.
 
 #### Acceptance Criteria
-- [ ] **Identify In-Scope Public Forms:** Review the implemented TSLS-Web application and document the public-facing forms that are included in the final project scope, including the Advocate interest/request form. For each form, identify whether its submission behavior uses the project sandbox/mock layer, preserves an existing Gravity Forms/Salesforce workflow, or depends on the shared REST API contract.
-- [ ] **Form Labels and Required Fields:** Verify that every in-scope form control has a clear associated label and that required fields are identified to users before submission. Correct missing, unclear, or improperly associated labels and required-field indicators.
-- [ ] **Accessible Validation and Error Feedback:** Verify that submitting missing or invalid required information produces a clear error message associated with the applicable field. Errors must not rely on color alone, and users must be able to identify and correct the affected fields using keyboard navigation and applicable assistive technology.
-- [ ] **Submission Status Feedback:** Verify that each in-scope form provides clear feedback for applicable submission states, including successful sandbox submissions and submission errors. Sandbox behavior must not state or imply that information was submitted to a production system when no production submission occurred.
-- [ ] **Production Integration Boundary Verification:** Verify that applicable Gravity Forms/Salesforce workflows remain identified as the production workflow and that sandbox/mock implementations do not silently replace them. Document the final integration method used or expected for each in-scope form.
-- [ ] **End-to-End Form Testing:** Test each identified in-scope form from initial entry through validation and the applicable success or error response. Record unresolved defects and correct issues that prevent the intended frontend journey from being completed.
-- [ ]  **Advocate Interest Form:** Refine the “I Want to Help” Advocate pathway to provide a clear engagement opportunity for users interested in supporting TSLS through community advocacy and outreach. Implement an accessible Advocate interest/request form collecting first name, last name, email address, optional phone number, advocacy interests, and a message describing the user's interest in supporting TSLS. Provide required-field validation, accessible submission feedback, and clearly identify the sandbox or approved production integration used for submission. The form must not imply that submission automatically establishes the user as an official TSLS representative or advocate.
+- [x] **Identify In-Scope Public Forms:** Review the implemented TSLS-Web application and document the public-facing forms that are included in the final project scope, including the Advocate interest/request form. For each form, identify whether its submission behavior uses the project sandbox/mock layer, preserves an existing Gravity Forms/Salesforce workflow, or depends on the shared REST API contract. — See the "In-Scope Public Forms" table in `documentation/api-contract.md`.
+- [x] **Form Labels and Required Fields:** Verify that every in-scope form control has a clear associated label and that required fields are identified to users before submission. Correct missing, unclear, or improperly associated labels and required-field indicators.
+- [x] **Accessible Validation and Error Feedback:** Verify that submitting missing or invalid required information produces a clear error message associated with the applicable field. Errors must not rely on color alone, and users must be able to identify and correct the affected fields using keyboard navigation and applicable assistive technology.
+- [x] **Submission Status Feedback:** Verify that each in-scope form provides clear feedback for applicable submission states, including successful sandbox submissions and submission errors. Sandbox behavior must not state or imply that information was submitted to a production system when no production submission occurred. — Contact, Advocate, and Workshop Registration forms now call their sandbox API endpoints directly (previously Contact and Advocate only simulated success locally, and Workshop Registration was an unwired stub) with loading, success, and error states; see `tests/api-integration-test-plan.md` for defects found and fixed.
+- [x] **Production Integration Boundary Verification:** Verify that applicable Gravity Forms/Salesforce workflows remain identified as the production workflow and that sandbox/mock implementations do not silently replace them. Document the final integration method used or expected for each in-scope form. — See the "In-Scope Public Forms" table and "Phase 1 Integration Boundary" / "Stripe Integration Boundary" sections in `documentation/api-contract.md`.
+- [x] **End-to-End Form Testing:** Test each identified in-scope form from initial entry through validation and the applicable success or error response. Record unresolved defects and correct issues that prevent the intended frontend journey from being completed. — See `tests/api-integration-test-plan.md`, "Milestone 3 — Test Execution Summary and Observed Results."
+- [x] **Advocate Interest Form:** Refine the “I Want to Help” Advocate pathway to provide a clear engagement opportunity for users interested in supporting TSLS through community advocacy and outreach. Implement an accessible Advocate interest/request form collecting first name, last name, email address, optional phone number, advocacy interests, and a message describing the user's interest in supporting TSLS. Provide required-field validation, accessible submission feedback, and clearly identify the sandbox or approved production integration used for submission. The form must not imply that submission automatically establishes the user as an official TSLS representative or advocate.
 
 ---
 

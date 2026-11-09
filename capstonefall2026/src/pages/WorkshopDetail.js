@@ -11,8 +11,10 @@ import {
     TextField,
     Typography,
 } from "@mui/material";
-import { getWorkshopById } from "../services/workshopService";
+import { getWorkshopById, registerForWorkshop } from "../services/workshopService";
 import { applyPageMetadata, getRouteMetadata } from "../seo/metadata";
+
+const EMPTY_REGISTRATION_FORM = { firstName: "", lastName: "", email: "", phone: "" };
 
 function WorkshopDetail() {
     const { id } = useParams();
@@ -21,21 +23,21 @@ function WorkshopDetail() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const [showRegistration, setShowRegistration] = useState(false);
+    const [workshopFull, setWorkshopFull] = useState(false);
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-    });
+    const [formData, setFormData] = useState(EMPTY_REGISTRATION_FORM);
 
-    const [formErrors, setFormErrors] = useState({
-        name:"",
-        email:"",
-    })
+    const [formErrors, setFormErrors] = useState({});
 
-    const [registrationSuccess, setRegistrationSuccess] = useState(false);
+    // Duplicate-submission prevention: "submitting" disables the submit button
+    // until the sandbox API responds (see documentation/api-contract.md, API —
+    // Workshop Registration).
+    const [registrationStatus, setRegistrationStatus] = useState("idle");
+    const [submitError, setSubmitError] = useState("");
+    const [registrationResult, setRegistrationResult] = useState(null);
 
-    const nameInputRef = useRef(null);
+    const firstNameInputRef = useRef(null);
+    const lastNameInputRef = useRef(null);
     const emailInputRef = useRef(null);
     const confirmationRef = useRef(null);
     
@@ -77,29 +79,45 @@ function WorkshopDetail() {
         });
     }, [id, workshop, error, loading]);
 
-    const handleRegistrationSubmit = (event) => {
+    const handleRegistrationFieldChange = (field) => (event) => {
+        const { value } = event.target;
+
+        setFormData((prev) => ({ ...prev, [field]: value }));
+        setFormErrors((prev) => ({ ...prev, [field]: undefined }));
+    };
+
+    const handleRegistrationSubmit = async (event) => {
         event.preventDefault();
 
-        const errors = {
-            name: "",
-            email: "",
-        };
-
-        if (!formData.name.trim()) {
-            errors.name = "Please enter your full name.";
+        // Duplicate-submission prevention: ignore repeated clicks/Enter while
+        // a request is already in flight.
+        if (registrationStatus === "submitting") {
+            return;
         }
 
-        if (!formData.email.trim()) {
-            errors.email = "Please enter your email address.";
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+        const errors = {};
+
+        if (!formData.firstName.trim()) {
+            errors.firstName = "Please enter your first name.";
+        }
+
+        if (!formData.lastName.trim()) {
+            errors.lastName = "Please enter your last name.";
+        }
+
+        if (!formData.email.trim() && !formData.phone.trim()) {
+            errors.email = "Please provide an email address or phone number.";
+        } else if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
             errors.email = "Please enter a valid email address.";
         }
 
-        setFormErrors(errors);
+        if (Object.keys(errors).length > 0) {
+            setFormErrors(errors);
 
-        if (errors.name || errors.email) {
-            if (errors.name) {
-                nameInputRef.current?.focus();
+            if (errors.firstName) {
+                firstNameInputRef.current?.focus();
+            } else if (errors.lastName) {
+                lastNameInputRef.current?.focus();
             } else if (errors.email) {
                 emailInputRef.current?.focus();
             }
@@ -107,12 +125,41 @@ function WorkshopDetail() {
             return;
         }
 
-        // Successful sandbox submission will go here next.
-        setRegistrationSuccess(true);
+        setFormErrors({});
+        setSubmitError("");
+        setRegistrationStatus("submitting");
 
-        setTimeout(() => {
-            confirmationRef.current?.focus();
-        }, 0);
+        try {
+            const result = await registerForWorkshop(id, {
+                firstName: formData.firstName.trim(),
+                lastName: formData.lastName.trim(),
+                email: formData.email.trim() || null,
+                phone: formData.phone.trim() || null,
+            });
+
+            setRegistrationResult(result);
+            setRegistrationStatus("success");
+
+            setTimeout(() => {
+                confirmationRef.current?.focus();
+            }, 0);
+        } catch (err) {
+            const apiError = err?.response?.data?.error;
+
+            setRegistrationStatus("idle");
+
+            if (apiError?.code === "WORKSHOP_FULL") {
+                setWorkshopFull(true);
+                setShowRegistration(false);
+            } else if (apiError?.code === "NOT_FOUND") {
+                setError("We could not find this workshop. Please return to the workshop search.");
+                setShowRegistration(false);
+            } else if (apiError?.fields) {
+                setFormErrors(apiError.fields);
+            } else {
+                setSubmitError("We could not submit your sandbox registration. Please try again.");
+            }
+        }
     };
 
     if (loading) {
@@ -202,7 +249,11 @@ function WorkshopDetail() {
                     </Stack>
                 </Box>
 
-                {workshop.seatAvailability > 0 ? (
+                {workshopFull || workshop.seatAvailability <= 0 ? (
+                    <Alert severity="info">
+                        This workshop is full. Please choose another workshop or check back later.
+                    </Alert>
+                ) : registrationStatus !== "success" && !showRegistration ? (
                     <Button
                         variant="contained"
                         size="large"
@@ -211,13 +262,9 @@ function WorkshopDetail() {
                     >
                         Register for This Workshop
                     </Button>
-                ) : (
-                    <Alert severity="info">
-                        This workshop currently has no seats available.
-                    </Alert>
-                )}
+                ) : null}
 
-                {showRegistration && workshop.seatAvailability > 0 && (
+                {showRegistration && registrationStatus !== "success" && !workshopFull && workshop.seatAvailability > 0 && (
                     <Box
                         component="form"
                         aria-labelledby="registration-heading"
@@ -239,40 +286,47 @@ function WorkshopDetail() {
                             does not create a production workshop registration.
                         </Alert>
 
+                        {submitError && (
+                            <Alert severity="error" sx={{ mb: 3 }}>
+                                {submitError}
+                            </Alert>
+                        )}
+
                         <Stack spacing={3}>
                             <TextField
-                                id="registration-name"
-                                label="Full Name"
+                                id="registration-first-name"
+                                label="First Name"
                                 required
                                 fullWidth
-                                inputRef={nameInputRef}
-                                error={Boolean(formErrors.name)}
-                                helperText={formErrors.name}
-                                value={formData.name}
-                                onChange={(event) =>
-                                    setFormData({
-                                        ...formData,
-                                        name: event.target.value,
-                                    })
-                                }
+                                inputRef={firstNameInputRef}
+                                error={Boolean(formErrors.firstName)}
+                                helperText={formErrors.firstName}
+                                value={formData.firstName}
+                                onChange={handleRegistrationFieldChange("firstName")}
+                            />
+
+                            <TextField
+                                id="registration-last-name"
+                                label="Last Name"
+                                required
+                                fullWidth
+                                inputRef={lastNameInputRef}
+                                error={Boolean(formErrors.lastName)}
+                                helperText={formErrors.lastName}
+                                value={formData.lastName}
+                                onChange={handleRegistrationFieldChange("lastName")}
                             />
 
                             <TextField
                                 id="registration-email"
                                 label="Email Address"
                                 type="email"
-                                required
                                 fullWidth
                                 inputRef={emailInputRef}
                                 error={Boolean(formErrors.email)}
-                                helperText={formErrors.email}
+                                helperText={formErrors.email || "Provide an email address or phone number."}
                                 value={formData.email}
-                                onChange={(event) =>
-                                    setFormData({
-                                        ...formData,
-                                        email: event.target.value,
-                                    })
-                                }
+                                onChange={handleRegistrationFieldChange("email")}
                             />
 
                             <TextField
@@ -281,12 +335,7 @@ function WorkshopDetail() {
                                 type="tel"
                                 fullWidth
                                 value={formData.phone}
-                                onChange={(event) =>
-                                    setFormData({
-                                        ...formData,
-                                        phone: event.target.value,
-                                    })
-                                }
+                                onChange={handleRegistrationFieldChange("phone")}
                             />
 
                             <Button
@@ -294,14 +343,15 @@ function WorkshopDetail() {
                                 variant="contained"
                                 size="large"
                                 fullWidth
+                                disabled={registrationStatus === "submitting"}
                             >
-                                Submit Registration
+                                {registrationStatus === "submitting" ? "Submitting..." : "Submit Registration"}
                             </Button>
                         </Stack>
                     </Box>
                 )}
 
-                {registrationSuccess && (
+                {registrationStatus === "success" && registrationResult && (
                     <Alert
                         severity="success"
                         tabIndex={-1}
@@ -316,6 +366,10 @@ function WorkshopDetail() {
                         <Typography sx={{ mt: 1 }}>
                             Your demonstration registration for <strong>{workshop.title}</strong>{" "}
                             was submitted successfully.
+                        </Typography>
+
+                        <Typography sx={{ mt: 1 }}>
+                            Confirmation: {registrationResult.registrationId}
                         </Typography>
 
                         <Typography sx={{ mt: 1 }}>
