@@ -42,3 +42,28 @@ VoiceOver testing was performed on forms using macOS.
 **Command executed:**
 
 `CI=true npm test -- --watch=false --runTestsByPath src/pages/CheckoutForm.test.js`
+
+## 4. Outstanding Defects and Follow-Up Items
+
+| ID | Outstanding Issue | Priority | Status |
+|---|---|---|---|
+| PBI13-01 | Complete remaining VoiceOver and accessibility checks for the Contact and Donation forms. | Low | Partially Verified |
+| PBI13-02 | Workshop registration dialog in `NeedHelp.js` is commented out. Confirm whether this is intentional. | Medium | Pending Team Confirmation |
+| PBI13-03 | Production API integrations have not been verified end-to-end. Needs to be coordinated with future Backend Team #30. | Medium | Pending Backend Integration |
+| PBI13-04 | Volunteer registration redirects to Hands On Atlanta. No local signup form was identified; confirm the intended workflow/form with the team. | Low | Partially Verified |
+| PBI13-05 | No dedicated Technology Help Request form was found in the reviewed frontend pages. Confirm implementation scope and ownership. | Medium | Pending Team Confirmation |
+| PBI13-06 | Successful Donation form submission has passed automated tests but was not been manually verified in the browser. | Low | Pending Verification |
+
+## 2. Resolved Issues
+
+| Issue | Resolution | Status |
+|---|---|---|
+| Contact form displayed a misleading success message. | Updated the confirmation to clarify that submissions are demonstration-only and are not sent to production. | Resolved |
+| Donation form lacked a demonstration disclaimer. | Added a visible disclaimer explaining that no actual payments are processed or collected. | Resolved |
+| Dedicated Advocate Interest Form was not implemented. | Created an accessible sandbox form with validation, keyboard support, and submission feedback. | Resolved |
+
+## 5. Summary
+
+The remaining items primarily involve testing gaps, integration dependencies, and team confirmation.
+
+**Note:** Not every outstanding issue is a confirmed defect. Some tasks or implementation decisions requires the team to review.
