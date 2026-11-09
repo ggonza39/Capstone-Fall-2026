@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
-import { Container, Typography, Box, Paper, TextField, Stack, FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox, Button, FormHelperText, Alert, } from "@mui/material";
+import { Container, Typography, Box, Paper, TextField, Stack, FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox, Button, FormHelperText, Alert, CircularProgress, } from "@mui/material";
+import { apiRequest } from "../mocks/APIClient";
 
 function Advocate() {
 
@@ -17,6 +18,13 @@ function Advocate() {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const [hasAttemptedSubmit, setHasAttemptedSubmit] = useState(false);
+
+    // Duplicate-submission prevention: disables the submit button while the
+    // sandbox request is in flight (documentation/api-contract.md, API 6 —
+    // Advocate Interest Inquiry).
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const [submitError, setSubmitError] = useState("");
 
     const firstNameRef = useRef(null);
     const lastNameRef = useRef(null);
@@ -54,16 +62,21 @@ function Advocate() {
     
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         setHasAttemptedSubmit(true);
+        setSubmitError("");
+
+        // Duplicate-submission prevention: ignore repeated clicks/Enter while
+        // a request is already in flight.
+        if (isSubmitting) {
+            return;
+        }
 
         const isValid = validateForm();
 
-        if(isValid) {
-            setIsSubmitted(true);
-        } else {
+        if (!isValid) {
             setIsSubmitted(false);
 
             if (formData.firstName.trim() === "") {
@@ -80,6 +93,37 @@ function Advocate() {
             } else if (formData.message.trim() === "") {
                 messageRef.current?.focus();
             }
+
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        try {
+            await apiRequest("/v1/advocate-inquiries", "POST", {
+                firstName: formData.firstName.trim(),
+                lastName: formData.lastName.trim(),
+                email: formData.email.trim(),
+                phone: formData.phone.trim() || null,
+                interests: formData.interests,
+                message: formData.message.trim(),
+            });
+
+            setIsSubmitted(true);
+        } catch (err) {
+            const apiError = err?.response?.data?.error;
+
+            if (apiError?.fields) {
+                setErrors((previousErrors) => ({ ...previousErrors, ...apiError.fields }));
+            } else {
+                setSubmitError(
+                    "We could not submit your advocate interest request. Please try again."
+                );
+            }
+
+            setIsSubmitted(false);
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -97,6 +141,7 @@ function Advocate() {
         }));
 
         setIsSubmitted(false);
+        setSubmitError("");
     };
 
     const handleInterestChange = (event) => {
@@ -115,6 +160,7 @@ function Advocate() {
         }));
 
         setIsSubmitted(false);
+        setSubmitError("");
     };
 
     return(
@@ -304,12 +350,20 @@ function Advocate() {
                                     here will not be submitted to a production system.
                                 </Typography>
 
+                                {submitError && (
+                                    <Alert severity="error" role="alert">
+                                        {submitError}
+                                    </Alert>
+                                )}
+
                                 <Button
                                     type="submit"
                                     variant="contained"
                                     size="large"
+                                    disabled={isSubmitting}
+                                    startIcon={isSubmitting ? <CircularProgress size={18} color="inherit" /> : undefined}
                                     sx={{ alignSelf: "flex-start"  }}>
-                                        Submit Advocate Request
+                                        {isSubmitting ? "Submitting..." : "Submit Advocate Request"}
                                 </Button>
                             </Stack>
                         </Box>

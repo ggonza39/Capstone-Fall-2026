@@ -186,9 +186,27 @@ This satisfies REQ-25 (Mock API/dummy JSON for Phase 1 forms), REQ-27 (frontend 
 ## Public API Operations
 This contract includes the following Sponsor-Confirmed public submission endpoints:
 - POST /api/v1/assistance-requests (REQ-21)
-- POST /api/v1/volunteer-inquiries (REQ-22 — Figma-Confirmed fields)
+- POST /api/v1/volunteer-inquiries (REQ-22 — Figma-Confirmed fields; see the Milestone 3 Production Integration Boundary Update below — the public website currently links directly to the Hands On Atlanta production workflow instead of rendering this form)
 - POST /api/v1/contact-inquiries (REQ-23)
 - POST /api/v1/donor-inquiries (REQ-24 — no payment processing; Pending Frontend Field Confirmation)
+
+Milestone 2 and Milestone 3 added two further sandbox-only endpoints that follow the same contract conventions (documented later in this file as API 5 and API 6): workshop search/details/registration (PBI-7/PBI-8/PBI-12) and the Advocate Interest Inquiry (PBI-13).
+
+---
+
+## In-Scope Public Forms (Milestone-3 — PBI-13)
+This table identifies every public-facing form in the final project scope, the page that implements it, and whether its submission behavior uses this project's sandbox/mock layer, preserves an existing production workflow, or depends on the shared REST API contract above.
+
+| Form | Page(s) | Integration Method | Notes |
+|---|---|---|---|
+| Technology Help Request | *(no standalone form in current UI)* | Sandbox REST API contract — `POST /api/v1/assistance-requests` (API 1) is implemented, validated, and tested but not currently called by any page. | REQ-21's "I Need Help" intent is represented by the workshop discovery and registration journey below instead of a separate generic request form. See Outstanding Issues in `tests/api-integration-test-plan.md`. |
+| Workshop Registration | `NeedHelp.js` (search) → `WorkshopDetail.js` (registration) | Sandbox REST API contract — `GET /api/workshops`, `GET /api/workshops/:id`, `POST /api/workshops/:id/registrations` (API 5) | Sandbox demonstration only; response `message` explicitly states no production registration was submitted. |
+| Volunteer Signup | `WantToHelp.js` | Existing external production workflow — direct link to Hands On Atlanta (`https://volunteer.handsonatlanta.org/`) | Sponsor-confirmed. The shared contract's `POST /api/v1/volunteer-inquiries` (API 2) mock endpoint remains implemented/tested but is not rendered as a form. |
+| General Contact | `Contact.js` | Sandbox REST API contract — `POST /api/v1/contact-inquiries` (API 3) | |
+| Donor Interest/Inquiry & Donation Checkout | `Donate.js` / `CheckoutForm.js` | Sandbox REST API contract — `POST /api/v1/donor-inquiries` (API 4) — combined with the real Stripe.js Elements UI in **test mode only** (see Stripe Integration Boundary below) | No PaymentIntent is created and no real charge is ever submitted; only non-payment donor details reach the sandbox endpoint. |
+| Advocate Interest | `Advocate.js` | Sandbox REST API contract — `POST /api/v1/advocate-inquiries` (API 6) | Milestone-3 addition (PBI-13). Submitting this form does not establish the user as an official TSLS representative or advocate. |
+
+No in-scope public form in the current UI depends on a Gravity Forms–driven workflow; Volunteer Signup is the only pathway that preserves an existing external/production workflow today.
 
 ---
 
@@ -376,6 +394,11 @@ HTTP 400 Bad Request
   }
 }
 ```
+
+## Milestone 3 Production Integration Boundary Update (PBI-13)
+The sponsor subsequently confirmed that the "I Want to Help → Volunteer" call to action directs visitors to the organization's existing external production volunteer workflow (Hands On Atlanta, `https://volunteer.handsonatlanta.org/`) instead of a TSLS-hosted inquiry form. The public website therefore does not currently render a volunteer inquiry form against this endpoint — `src/pages/WantToHelp.js`'s Volunteer button is a direct external link, which is the final production workflow for this pathway.
+
+This mock endpoint, its validation rules, and its MSW/Express handlers remain implemented and unit tested (`src/mocks/validation-logic/volunteerInquiries.mjs`) so the contract stays available if a TSLS-hosted volunteer inquiry form is reintroduced in a future milestone. No sandbox implementation silently replaces the Hands On Atlanta production workflow.
 
 ---
 
@@ -625,6 +648,88 @@ Returned when the sandbox workshop's `seatAvailability` is 0.
 
 ---
 
+# API 6 — Advocate Interest Inquiry (Milestone 3 — PBI-13)
+
+## Status
+**SANDBOX / MOCK ONLY.** Like API 5 above, this endpoint is not part of the original REQ-21–REQ-29 contract with backend Team #30. It was added in Milestone 3 to support the "I Want to Help → Advocate" pathway (`src/pages/Advocate.js`). It follows the same shared-contract conventions (request/response shape, validation-error format, `/api/v1` versioning) as APIs 1–4 so it can be handed off to a production backend with no frontend redesign if the Advocate pathway is approved for production.
+
+## Endpoint
+POST /api/v1/advocate-inquiries
+
+## Purpose
+Allow a visitor interested in advocating for Tech Smart Learning for Seniors in their community to submit an interest request. Submitting this form does not automatically make the visitor an official TSLS representative or advocate.
+
+## Content-Type
+application/json
+
+## Fields
+### Required fields
+- firstName
+- lastName
+- email
+- interests (at least one)
+- message
+
+### Optional fields
+- phone
+
+### Field notes and data types
+| Field | Type | Notes |
+|---|---|---|
+| firstName | string | Required, cannot be empty. |
+| lastName | string | Required, cannot be empty. |
+| email | string (email format) | Required. |
+| phone | string \| null | Optional. |
+| interests | array of string (enum: "sharePrograms" \| "promoteEvents" \| "connectOrganizations" \| "outreach" \| "other") | Required; at least one value, matching the checkbox values in `src/pages/Advocate.js`. |
+| message | string | Required; describes the visitor's interest in supporting TSLS. |
+
+## Example Request
+```json
+{
+  "firstName": "Mary",
+  "lastName": "Johnson",
+  "email": "mary@example.com",
+  "phone": null,
+  "interests": ["sharePrograms", "outreach"],
+  "message": "I would like to help spread the word about TechSmart in my neighborhood."
+}
+```
+
+## Validation Rules
+- firstName cannot be empty.
+- lastName cannot be empty.
+- email is required and must be in a valid email format.
+- interests must include at least one value, matching one of the confirmed checkbox values.
+- message cannot be empty.
+
+## Successful Response
+HTTP 201 Created
+
+```json
+{
+  "inquiryId": "AI-1001",
+  "status": "received",
+  "message": "Your advocate interest request has been received."
+}
+```
+
+## Validation Error Response
+HTTP 400 Bad Request
+
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "The request contains invalid or missing information.",
+    "fields": {
+      "interests": "Select at least one advocacy interest."
+    }
+  }
+}
+```
+
+---
+
 ## Field Status Summary
 Fields across all four public submission endpoints are **Sponsor-Confirmed** for the baseline required/optional fields documented in this contract.
 
@@ -653,11 +758,11 @@ Until then, this contract is Sponsor-Confirmed for Milestone 1 frontend developm
 
 ---
 
-## Phase 1 Integration Boundary (Milestone-2 — PBI-12)
+## Phase 1 Integration Boundary (Milestone-2 PBI-12; updated Milestone-3 PBI-13)
 This section makes explicit which Phase 1 interactions are sandbox/mock, which preserve existing external/production workflows, and which depend on the shared REST API contract above, so the sandbox implementation is never mistaken for a completed production integration.
 
 ```text
-Frontend (React pages: NeedHelp.js, Contact.js, WantToHelp.js, etc.)
+Frontend (React pages: NeedHelp.js, Contact.js, WantToHelp.js, Advocate.js, Donate.js, etc.)
    |
 Service / Adapter Layer (src/services/*.js, src/mocks/APIClient.ts)
    |
@@ -670,15 +775,24 @@ Production Backend (Team #30) when available
 
 ### A. SANDBOX / MOCK (this repository's MSW layer only — never production)
 - GET /api/workshops, GET /api/workshops/:id, POST /api/workshops/:id/registrations — workshop search, details, and registration (API 5 above). Representative data only; no production workshop-location source or registration system exists yet.
-- POST /api/v1/assistance-requests, /api/v1/contact-inquiries, /api/v1/donor-inquiries, /api/v1/volunteer-inquiries — simulate Team #30's future responses using this same contract (REQ-25, REQ-27).
+- POST /api/v1/assistance-requests, /api/v1/contact-inquiries, /api/v1/donor-inquiries, /api/v1/volunteer-inquiries, /api/v1/advocate-inquiries — simulate Team #30's future responses using this same contract (REQ-25, REQ-27).
+- Donation checkout UI (`src/pages/Donate.js`, `src/pages/CheckoutForm.js`) — uses the real Stripe.js Elements UI in **Stripe test mode only** (a `pk_test_...` publishable key supplied via the `REACT_APP_STRIPE_PUBLISHABLE_KEY` environment variable; see Stripe Integration Boundary below). No PaymentIntent is created and no charge is ever submitted to Stripe; the donor's non-payment details are submitted to the sandbox `/api/v1/donor-inquiries` endpoint only.
 
 ### B. EXISTING EXTERNAL / PRODUCTION WORKFLOW (never replaced by this mock layer)
-- Donation processing — the organization's existing Stripe-enabled donation experience (PBI-9). Not implemented, replaced, or proxied by this project.
-- Volunteer signup execution — the organization's established Hands On Atlanta signup process (PBI-9). The Volunteer Inquiry mock above (API 2) is a separate website *inquiry* form, not a replacement for Hands On Atlanta's own signup/application workflow.
+- Volunteer signup execution — the "I Want to Help → Volunteer" button on `src/pages/WantToHelp.js` links directly to the organization's established Hands On Atlanta signup process (`https://volunteer.handsonatlanta.org/`). This is the confirmed final production workflow for this pathway (see the Milestone 3 update in API 2 above). The Volunteer Inquiry mock endpoint (API 2) remains implemented and tested but is not currently rendered as a form on the public website.
 - Any current Gravity Forms/Salesforce-driven production form this project has not yet been asked to replace.
 
 ### C. SHARED REST API CONTRACT / FUTURE BACKEND DEPENDENCY
-- All `/api/v1/*` endpoints documented in this contract (APIs 1–4) — once Team #30's backend is available, the website's service/adapter layer can point at the real backend using this same contract with no frontend redesign required (REQ-28).
+- All `/api/v1/*` endpoints documented in this contract (APIs 1–4, and API 6 — Advocate Interest Inquiry) — once Team #30's backend is available, the website's service/adapter layer can point at the real backend using this same contract with no frontend redesign required (REQ-28).
 
 ### Independent Frontend Operation
 The sandbox layer (column A) lets the "I Need Help" workshop search/detail/registration journey and the public form workflows be developed, tested, and demonstrated without waiting on Team #30's backend or CRM integration, and without modifying or depending on Team #30's pull requests.
+
+---
+
+## Stripe Integration Boundary (Milestone-3 — PBI-13)
+- The Donate page (`src/pages/Donate.js`) uses Stripe's official `@stripe/react-stripe-js` / `@stripe/stripe-js` Elements components in **test mode only**. `loadStripe()` is initialized with `process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY`, which must always be a `pk_test_...` publishable test key for this project. Publishable keys are safe to expose in frontend code, but a Stripe **secret key must never** be added to source control, committed, or used anywhere in this frontend application.
+- `CheckoutForm.js` never creates a PaymentIntent and never confirms a real payment; `elements.submit()` validates the payment form fields only, and the Apple Pay/Google Pay Express Checkout Element is explicitly configured to report `event.paymentFailed(...)` so no demo payment can be completed. Submitting the form sends only the donor's non-payment contact details (firstName, lastName, email) to the sandbox `/api/v1/donor-inquiries` endpoint.
+- The sandbox donor-inquiries response includes additive `isSimulation: true` and `success: true` fields (not part of the Sponsor-Confirmed contract fields in API 4) that `CheckoutForm.js` uses to display "Demo successful! No actual payment was processed." This keeps the sandbox donation demonstration clearly separated from a real charge.
+- No production Stripe account, live/secret keys, or real payment processing are implemented or configured anywhere in this project.
+

@@ -21,6 +21,15 @@ export const LEAD_SOURCES = [
     "Other",
 ];
 
+/** Advocacy interest checkbox values used by the Advocate interest form (PBI-13). */
+export const ADVOCACY_INTERESTS = [
+    "sharePrograms",
+    "promoteEvents",
+    "connectOrganizations",
+    "outreach",
+    "other",
+];
+
 export const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Shared ZIP-code validation rule used by the workshop search endpoint (PBI-7 / PBI-12). */
