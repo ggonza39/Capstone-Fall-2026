@@ -218,10 +218,7 @@ function WantToHelp() {
                                         technology education for older adults.
                                     </Typography>
 
-                                    {/* Sponsor wants explain the organization's community impact 
-                                        and provide an engagement path when sponsor-approved content 
-                                        becomes available */}
-                                    <Button variant="contained" href="#community-impact">Learn About Our Impact</Button>
+                                    <Button variant="contained" href="/advocate">Become an Advocate</Button>
                                 </CardContent>
                             </Card>
                         </Grid>
