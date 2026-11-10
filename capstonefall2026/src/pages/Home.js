@@ -98,7 +98,7 @@ function Home() {
                 <div className="home-container home-container-md">
                     <h2 id="workshop-heading">Find a Workshop Near You</h2>
                     <p className="home-search-description">Enter your ZIP code to find technology workshops in your area.</p>
-                    <form onSubmit={handleWorkshopSearch} noValidate>
+                    <form action="/need-help" method="get" onSubmit={handleWorkshopSearch} noValidate>
                         <div className="home-search-fields">
                             <div className="home-zip-control">
                                 <div className={`home-zip-outline${zipError ? " home-zip-error" : ""}`}>
@@ -106,6 +106,9 @@ function Home() {
                                         className="home-zip-input"
                                         id="home-zip-code"
                                         type="text"
+                                        name="zip"
+                                        required
+                                        pattern="[0-9]{5}"
                                         aria-label="ZIP Code"
                                         aria-describedby="home-zip-code-help"
                                         aria-invalid={zipError}

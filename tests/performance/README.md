@@ -1,20 +1,42 @@
 # Performance and SEO measurements
 
-## Latest result: all five targets met in the optimized local build
+## Latest correction: all five targets met in the local production build
 
-The **[November 10 TBT follow-up](tbt-followup.md)** fixes the remaining startup blocking work. Five local production Lighthouse runs now measure **45 ms median TBT**, ranging **42–67.24 ms**, below the **<200 ms** target in every run. All five metrics meet their targets in all five runs.
+The [build-rendered homepage correction](tbt-static-home-optimization.md) removes the initial React rendering work from Home while preserving its content, layout, ZIP validation, and mobile menu. Five new Lighthouse **12.8.2** audits of the local production build meet **every target in every run**. TBT is **0 ms median**, with a **0-90 ms range**, compared with **492.544 ms** in the paired local before set.
 
-| Metric | Documented baseline | Latest local median | Target | Status |
+| Metric | Updated local median | Target | Status |
+|---|---:|---:|---|
+| FCP | **1.186 s** | <2.0 s | **Met, 5/5** |
+| LCP | **1.223 s** | <2.5 s | **Met, 5/5** |
+| TBT | **0 ms** | <200 ms | **Met, 5/5** |
+| Speed Index | **2.227 s** | <3.4 s | **Met, 5/5** |
+| Lighthouse SEO | **100/100** | 90-100/100 | **Met, 5/5** |
+
+[Exact before/after summary](2026-11-10-tbt-rendering/summary.json). The build passed, along with 107 browser checks, zero visual differences, and 17 new unit tests. Six existing Advocate/Contact API-expectation tests still fail in the wider suite; details and retained reports are in the correction report. One after audit has a retained slow-CPU warning. FCP and Speed Index medians increased in this comparison but still meet their targets.
+
+**Deployment and public confirmation are pending.** These new source changes have not been published by this task. The latest public measurement remains **457 ms TBT**, below. Deploy the new postbuild output and routing configuration, then rerun the collector with `-RequireStaticHome` in a new directory. Local success does not replace the public result.
+
+## Latest measured public results: four of five targets met
+
+Completed **November 10, 2026, 15:11?15:13 EST**, against the [live TSLS-Web homepage](https://capstone-fall-2026.vercel.app/) after the optimized changes were published. The requested Lighthouse **12.8.2** collector ran five sequential audits in a **new directory**, followed by the summarizer against that same directory.
+
+**Public TBT is 457 ms median (326.5?542 ms), above the <200 ms target in all five runs.** The other four targets pass in every run. Deployment identity stayed unchanged throughout collection. All five audits completed with **zero runtime errors**; runs **3 and 4** contain retained slow-CPU warnings.
+
+| Metric | Documented baseline | Final production median | Target | Status |
 |---|---:|---:|---:|---|
-| FCP | 5.7 s | **0.759 s** | <2.0 s | **Met, 5/5** |
-| LCP | 21.8 s | **1.709 s** | <2.5 s | **Met, 5/5** |
-| TBT | 700 ms | **45 ms** | <200 ms | **Met, 5/5** |
-| Speed Index | 8.7 s | **0.759 s** | <3.4 s | **Met, 5/5** |
-| Lighthouse SEO | 40/100 | **100/100** | 90–100/100 | **Met, 5/5** |
+| FCP | 5.7 s | **0.788 s** | <2.0 s | **Met, 5/5** |
+| LCP | 21.8 s | **1.491 s** | <2.5 s | **Met, 5/5** |
+| TBT | 700 ms | **457 ms** | <200 ms | **Not met, 0/5** |
+| Speed Index | 8.7 s | **1.214 s** | <3.4 s | **Met, 5/5** |
+| Lighthouse SEO | 40/100 | **100/100** | 90?100/100 | **Met, 5/5** |
 
-The paired local before/after TBT medians are **401 → 45 ms (88.8% lower)**. Static HTML/CSS replaces homepage/shared-shell runtime styling; MUI pages and the mobile drawer retain their existing theme when loaded. Initial gzip JavaScript is **41.8% smaller**. All content remains immediately available, and **77 browser checks found zero visual differences**. [Implementation, checks, and reproduction](tbt-followup.md); [exact results and all audit references](2026-11-10-tbt-followup/summary.json).
+[Final report: individual runs, baseline comparisons, conditions, and remaining limitations](final-performance-and-seo-results.md). [Exact summary and raw-audit references](2026-11-10-production-final-mobile/summary.json). [Deployment identity](2026-11-10-production-final-mobile/deployment.json).
 
-**Public deployment verification is pending.** The updated source is tested locally and has not been pushed or deployed. The earlier public **413 ms** result below is retained for the build actually measured. Deploy through the existing `main` workflow, then repeat the hosted audits before claiming public compliance. Historical baseline conditions and the existing SEO/integration limitations remain documented in the [final report](final-performance-and-seo-results.md).
+The optimized entry script **main.ce2cc812.js** is deployed; its run-1 decoded size is **259,662 bytes**, compared with **450,658 bytes** in the earlier public build. This smaller delivery does not establish a passing TBT result. The earlier public **413 ms** and local **45 ms** measurements remain historical evidence in their original directories. The [local TBT follow-up](tbt-followup.md) documents the implementation and its separate 401 ? 45 ms experiment; that local result cannot replace the final production measurement.
+
+**Deployment verification is complete; the TBT target remains unmet.** Final CPU benchmark indices were **734.5?1,096.5**, below the earlier public **1,881?2,150.5**, with two explicit slow-CPU warnings. These conditions limit timing comparisons and code attribution; they do not turn the measured failure into a pass. Settings and targets were unchanged, and no report was discarded or replaced.
+
+Supplemental [production browser verification](2026-11-10-production-final-mobile/browser-verification.json) passed **60 checks across ten routes**, with zero uncaught browser errors. The eight static pages, including **Advocate**, have the expected rendered metadata and sitemap entries. Unknown-page HTTP status, workshop/API integration, client-rendering, field performance, and overall 50% criterion limitations remain in the final report.
 
 ## Earlier deployed measurements
 
@@ -26,7 +48,7 @@ The subsequent [FCP optimization and local production verification](fcp-optimiza
 
 [LCP optimization and local production verification](lcp-optimization.md) records the next startup-code reduction, a fresh local before/after audit set, and ZIP-field visual/functional checks.
 
-[Earlier TBT analysis and optimization](tbt-optimization.md) records deferred mobile-menu loading and its November 5 measurements, which did not meet the target. The [November 10 follow-up](tbt-followup.md) fixes the remaining startup work and meets the target in all five local runs.
+[Earlier TBT analysis and optimization](tbt-optimization.md) records deferred mobile-menu loading and its November 5 measurements, which did not meet the target. The [November 10 follow-up](tbt-followup.md) reduces startup work and meets the target in its five local runs; the latest public measurement above does not meet TBT.
 
 [Speed Index optimization](speed-index-optimization.md) records lossless logo delivery, image sizing, paired local audits, and preserved header/Menu appearance. Speed Index remains below target; no timing improvement is established by this set.
 
@@ -34,11 +56,11 @@ The subsequent [FCP optimization and local production verification](fcp-optimiza
 
 [Frontend asset optimization](frontend-asset-optimization.md) records responsive WebP photos/logos, a 93.7% image-body reduction on I Want to Help at tested DPR 1 widths, script/style/font review, Lighthouse diagnostics, and preserved layouts/navigation. Final deployed measurements remain separate.
 
-## Baseline, initial results, and final comparison
+## Historical initial and earlier public comparison
 
-The documented project baseline and targets come from PBI-14. These earlier public results use the same deployed route, machine, Lighthouse version, settings, and five-run median procedure. Chrome updated from 156 to 157 between sets; the final report records this comparability limit. That hosted snapshot met four targets. The newer local fix above meets all five and awaits hosted confirmation.
+The documented project baseline and targets come from PBI-14. This historical table records the initial deployment and the earlier November 10 public snapshot before the TBT follow-up. Chrome updated from 156 to 157 between those sets. The latest production results at the top of this README supersede that earlier snapshot as the final public measurement; TBT remains unmet.
 
-| Metric | Documented project baseline | Initial deployed median | Final target | Initial target status | Final after optimization |
+| Metric | Documented project baseline | Initial deployed median | Target | Initial target status | Earlier public, before TBT follow-up |
 |---|---:|---:|---:|---|---|
 | First Contentful Paint (FCP) | 5.7 s | **0.819 s** | <2.0 s | Met | **0.784 s — Met** |
 | Largest Contentful Paint (LCP) | 21.8 s | **4.515 s** | <2.5 s | Above target | **1.707 s — Met** |

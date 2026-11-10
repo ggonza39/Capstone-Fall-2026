@@ -7,34 +7,8 @@ import logo260 from "../assets/optimized/techsmartLogo-260.webp";
 import logo380 from "../assets/optimized/techsmartLogo-380.webp";
 import { loadMobileNavigation } from "./mobileNavigationLoader";
 import SiteIcon from "./SiteIcon";
+import navigation from "./navigation";
 import "./SiteShell.css";
-
-const navigation = [
-    {
-        label: "Home",
-        path: "/",
-    },
-    {
-        label: "I Need Technology Help",
-        path: "/need-help",
-    },
-    {
-        label: "I Want to Help",
-        path: "/want-to-help",
-    },
-    {
-        label: "Resources",
-        path: "/resources",
-    },
-    {
-        label: "About",
-        path: "/about",
-    },
-    {
-        label: "Contact",
-        path: "/contact",
-    },
-];
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);

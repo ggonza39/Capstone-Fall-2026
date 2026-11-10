@@ -1,106 +1,117 @@
-# Final performance and SEO results
+# Final production performance and SEO results
 
-## Latest TBT fix: all five local targets met
+## Latest implementation follow-up: all five targets pass locally
 
-The **November 10 TBT follow-up** removes the homepage/shared navigation styling runtime from initial loading while preserving the existing appearance and behavior. Five fresh local production audits now measure **45 ms median TBT (42–67.24 ms)**, below **200 ms in every run**. **All five metric targets pass in all five runs.**
+The new [build-rendered homepage TBT correction](tbt-static-home-optimization.md) meets **all five targets in every one of five local production audits** using Lighthouse **12.8.2**. Its medians are **FCP 1.186 s, LCP 1.223 s, TBT 0 ms, Speed Index 2.227 s, and SEO 100/100**. TBT ranges **0-90 ms**, with every run below **200 ms**. The paired local before median was **492.544 ms**.
 
-| Metric | Optimized local median | Target | Status |
-|---|---:|---:|---|
-| FCP | **0.759 s** | <2.0 s | **Met, 5/5** |
-| LCP | **1.709 s** | <2.5 s | **Met, 5/5** |
-| TBT | **45 ms** | <200 ms | **Met, 5/5** |
-| Speed Index | **0.759 s** | <3.4 s | **Met, 5/5** |
-| Lighthouse SEO | **100/100** | 90–100/100 | **Met, 5/5** |
+The homepage now arrives as complete HTML and uses a small native controller; React loads on secondary pages immediately and for the mobile drawer when requested. Production build, 107 browser checks with zero visual differences, and 17 new unit tests pass. Six existing Advocate/Contact API-expectation failures remain in the broader suite. The [new report](tbt-static-home-optimization.md) records implementation details, unchanged thresholds/settings, CPU warnings, tradeoffs, regression evidence, and deployment instructions; [summary.json](2026-11-10-tbt-rendering/summary.json) retains exact local results.
 
-The paired local TBT median fell from **401 to 45 ms (88.8%)**; compressed startup JavaScript is **41.8% smaller**. The [follow-up report](tbt-followup.md) records the implementation, baseline/target comparisons, visual and functional checks, and all ten raw audits. [Exact summary](2026-11-10-tbt-followup/summary.json).
+**These changes have not been deployed by this follow-up. The latest public TBT measurement is still 457 ms.** The published results below remain the measured production record until a new deployment is confirmed with a separate five-run hosted audit. Use the collector's `-RequireStaticHome` flag to reject the old deployment before collecting that confirmation.
 
-**Deployment confirmation is pending.** This tested build has not been pushed or deployed. The public 413 ms measurement below identifies the earlier hosted build and remains historical evidence. After the normal `main` deployment, repeat the hosted five-run procedure before reporting the public site as meeting all five targets. The existing SEO/API/hosting limitations below also remain separate from homepage metric compliance.
+## Latest measured public deployment
 
-## Earlier deployed measurement, before the TBT follow-up
+Completed **November 10, 2026, 15:11?15:13 EST (UTC?5)** against the live [TSLS-Web homepage](https://capstone-fall-2026.vercel.app/) after the optimized changes were published. The requested Lighthouse collector and summarizer ran against a **new evidence directory**, preserving the earlier hosted and local reports.
 
-Completed **November 10, 2026** for [Milestone 3, PBI-14](../../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo). Five sequential Lighthouse audits measured the deployed [TSLS-Web homepage](https://capstone-fall-2026.vercel.app/) after optimization. All five completed with **zero runtime errors and zero warnings**, and the deployed HTML/entry-script identity stayed unchanged throughout the set.
+**Four of five targets are met. Public Total Blocking Time is 457 ms median, above the <200 ms target in all five runs.** FCP is **0.788 s**, LCP **1.491 s**, Speed Index **1.214 s**, and SEO **100/100**. There were **zero runtime errors and two slow-CPU warnings**. Deployment HTML, ETag, and entry script remained unchanged across all five audits.
 
-**This earlier public snapshot met four of five targets: TBT was 413ms median against <200ms.** Its other medians were **FCP 0.784s, LCP 1.707s, Speed Index 0.981s, and SEO 100/100**. Application code and deployment were not changed during that measurement. The follow-up above subsequently changed and tested the local source.
+The earlier **45 ms local TBT** result does not establish public compliance. This report uses the measured production results. The smaller startup bundle is deployed, but this hosted set does not reproduce the earlier local TBT result.
 
 ## Baseline, initial implementation, and final comparison
 
-Each final result is the independent median of the five unrounded numeric audit values. The median of one metric may come from a different run than another metric. Timing values below are rounded for display.
+Each result is the independent median of all five unrounded numeric values. A metric's median may come from a different run than another metric. Display values are rounded only after calculation.
 
-| Metric | Documented project baseline | Initial deployed median, Nov 5 | Final deployed median, Nov 10 | Target | Final status |
-|---|---:|---:|---:|---:|---|
-| First Contentful Paint | 5.7s | 0.819s | **0.784s** | <2.0s | **Met, 5/5 runs** |
-| Largest Contentful Paint | 21.8s | 4.515s | **1.707s** | <2.5s | **Met, 5/5 runs** |
-| Total Blocking Time | 700ms | 1,019ms | **413ms** | <200ms | **Not met, 0/5 runs** |
-| Speed Index | 8.7s | 1.111s | **0.981s** | <3.4s | **Met, 5/5 runs** |
-| Lighthouse SEO | 40/100 | 100/100 | **100/100** | 90–100/100 | **Met, 5/5 runs** |
+| Metric | Documented baseline | Initial deployed, Nov 5 | Earlier public, Nov 10 before TBT follow-up | Final production, Nov 10 after deployment | Target | Final status |
+|---|---:|---:|---:|---:|---:|---|
+| FCP | 5.7 s | 0.819 s | 0.784 s | **0.788 s** | <2.0 s | **Met, 5/5** |
+| LCP | 21.8 s | 4.515 s | 1.707 s | **1.491 s** | <2.5 s | **Met, 5/5** |
+| TBT | 700 ms | 1,019 ms | 413 ms | **457 ms** | <200 ms | **Not met, 0/5** |
+| Speed Index | 8.7 s | 1.111 s | 0.981 s | **1.214 s** | <3.4 s | **Met, 5/5** |
+| Lighthouse SEO | 40/100 | 100/100 | 100/100 | **100/100** | 90?100/100 | **Met, 5/5** |
 
-| Metric | Timing reduction vs documented baseline | Timing reduction vs initial deployed median |
+| Metric | Change vs documented baseline | Change vs initial deployed median |
 |---|---:|---:|
-| FCP | 86.2% | 4.3% |
-| LCP | 92.2% | 62.2% |
-| TBT | 41.0% | 59.5% |
-| Speed Index | 88.7% | 11.8% |
+| FCP | 86.2% lower | 3.8% lower |
+| LCP | 93.2% lower | 67.0% lower |
+| TBT | 34.7% lower | 55.2% lower |
+| Speed Index | 86.1% lower | **9.2% higher** |
 | SEO | **+60 points** | **0 points** |
 
-Timing changes use `(reference - final median) / reference × 100`, calculated before rounding. SEO uses score-point changes. Initial deployed SEO was already 100, so the 60-point historical difference is not attributed to this optimization work.
+Timing reductions use (reference ? final median) / reference ? 100 before rounding; SEO uses score-point changes. Initial deployed SEO was already 100, so the historical 60-point difference is not attributed to this optimization.
 
-The [documented baseline's raw reports and conditions are unavailable](../usability-performance-evaluation-plan.md#5-the-50-improvement-target-and-its-relationship-to-individual-thresholds); comparisons with it are descriptive. The initial and final deployed sets use the same URL, machine, Node/Lighthouse versions, emulation, throttling, and aggregation procedure. **Installed Chrome updated from 156.0.8078.80 to 157.0.8103.39**, and the intervening deployed build includes other application changes. These observations do not establish that code optimizations alone caused each timing change. Local optimization experiments remain separate from this hosted comparison.
+The [historical baseline's raw reports and conditions are unavailable](../usability-performance-evaluation-plan.md#5-the-50-improvement-target-and-its-relationship-to-individual-thresholds), so those comparisons are descriptive. The initial and final hosted sets share the same URL, machine, Node/Lighthouse versions, full audit settings, and aggregation procedure; **Chrome changed from 156.0.8078.80 to 157.0.8103.39**. CPU calibration was also lower in this final set, and intervening deployments include other changes. The results do not establish that frontend code alone caused each timing difference.
 
 ## Individual runs and retained evidence
 
-| Run | Start, EST (UTC−5) | FCP (s) | LCP (s) | TBT (ms) | Speed Index (s) | SEO | Raw reports |
-|---|---|---:|---:|---:|---:|---:|---|
-| 1 | 00:08:03 | 0.832 | 1.707 | 413 | 1.174 | 100 | [JSON](2026-11-10-final-mobile/run-1.report.json), [HTML](2026-11-10-final-mobile/run-1.report.html) |
-| 2 | 00:08:18 | 0.781 | 1.685 | 439 | 0.928 | 100 | [JSON](2026-11-10-final-mobile/run-2.report.json), [HTML](2026-11-10-final-mobile/run-2.report.html) |
-| 3 | 00:08:33 | 0.784 | 1.740 | 366 | 0.987 | 100 | [JSON](2026-11-10-final-mobile/run-3.report.json), [HTML](2026-11-10-final-mobile/run-3.report.html) |
-| 4 | 00:08:47 | 0.782 | 1.724 | 413 | 0.981 | 100 | [JSON](2026-11-10-final-mobile/run-4.report.json), [HTML](2026-11-10-final-mobile/run-4.report.html) |
-| 5 | 00:09:02 | 0.784 | 1.677 | 361 | 0.896 | 100 | [JSON](2026-11-10-final-mobile/run-5.report.json), [HTML](2026-11-10-final-mobile/run-5.report.html) |
-| **Median** | | **0.784** | **1.707** | **413** | **0.981** | **100** | [Exact summary](2026-11-10-final-mobile/summary.json) |
+| Run | Start, EST | FCP (s) | LCP (s) | TBT (ms) | Speed Index (s) | SEO | Warnings | Reports |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| 1 | 15:11:08 | 0.820 | 1.509 | 487 | 1.283 | 100 | None | [JSON](2026-11-10-production-final-mobile/run-1.report.json), [HTML](2026-11-10-production-final-mobile/run-1.report.html) |
+| 2 | 15:11:31 | 0.788 | 1.491 | 440.5 | 1.099 | 100 | None | [JSON](2026-11-10-production-final-mobile/run-2.report.json), [HTML](2026-11-10-production-final-mobile/run-2.report.html) |
+| 3 | 15:11:53 | 0.787 | 1.483 | 457 | 1.214 | 100 | Slow CPU | [JSON](2026-11-10-production-final-mobile/run-3.report.json), [HTML](2026-11-10-production-final-mobile/run-3.report.html) |
+| 4 | 15:12:15 | 0.801 | 1.514 | 542 | 1.397 | 100 | Slow CPU | [JSON](2026-11-10-production-final-mobile/run-4.report.json), [HTML](2026-11-10-production-final-mobile/run-4.report.html) |
+| 5 | 15:12:36 | 0.781 | 1.441 | 326.5 | 1.110 | 100 | None | [JSON](2026-11-10-production-final-mobile/run-5.report.json), [HTML](2026-11-10-production-final-mobile/run-5.report.html) |
+| **Median** | | **0.788** | **1.491** | **457** | **1.214** | **100** | **2 total** | [Exact summary](2026-11-10-production-final-mobile/summary.json) |
 
-FCP ranged **0.781–0.832s**, LCP **1.677–1.740s**, TBT **361–439ms**, and Speed Index **0.896–1.174s**. SEO was 100 in every run. All runs are retained; none was discarded, replaced, or selected for a better result. Lighthouse's [run-1 final screenshot](2026-11-10-final-mobile/run-1-final-screenshot.jpg) was visually checked against the expected homepage. CLS was zero in all five homepage runs.
+FCP ranged **0.781?0.820 s**, LCP **1.441?1.514 s**, TBT **326.5?542 ms**, and Speed Index **1.099?1.397 s**. SEO was 100 and CLS zero in all five runs. All five reports are retained, including the two with warnings; none was discarded, substituted, or selected for a better result. The [run-1 Lighthouse screenshot](2026-11-10-production-final-mobile/run-1-final-screenshot.jpg) was visually checked and shows the expected homepage.
 
 ## Conditions and deployment identity
 
 | Setting | Recorded value |
 |---|---|
-| Route/build | `https://capstone-fall-2026.vercel.app/`, live Vercel production Home; no local build/dev server |
-| Tooling | Lighthouse CLI **12.8.2**, Node **20.11.1**, Chrome **157.0.8103.39** |
-| Device | Mobile Moto G Power emulation, **412 × 823 CSS px**, DPR **1.75** |
-| Throttling | Simulated **150ms RTT**, **1,638.4 Kbps**, **4× CPU slowdown**; complete settings match all initial reports |
-| Machine | Windows 11 Home 64-bit, **10.0.26200**, Intel Core i5-1035G1, 4 cores / 8 logical processors |
-| Runs/browser state | Five sequential navigation audits; fresh Chrome process/profile and default storage reset per run; no extension/signed-in profile |
-| Dataset/interactions | Homepage navigation only; no ZIP search, workshop registration, form submission, payment, or injected mock dataset |
-| External dependencies | Live requests left enabled; no URL blocking; no builds/tests/other browser audits during collection |
-| CPU calibration | Lighthouse benchmark index **1,881–2,150.5**; initial range **1,254.5–2,205.5**; variability retained |
-| Entry script | `/static/js/main.25dae39a.js`, verified in every audit's network records |
-| HTML ETag | `"4395876b2448fbb9fb9784b7db8b42e2"`, stable at preflight and after every run |
-| Last-Modified | November 10, 2026, **05:06:04 UTC** |
+| URL/build | Live Vercel production Home at https://capstone-fall-2026.vercel.app/ |
+| Tools | Lighthouse CLI **12.8.2**, Node **20.11.1**, Chrome **157.0.8103.39** |
+| Device | Mobile Moto G Power emulation, **412 ? 823 CSS px**, DPR **1.75** |
+| Throttling | Simulated **150 ms RTT**, **1,638.4 Kbps**, **4? CPU slowdown**; full settings match all initial reports |
+| Machine | Windows 11 Home 64-bit **10.0.26200**, Intel Core i5-1035G1, 4 cores / 8 logical processors |
+| Browser state | Five sequential navigation audits; fresh Chrome process/profile and default storage reset per run |
+| Interactions | No ZIP search, registration, payment, form submission, injected mock dataset, or URL blocking |
+| Collection | No builds, tests, or other browser audits during the Lighthouse set; supplemental browser checks followed collection |
+| CPU calibration | **734.5?1,096.5** benchmark index; slow-CPU warnings in runs **3 and 4** |
+| Entry script | **/static/js/main.ce2cc812.js**, verified in every audit |
+| Stylesheet | /static/css/main.1083a7e6.css |
+| HTML ETag | **"6d7b014329383f43f52624d523351c67"**, stable at preflight and after every run |
+| Last-Modified | **November 10, 2026, 20:04:27 UTC** |
+| HTML SHA-256 | c682740b87122600cc3f7a26e9049a25e3ba8ffcbddd7c40ead1ceca19fca86f |
 
-[deployment.json](2026-11-10-final-mobile/deployment.json) records the environment and six deployment snapshots. The served [asset manifest](2026-11-10-final-mobile/asset-manifest.json) includes all **24 optimized image variants**; the raw [HTML](2026-11-10-final-mobile/index.html) and its SHA-256 fingerprint are retained. The local reference commit is `714ae3df202181affa95f638c1636085a72e91c6`; public artifacts do not expose a verified deployed source commit, so this is not claimed as the deployed commit.
+[deployment.json](2026-11-10-production-final-mobile/deployment.json) retains the environment and all six deployment snapshots. The [asset manifest](2026-11-10-production-final-mobile/asset-manifest.json) and [HTML](2026-11-10-production-final-mobile/index.html) identify the measured build; the manifest includes all **24 optimized image variants**. Local reference commit **b33e2e12b92994b21e4620140d6c2f2d15b8024e** is recorded only as a reference: public artifacts do not expose a verified deployed source commit.
 
-## Targets not achieved and remaining limitations
+## TBT target and comparison limits
 
-- **TBT was unmet in every earlier public run.** The 413ms median was 213ms above the 200ms threshold, despite a 59.5% reduction from the initial deployed median. Run 1 identifies five long tasks; the entry script accounts for the longest two, approximately **281ms and 132ms**. Lighthouse reports about **40 KiB** of potentially unused entry JavaScript. The [subsequent fix](tbt-followup.md) addresses the remaining startup styling/rendering work and passes all five local targets; its hosted confirmation remains pending. Home makes no initial Stripe or lazy-route/menu chunk request in either set.
-- **Scope is homepage mobile lab measurement.** It does not establish field-user performance, desktop results, other routes' performance, interaction responsiveness, form/API readiness, or production payment behavior. The earlier local I Want to Help CLS and image opportunities are not reclassified as resolved by a passing homepage result.
-- **SEO 100 is a Lighthouse result.** It does not establish indexing, rankings, rich results, or equivalent behavior for JavaScript-disabled crawlers. Deployed raw HTML still provides a shared fallback; route-specific content and metadata depend on JavaScript.
-- **Unknown pages return HTTP 200.** The deployed missing-page probe correctly renders noindex with no canonical, but client metadata does not produce a server 404.
-- **A successful workshop-detail page could not be verified.** `/workshops/WS-1001` renders Workshop Not Found with appropriate noindex/no-canonical metadata. A read-only [API probe](2026-11-10-final-mobile/workshop-api-probe.json) to `/api/workshops/WS-1001` returned **HTTP 200, `text/html`**, rather than workshop JSON. Backend/deployment integration for that pathway needs separate verification. No mock worker was enabled and no submission was attempted to bypass this limit.
-- **The overall 50% improvement interpretation remains unresolved.** The evaluation plan distinguishes an aggregate target from a per-metric floor. This report evaluates the five explicit metric targets and does not declare the undefined overall target achieved. TBT's descriptive reduction from the historical baseline is 41%, below a hypothetical 50% per-metric floor.
+**TBT remains 257 ms above the 200 ms threshold at the median.** No final hosted run meets the strict <200 ms target. The final median is higher than the earlier public 413 ms snapshot, despite the smaller entry script.
+
+The initial homepage script now has **259,662 decoded bytes and 84,732 transferred bytes** in run 1, compared with **450,658 decoded bytes and 145,578 transferred bytes** in the earlier public run 1. The final homepage makes **one initial script request, with no Stripe or lazy-route/menu chunks**. These network observations confirm reduced startup delivery; they do not by themselves establish reduced blocking time.
+
+Run 1 attributes modeled long tasks of approximately **244, 173, and 72 ms** to the entry script, **193 ms** to the document, and **85 ms** to unattributed work. These are Lighthouse's modeled task durations under simulated throttling, not directly observed trace durations; summing complete task durations is not the TBT formula. The raw diagnostics are retained for subsequent main-thread analysis.
+
+CPU calibration is an important limitation: the final benchmark index range **734.5?1,096.5** is below the earlier hosted **1,881?2,150.5** and the local follow-up's after range **2,281?2,390.5**. Lighthouse explicitly warned about a slower-than-expected CPU in two final runs. This limits timing comparisons and attribution, but does not convert the measured TBT failure into a pass or prove that CPU variation explains the entire difference. The configured 4? multiplier was retained for comparison; no threshold or setting was relaxed to obtain a passing result.
+
+The [local TBT experiment](tbt-followup.md) remains useful implementation evidence: it measured 401 ? 45 ms before/after on localhost and preserved appearance and behavior. Its 45 ms result remains separate from the **457 ms production result**. Further TBT diagnosis should profile the remaining script, style/layout, and rendering tasks under consistent machine conditions and retain any subsequent measurement sets separately.
 
 ## Supplemental deployed SEO checks
 
-[browser-verification.json](2026-11-10-final-mobile/browser-verification.json) records **54 passing checks across nine rendered route captures**, with zero uncaught browser errors. The seven configured static routes have the expected title/description, one main and h1, correct canonical, and indexable metadata. The two error-path captures verify noindex/canonical removal. Deployed [robots.txt](2026-11-10-final-mobile/robots.txt) and [sitemap.xml](2026-11-10-final-mobile/sitemap.xml) return HTTP 200 and advertise the expected origin/static routes. The browser check runs outside Lighthouse collection and assigns no additional Lighthouse SEO scores.
+[Browser verification](2026-11-10-production-final-mobile/browser-verification.json) passed **60 checks across ten rendered route captures**, with **zero uncaught browser errors**. The eight configured static routes have the expected title/description, one main and h1, correct canonical, and indexable rendered metadata. **Advocate now displays ?Become a TechSmart Advocate | TechSmart,? renders its interest form page, and is included in the sitemap.** Two error paths verify noindex and canonical removal.
 
-The first supplemental check assumed the historical WS-1001 fixture would load in production. Its [failed assumption record](2026-11-10-final-mobile/browser-verification-initial-workshop-assumption.json) is retained. The final check explicitly records the unavailable detail page as a limitation and verifies its error metadata; it does not claim successful workshop content.
+Deployed [robots.txt](2026-11-10-production-final-mobile/robots.txt) and [sitemap.xml](2026-11-10-production-final-mobile/sitemap.xml) return HTTP 200 and advertise the expected production origin and all eight configured static routes. These checks ran after the Lighthouse set and assign no additional Lighthouse scores or timing measurements.
 
-## Reproduce and validate
+## Remaining limitations
 
-[run-final-lighthouse.ps1](run-final-lighthouse.ps1) runs the fixed five-run procedure, records environment/deployment identity, checks for deployment changes, and refuses to overwrite an evidence directory. Make Lighthouse 12.8.2 available outside application dependencies and pass its CLI path:
+- **TBT is the one unmet metric target.** Four metrics pass in every run; the report does not claim that all performance standards have been met.
+- **Homepage mobile lab scope.** Results do not establish field performance, desktop or other routes' timings, interaction responsiveness, form/API readiness, or production payment behavior. Earlier local I Want to Help CLS/image observations are not resolved by a passing homepage result.
+- **SEO 100 is a Lighthouse result.** It does not establish indexing, rankings, rich results, or equivalent behavior for JavaScript-disabled crawlers. Raw HTML still provides a shared fallback; route-specific content and metadata depend on JavaScript.
+- **Unknown pages return HTTP 200.** The deployed missing page correctly renders noindex with no canonical, but client metadata does not produce a server 404.
+- **Successful workshop-detail content remains unverified.** The representative WS-1001 page renders Workshop Not Found with noindex/no canonical. A fresh [read-only API probe](2026-11-10-production-final-mobile/workshop-api-probe.json) returned **HTTP 200, text/html**, rather than workshop JSON. Backend/deployment integration needs separate verification. No mock worker, registration, or payment was submitted to bypass this limitation.
+- **The overall 50% improvement interpretation remains unresolved.** The evaluation plan distinguishes an aggregate target from a per-metric floor. This report evaluates the five explicit metrics and does not declare that undefined overall criterion achieved. TBT's descriptive reduction from the historical 700 ms baseline is **34.7%**.
 
-```powershell
-npm exec --yes --package=lighthouse@12.8.2 -- lighthouse --version
-./tests/performance/run-final-lighthouse.ps1 -LighthouseCli '<cached-node_modules/lighthouse/cli/index.js>' -OutputDirectory 'tests/performance/NEW-DATE-final-mobile'
-node tests/performance/summarize-final-lighthouse.cjs tests/performance/NEW-DATE-final-mobile
-```
+## Earlier evidence and reproduction
 
-Record the actual browser version on each repetition; do not silently treat a different version as identical. The [summary helper](summarize-final-lighthouse.cjs) validates full settings against the initial reports, deployed entry identity, finite metric values, and the five-run set before calculating medians and comparisons. [check-final-deployment.cjs](check-final-deployment.cjs), with `PUPPETEER_CORE_PATH` set for external tooling, repeats the supplemental rendered checks without submitting forms. The earlier hosted reporting measurement changed no application code or deployment. The subsequent local TBT implementation and its pending hosted confirmation are documented at the top of this report.
+The [initial November 5 summary](2026-11-05-initial-mobile/summary.json), [earlier November 10 public summary](2026-11-10-final-mobile/summary.json), and [local TBT summary](2026-11-10-tbt-followup/summary.json) remain unchanged. Their raw reports are retained in their original directories. Current results are in **2026-11-10-production-final-mobile**, not the earlier final-mobile directory.
+
+The requested [collector](run-final-lighthouse.ps1) was run with Lighthouse **12.8.2**, followed by the [summarizer](summarize-final-lighthouse.cjs) against the same new directory. The summarizer validates full settings, numeric values, the five-run set, and deployment identity against the initial measurement. It was rerun after screenshot review and supplemental browser verification to include those outcomes.
+
+~~~powershell
+./tests/performance/run-final-lighthouse.ps1 -LighthouseCli '<cached-node_modules/lighthouse/cli/index.js>' -OutputDirectory 'tests/performance/2026-11-10-production-final-mobile'
+node tests/performance/summarize-final-lighthouse.cjs tests/performance/2026-11-10-production-final-mobile
+~~~
+
+Those are the completed commands; the collector refuses to overwrite that directory. For another run, choose a new evidence directory and retain Lighthouse 12.8.2, the documented flags/settings, and the actual browser/environment record. Run [check-final-deployment.cjs](check-final-deployment.cjs), with PUPPETEER_CORE_PATH set for external tooling, separately from Lighthouse collection for supplemental rendered checks.
+
+**This final verification changed documentation and added evidence only. No application source, commit, push, merge, or deployment was performed during this measurement task.**

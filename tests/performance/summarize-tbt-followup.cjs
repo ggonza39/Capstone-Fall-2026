@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const directory = process.argv[2] || 'tests/performance/2026-11-10-tbt-followup';
 const read = file => JSON.parse(fs.readFileSync(path.join(directory, file), 'utf8'));
+const environment = read('environment.json');
 const median = values => [...values].sort((a, b) => a - b)[Math.floor(values.length / 2)];
 const metrics = {
   FCP: { audit: 'first-contentful-paint', targetExclusive: 2000 },
@@ -47,8 +48,8 @@ for (const phase of ['before', 'after']) {
 }
 const summary = {
   generatedAtUtc: new Date().toISOString(), url: 'http://127.0.0.1:4173/',
-  scope: 'Controlled local production experiment. The earlier deployed 413ms median is retained separately; public results require deployment and a fresh hosted audit.',
-  environment: read('environment.json'), lighthouseVersion: '12.8.2', settings,
+  scope: environment.scope || 'Controlled local production experiment. The earlier deployed 413ms median is retained separately; public results require deployment and a fresh hosted audit.',
+  environment, lighthouseVersion: '12.8.2', settings,
   aggregation: 'Independent numeric median of all five runs in each phase; timings in ms; no reports discarded.',
   ...phases,
   tbtReductionPercent: (1 - phases.after.metrics.TBT.median / phases.before.metrics.TBT.median) * 100,

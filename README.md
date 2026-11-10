@@ -54,9 +54,9 @@ The project uses the following tools to support design, development, accessibili
 
 ## Performance and SEO
 
-The November 10, 2026 optimized **local production build meets all five Lighthouse targets in all five mobile runs**: FCP **0.759 s**, LCP **1.709 s**, TBT **45 ms** (target <200 ms), Speed Index **0.759 s**, and SEO **100/100**. The TBT fix removes homepage/shared-navigation runtime styling while preserving the design; 55 automated tests and 77 browser checks passed.
+The latest November 10, 2026 **local production-build follow-up meets all five Lighthouse targets in all five mobile runs**: FCP **1.186 s**, LCP **1.223 s**, TBT **0 ms median** (range **0–90 ms**, target <200 ms), Speed Index **2.227 s**, and SEO **100/100**. The homepage now ships complete HTML with a small interaction script, reducing initial gzip JavaScript from 82,615 to 3,574 bytes. See the [implementation and evidence](tests/performance/tbt-static-home-optimization.md).
 
-See the [performance README](tests/performance/README.md) and [TBT follow-up evidence](tests/performance/tbt-followup.md). **Public deployment confirmation is pending**: the earlier hosted 413 ms result remains recorded until the updated build is deployed and re-audited.
+**Deployment and another public audit are required to confirm this new fix.** The latest measured public build still has **457 ms median TBT**, with four of five targets met; the new local result does not replace that measurement. See the [performance README](tests/performance/README.md) and [final report](tests/performance/final-performance-and-seo-results.md) for public results, historical comparisons, and CPU-calibration limitations. One latest local run reported a slow-CPU warning; every run is retained.
 
 ## Repository Structure
 - `/documentation` — Requirements engineering document, API contract specs, and future-development roadmap

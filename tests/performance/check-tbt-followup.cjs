@@ -11,6 +11,7 @@ assert.ok(["before", "after"].includes(phase), "Choose before or after");
 const baseUrl = process.argv[3] || "http://127.0.0.1:4173/";
 const directory = "tests/performance/2026-11-10-tbt-followup";
 const outputPath = process.argv[4] || `${directory}/browser-${phase}.json`;
+const beforePath = path.join(path.dirname(outputPath), "browser-before.json");
 const evidence = {
   phase, baseUrl, capturedAtUtc: new Date().toISOString(),
   purpose: "Visual, keyboard, routing, and asset regression checks; not a Lighthouse measurement",
@@ -71,6 +72,8 @@ async function snapshot(page) {
       documentHeight: document.documentElement.scrollHeight,
       title: document.title,
       description: document.querySelector('meta[name="description"]')?.content,
+      prerendered: document.getElementById("root")?.dataset.prerendered || null,
+      documentScripts: [...document.querySelectorAll("script[src]")].map(element => element.src),
       logo: { currentSrc: logo.currentSrc, width: logo.width, height: logo.height, naturalWidth: logo.naturalWidth, naturalHeight: logo.naturalHeight },
       bottomNavigationDetails: [...document.querySelectorAll('nav[aria-label="Mobile quick navigation"] a')].map(element => ({ text: element.textContent.trim(), iconFontSize: getComputedStyle(element.querySelector("svg")).fontSize, labelFontSize: getComputedStyle(element.querySelector("span")).fontSize })),
       activeElement: { tag: document.activeElement?.tagName, id: document.activeElement?.id, text: document.activeElement?.textContent.trim() },
@@ -107,6 +110,11 @@ async function homeChecks(width, height, label) {
   await page.goto(baseUrl, { waitUntil: "networkidle0" });
   await settle(page);
   const initial = await snapshot(page);
+  if (initial.prerendered === "home") {
+    evidence.staticHome = true;
+    const startupJavaScript = initial.assets.filter(asset => /\.js(?:[?#]|$)/.test(asset.url));
+    check(`Static Home requests no React application or menu chunks initially at ${label}`, startupJavaScript.length > 0 && startupJavaScript.every(asset => initial.documentScripts.includes(asset.url)), { startupJavaScript: startupJavaScript.map(asset => asset.url), documentScripts: initial.documentScripts });
+  }
   check(`Home has one h1 at ${label}`, await page.$$eval("h1", elements => elements.length === 1));
   check(`Home has four semantic sections at ${label}`, await page.$$eval("main > section", elements => elements.length === 4));
   check(`Home has no horizontal overflow at ${label}`, initial.documentWidth <= width);
@@ -142,8 +150,10 @@ async function homeChecks(width, height, label) {
       activeText: document.activeElement.textContent.trim(),
       links: [...document.querySelectorAll("#mobile-navigation a")].map(element => ({ text: element.textContent.trim(), href: element.getAttribute("href"), current: element.getAttribute("aria-current") })),
       rect: (() => { const rect = document.querySelector("#mobile-navigation").getBoundingClientRect(); return { x: rect.x, y: rect.y, width: rect.width, height: rect.height }; })(),
+      islandMounted: Boolean(document.querySelector("[data-home-menu]")),
     }));
     check(`Menu opens by keyboard with six links at ${label}`, result.menuOpen.expanded === "true" && result.menuOpen.links.length === 6);
+    if (initial.prerendered === "home") check(`Static Home mounts its requested React drawer island at ${label}`, result.menuOpen.islandMounted);
     await page.keyboard.press("Escape");
     await page.waitForFunction(() => document.querySelector('header button[aria-controls="mobile-navigation"]')?.getAttribute("aria-expanded") === "false");
     await new Promise(resolve => setTimeout(resolve, 350));
@@ -174,6 +184,13 @@ async function secondaryRoutes() {
     });
     check(`Secondary route renders semantic content ${route}`, result.mainCount === 1 && result.heading.length > 0);
     check(`Secondary route receives heading theme ${route}`, result.headingStyle.fontFamily === 'Rockwell, Georgia, serif' && result.headingStyle.fontWeight === "700");
+    if (evidence.staticHome) {
+      const response = await page.reload({ waitUntil: "networkidle0" });
+      await page.waitForFunction(text => document.querySelector("h1")?.textContent.trim() === text, {}, result.heading);
+      result.refreshed = await page.evaluate(() => ({ path: location.pathname, title: document.title, heading: document.querySelector("h1")?.textContent.trim(), prerendered: document.getElementById("root")?.dataset.prerendered || null }));
+      result.refreshed.status = response.status();
+      check(`Direct secondary route refresh preserves its content ${route}`, result.refreshed.path === route && result.refreshed.heading === result.heading && result.refreshed.prerendered !== "home");
+    }
     await page.click('header a[aria-label="TechSmart Learning for Seniors home"]');
     await settle(page);
     check(`Secondary route returns to Home ${route}`, new URL(page.url()).pathname === "/");
@@ -181,6 +198,142 @@ async function secondaryRoutes() {
     evidence.routes.push(result);
     await page.close();
   }
+}
+
+async function fillZip(page, value) {
+  await page.focus("#home-zip-code");
+  await page.keyboard.down("Control");
+  await page.keyboard.press("A");
+  await page.keyboard.up("Control");
+  await page.keyboard.type(value);
+}
+
+function trackPageErrors(page, context) {
+  page.on("pageerror", error => evidence.pageErrors.push({ ...context, url: page.url(), message: error.message }));
+  page.on("requestfailed", request => evidence.requestsFailed.push({ ...context, url: request.url(), message: request.failure()?.errorText }));
+}
+
+async function staticHomeChecks() {
+  const expected = require("../../capstonefall2026/src/seo/config.json").routes["/"];
+  const result = { noJavaScript: {}, enhancedNavigation: {}, menuNavigation: {}, unknownRoute: {} };
+  evidence.staticHomeChecks = result;
+
+  // A disabled-JavaScript page verifies the served document, native constraints,
+  // and GET navigation independently of the enhancement controller.
+  const noJavaScript = await browser.newPage();
+  noJavaScript.setDefaultTimeout(25000);
+  await noJavaScript.setViewport({ width: 412, height: 823 });
+  await noJavaScript.setJavaScriptEnabled(false);
+  trackPageErrors(noJavaScript, { journey: "static-no-JavaScript" });
+  const response = await noJavaScript.goto(baseUrl, { waitUntil: "networkidle0" });
+  const rawHtml = await response.text();
+  const initial = await noJavaScript.evaluate(() => {
+    const input = document.querySelector("#home-zip-code"), form = input?.form;
+    return {
+      heading: document.querySelector("h1")?.textContent.trim(),
+      sections: document.querySelectorAll("main > section").length,
+      title: document.title,
+      description: document.querySelector('meta[name="description"]')?.content,
+      canonical: document.querySelector('link[rel="canonical"]')?.href,
+      robots: document.querySelector('meta[name="robots"]')?.content,
+      prerendered: document.getElementById("root")?.dataset.prerendered,
+      mainCount: document.querySelectorAll("main").length,
+      form: { action: form?.getAttribute("action"), method: form?.method, noValidate: form?.noValidate, name: input?.name, required: input?.required, pattern: input?.pattern, maxLength: input?.maxLength, inputMode: input?.inputMode },
+      links: [...document.querySelectorAll("main a")].map(element => ({ text: element.textContent.trim(), href: element.getAttribute("href") })),
+    };
+  });
+  result.noJavaScript.initial = initial;
+  result.noJavaScript.rawHtmlBytes = Buffer.byteLength(rawHtml);
+  check("Raw HTML exposes Home content and route metadata without JavaScript", rawHtml.includes('data-prerendered="home"') && rawHtml.includes("Technology Made Simple.") && initial.prerendered === "home" && initial.heading === "Technology Made Simple." && initial.sections === 4 && initial.mainCount === 1 && initial.title === expected.title && initial.description === expected.description && initial.robots === "index,follow" && Boolean(initial.canonical));
+  check("No-JavaScript Home retains crawlable primary links", initial.links.some(link => link.href === "/need-help" && link.text === "I Need Technology Help") && initial.links.some(link => link.href === "/want-to-help" && link.text === "I Want to Help"));
+  check("No-JavaScript ZIP form provides required five-digit native GET validation", initial.form.action === "/need-help" && initial.form.method === "get" && !initial.form.noValidate && initial.form.name === "zip" && initial.form.required && initial.form.pattern === "[0-9]{5}" && initial.form.maxLength === 5 && initial.form.inputMode === "numeric");
+  await noJavaScript.click("main form button[type=submit]");
+  result.noJavaScript.empty = await noJavaScript.$eval("#home-zip-code", input => ({ valueMissing: input.validity.valueMissing, invalid: input.matches(":invalid"), message: input.validationMessage, focused: document.activeElement === input }));
+  check("No-JavaScript empty ZIP is blocked by native validation", new URL(noJavaScript.url()).pathname === "/" && result.noJavaScript.empty.valueMissing && result.noJavaScript.empty.invalid && result.noJavaScript.empty.focused);
+  await fillZip(noJavaScript, "12abc");
+  await noJavaScript.click("main form button[type=submit]");
+  result.noJavaScript.malformed = await noJavaScript.$eval("#home-zip-code", input => ({ value: input.value, patternMismatch: input.validity.patternMismatch, invalid: input.matches(":invalid"), message: input.validationMessage, focused: document.activeElement === input }));
+  check("No-JavaScript malformed ZIP is blocked by its pattern", new URL(noJavaScript.url()).pathname === "/" && result.noJavaScript.malformed.patternMismatch && result.noJavaScript.malformed.invalid && result.noJavaScript.malformed.focused);
+  await fillZip(noJavaScript, "00501");
+  const [nativeGet] = await Promise.all([noJavaScript.waitForNavigation({ waitUntil: "networkidle0" }), noJavaScript.keyboard.press("Enter")]);
+  result.noJavaScript.validGet = { url: noJavaScript.url(), method: nativeGet.request().method(), status: nativeGet.status() };
+  const nativeUrl = new URL(noJavaScript.url());
+  check("No-JavaScript valid ZIP performs GET navigation and preserves a leading zero", nativeGet.request().method() === "GET" && nativeUrl.pathname === "/need-help" && nativeUrl.searchParams.get("zip") === "00501");
+  await noJavaScript.close();
+
+  const enhanced = await browser.newPage();
+  enhanced.setDefaultTimeout(25000);
+  await enhanced.setViewport({ width: 1280, height: 900 });
+  trackPageErrors(enhanced, { journey: "static-enhanced-navigation" });
+  await enhanced.goto(baseUrl, { waitUntil: "networkidle0" });
+  await settle(enhanced);
+  await enhanced.evaluate(() => { window.__tbtDocumentToken = "enhanced-zip-home"; });
+  await fillZip(enhanced, "00501");
+  const [enhancedGet] = await Promise.all([enhanced.waitForNavigation({ waitUntil: "networkidle0" }), enhanced.keyboard.press("Enter")]);
+  await enhanced.waitForSelector("h1");
+  result.enhancedNavigation.validZip = await enhanced.evaluate(() => ({ url: location.href, path: location.pathname, zip: new URLSearchParams(location.search).get("zip"), heading: document.querySelector("h1")?.textContent.trim(), previousDocumentToken: window.__tbtDocumentToken || null }));
+  result.enhancedNavigation.validZip.method = enhancedGet.request().method();
+  check("Enhanced valid ZIP loads the help document and preserves a leading zero", result.enhancedNavigation.validZip.path === "/need-help" && result.enhancedNavigation.validZip.zip === "00501" && result.enhancedNavigation.validZip.method === "GET" && result.enhancedNavigation.validZip.previousDocumentToken === null && result.enhancedNavigation.validZip.heading === "I Need Technology Help");
+  await enhanced.goto(baseUrl, { waitUntil: "networkidle0" });
+  await settle(enhanced);
+  await enhanced.evaluate(() => { window.__tbtDocumentToken = "primary-anchor-home"; });
+  const [anchorNavigation] = await Promise.all([enhanced.waitForNavigation({ waitUntil: "networkidle0" }), enhanced.click('main a[href="/need-help"]')]);
+  await enhanced.waitForFunction(() => document.querySelector("h1")?.textContent.trim() === "I Need Technology Help");
+  result.enhancedNavigation.primaryLink = await enhanced.evaluate(() => ({ path: location.pathname, heading: document.querySelector("h1")?.textContent.trim(), previousDocumentToken: window.__tbtDocumentToken || null }));
+  result.enhancedNavigation.primaryLink.method = anchorNavigation.request().method();
+  check("Static primary anchor opens the correct full document", result.enhancedNavigation.primaryLink.path === "/need-help" && result.enhancedNavigation.primaryLink.method === "GET" && result.enhancedNavigation.primaryLink.previousDocumentToken === null);
+  await enhanced.goBack({ waitUntil: "networkidle0" });
+  await settle(enhanced);
+  result.enhancedNavigation.back = await enhanced.evaluate(() => ({ path: location.pathname, prerendered: document.getElementById("root")?.dataset.prerendered, headings: document.querySelectorAll("h1").length, sections: document.querySelectorAll("main > section").length }));
+  check("Back restores the static Home document without duplicate content", result.enhancedNavigation.back.path === "/" && result.enhancedNavigation.back.prerendered === "home" && result.enhancedNavigation.back.headings === 1 && result.enhancedNavigation.back.sections === 4);
+  await fillZip(enhanced, "12");
+  await enhanced.keyboard.press("Enter");
+  await enhanced.waitForFunction(() => document.querySelector("#home-zip-code-help")?.getAttribute("role") === "alert");
+  check("Home helper validation still works after Back navigation", new URL(enhanced.url()).pathname === "/" && await enhanced.$eval("#home-zip-code-help", element => element.textContent === "Enter a valid 5-digit ZIP code."));
+  await enhanced.close();
+
+  const mobile = await browser.newPage();
+  mobile.setDefaultTimeout(25000);
+  await mobile.setViewport({ width: 412, height: 823 });
+  trackPageErrors(mobile, { journey: "static-mobile-menu-navigation" });
+  await mobile.goto(baseUrl, { waitUntil: "networkidle0" });
+  await settle(mobile);
+  await mobile.evaluate(() => { window.__tbtDocumentToken = "menu-home"; });
+  await mobile.focus('header button[aria-controls="mobile-navigation"]');
+  await mobile.keyboard.press("Enter");
+  await mobile.waitForSelector('#mobile-navigation a[href="/resources"]', { visible: true });
+  const [menuNavigation] = await Promise.all([mobile.waitForNavigation({ waitUntil: "networkidle0" }), mobile.click('#mobile-navigation a[href="/resources"]')]);
+  await mobile.waitForFunction(() => document.querySelector("h1")?.textContent.trim() === "Technology Resources");
+  result.menuNavigation.destination = await mobile.evaluate(() => ({ path: location.pathname, heading: document.querySelector("h1")?.textContent.trim(), previousDocumentToken: window.__tbtDocumentToken || null, drawerPresent: Boolean(document.querySelector("#mobile-navigation")) }));
+  result.menuNavigation.destination.method = menuNavigation.request().method();
+  check("Static mobile drawer link loads the selected full document", result.menuNavigation.destination.path === "/resources" && result.menuNavigation.destination.heading === "Technology Resources" && result.menuNavigation.destination.method === "GET" && result.menuNavigation.destination.previousDocumentToken === null && !result.menuNavigation.destination.drawerPresent);
+  await mobile.click('header a[aria-label="TechSmart Learning for Seniors home"]');
+  await settle(mobile);
+  check("Mobile drawer journey returns Home through its logo link", new URL(mobile.url()).pathname === "/" && await mobile.$$eval("h1", elements => elements.length === 1));
+  // A direct refresh of the returned root must recover the static entry, even
+  // when the secondary-page React router handled the logo click in memory.
+  await mobile.reload({ waitUntil: "networkidle0" });
+  await settle(mobile);
+  result.menuNavigation.refreshedHome = await mobile.evaluate(() => ({ path: location.pathname, prerendered: document.getElementById("root")?.dataset.prerendered, mainCount: document.querySelectorAll("main").length }));
+  check("Refreshing the returned root serves static Home", result.menuNavigation.refreshedHome.path === "/" && result.menuNavigation.refreshedHome.prerendered === "home" && result.menuNavigation.refreshedHome.mainCount === 1);
+  await mobile.close();
+
+  const unknown = await browser.newPage();
+  unknown.setDefaultTimeout(25000);
+  trackPageErrors(unknown, { journey: "unknown-route-fallback" });
+  const unknownPath = "/this-page-does-not-exist-tbt-check";
+  const unknownResponse = await unknown.goto(new URL(unknownPath, baseUrl).href, { waitUntil: "networkidle0" });
+  await unknown.waitForFunction(() => document.querySelector("h1")?.textContent.trim() === "Page Not Found");
+  const captureUnknown = () => unknown.evaluate(() => ({ path: location.pathname, title: document.title, heading: document.querySelector("h1")?.textContent.trim(), robots: document.querySelector('meta[name="robots"]')?.content, canonical: document.querySelector('link[rel="canonical"]')?.href || null, prerendered: document.getElementById("root")?.dataset.prerendered || null, mainCount: document.querySelectorAll("main").length }));
+  result.unknownRoute.initial = await captureUnknown();
+  result.unknownRoute.initial.status = unknownResponse.status();
+  check("Unknown route renders the recovery page instead of static Home", result.unknownRoute.initial.path === unknownPath && result.unknownRoute.initial.heading === "Page Not Found" && result.unknownRoute.initial.robots === "noindex,follow" && result.unknownRoute.initial.canonical === null && result.unknownRoute.initial.prerendered !== "home" && result.unknownRoute.initial.mainCount === 1);
+  const unknownRefresh = await unknown.reload({ waitUntil: "networkidle0" });
+  await unknown.waitForFunction(() => document.querySelector("h1")?.textContent.trim() === "Page Not Found");
+  result.unknownRoute.refreshed = await captureUnknown();
+  result.unknownRoute.refreshed.status = unknownRefresh.status();
+  check("Unknown route refresh preserves its recovery page and noindex", result.unknownRoute.refreshed.path === unknownPath && result.unknownRoute.refreshed.heading === "Page Not Found" && result.unknownRoute.refreshed.robots === "noindex,follow" && result.unknownRoute.refreshed.canonical === null && result.unknownRoute.refreshed.prerendered !== "home");
+  await unknown.close();
 }
 (async () => {
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
@@ -190,7 +343,7 @@ async function secondaryRoutes() {
     for (const [width, height, label] of [[412, 823, "mobile-412"], [768, 900, "tablet-768"], [1280, 900, "desktop-1280"], [853, 900, "zoom-reflow-853"]]) await homeChecks(width, height, label);
     if (phase === "after") {
       await secondaryRoutes();
-      const beforePath = `${directory}/browser-before.json`;
+      if (evidence.staticHome) await staticHomeChecks();
       if (fs.existsSync(beforePath)) {
         const before = JSON.parse(fs.readFileSync(beforePath, "utf8"));
         for (const viewport of evidence.viewports) {
