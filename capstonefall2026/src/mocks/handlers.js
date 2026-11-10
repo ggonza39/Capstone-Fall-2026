@@ -2,7 +2,11 @@
 import { http, HttpResponse, delay } from "msw";
 import { workshops, workshopSummaries } from "./data/workshops";
 import { isValidZip } from "./validation-logic/validationHelpers.mjs";
+import { validateAssistanceRequest } from "./validation-logic/assistanceRequests.mjs";
 import { validateVolunteerInquiry } from "./validation-logic/volunteerInquiries.mjs";
+import { validateContactInquiry } from "./validation-logic/contactInquiries.mjs";
+import { validateDonorInquiry } from "./validation-logic/donorInquiries.mjs";
+import { validateAdvocateInquiry } from "./validation-logic/advocateInquiries.mjs";
 import {
   isWorkshopFull,
   validateWorkshopRegistration,
@@ -13,9 +17,11 @@ import {
  *
  * Implements the documented sandbox API behavior.
  * No production backend or payment processing is performed.
+ *
+ * Validation/business-logic rules live in ./validation-logic/*.mjs so they
+ * can be shared with the Express mock server (src/mocks/mockServer.mjs) and
+ * unit tested directly, rather than duplicated here.
  */
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validationError(fields) {
   return HttpResponse.json(
@@ -30,10 +36,6 @@ function validationError(fields) {
   );
 }
 
-function requireString(value) {
-  return typeof value === "string" && value.trim().length > 0;
-}
-
 let nextId = 1001;
 
 function generateId(prefix) {
@@ -44,31 +46,8 @@ export const handlers = [
   // API 1: Assistance Request (REQ-21)
   http.post("/api/v1/assistance-requests", async ({ request }) => {
     const body = await request.json();
-    const fields = {};
 
-    if (!requireString(body.firstName)) {
-      fields.firstName = "First name is required.";
-    }
-
-    if (!requireString(body.lastName)) {
-      fields.lastName = "Last name is required.";
-    }
-
-    if (!requireString(body.email) && !requireString(body.phone)) {
-      fields.email = "Provide an email address or phone number.";
-    }
-
-    if (body.email && !EMAIL_PATTERN.test(body.email)) {
-      fields.email = "Enter a valid email address.";
-    }
-
-    if (!requireString(body.helpCategory)) {
-      fields.helpCategory = "Help category is required.";
-    }
-
-    if (!requireString(body.description)) {
-      fields.description = "Description is required.";
-    }
+    const fields = validateAssistanceRequest(body);
 
     if (Object.keys(fields).length > 0) {
       return validationError(fields);
@@ -108,25 +87,8 @@ export const handlers = [
   // API 3: General Contact Inquiry (REQ-23)
   http.post("/api/v1/contact-inquiries", async ({ request }) => {
     const body = await request.json();
-    const fields = {};
 
-    if (!requireString(body.firstName)) {
-      fields.firstName = "First name is required.";
-    }
-
-    if (!requireString(body.lastName)) {
-      fields.lastName = "Last name is required.";
-    }
-
-    if (!requireString(body.email)) {
-      fields.email = "Email is required.";
-    } else if (!EMAIL_PATTERN.test(body.email)) {
-      fields.email = "Enter a valid email address.";
-    }
-
-    if (!requireString(body.inquiryType)) {
-      fields.inquiryType = "Please select a valid inquiry type.";
-    }
+    const fields = validateContactInquiry(body);
 
     if (Object.keys(fields).length > 0) {
       return validationError(fields);
@@ -146,38 +108,36 @@ export const handlers = [
   // No payment processing.
   http.post("/api/v1/donor-inquiries", async ({ request }) => {
     const body = await request.json();
-    const fields = {};
 
-    if (!requireString(body.firstName)) {
-      fields.firstName = "First name is required.";
+    const fields = validateDonorInquiry(body);
+
+    if (Object.keys(fields).length > 0) {
+      return validationError(fields);
     }
 
-    if (!requireString(body.lastName)) {
-      fields.lastName = "Last name is required.";
-    }
+    // isSimulation/success are additive sandbox-only fields (not part of the
+    // Sponsor-Confirmed contract fields) consumed by CheckoutForm.js to show a
+    // clear "no real payment was processed" confirmation message — see the
+    // Stripe Integration Boundary section of documentation/api-contract.md.
+    return HttpResponse.json(
+      {
+        inquiryId: generateId("DI"),
+        status: "received",
+        message: "Your donor interest inquiry has been received.",
+        isSimulation: true,
+        success: true,
+      },
+      { status: 201 }
+    );
+  }),
 
-    if (!requireString(body.email) && !requireString(body.phone)) {
-      fields.email = "Provide an email address or phone number.";
-    }
+  // API 6 — Advocate Interest Inquiry (PBI-13)
+  // Sandbox-only. Submitting this form does not establish the user as an
+  // official TSLS representative or advocate.
+  http.post("/api/v1/advocate-inquiries", async ({ request }) => {
+    const body = await request.json();
 
-    if (body.email && !EMAIL_PATTERN.test(body.email)) {
-      fields.email = "Enter a valid email address.";
-    }
-
-    const prohibitedPaymentFields = [
-      "amount",
-      "cardNumber",
-      "cvv",
-      "paymentToken",
-      "paymentMethod",
-    ];
-
-    for (const field of prohibitedPaymentFields) {
-      if (Object.prototype.hasOwnProperty.call(body, field)) {
-        fields[field] =
-          "Payment information is not accepted in Phase 1.";
-      }
-    }
+    const fields = validateAdvocateInquiry(body);
 
     if (Object.keys(fields).length > 0) {
       return validationError(fields);
@@ -185,9 +145,9 @@ export const handlers = [
 
     return HttpResponse.json(
       {
-        inquiryId: generateId("DI"),
+        inquiryId: generateId("AI"),
         status: "received",
-        message: "Your donor interest inquiry has been received.",
+        message: "Your advocate interest request has been received.",
       },
       { status: 201 }
     );

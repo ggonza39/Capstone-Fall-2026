@@ -446,3 +446,70 @@ These endpoints (`documentation/api-contract.md`, "API 5") are sandbox/mock only
 - Test scenario: POST /api/workshops/:id/registrations where the sandbox workshop's `seatAvailability` is 0
 - Expected HTTP status: 409 Conflict
 - Expected behavior: standard error envelope with `code: "WORKSHOP_FULL"`; frontend clearly communicates the workshop is full
+
+---
+
+## Advocate Interest Inquiry Tests (Milestone-3 — PBI-13, SANDBOX ONLY)
+
+This endpoint (`documentation/api-contract.md`, "API 6") is sandbox/mock only, following the same `/api/v1` contract conventions as the REQ-21–REQ-24 endpoints above. Automated coverage lives in `capstonefall2026/src/mocks/validation-logic/advocateInquiries.test.js` (pure validation rules) and `capstonefall2026/src/pages/Advocate.test.js` (UI-level required-field/success/duplicate-submission/API-error states).
+
+### Test 41: Valid Advocate Interest Submission (PBI-13)
+- Test scenario: POST /api/v1/advocate-inquiries with firstName, lastName, email, at least one `interests` value, and a message
+- Expected HTTP status: 201 Created
+- Expected behavior: response includes `inquiryId`, `status: "received"`, and a message confirming the request was received
+
+### Test 42: Advocate Inquiry Missing Required Fields (PBI-13)
+- Test scenario: POST /api/v1/advocate-inquiries missing firstName/lastName/email/message
+- Expected HTTP status: 400 Bad Request
+- Expected behavior: validation error identifies each missing field
+
+### Test 43: Advocate Inquiry Malformed Email (PBI-13)
+- Test scenario: POST /api/v1/advocate-inquiries with an invalid email format
+- Expected HTTP status: 400 Bad Request
+- Expected behavior: validation error identifies `email` as invalid
+
+### Test 44: Advocate Inquiry Missing Advocacy Interests (PBI-13)
+- Test scenario: POST /api/v1/advocate-inquiries with an empty `interests` array
+- Expected HTTP status: 400 Bad Request
+- Expected behavior: validation error identifies `interests` as required (at least one selection)
+
+### Test 45: Advocate Inquiry Unsupported Interest Value (PBI-13)
+- Test scenario: POST /api/v1/advocate-inquiries with an `interests` value that does not match a confirmed checkbox option
+- Expected HTTP status: 400 Bad Request
+- Expected behavior: validation error identifies `interests` as invalid
+
+### Test 46: Advocate Form Duplicate-Submission Prevention (PBI-13)
+- Test scenario: user submits a valid Advocate Interest Form while a prior sandbox request is still in flight
+- Expected behavior: the submit button is disabled and shows a "Submitting..." state until the in-flight request resolves; a second click does not trigger a second API call
+
+### Test 47: Advocate Form Field-Level API Error Feedback (PBI-13)
+- Test scenario: the sandbox API returns a `VALIDATION_ERROR` with field-level messages for an Advocate submission
+- Expected behavior: the returned field errors are displayed next to the corresponding form controls, matching the pattern already used for workshop registration
+
+---
+
+## Milestone 3 — Test Execution Summary and Observed Results (PBI-13)
+
+This section records what was actually executed for the Milestone-3 integration work and is maintained alongside — not as a replacement for — the authoritative project Testing Document referenced in `usability-performance-evaluation-plan.md` (reported to exist outside this repository, e.g. as a shared Google Doc; it was not supplied to this workspace and could not be updated directly as part of this work).
+
+### Automated test execution (`npm test` / `react-scripts test --watchAll=false`)
+- **Observed result:** 15 test suites / 122 tests passed after the Milestone-3 integration changes below (run with `--maxWorkers=2`; see the App.test.js flakiness note).
+- Suites directly covering the contract-level tests in this document: `assistanceRequests.test.js`, `contactInquiries.test.js`, `donorInquiries.test.js`, `workshopRegistration.test.js`, `advocateInquiries.test.js`, `validationHelpers.test.js` (validation-logic/business-rule tests, Tests 1–47 above), and `Advocate.test.js`, `Contact.test.js`, `CheckoutForm.test.js`, `NeedHelp.test.js`, `WorkshopDetail.test.js` (UI-level integration tests covering success, invalid input, backend validation errors, and duplicate-submission prevention for each in-scope form).
+- A dedicated validation/business-logic test module and Jest spec now exists for every `/api/v1/*` endpoint (previously only workshop registration and volunteer inquiries had one); Assistance Request, Contact Inquiry, and Donor Inquiry validation logic was extracted out of `src/mocks/handlers.js` into shared, unit-tested modules under `src/mocks/validation-logic/` and reused by the Express mock server (`src/mocks/mockServer.mjs`) so both mock layers enforce identical rules.
+
+### Manual verification
+- Started `node src/mocks/mockServer.mjs` and exercised every `/api/v1/*` endpoint plus `/api/workshops*` with `curl`/`Invoke-RestMethod`, confirming success (`201`/`200`), validation-error (`400`), not-found (`404`/unmatched route), workshop-full (`409`), and malformed-JSON (`400`) responses.
+- Confirmed the Donate page's sandbox donation flow end-to-end in the existing `CheckoutForm.test.js` suite and by inspecting the MSW handler response, including the `isSimulation`/`success` fields now returned by `/api/v1/donor-inquiries` (previously missing, which meant the "Demo successful! No actual payment was processed." message would never have appeared in a real MSW-backed run of the app, only when `fetch` was mocked directly in a test).
+
+### Defects found and fixed during this work
+1. **Workshop registration regression:** a prior change (`workshopService.js`) bypassed the shared API contract entirely (importing mock data directly) and silently dropped the `registerForWorkshop` export, breaking `NeedHelp.test.js` and workshop registration. Restored the `apiRequest`/MSW-backed implementation; registration UI was moved to `WorkshopDetail.js` (previously a non-functional `// Successful sandbox submission will go here next.` stub) and the dead/commented registration-dialog code was removed from `NeedHelp.js`.
+2. **Contact form had no API integration:** `Contact.js` simulated a success message locally without calling `/api/v1/contact-inquiries` at all, and lacked the contract's required `inquiryType` field. Rewired to call the sandbox API with loading, field-level, and generic-error states.
+3. **Advocate form had no API integration:** the Advocate Interest Form (`src/pages/Advocate.js`, originally built on a separate branch) only simulated success locally. Added `POST /api/v1/advocate-inquiries` (MSW handler, Express route, validation module, OpenAPI/contract docs) and wired the form to it with duplicate-submission prevention and API error handling.
+4. **Donor Inquiry sandbox response gap:** `CheckoutForm.js` checked for `result.isSimulation && result.success`, but the MSW/Express donor-inquiries response never included those fields, so the "Demo successful!" confirmation could never actually render outside of a test that mocks `fetch` directly. Added the additive `isSimulation`/`success` fields to the sandbox response.
+
+### Outstanding issues / remaining work for the Milestone-3 testing-document deadline (November 22)
+- The authoritative project Testing Document (referenced in `tests/usability-performance-evaluation-plan.md` as existing outside this repository) was not available to this workspace. The team should merge the automated results and defects above into that document, or confirm its repository location so future updates can be made directly.
+- **Technology Help Request (REQ-21):** the `/api/v1/assistance-requests` sandbox endpoint is fully implemented, validated, and unit tested, but no dedicated standalone frontend form currently targets it — the "I Need Help" journey is represented by workshop discovery and registration instead (per the Main Backlog's description of that journey). The team should confirm whether a separate Technology Help Request form remains in scope for production release or whether workshop registration is the final intended pathway.
+- **Volunteer Signup (REQ-22):** the sandbox endpoint and its handlers remain implemented and tested, but the public website currently links directly to the organization's Hands On Atlanta production signup process instead of rendering a TSLS-hosted inquiry form (sponsor-confirmed decision — see the Milestone 3 update in the Volunteer Inquiry section of `documentation/api-contract.md`). This is intentional, not a defect, and should be reflected in the authoritative Testing Document.
+- `App.test.js`'s `"opens /want-to-help directly and retains the shared layout"` test was observed to fail intermittently only when the full suite runs with default Jest worker parallelism (CPU contention on this machine slowing a lazy-loaded route transition past the default timeout); it passed consistently both in isolation and with `--maxWorkers=2`. This is a pre-existing timing flake unrelated to the Milestone-3 API integration changes and was not modified.
+

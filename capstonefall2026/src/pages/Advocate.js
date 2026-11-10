@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Container, Typography, Box, Paper, TextField, Stack, FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox, Button, FormHelperText, Alert, } from "@mui/material";
-
+//import { apiRequest } from "../mocks/APIClient";
 function Advocate() {
 
     const [formData, setFormData] = useState({
@@ -53,6 +53,37 @@ function Advocate() {
         return Object.keys(newErrors).length === 0;
     
     };
+  
+  /*
+  API is throwing a 405 error commented out the code
+  try {
+            await apiRequest("/v1/advocate-inquiries", "POST", {
+                firstName: formData.firstName.trim(),
+                lastName: formData.lastName.trim(),
+                email: formData.email.trim(),
+                phone: formData.phone.trim() || null,
+                interests: formData.interests,
+                message: formData.message.trim(),
+            });
+
+            setIsSubmitted(true);
+        } catch (err) {
+            const apiError = err?.response?.data?.error;
+
+            if (apiError?.fields) {
+                setErrors((previousErrors) => ({ ...previousErrors, ...apiError.fields }));
+            } else {
+                setSubmitError(
+                    "We could not submit your advocate interest request. Please try again."
+                );
+            }
+
+            setIsSubmitted(false);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+  */
 
     const handleSubmit = (event) => {
         event.preventDefault();

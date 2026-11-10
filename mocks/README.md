@@ -44,9 +44,10 @@ The mock layer supports:
 
 ## Planned Mock Endpoints (Requirement Traceability)
 1. POST /api/v1/assistance-requests — REQ-21
-2. POST /api/v1/volunteer-inquiries — REQ-22 (Figma-Confirmed fields)
+2. POST /api/v1/volunteer-inquiries — REQ-22 (Figma-Confirmed fields; see Milestone 3 update below)
 3. POST /api/v1/contact-inquiries — REQ-23
 4. POST /api/v1/donor-inquiries — REQ-24 (no payment processing; Pending Frontend Field Confirmation)
+5. POST /api/v1/advocate-inquiries — Milestone 3 PBI-13 (sandbox-only; see "Advocate Interest Inquiry" below)
 
 ---
 
@@ -320,5 +321,15 @@ These three endpoints are implemented as runnable MSW handlers in `capstonefall2
 
 These endpoints are reached from the frontend through `capstonefall2026/src/services/workshopService.js` (the service/adapter layer) rather than by importing mock data directly, so a production backend can later be substituted with no changes required in the pages that call it.
 
-**Boundary reminder:** this sandbox layer never replaces the organization's existing Stripe donation workflow or Hands On Atlanta volunteer signup process (PBI-9) — those remain outside the mock layer entirely.
+---
+
+## Advocate Interest Inquiry (Milestone-3 — PBI-13)
+
+`POST /api/v1/advocate-inquiries` follows the same `/api/v1` contract conventions as the four REQ-21–REQ-24 endpoints above — see `documentation/api-contract.md` ("API 6") for the full request/response schema. Submitted through `src/pages/Advocate.js` using the shared `apiRequest` client (`src/mocks/APIClient.ts`). Returns `201` on success, `400` for validation errors (missing name/email/interests/message or an unrecognized interest value).
+
+---
+
+**Boundary reminder (updated Milestone 3):**
+- The Donate page (`src/pages/Donate.js` / `CheckoutForm.js`) uses real Stripe.js Elements components in **test mode only** (a `pk_test_...` publishable key; see "Stripe Integration Boundary" in `documentation/api-contract.md`). No PaymentIntent is created and no real charge is ever submitted — this sandbox layer never performs production payment processing.
+- The Volunteer pathway (`src/pages/WantToHelp.js`) links directly to the organization's Hands On Atlanta production signup process; it is not proxied, replaced, or silently replicated by this mock layer.
 

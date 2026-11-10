@@ -3,7 +3,7 @@
 ## Overview
 This folder contains test suites, automated scripts, and manual testing documentation evaluating application accessibility, usability, and form workflows.
 
-- `api-integration-test-plan.md` — contract-level and endpoint-level test cases for the shared public API contract and the Milestone-2 workshop sandbox endpoints.
+- `api-integration-test-plan.md` — contract-level and endpoint-level test cases for the shared public API contract and the Milestone-2/Milestone-3 sandbox endpoints (workshop search/registration, Advocate Interest Inquiry), including a Milestone-3 execution summary with actual automated test results, defects found/fixed, and outstanding items for the testing-document milestone.
 - `usability-performance-evaluation-plan.md` — evaluation plan defining representative senior-user participants, usability test tasks, success measurement, and consistent performance-testing conditions (addresses professor/Gonzalez Testing Document feedback).
 - [Initial deployed performance measurement](performance/README.md) — five-run mobile Lighthouse results, raw reports, baseline/target comparison, and conditions to repeat for final measurement (PBI-14).
 - [Final performance and SEO results](performance/final-performance-and-seo-results.md) — latest local results meeting all five targets, earlier deployed measurements, baseline comparisons, and deployment/SEO/integration limits (November 10, 2026).

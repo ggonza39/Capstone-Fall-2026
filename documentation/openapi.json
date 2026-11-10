@@ -3,7 +3,7 @@
     "info": {
         "title": "Tech Smart Learning for Seniors API (Mock, Phase 1)",
         "version": "1.0.0",
-        "description": "Formal OpenAPI 3.x mirror of documentation/api-contract.md and the Mock API documented in mocks/README.md, produced to satisfy Milestone 1, Issue #16, PBI-4, Acceptance Criterion 1 (\"API Endpoint Specifications\"). This spec is documentation only; it describes the same Mock API behavior already documented in mocks/README.md and does not represent a live production backend. Endpoint naming reconciliation notes: the four form-submission endpoints below use the exact paths and status codes already defined in documentation/api-contract.md (POST, 201 Created). The two workshop endpoints use the exact unversioned paths written in documentation/milestones/Milestone-2.md (PBI-7/PBI-8/PBI-12) and are documented here as GET, 200 OK per standard REST convention, since Milestone-2 does not specify a response status for reads. ASSUMPTION/UNRESOLVED: the workshop endpoints do not share the /api/v1 versioning prefix used by the four form endpoints, because no versioned workshop path is written anywhere in the repository; this inconsistency should be reconciled by the team before Milestone 2 implementation. Workshop registration (PBI-8) is intentionally NOT included in this spec because Issue #16 / PBI-4 AC-1 only requires workshop search, workshop details, volunteer sign-ups, and donation processing, and no literal registration path is documented anywhere in the repository.",
+        "description": "Formal OpenAPI 3.x mirror of documentation/api-contract.md and the Mock API documented in mocks/README.md, produced to satisfy Milestone 1, Issue #16, PBI-4, Acceptance Criterion 1 (\"API Endpoint Specifications\"). This spec is documentation only; it describes the same Mock API behavior already documented in mocks/README.md and does not represent a live production backend. Endpoint naming reconciliation notes: the form-submission endpoints below use the exact paths and status codes already defined in documentation/api-contract.md (POST, 201 Created). The workshop endpoints use the exact unversioned paths written in documentation/milestones/Milestone-2.md (PBI-7/PBI-8/PBI-12) and are documented here as GET, 200 OK per standard REST convention, since Milestone-2 does not specify a response status for reads. ASSUMPTION/UNRESOLVED: the workshop endpoints do not share the /api/v1 versioning prefix used by the form endpoints, because no versioned workshop path is written anywhere in the repository; this inconsistency should be reconciled by the team before production release. Workshop registration (PBI-8 / PBI-12) and the Milestone-3 PBI-13 Advocate Interest Inquiry endpoint are documented as sandbox-only demonstrations; neither represents a production backend commitment.",
         "contact": {
             "name": "Integration Engineer / Backend API Specialist",
             "url": "https://github.com/ggonza39/Capstone-Fall-2026"
@@ -33,8 +33,12 @@
             "description": "REQ-24 — Donor Interest/Inquiry form (NO payment processing)"
         },
         {
+            "name": "Advocate",
+            "description": "Milestone-3 PBI-13 — Advocate Interest Inquiry (sandbox-only)"
+        },
+        {
             "name": "Workshops",
-            "description": "Milestone-2 PBI-7/PBI-8/PBI-12 — workshop search and details"
+            "description": "Milestone-2 PBI-7/PBI-8/PBI-12 — workshop search, details, and sandbox registration"
         }
     ],
     "paths": {
@@ -195,6 +199,46 @@
                 }
             }
         },
+        "/api/v1/advocate-inquiries": {
+            "post": {
+                "tags": [
+                    "Advocate"
+                ],
+                "summary": "Submit an Advocate interest/request (Milestone-3 PBI-13)",
+                "description": "Sandbox-only. Submitting this form does not establish the user as an official TSLS representative or advocate (see documentation/api-contract.md, API 5 — Advocate Interest Inquiry).",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AdvocateInquiry"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Advocate interest request received",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AdvocateInquiryResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "415": {
+                        "$ref": "#/components/responses/UnsupportedMediaType"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        },
         "/api/workshops": {
             "get": {
                 "tags": [
@@ -272,6 +316,59 @@
                     },
                     "404": {
                         "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/ServerError"
+                    }
+                }
+            }
+        },
+        "/api/workshops/{id}/registrations": {
+            "post": {
+                "tags": [
+                    "Workshops"
+                ],
+                "summary": "Submit a sandbox workshop registration (Milestone-2 PBI-8 / PBI-12)",
+                "description": "Sandbox demonstration only — this is not the final production workshop registration workflow (see the response `message` field and documentation/api-contract.md).",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/WorkshopRegistration"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Sandbox workshop registration received",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WorkshopRegistrationResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/ValidationError"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "409": {
+                        "$ref": "#/components/responses/WorkshopFull"
                     },
                     "500": {
                         "$ref": "#/components/responses/ServerError"
@@ -580,6 +677,85 @@
                     },
                     "message": {
                         "type": "string"
+                    },
+                    "isSimulation": {
+                        "type": "boolean",
+                        "description": "Sandbox-only additive field consumed by the Donate page's CheckoutForm to confirm no real payment was processed (see Stripe Integration Boundary in api-contract.md)."
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "description": "Sandbox-only additive field consumed by the Donate page's CheckoutForm."
+                    }
+                }
+            },
+            "AdvocacyInterest": {
+                "type": "string",
+                "enum": [
+                    "sharePrograms",
+                    "promoteEvents",
+                    "connectOrganizations",
+                    "outreach",
+                    "other"
+                ],
+                "description": "Checkbox values observed in the Advocate Interest Form (Milestone-3 PBI-13)."
+            },
+            "AdvocateInquiry": {
+                "type": "object",
+                "required": [
+                    "firstName",
+                    "lastName",
+                    "email",
+                    "interests",
+                    "message"
+                ],
+                "description": "Sandbox-only (Milestone-3 PBI-13). Submitting this form does not establish the user as an official TSLS representative or advocate.",
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interests": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "$ref": "#/components/schemas/AdvocacyInterest"
+                        }
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AdvocateInquiryResponse": {
+                "type": "object",
+                "required": [
+                    "inquiryId",
+                    "status",
+                    "message"
+                ],
+                "properties": {
+                    "inquiryId": {
+                        "type": "string",
+                        "example": "AI-1001"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "received"
+                        ]
+                    },
+                    "message": {
+                        "type": "string"
                     }
                 }
             },
@@ -694,6 +870,78 @@
                         "$ref": "#/components/schemas/WorkshopDetail"
                     }
                 }
+            },
+            "WorkshopRegistration": {
+                "type": "object",
+                "required": [
+                    "firstName",
+                    "lastName"
+                ],
+                "description": "Sandbox demonstration only (Milestone-2 PBI-8 / PBI-12). At least one of email or phone is required.",
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "nullable": true
+                    },
+                    "phone": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }
+            },
+            "WorkshopRegistrationResponse": {
+                "type": "object",
+                "required": [
+                    "registrationId",
+                    "status",
+                    "message",
+                    "workshop"
+                ],
+                "properties": {
+                    "registrationId": {
+                        "type": "string",
+                        "example": "WR-1001"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "received"
+                        ]
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "workshop": {
+                        "type": "object",
+                        "required": [
+                            "id",
+                            "title",
+                            "dateTime",
+                            "location"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "dateTime": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
             }
         },
         "responses": {
@@ -709,6 +957,16 @@
             },
             "NotFound": {
                 "description": "The requested resource does not exist.",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/ApiError"
+                        }
+                    }
+                }
+            },
+            "WorkshopFull": {
+                "description": "This workshop is full (sandbox demonstration — Milestone-2 PBI-8 / PBI-12).",
                 "content": {
                     "application/json": {
                         "schema": {
