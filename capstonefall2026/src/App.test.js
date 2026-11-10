@@ -2,6 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { loadStripe } from '@stripe/stripe-js';
 import App from './App';
+import seoConfig from './seo/config.json';
 
 jest.mock('@stripe/stripe-js', () => ({
   loadStripe: jest.fn(() => Promise.resolve(null)),
@@ -49,6 +50,34 @@ test.each([
   expect(screen.getByRole('link', { name: 'TechSmart Learning for Seniors home' })).toBeInTheDocument();
   expect(screen.getByRole('main')).toHaveAttribute('id', 'main-content');
   expect(screen.getByRole('navigation', { name: 'Footer navigation' })).toBeInTheDocument();
+});
+
+test('opens the Advocate form directly with its own indexable page metadata', async () => {
+  window.history.replaceState({}, '', '/advocate');
+  render(<App />);
+
+  expect(await screen.findByRole('heading', { level: 1, name: 'Become a TechSmart Advocate' }, { timeout: 5000 })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { level: 2, name: 'Advocate Interest Form' })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Submit Advocate Request' })).toBeInTheDocument();
+  expect(document.title).toBe(seoConfig.routes['/advocate'].title);
+  expect(document.title).not.toMatch(/Page Not Found/);
+  expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute('content', 'index,follow');
+  expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute('href', expect.stringMatching(/\/advocate$/));
+});
+
+test('the I Want to Help Advocate link opens the form and updates page metadata', async () => {
+  window.history.replaceState({}, '', '/want-to-help');
+  render(<App />);
+  expect(await screen.findByRole('heading', { level: 1, name: 'I Want to Help' }, { timeout: 5000 })).toBeInTheDocument();
+
+  const advocate = within(screen.getByRole('main')).getByRole('link', { name: 'Become an Advocate' });
+  expect(advocate).toHaveAttribute('href', '/advocate');
+  userEvent.click(advocate);
+
+  expect(await screen.findByRole('heading', { level: 1, name: 'Become a TechSmart Advocate' }, { timeout: 5000 })).toBeInTheDocument();
+  expect(window.location.pathname).toBe('/advocate');
+  expect(document.title).toBe(seoConfig.routes['/advocate'].title);
+  expect(screen.getByRole('button', { name: 'Submit Advocate Request' })).toBeInTheDocument();
 });
 
 test('loads the donation form and initializes Stripe only when entering the donation route', async () => {
