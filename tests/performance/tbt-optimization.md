@@ -1,5 +1,7 @@
 # TBT analysis, optimization, and local verification
 
+**Historical November 5 experiment.** The [November 10 TBT follow-up](tbt-followup.md) subsequently fixed the remaining startup styling work: **45 ms local median TBT, 42–67.24 ms range**, with all five metric targets met in every run. Its deployment confirmation is pending; the original measurements below are retained unchanged.
+
 Completed on **November 5, 2026** for [Milestone 3, PBI-14](../../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo). The documented project TBT baseline is **700 ms**, and the target is **less than 200 ms**. The [initial deployed mobile audit](README.md) measured **1,019 ms**. Original baseline reports and conditions are unavailable, so the historical baseline is a reference, not a controlled comparison with localhost.
 
 The optimized local production build measures a **1,228 ms TBT median**, compared with **1,568 ms before**. **The <200 ms target was not achieved.** Final deployed verification remains pending. All ten local runs contain slow-CPU warnings, which limit timing comparisons.

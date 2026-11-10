@@ -44,7 +44,8 @@ test.each([
   window.history.replaceState({}, '', route);
   render(<App />);
 
-  expect(await screen.findByRole('heading', { level: 1, name: heading })).toBeInTheDocument();
+  // A cold secondary route also imports its theme; Jest transforms those modules.
+  expect(await screen.findByRole('heading', { level: 1, name: heading }, { timeout: 5000 })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: 'TechSmart Learning for Seniors home' })).toBeInTheDocument();
   expect(screen.getByRole('main')).toHaveAttribute('id', 'main-content');
   expect(screen.getByRole('navigation', { name: 'Footer navigation' })).toBeInTheDocument();
@@ -55,7 +56,7 @@ test('loads the donation form and initializes Stripe only when entering the dona
   expect(loadStripe).not.toHaveBeenCalled();
 
   userEvent.click(within(screen.getByRole('main')).getByRole('link', { name: 'I Want to Help' }));
-  expect(await screen.findByRole('heading', { level: 1, name: 'I Want to Help' })).toBeInTheDocument();
+  expect(await screen.findByRole('heading', { level: 1, name: 'I Want to Help' }, { timeout: 5000 })).toBeInTheDocument();
   expect(loadStripe).not.toHaveBeenCalled();
 
   const donate = within(screen.getByRole('main')).getByRole('link', { name: 'Donate' });

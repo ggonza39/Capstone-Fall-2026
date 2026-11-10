@@ -1,14 +1,32 @@
-# Initial deployed performance measurement
+# Performance and SEO measurements
+
+## Latest result: all five targets met in the optimized local build
+
+The **[November 10 TBT follow-up](tbt-followup.md)** fixes the remaining startup blocking work. Five local production Lighthouse runs now measure **45 ms median TBT**, ranging **42–67.24 ms**, below the **<200 ms** target in every run. All five metrics meet their targets in all five runs.
+
+| Metric | Documented baseline | Latest local median | Target | Status |
+|---|---:|---:|---:|---|
+| FCP | 5.7 s | **0.759 s** | <2.0 s | **Met, 5/5** |
+| LCP | 21.8 s | **1.709 s** | <2.5 s | **Met, 5/5** |
+| TBT | 700 ms | **45 ms** | <200 ms | **Met, 5/5** |
+| Speed Index | 8.7 s | **0.759 s** | <3.4 s | **Met, 5/5** |
+| Lighthouse SEO | 40/100 | **100/100** | 90–100/100 | **Met, 5/5** |
+
+The paired local before/after TBT medians are **401 → 45 ms (88.8% lower)**. Static HTML/CSS replaces homepage/shared-shell runtime styling; MUI pages and the mobile drawer retain their existing theme when loaded. Initial gzip JavaScript is **41.8% smaller**. All content remains immediately available, and **77 browser checks found zero visual differences**. [Implementation, checks, and reproduction](tbt-followup.md); [exact results and all audit references](2026-11-10-tbt-followup/summary.json).
+
+**Public deployment verification is pending.** The updated source is tested locally and has not been pushed or deployed. The earlier public **413 ms** result below is retained for the build actually measured. Deploy through the existing `main` workflow, then repeat the hosted audits before claiming public compliance. Historical baseline conditions and the existing SEO/integration limitations remain documented in the [final report](final-performance-and-seo-results.md).
+
+## Earlier deployed measurements
 
 Measured the [deployed TSLS-Web homepage](https://capstone-fall-2026.vercel.app/) on **November 5, 2026** , before PBI-14 final optimization. Five sequential Lighthouse navigation audits completed with no runtime errors or run warnings. The results below are the independent median of each metric across all five runs, using the numeric audit values rather than Lighthouse's rounded display strings.
 
-This completes the **Initial Performance Measurement** criterion in [Milestone 3, PBI-14](../../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo). Application code was not changed for this measurement. Final optimization and final measurements remain pending.
+This completes the **Initial Performance Measurement** criterion in [Milestone 3, PBI-14](../../documentation/milestones/Milestone-3.md#pbi-14-optimize-frontend-performance-and-technical-seo). Application code was not changed for this measurement. The subsequent **[final deployed results — November 10, 2026](final-performance-and-seo-results.md)** complete the final-results criterion, with five retained audits, baseline/target comparisons, and remaining limitations.
 
 The subsequent [FCP optimization and local production verification](fcp-optimization.md) documents deferred secondary-page/payment loading and a separate five-run before/after experiment. The initial deployed results below remain the reference for the final hosted comparison.
 
 [LCP optimization and local production verification](lcp-optimization.md) records the next startup-code reduction, a fresh local before/after audit set, and ZIP-field visual/functional checks.
 
-[TBT analysis and optimization](tbt-optimization.md) records deferred mobile-menu loading, local before/after audits, and menu regression checks. The local TBT target remains unmet.
+[Earlier TBT analysis and optimization](tbt-optimization.md) records deferred mobile-menu loading and its November 5 measurements, which did not meet the target. The [November 10 follow-up](tbt-followup.md) fixes the remaining startup work and meets the target in all five local runs.
 
 [Speed Index optimization](speed-index-optimization.md) records lossless logo delivery, image sizing, paired local audits, and preserved header/Menu appearance. Speed Index remains below target; no timing improvement is established by this set.
 
@@ -18,21 +36,21 @@ The subsequent [FCP optimization and local production verification](fcp-optimiza
 
 ## Baseline, initial results, and final comparison
 
-The documented project baseline and targets come from PBI-14. Final results will be recorded after optimization using the same route and test conditions.
+The documented project baseline and targets come from PBI-14. These earlier public results use the same deployed route, machine, Lighthouse version, settings, and five-run median procedure. Chrome updated from 156 to 157 between sets; the final report records this comparability limit. That hosted snapshot met four targets. The newer local fix above meets all five and awaits hosted confirmation.
 
 | Metric | Documented project baseline | Initial deployed median | Final target | Initial target status | Final after optimization |
 |---|---:|---:|---:|---|---|
-| First Contentful Paint (FCP) | 5.7 s | **0.819 s** | <2.0 s | Met | Pending |
-| Largest Contentful Paint (LCP) | 21.8 s | **4.515 s** | <2.5 s | Above target | Pending |
-| Total Blocking Time (TBT) | 700 ms | **1,019 ms** | <200 ms | Above target | Pending |
-| Speed Index | 8.7 s | **1.111 s** | <3.4 s | Met | Pending |
-| Lighthouse SEO | 40/100 | **100/100** | 90–100/100 | Met | Pending |
+| First Contentful Paint (FCP) | 5.7 s | **0.819 s** | <2.0 s | Met | **0.784 s — Met** |
+| Largest Contentful Paint (LCP) | 21.8 s | **4.515 s** | <2.5 s | Above target | **1.707 s — Met** |
+| Total Blocking Time (TBT) | 700 ms | **1,019 ms** | <200 ms | Above target | **413 ms — Not met** |
+| Speed Index | 8.7 s | **1.111 s** | <3.4 s | Met | **0.981 s — Met** |
+| Lighthouse SEO | 40/100 | **100/100** | 90–100/100 | Met | **100/100 — Met** |
 
-Relative to the documented baseline, FCP is 85.6% lower, LCP is 79.3% lower, and Speed Index is 87.2% lower. TBT is **45.6% higher**. SEO increased by **60 points**. Timing changes use `(baseline - initial median) / baseline * 100`, calculated before rounding. SEO is reported as a score change because higher is better.
+For the November 5 initial measurement relative to the documented baseline, FCP is 85.6% lower, LCP is 79.3% lower, and Speed Index is 87.2% lower. TBT is **45.6% higher**. SEO increased by **60 points**. Timing changes use `(baseline - initial median) / baseline * 100`, calculated before rounding. SEO is reported as a score change because higher is better. The [final report](final-performance-and-seo-results.md#baseline-initial-implementation-and-final-comparison) contains the corresponding final percentages.
 
 The original baseline's raw Lighthouse reports, URL, device, throttling, and tooling versions are not supplied in the repository. These historical comparisons are descriptive; equivalent baseline conditions cannot be verified. The initial deployed results establish a repeatable reference for the final audit. No conclusion is drawn about the separately documented, unresolved overall 50% improvement target.
 
-## Individual runs and evidence
+## Initial individual runs and evidence
 
 All times below come from the corresponding JSON report. Timing values are rounded only for this table.
 
@@ -47,7 +65,7 @@ All times below come from the corresponding JSON report. Timing values are round
 
 LCP ranged from 2.100 to 4.639 seconds; TBT ranged from 756 to 1,283 ms. All five runs are retained, including the faster fifth run. No run was discarded. Lighthouse's final screenshot for run 1 was visually checked and shows the expected TSLS-Web homepage.
 
-## Recorded test conditions
+## Initial recorded test conditions
 
 | Setting | Value |
 |---|---|
@@ -69,7 +87,7 @@ LCP ranged from 2.100 to 4.639 seconds; TBT ranged from 756 to 1,283 ms. All fiv
 
 The full settings, run times, exact numeric metrics, comparisons, and validation results are retained in [summary.json](2026-11-05-initial-mobile/summary.json). Browser benchmark indices vary between runs; medians and ranges preserve that variability. These are simulated mobile lab measurements, rather than field-user measurements or results for other routes/device profiles.
 
-## Deployment identity
+## Initial deployment identity
 
 [deployment.json](2026-11-05-initial-mobile/deployment.json) records the public deployment headers and local environment:
 
