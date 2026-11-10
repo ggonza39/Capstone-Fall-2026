@@ -218,7 +218,7 @@ function WantToHelp() {
                                         technology education for older adults.
                                     </Typography>
 
-                                    <Button variant="contained" href="/advocate">Become an Advocate</Button>
+                                    <Button variant="contained" component={RouterLink} to="/advocate">Become an Advocate</Button>
                                 </CardContent>
                             </Card>
                         </Grid>

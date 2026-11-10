@@ -1,0 +1,110 @@
+{
+  "capturedAtUtc": "2026-11-10T05:31:26.602Z",
+  "referenceCommit": "714ae3df202181affa95f638c1636085a72e91c6",
+  "node": "v20.11.1",
+  "lighthouse": "12.8.2",
+  "chrome": "157.0.8103.39",
+  "operatingSystem": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26200",
+    "OSArchitecture": "64-bit"
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+    "NumberOfCores": 4,
+    "NumberOfLogicalProcessors": 8
+  },
+  "server": "serve14.2.4 http://127.0.0.1:4173/",
+  "note": "Separate controlled localhost production experiment, not a replacement for the deployed413ms measurement. Existing build was regenerated before source edits; before/asset-manifest identifies it.",
+  "beforeEntry": [
+    "static/js/main.eec3178c.js"
+  ],
+  "afterBuild": {
+    "entry": "static/js/main.e71af680.js",
+    "css": "static/css/main.1083a7e6.css",
+    "sourceDescription": "Reference commit plus the current uncommitted TBT implementation; not a public deployment",
+    "sourceFiles": [
+      {
+        "file": "capstonefall2026/src/index.js",
+        "bytes": 1421,
+        "sha256": "85f3c65072f1db16a5f55173c97617618d5e21583e0f28c2e6b3ba62eba778f1"
+      },
+      {
+        "file": "capstonefall2026/src/App.js",
+        "bytes": 2679,
+        "sha256": "199d6ea0f1989495a6e6c5f946b5ce81625658fe3fd6d69353aa52e4c0e1d3ad"
+      },
+      {
+        "file": "capstonefall2026/src/layouts/MainLayout.js",
+        "bytes": 1914,
+        "sha256": "4f810778df11e994cf4dd0c1ed5be07a8e5bae17e03ebb13b6800657c59c7142"
+      },
+      {
+        "file": "capstonefall2026/src/pages/Home.js",
+        "bytes": 9111,
+        "sha256": "0cf8da1d1c95c42c4d0c2d04f509dd897cb1894e2aaaae39aafb309d180a122f"
+      },
+      {
+        "file": "capstonefall2026/src/pages/Home.css",
+        "bytes": 6561,
+        "sha256": "07150dd7c343a5a1bc7fe272140025ec4f2709ac3928556ef4c79a38829de6c9"
+      },
+      {
+        "file": "capstonefall2026/src/styles/base.css",
+        "bytes": 1363,
+        "sha256": "8c559c04cc723b72b04dd77a80e5afd63f6787edb662c522541920dfd39c8e1b"
+      },
+      {
+        "file": "capstonefall2026/src/components/Header.js",
+        "bytes": 8116,
+        "sha256": "63abd986f6aecd06b7414accb888517d5a8cd57b8d75b228964655588eb916d9"
+      },
+      {
+        "file": "capstonefall2026/src/components/Footer.js",
+        "bytes": 1062,
+        "sha256": "325f0f25913736ad9374ddb9cf513e6ab1a762dc49dfe7cbd5b884cee9ff87e3"
+      },
+      {
+        "file": "capstonefall2026/src/components/MobileBottomNav.js",
+        "bytes": 1132,
+        "sha256": "858ff2837ae1ae5b32098d890982b068c43b6104a8c004ff78ed12e13e9a8f95"
+      },
+      {
+        "file": "capstonefall2026/src/components/MobileNavigation.js",
+        "bytes": 3511,
+        "sha256": "6e0816c7cb3dc1697626a42f669c87e4d46cd096d19e35fcda21870d32aa6032"
+      },
+      {
+        "file": "capstonefall2026/src/components/SiteIcon.js",
+        "bytes": 1137,
+        "sha256": "1f1565a837fb80155742803bcba9f0c5eaa63c8e047c9996a1f8c4bc32db953c"
+      },
+      {
+        "file": "capstonefall2026/src/components/SiteShell.css",
+        "bytes": 5283,
+        "sha256": "4337511d9de1bf3c478415519d6fefaecc7fd7cd9ffc1c1f0b603afbdb637a6a"
+      },
+      {
+        "file": "capstonefall2026/src/theme/PageTheme.js",
+        "bytes": 432,
+        "sha256": "9ee333c47fba5a0286bcc88deeb175d20254994a850474da9e076414c884ef2d"
+      }
+    ]
+  },
+  "collection": {
+    "beforeFirstUtc": "2026-11-10T05:31:32.333Z",
+    "beforeLastUtc": "2026-11-10T05:32:32.683Z",
+    "afterFirstUtc": "2026-11-10T05:44:30.596Z",
+    "afterLastUtc": "2026-11-10T05:45:27.145Z",
+    "note": "Fresh browser per run; builds, tests, and supplemental browser checks outside audit collection. No reports discarded."
+  },
+  "verification": {
+    "productionBuild": "passed",
+    "automatedTests": 55,
+    "automatedSuites": 6,
+    "testReport": "test-results-final.json",
+    "browserChecks": 77,
+    "visualDifferences": 0,
+    "browserReport": "browser-after.json"
+  }
+}

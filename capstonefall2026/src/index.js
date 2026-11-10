@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { CssBaseline, ThemeProvider } from "@mui/material";
 import App from "./App";
-import theme from "./theme/theme";
+import "./styles/base.css";
 
 /**
  * PBI-12: Mock API / sandbox integration.
@@ -49,10 +48,7 @@ enableMocking()
   .then(() => {
     root.render(
       <React.StrictMode>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <App />
       </React.StrictMode>
     );
   })
@@ -61,10 +57,7 @@ enableMocking()
 
     root.render(
       <React.StrictMode>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <App />
       </React.StrictMode>
     );
   });

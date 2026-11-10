@@ -52,6 +52,12 @@ The project uses the following tools to support design, development, accessibili
 - **Team Communication:** Microsoft Teams  
   Used for weekly meetings, sponsor check-ins, asynchronous team coordination, and development updates.
 
+## Performance and SEO
+
+The November 10, 2026 optimized **local production build meets all five Lighthouse targets in all five mobile runs**: FCP **0.759 s**, LCP **1.709 s**, TBT **45 ms** (target <200 ms), Speed Index **0.759 s**, and SEO **100/100**. The TBT fix removes homepage/shared-navigation runtime styling while preserving the design; 55 automated tests and 77 browser checks passed.
+
+See the [performance README](tests/performance/README.md) and [TBT follow-up evidence](tests/performance/tbt-followup.md). **Public deployment confirmation is pending**: the earlier hosted 413 ms result remains recorded until the updated build is deployed and re-audited.
+
 ## Repository Structure
 - `/documentation` — Requirements engineering document, API contract specs, and future-development roadmap
 - `/design` — Wireframes, user journeys, information architecture maps, and persona assets

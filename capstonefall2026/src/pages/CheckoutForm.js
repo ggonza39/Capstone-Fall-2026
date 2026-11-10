@@ -145,6 +145,23 @@ export function CheckoutForm() {
                     <Typography variant="h1" component="h1" gutterBottom>
                         Make a Donation
                     </Typography>
+
+                    <Box
+                      role="note"
+                      sx={{
+                        backgroundColor: "#FFF3CD",
+                        border: "1px solid #E6B800",
+                        borderRadius: 2,
+                        p: 2,
+                        mb: 3,
+                      }}
+                    >
+                      <Typography variant="body1">
+                        <strong>Demostration Only:</strong> This donation form is for 
+                        testing purposes. No actual payments will be processed, 
+                        and no donations will be collected.
+                      </Typography>
+                    </Box>
                     
                     <form onSubmit={handleSubmit} noValidate>
                         <Box

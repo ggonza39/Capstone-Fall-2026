@@ -17,13 +17,13 @@ afterEach(() => {
     document.head.innerHTML = originalHead;
 });
 
-test("all seven public pages have distinct descriptive titles, descriptions, and canonicals", () => {
+test("all eight public pages have distinct descriptive titles, descriptions, and canonicals", () => {
     const metadata = Object.keys(seoConfig.routes).map((route) => getRouteMetadata(route));
 
-    expect(metadata).toHaveLength(7);
-    expect(new Set(metadata.map((page) => page.title)).size).toBe(7);
-    expect(new Set(metadata.map((page) => page.description)).size).toBe(7);
-    expect(new Set(metadata.map((page) => page.canonical)).size).toBe(7);
+    expect(metadata).toHaveLength(8);
+    expect(new Set(metadata.map((page) => page.title)).size).toBe(8);
+    expect(new Set(metadata.map((page) => page.description)).size).toBe(8);
+    expect(new Set(metadata.map((page) => page.canonical)).size).toBe(8);
     metadata.forEach((page) => {
         expect(page.title).toMatch(/TechSmart/);
         expect(page.title).not.toMatch(/React App/);
@@ -36,6 +36,7 @@ test.each([
     ["/?source=home#top", "/"],
     ["/need-help/?zip=01234#workshops", "/need-help"],
     ["/want-to-help#donate", "/want-to-help"],
+    ["/ADVOCATE/?source=help#form", "/advocate"],
     ["/resources///?topic=smartphones", "/resources"],
     ["/ABOUT/", "/about"],
     ["/NEED-HELP?zip=01234", "/need-help"],
@@ -165,7 +166,8 @@ test("crawl-file generation uses the configured public routes and excludes demon
         const result = generateSeoFiles({ siteOrigin: "https://preview.techsmart.example/", outputDirectory: "seo-test-output" });
         const expected = Object.keys(seoConfig.routes).map((route) => `https://preview.techsmart.example${route}`);
         expect(result.urls).toEqual(expected);
-        expect(result.urls).toHaveLength(7);
+        expect(result.urls).toHaveLength(8);
+        expect(result.sitemap).toContain("<loc>https://preview.techsmart.example/advocate</loc>");
         expect(result.sitemap).not.toContain("/workshops/");
         expected.forEach((url) => expect(result.sitemap).toContain(`<loc>${url}</loc>`));
         expect(result.robots).toContain("User-agent: *\nDisallow:\n");

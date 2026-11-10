@@ -2,23 +2,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
-import {
-    AppBar,
-    Toolbar,
-    Container,
-    Box,
-    Button,
-    CircularProgress,
-    Typography,
-} from "@mui/material";
-
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-
 import logo from "../assets/techsmartLogo.webp";
 import logo260 from "../assets/optimized/techsmartLogo-260.webp";
 import logo380 from "../assets/optimized/techsmartLogo-380.webp";
 import { loadMobileNavigation } from "./mobileNavigationLoader";
+import SiteIcon from "./SiteIcon";
+import "./SiteShell.css";
 
 const navigation = [
     {
@@ -135,46 +124,16 @@ function Header() {
 
     return (
         <>
-            <AppBar
-                position="sticky"
-                color="inherit"
-                elevation={0}
-                component="header"
-                sx={{
-                    backgroundColor: "#FFFFFF",
-
-                    borderBottom: "1px solid",
-                    borderColor: "divider",
-                }}
-            >
-                <Container maxWidth="lg">
-                    <Toolbar
-                        disableGutters
-                        sx={{
-                            minHeight: {
-                                xs: 80,
-                                md: 100,
-                            },
-
-                            justifyContent: "space-between",
-
-                            gap: 2,
-                        }}
-                    >
-                        <Box
-                            component={RouterLink}
+            <header className="site-header">
+                <div className="site-container">
+                    <div className="site-header-toolbar">
+                        <RouterLink
                             to="/"
                             onClick={closeMenu}
                             aria-label="TechSmart Learning for Seniors home"
-                            sx={{
-                                display: "inline-flex",
-                                alignItems: "center",
-
-                                flexShrink: 0,
-                            }}
+                            className="site-logo-link"
                         >
-                            <Box
-                                component="img"
+                            <img
                                 src={logo}
                                 srcSet={`${logo260} 260w, ${logo380} 380w, ${logo} 500w`}
                                 sizes="(min-width: 900px) 260px, (min-width: 600px) 220px, 190px"
@@ -183,131 +142,71 @@ function Header() {
                                 height={250}
                                 loading="eager"
                                 fetchPriority="high"
-                                sx={{
-                                    width: {
-                                        xs: 190,
-                                        sm: 220,
-                                        md: 260,
-                                    },
-
-                                    height: "auto",
-                                }}
+                                className="site-logo"
                             />
-                        </Box>
+                        </RouterLink>
 
                         {/* DESKTOP VIEW NAVIGATION LINKS */}
 
-                        <Box
-                            component="nav"
+                        <nav
                             aria-label="Main navigation"
-                            sx={{
-                                display: {
-                                    xs: "none",
-                                    lg: "flex",
-                                },
-
-                                alignItems: "center",
-
-                                gap: 0.5,
-                            }}
+                            className="site-desktop-navigation"
                         >
                             {navigation.map((item) => {
                                 const active = location.pathname === item.path;
 
                                 return (
-                                    <Button
+                                    <RouterLink
                                         key={item.path}
-                                        component={RouterLink}
                                         to={item.path}
-                                        color="inherit"
                                         aria-current={active ? "page" : undefined}
-                                        sx={{
-                                            color: active ? "primary.main" : "text.primary",
-
-                                            textDecoration: active ? "underline" : "none",
-
-                                            textDecorationThickness: "3px",
-
-                                            textUnderlineOffset: "6px",
-
-                                            whiteSpace: "nowrap",
-
-                                            "&:focus-visible": {
-                                                outline: "3px solid #000000",
-                                                outlineOffset: "4px",
-                                                borderRadius: "4px",
-                                            },
-
-                                            "&:hover": {
-                                                color: "primary.main",
-
-                                                textDecoration: "underline",
-
-                                                textDecorationThickness: "3px",
-
-                                                textUnderlineOffset: "6px",
-                                            },
-                                        }}
+                                        className="site-shell-button site-header-link"
                                     >
                                         {item.label}
-                                    </Button>
+                                    </RouterLink>
                                 );
                             })}
-                        </Box>
+                        </nav>
 
                         {/* MOBILE/TABLET MENU BUTTON */}
 
-                        <Button
+                        <button
+                            type="button"
                             ref={menuButtonRef}
                             onClick={toggleMenu}
                             aria-label={menuLoading ? "Loading navigation menu" : menuOpen ? "Close navigation menu" : "Open navigation menu"}
                             aria-busy={menuLoading}
                             aria-expanded={menuOpen}
                             aria-controls="mobile-navigation"
-                            startIcon={menuLoading ? <CircularProgress size={20} color="inherit" aria-label="Loading navigation menu" /> : menuOpen ? <CloseIcon /> : <MenuIcon />}
-                            variant="contained"
-                            data-uniform-size="false"
-                            sx={{
-                                // Keep navigation compact beside the logo on small screens.
-                                width: "auto",
-                                minWidth: 48,
-                                minHeight: 48,
-                                flexShrink: 0,
-                                whiteSpace: "nowrap",
-                                display: {
-                                    xs: "inline-flex",
-                                    lg: "none",
-                                },
-                            }}
+                            className="site-shell-button site-menu-button"
                         >
+                            <span className="site-menu-icon">
+                                {menuLoading ? (
+                                    <span role="progressbar" aria-label="Loading navigation menu" className="site-menu-progress">
+                                        <svg viewBox="22 22 44 44" aria-hidden="true" focusable="false">
+                                            <circle cx="44" cy="44" r="20.2" fill="none" stroke="currentColor" strokeWidth="3.6" />
+                                        </svg>
+                                    </span>
+                                ) : <SiteIcon name={menuOpen ? "close" : "menu"} />}
+                            </span>
                             Menu
-                        </Button>
-                    </Toolbar>
-                </Container>
+                        </button>
+                    </div>
+                </div>
                 {menuError && (
-                    <Box
+                    <div
                         role="alert"
-                        sx={{
-                            position: "absolute",
-                            top: "100%",
-                            right: 2,
-                            width: 320,
-                            maxWidth: "calc(100vw - 32px)",
-                            p: 2,
-                            backgroundColor: "background.paper",
-                            color: "text.primary",
-                            boxShadow: 3,
-                        }}
+                        className="site-menu-error"
                     >
-                        <Typography>{menuError}</Typography>
-                        <Button onClick={openMenu}>Retry</Button>
-                        <Button onClick={() => {
+                        <p>{menuError}</p>
+                        <button type="button" className="site-shell-button site-menu-recovery" onClick={openMenu}>Retry</button>
+                        <button type="button" className="site-shell-button site-menu-recovery" onClick={() => {
                             closeMenu();
                             menuButtonRef.current?.focus();
-                        }}>Dismiss</Button>
-                    </Box>
+                        }}>Dismiss</button>
+                    </div>
                 )}
-            </AppBar>
+            </header>
 
             {/* MOBILE/TABLET VIEW NAVIGATION LINKS */}
 
