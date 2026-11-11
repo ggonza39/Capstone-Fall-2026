@@ -1,0 +1,9 @@
+{
+  "capturedAtUtc": "2026-11-10T20:15:16.238Z",
+  "url": "https://capstone-fall-2026.vercel.app/api/workshops/WS-1001",
+  "method": "GET",
+  "status": 200,
+  "contentType": "text/html; charset=utf-8",
+  "bodyExcerpt": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"th",
+  "note": "Read-only probe after Lighthouse collection. No mock data, authentication, registration, or payment was submitted."
+}

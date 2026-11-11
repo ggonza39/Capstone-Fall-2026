@@ -1,0 +1,12 @@
+{
+  "cleanUrls": false,
+  "directoryListing": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "type": 308 }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/!(api|static|.well-known|index.html|app.html)", "destination": "/app.html" },
+    { "source": "/!(api|static|.well-known|index.html|app.html)/**", "destination": "/app.html" }
+  ]
+}

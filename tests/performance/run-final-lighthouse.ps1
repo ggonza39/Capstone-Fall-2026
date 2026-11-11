@@ -2,7 +2,8 @@ param(
     [Parameter(Mandatory = $true)][string]$LighthouseCli,
     [string]$OutputDirectory = 'tests/performance/2026-11-10-final-mobile',
     [string]$Url = 'https://capstone-fall-2026.vercel.app/',
-    [string]$ChromePath = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
+    [string]$ChromePath = 'C:\Program Files\Google\Chrome\Application\chrome.exe',
+    [switch]$RequireStaticHome
 )
 
 $ErrorActionPreference = 'Stop'
@@ -34,11 +35,15 @@ function Get-DeploymentSnapshot {
         vercelCache = $response.Headers['X-Vercel-Cache']
         vercelId = $response.Headers['X-Vercel-Id']
         entryScript = $entry
+        staticHomeInRawHtml = $response.Content.Contains('data-prerendered="home"')
         htmlSha256 = $htmlHash
     }
 }
 
 $preflight = Get-DeploymentSnapshot
+if ($RequireStaticHome -and -not $preflight.staticHomeInRawHtml) {
+    throw 'The live HTML does not contain the build-rendered homepage. Verify that the new postbuild and Vercel routing configuration were deployed before collecting confirmation results.'
+}
 $manifestResponse = Invoke-WebRequest ([Uri]::new([Uri]$Url, 'asset-manifest.json').AbsoluteUri) -UseBasicParsing
 $manifest = $manifestResponse.Content | ConvertFrom-Json
 # Builds with extracted CSS may list the stylesheet before the entry script.
