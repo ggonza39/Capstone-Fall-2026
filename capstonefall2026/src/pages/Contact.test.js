@@ -71,7 +71,7 @@ test("submits a valid contact inquiry and shows a success message", async () => 
 
     userEvent.click(fields.submit);
 
-    expect(await screen.findByText(/your message was submitted successfully/i)).toBeInTheDocument();
+    expect(await screen.findByText(/this is a demonstration form/i)).toBeInTheDocument();
     expect(apiRequest).toHaveBeenCalledWith(
         "/v1/contact-inquiries",
         "POST",
@@ -103,7 +103,7 @@ test("disables the submit button while the request is in flight to prevent dupli
     expect(apiRequest).toHaveBeenCalledTimes(1);
 
     resolveRequest({ inquiryId: "CI-1002", status: "received", message: "ok" });
-    expect(await screen.findByText(/your message was submitted successfully/i)).toBeInTheDocument();
+    expect(await screen.findByText(/this is a demonstration form/i)).toBeInTheDocument();
 });
 
 test("shows field validation errors returned by the sandbox API", async () => {
