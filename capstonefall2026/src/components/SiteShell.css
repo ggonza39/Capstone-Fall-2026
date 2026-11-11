@@ -1,0 +1,296 @@
+/* Static shell styles keep the shared navigation ready without runtime styling. */
+.site-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.site-header-toolbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 80px;
+}
+
+.site-logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-logo {
+  display: block;
+  width: 190px;
+  height: auto;
+}
+
+.site-shell-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  margin: 0;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 6px;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  font-family: "Bilo", Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-shell-button:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 4px;
+}
+
+.site-desktop-navigation {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.site-header-link {
+  text-align: start;
+  white-space: nowrap;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.site-header-link[aria-current="page"],
+.site-header-link:hover {
+  color: #1f70b1;
+  text-decoration-line: underline;
+}
+
+.site-header-link:focus-visible {
+  border-radius: 4px;
+}
+
+.site-menu-button {
+  width: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+  background: #1f70b1;
+  color: #fff;
+}
+
+.site-menu-icon {
+  display: inline-flex;
+  margin-left: -4px;
+  margin-right: 8px;
+}
+
+.site-icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.site-menu-icon .site-icon {
+  font-size: 20px;
+}
+
+.site-menu-progress {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  animation: site-menu-rotate 1.4s linear infinite;
+}
+
+.site-menu-progress svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.site-menu-progress circle {
+  stroke-dasharray: 80px, 200px;
+  stroke-dashoffset: 0;
+}
+
+@keyframes site-menu-rotate {
+  to { transform: rotate(360deg); }
+}
+
+.site-menu-error {
+  position: absolute;
+  top: 100%;
+  right: 16px;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  padding: 16px;
+  background: #f7f7f7;
+  color: #222;
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.site-menu-error p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.site-menu-recovery {
+  color: #1f70b1;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 32px 0;
+  background: #1f70b1;
+  color: #fff;
+}
+
+.site-footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.site-footer-copyright {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.site-footer-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.site-footer-navigation a {
+  color: inherit;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+}
+
+.site-bottom-navigation-content {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  padding-top: 8px;
+  background: #f7f7f7;
+}
+
+.site-bottom-link {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  max-width: 168px;
+  margin: 0;
+  padding: 0 12px;
+  border: 0;
+  color: #444;
+  font-family: "Bilo", Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-bottom-link .site-icon {
+  font-size: 1.9285714286rem;
+}
+
+.site-bottom-link span {
+  font-size: 0.9642857143rem;
+}
+
+.site-bottom-link[aria-current="page"] {
+  color: #1f70b1;
+}
+
+.site-bottom-link[aria-current="page"] span {
+  font-size: 1.125rem;
+}
+
+.site-bottom-link:focus-visible {
+  outline: 3px solid #173657;
+  outline-offset: -4px;
+  border-radius: 8px;
+}
+
+@media (hover: hover) {
+  .site-menu-button:hover {
+    background: #154e7b;
+  }
+
+  .site-menu-recovery:hover,
+  .site-header-link:hover {
+    background: rgba(34, 34, 34, 0.04);
+  }
+}
+
+@media (min-width: 600px) {
+  .site-container { padding-right: 24px; padding-left: 24px; }
+  .site-logo { width: 220px; }
+  .site-footer-navigation { flex-direction: row; gap: 24px; }
+}
+
+@media (min-width: 900px) {
+  .site-header-toolbar { min-height: 100px; }
+  .site-logo { width: 260px; }
+  .site-bottom-navigation { display: none; }
+}
+
+@media (min-width: 1200px) {
+  .site-desktop-navigation { display: flex; }
+  .site-menu-button { display: none; }
+}

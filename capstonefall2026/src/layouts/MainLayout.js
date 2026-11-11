@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import { Box } from "@mui/material";
 
 import { Outlet } from "react-router-dom";
 
@@ -28,20 +27,7 @@ import RouteMetadata from "../seo/RouteMetadata";
  */
 function MainLayout() {
     return (
-        <Box
-            sx={{
-                minHeight: "100vh",
-
-                display: "flex",
-
-                flexDirection: "column",
-
-                paddingBottom: {
-                    xs: "calc(80px + env(safe-area-inset-bottom))",
-                    md: 0,
-                },
-            }}
-        >
+        <div className="site-app">
             <RouteMetadata />
             <ScrollToTop />{/* Scroll to top of page when selecting bottom navigation button */}
 
@@ -49,22 +35,19 @@ function MainLayout() {
 
             <Header />
 
-            <Box
-                component="main"
+            <main
+                className="site-main"
                 id="main-content"
                 tabIndex={-1}
-                sx={{
-                    flexGrow: 1,
-                }}
             >
-                <Suspense fallback={<Box role="status" sx={{ p: 4 }}>Loading page…</Box>}>
+                <Suspense fallback={<div className="site-page-loading" role="status">Loading page…</div>}>
                     <Outlet />
                 </Suspense>
-            </Box>
+            </main>
 
             <Footer />
             <MobileBottomNav />
-        </Box>
+        </div>
     );
 }
 

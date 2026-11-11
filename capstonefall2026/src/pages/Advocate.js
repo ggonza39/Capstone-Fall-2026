@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
-import { Container, Typography, Box, Paper, TextField, Stack, FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox, Button, FormHelperText, Alert, CircularProgress, } from "@mui/material";
-import { apiRequest } from "../mocks/APIClient";
-
+import { Container, Typography, Box, Paper, TextField, Stack, FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox, Button, FormHelperText, Alert, } from "@mui/material";
+//import { apiRequest } from "../mocks/APIClient";
 function Advocate() {
 
     const [formData, setFormData] = useState({
@@ -18,13 +17,6 @@ function Advocate() {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const [hasAttemptedSubmit, setHasAttemptedSubmit] = useState(false);
-
-    // Duplicate-submission prevention: disables the submit button while the
-    // sandbox request is in flight (documentation/api-contract.md, API 6 —
-    // Advocate Interest Inquiry).
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const [submitError, setSubmitError] = useState("");
 
     const firstNameRef = useRef(null);
     const lastNameRef = useRef(null);
@@ -61,45 +53,10 @@ function Advocate() {
         return Object.keys(newErrors).length === 0;
     
     };
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        setHasAttemptedSubmit(true);
-        setSubmitError("");
-
-        // Duplicate-submission prevention: ignore repeated clicks/Enter while
-        // a request is already in flight.
-        if (isSubmitting) {
-            return;
-        }
-
-        const isValid = validateForm();
-
-        if (!isValid) {
-            setIsSubmitted(false);
-
-            if (formData.firstName.trim() === "") {
-                firstNameRef.current?.focus();
-            } else if (formData.lastName.trim() === "") {
-                lastNameRef.current?.focus();
-            } else if (
-                formData.email.trim() === "" ||
-                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
-            ) {
-                emailRef.current?.focus();
-            } else if (formData.interests.length === 0) {
-                document.getElementById("advocacy-interest-first")?.focus();
-            } else if (formData.message.trim() === "") {
-                messageRef.current?.focus();
-            }
-
-            return;
-        }
-
-        setIsSubmitting(true);
-
-        try {
+  
+  /*
+  API is throwing a 405 error commented out the code
+  try {
             await apiRequest("/v1/advocate-inquiries", "POST", {
                 firstName: formData.firstName.trim(),
                 lastName: formData.lastName.trim(),
@@ -126,6 +83,36 @@ function Advocate() {
             setIsSubmitting(false);
         }
     };
+  */
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        setHasAttemptedSubmit(true);
+
+        const isValid = validateForm();
+
+        if(isValid) {
+            setIsSubmitted(true);
+        } else {
+            setIsSubmitted(false);
+
+            if (formData.firstName.trim() === "") {
+                firstNameRef.current?.focus();
+            } else if (formData.lastName.trim() === "") {
+                lastNameRef.current?.focus();
+            } else if (
+                formData.email.trim() === "" ||
+                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
+            ) {
+                emailRef.current?.focus();
+            } else if (formData.interests.length === 0) {
+                document.getElementById("advocacy-interest-first")?.focus();
+            } else if (formData.message.trim() === "") {
+                messageRef.current?.focus();
+            }
+        }
+    };
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -141,7 +128,6 @@ function Advocate() {
         }));
 
         setIsSubmitted(false);
-        setSubmitError("");
     };
 
     const handleInterestChange = (event) => {
@@ -160,7 +146,6 @@ function Advocate() {
         }));
 
         setIsSubmitted(false);
-        setSubmitError("");
     };
 
     return(
@@ -350,20 +335,12 @@ function Advocate() {
                                     here will not be submitted to a production system.
                                 </Typography>
 
-                                {submitError && (
-                                    <Alert severity="error" role="alert">
-                                        {submitError}
-                                    </Alert>
-                                )}
-
                                 <Button
                                     type="submit"
                                     variant="contained"
                                     size="large"
-                                    disabled={isSubmitting}
-                                    startIcon={isSubmitting ? <CircularProgress size={18} color="inherit" /> : undefined}
                                     sx={{ alignSelf: "flex-start"  }}>
-                                        {isSubmitting ? "Submitting..." : "Submit Advocate Request"}
+                                        Submit Advocate Request
                                 </Button>
                             </Stack>
                         </Box>

@@ -1,0 +1,442 @@
+{
+  "generatedAtUtc": "2026-11-10T20:57:19.372Z",
+  "url": "http://127.0.0.1:4173/",
+  "scope": "Controlled local production experiment for build-rendered homepage. The current public457ms result remains unchanged until this source is deployed and a fresh hosted audit confirms it.",
+  "environment": {
+    "capturedAtUtc": "2026-11-10T20:38:36.000Z",
+    "referenceCommit": "b33e2e12b92994b21e4620140d6c2f2d15b8024e",
+    "node": "v20.11.1",
+    "lighthouse": "12.8.2",
+    "chrome": "157.0.8103.39",
+    "operatingSystem": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "OSArchitecture": "64-bit"
+    },
+    "cpu": {
+      "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    },
+    "baselinePublicTbtMedianMs": 457,
+    "scope": "Controlled local production experiment for build-rendered homepage. The current public457ms result remains unchanged until this source is deployed and a fresh hosted audit confirms it.",
+    "serverBefore": "serve14.2.4 -s build on127.0.0.1:4173",
+    "serverAfter": "serve14.2.4 build -c ../serve.json on127.0.0.1:4173; equivalent static-file precedence and secondary-route fallback",
+    "note": "Both phases use the same Chrome/Lighthouse/config settings and frozen production artifacts. Root/content delivery architecture changes from empty CSR HTML to build-rendered HTML. No timers, delayed essential content, blocked URLs, or lowered targets.",
+    "afterBuild": {
+      "entry": "static/js/main.d43fba1f.js",
+      "css": "static/css/main.9426d4c9.css",
+      "sourceFiles": [
+        {
+          "file": "capstonefall2026/package.json",
+          "sha256": "3d6526a010a5e6a07437966b1ed0a006f54013c74aeb3cf8340d74432a371812"
+        },
+        {
+          "file": "capstonefall2026/src/index.js",
+          "sha256": "03ac5fa51391db04d9750d116f8fe4dd0c7b436f361f76a16bcb5c5a453b5b5a"
+        },
+        {
+          "file": "capstonefall2026/src/reactApp.js",
+          "sha256": "7c365849db4505671c848eac826bc83fc0fcaa12631c683073321d5d6d2ffa01"
+        },
+        {
+          "file": "capstonefall2026/src/components/navigation.js",
+          "sha256": "8127b0e62fea1bb32fd0045b28f537fd143e0f682e174b29ce2c207a3837cd03"
+        },
+        {
+          "file": "capstonefall2026/src/components/Header.js",
+          "sha256": "84844ae37114321a9078c14921ea3a7a5d023d1f4ced7618504cd8ad224c2874"
+        },
+        {
+          "file": "capstonefall2026/src/components/MobileNavigation.js",
+          "sha256": "88392556a6efed9a568562c343a6e8d0c0afbe769b67ca1e1368600b18c30803"
+        },
+        {
+          "file": "capstonefall2026/src/components/ScrollToTop.js",
+          "sha256": "154f4558ca9891da8c54f44ac20e6e7f43b19786fa151447510a73222c7c257d"
+        },
+        {
+          "file": "capstonefall2026/src/pages/Home.js",
+          "sha256": "72633ed98571e7053ea7b71922756a84b6322ea7dde21b6519bf6a69314b2941"
+        },
+        {
+          "file": "capstonefall2026/src/home/enhanceStaticHome.js",
+          "sha256": "70d932ab9e4f23161a3d76d9e0342c82ff45d33bdc0363000cac6e997985658c"
+        },
+        {
+          "file": "capstonefall2026/src/home/homeMenu.js",
+          "sha256": "0ad140dde1dd4a3be70cc5c63822ffc327625cfb967c8459f9701c7a6c1a4191"
+        },
+        {
+          "file": "capstonefall2026/scripts/prerender-home.cjs",
+          "sha256": "0077ae2bcece295d779798dd51ffd3835373c343abd406d94ef8ec0e66dff77c"
+        },
+        {
+          "file": "capstonefall2026/vercel.json",
+          "sha256": "6d99511ccacb445d993d24d1b3d4d12e9a841836e23bbc328634dae09f6fd23c"
+        },
+        {
+          "file": "capstonefall2026/serve.json",
+          "sha256": "80b05817fd265d096d49b671062add07da4726dbe88d9013c570ef6105e703a2"
+        }
+      ],
+      "note": "Reference commit plus current source changes; not deployed."
+    },
+    "verification": {
+      "build": "passed, including postbuild static generation",
+      "browserChecks": 107,
+      "visualDifferences": 0,
+      "routeDeliveryChecks": 11,
+      "fullSuite": {
+        "passed": 136,
+        "failed": 6,
+        "total": 142,
+        "report": "test-results.json"
+      },
+      "retry": {
+        "passed": 20,
+        "failed": 2,
+        "report": "test-results-retry.json"
+      },
+      "newEnhancementAndFocusTests": {
+        "passed": 17,
+        "failed": 0
+      },
+      "testLimitations": "Existing unchanged Advocate and Contact forms use demo feedback while API integration tests expect submitted API outcomes. Full run had Contact5s timeouts;20s retry instead exposes success-message expectation mismatches. These page/test files have no diff in this task. Existing MUI development prop warnings and unset local Stripe key also remain."
+    }
+  },
+  "lighthouseVersion": "12.8.2",
+  "settings": {
+    "output": [
+      "json",
+      "html"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "aggregation": "Independent numeric median of all five runs in each phase; timings in ms; no reports discarded.",
+  "before": {
+    "entry": "static/js/main.ea37ed27.js",
+    "runs": [
+      {
+        "run": 1,
+        "reportJson": "before/run-1.report.json",
+        "reportHtml": "before/run-1.report.html",
+        "fetchTime": "2026-11-10T20:33:01.341Z",
+        "FCP": 768.7652,
+        "LCP": 1984.7651999999998,
+        "TBT": 916.9999999999999,
+        "Speed Index": 1325.2337804646972,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+        ],
+        "benchmarkIndex": 658.5,
+        "scriptBytes": 259633,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 2,
+        "reportJson": "before/run-2.report.json",
+        "reportHtml": "before/run-2.report.html",
+        "fetchTime": "2026-11-10T20:33:33.252Z",
+        "FCP": 842.046,
+        "LCP": 2046.0345,
+        "TBT": 1882,
+        "Speed Index": 2195.061179972355,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+        ],
+        "benchmarkIndex": 713.5,
+        "scriptBytes": 259633,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 3,
+        "reportJson": "before/run-3.report.json",
+        "reportHtml": "before/run-3.report.html",
+        "fetchTime": "2026-11-10T20:34:08.135Z",
+        "FCP": 770.1946,
+        "LCP": 1786.1946000000003,
+        "TBT": 452.9027000000001,
+        "Speed Index": 959.9011396062297,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [],
+        "benchmarkIndex": 1127,
+        "scriptBytes": 259633,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 4,
+        "reportJson": "before/run-4.report.json",
+        "reportHtml": "before/run-4.report.html",
+        "fetchTime": "2026-11-10T20:34:36.211Z",
+        "FCP": 768.8438000000001,
+        "LCP": 1785.8438,
+        "TBT": 453.57809999999995,
+        "Speed Index": 981.531484728489,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+        ],
+        "benchmarkIndex": 516,
+        "scriptBytes": 259633,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 5,
+        "reportJson": "before/run-5.report.json",
+        "reportHtml": "before/run-5.report.html",
+        "fetchTime": "2026-11-10T20:34:59.200Z",
+        "FCP": 767.9121,
+        "LCP": 1789.9121,
+        "TBT": 492.54395,
+        "Speed Index": 1044.7528776334684,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [],
+        "benchmarkIndex": 1113.5,
+        "scriptBytes": 259633,
+        "initialChunkRequests": []
+      }
+    ],
+    "startupBundle": {
+      "entry": "static/js/main.ea37ed27.js",
+      "rawBytes": 259633,
+      "gzipBytes": 82615
+    },
+    "metrics": {
+      "FCP": {
+        "median": 768.8438000000001,
+        "min": 767.9121,
+        "max": 842.046,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      },
+      "LCP": {
+        "median": 1789.9121,
+        "min": 1785.8438,
+        "max": 2046.0345,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      },
+      "TBT": {
+        "median": 492.54395,
+        "min": 452.9027000000001,
+        "max": 1882,
+        "medianMeetsTarget": false,
+        "runsMeetingTarget": 0
+      },
+      "Speed Index": {
+        "median": 1044.7528776334684,
+        "min": 959.9011396062297,
+        "max": 2195.061179972355,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      },
+      "SEO": {
+        "median": 100,
+        "min": 100,
+        "max": 100,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      }
+    }
+  },
+  "after": {
+    "entry": "static/js/main.d43fba1f.js",
+    "runs": [
+      {
+        "run": 1,
+        "reportJson": "after/run-1.report.json",
+        "reportHtml": "after/run-1.report.html",
+        "fetchTime": "2026-11-10T20:49:22.875Z",
+        "FCP": 1214.6022,
+        "LCP": 1231.6022,
+        "TBT": 0,
+        "Speed Index": 2228.1730520430856,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [],
+        "benchmarkIndex": 1017,
+        "scriptBytes": 7750,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 2,
+        "reportJson": "after/run-2.report.json",
+        "reportHtml": "after/run-2.report.html",
+        "fetchTime": "2026-11-10T20:49:44.343Z",
+        "FCP": 1217.0398,
+        "LCP": 1225.0398,
+        "TBT": 0,
+        "Speed Index": 2227.3746140658086,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [],
+        "benchmarkIndex": 1083,
+        "scriptBytes": 7750,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 3,
+        "reportJson": "after/run-3.report.json",
+        "reportHtml": "after/run-3.report.html",
+        "fetchTime": "2026-11-10T20:50:04.797Z",
+        "FCP": 1185.7904,
+        "LCP": 1222.7904,
+        "TBT": 0,
+        "Speed Index": 2253.008669975433,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [],
+        "benchmarkIndex": 1151.5,
+        "scriptBytes": 7750,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 4,
+        "reportJson": "after/run-4.report.json",
+        "reportHtml": "after/run-4.report.html",
+        "fetchTime": "2026-11-10T20:50:26.588Z",
+        "FCP": 853.3816000000002,
+        "LCP": 1222.7632,
+        "TBT": 90,
+        "Speed Index": 2127.40949193634,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+        ],
+        "benchmarkIndex": 929,
+        "scriptBytes": 7750,
+        "initialChunkRequests": []
+      },
+      {
+        "run": 5,
+        "reportJson": "after/run-5.report.json",
+        "reportHtml": "after/run-5.report.html",
+        "fetchTime": "2026-11-10T20:50:48.131Z",
+        "FCP": 765.6343999999999,
+        "LCP": 1215.6344,
+        "TBT": 0,
+        "Speed Index": 765.6343999999999,
+        "SEO": 100,
+        "cls": 0,
+        "warnings": [],
+        "benchmarkIndex": 1395,
+        "scriptBytes": 7750,
+        "initialChunkRequests": []
+      }
+    ],
+    "startupBundle": {
+      "entry": "static/js/main.d43fba1f.js",
+      "rawBytes": 7750,
+      "gzipBytes": 3574,
+      "reactSources": [],
+      "muiSources": [],
+      "emotionSources": [],
+      "moduleCount": 15,
+      "htmlBytes": 10769
+    },
+    "metrics": {
+      "FCP": {
+        "median": 1185.7904,
+        "min": 765.6343999999999,
+        "max": 1217.0398,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      },
+      "LCP": {
+        "median": 1222.7904,
+        "min": 1215.6344,
+        "max": 1231.6022,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      },
+      "TBT": {
+        "median": 0,
+        "min": 0,
+        "max": 90,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      },
+      "Speed Index": {
+        "median": 2227.3746140658086,
+        "min": 765.6343999999999,
+        "max": 2253.008669975433,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      },
+      "SEO": {
+        "median": 100,
+        "min": 100,
+        "max": 100,
+        "medianMeetsTarget": true,
+        "runsMeetingTarget": 5
+      }
+    }
+  },
+  "tbtReductionPercent": 100,
+  "allFiveMetricTargetsMet": true,
+  "everyRunMeetsEveryTarget": true,
+  "startupJavaScriptGzipReductionPercent": 95.67390909641105,
+  "warningsRetained": {
+    "before": 3,
+    "after": 1
+  }
+}
