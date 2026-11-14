@@ -6,6 +6,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "/api/index"
+    },
+    {
       "source": "/((?!api(?:/|$)|static(?:/|$)|[.]well-known(?:/|$)).+)",
       "destination": "/app.html"
     }
