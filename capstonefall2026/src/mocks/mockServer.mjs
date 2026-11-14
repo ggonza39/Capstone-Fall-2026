@@ -1,6 +1,7 @@
 // Article followed: https://medium.com/@irbaye/setting-up-express-from-scratch-a-step-by-step-guide-cbc142213089
 // Also, ChatGPT was used to help with boilerplate code and the first API method (POST volunteer-inquiries)
 import express from "express";
+import { pathToFileURL } from "node:url";
 import { workshops, workshopSummaries } from "./data/workshops.js";
 import {
   validationError,
@@ -230,6 +231,21 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Only start a listening server when this file is run directly (e.g.
+// `npm run mock-server` / `node src/mocks/mockServer.mjs`). When imported by
+// a Vercel serverless function (or any other module), `app` is reused
+// as-is with no open port — see documentation/api-contract.md.
+// Comparing resolved file:// URLs (instead of raw path strings) keeps this
+// check correct on Windows, where process.argv[1] uses backslashes/drive
+// letters that don't match import.meta.url's forward-slash file:// form.
+const isDirectExecution =
+  process.argv[1] !== undefined &&
+  import.meta.url === pathToFileURL(process.argv[1]).href;
+
+if (isDirectExecution) {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
