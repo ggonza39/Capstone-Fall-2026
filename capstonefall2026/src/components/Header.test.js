@@ -57,6 +57,7 @@ test("keeps the menu code unloaded until the user asks to open it", () => {
     expect(loadMobileNavigation).not.toHaveBeenCalled();
     expect(screen.getByRole("button", { name: "Open navigation menu" })).toHaveAttribute("aria-expanded", "false");
     expect(screen.getByRole("link", { name: "TechSmart Learning for Seniors home" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Admin" })).toHaveAttribute("href", "/admin");
     expect(screen.queryByRole("navigation", { name: "Mobile navigation" })).not.toBeInTheDocument();
 });
 
@@ -161,6 +162,7 @@ test("the real loaded drawer supports Escape, focus return, and navigation", asy
     userEvent.click(menuButton);
 
     const firstMenu = await screen.findByRole("navigation", { name: "Mobile navigation" });
+    expect(within(firstMenu).getByRole("link", { name: "Admin" })).toHaveAttribute("href", "/admin");
     const paper = firstMenu.closest(".MuiDrawer-paper");
     await waitFor(() => expect(paper.contains(document.activeElement)).toBe(true));
     fireEvent.keyDown(document.activeElement, { key: "Escape" });

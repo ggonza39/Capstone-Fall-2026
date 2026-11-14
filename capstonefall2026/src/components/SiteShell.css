@@ -80,6 +80,8 @@
 }
 
 .site-header-link {
+  padding-right: 12px;
+  padding-left: 12px;
   text-align: start;
   white-space: nowrap;
   text-decoration-thickness: 3px;

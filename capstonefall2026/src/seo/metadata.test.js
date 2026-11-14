@@ -68,6 +68,17 @@ test("workshop paths get a self canonical while missing routes stay out of the i
     });
 });
 
+test.each(["/admin", "/admin/login", "/admin/workshops", "/ADMIN/?source=header"])(
+    "%s has sandbox metadata and stays outside the public index",
+    (pathname) => {
+        const metadata = getRouteMetadata(pathname);
+        expect(metadata.title).toMatch(/TechSmart Sandbox/);
+        expect(metadata.robots).toBe("noindex,nofollow");
+        expect(metadata.canonical).toBeNull();
+        expect(seoConfig.routes).not.toHaveProperty("/admin");
+    }
+);
+
 test("metadata updates remove duplicate head tags and preserve unrelated metadata", () => {
     document.head.innerHTML = `
         <title>Old title</title><title>Duplicate title</title>
@@ -169,6 +180,7 @@ test("crawl-file generation uses the configured public routes and excludes demon
         expect(result.urls).toHaveLength(8);
         expect(result.sitemap).toContain("<loc>https://preview.techsmart.example/advocate</loc>");
         expect(result.sitemap).not.toContain("/workshops/");
+        expect(result.sitemap).not.toContain("/admin");
         expected.forEach((url) => expect(result.sitemap).toContain(`<loc>${url}</loc>`));
         expect(result.robots).toContain("User-agent: *\nDisallow:\n");
         expect(result.robots).toContain("Sitemap: https://preview.techsmart.example/sitemap.xml");

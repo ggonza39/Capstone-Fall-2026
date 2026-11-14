@@ -58,6 +58,12 @@ The latest November 10, 2026 **local production-build follow-up meets all five L
 
 **Deployment and another public audit are required to confirm this new fix.** The latest measured public build still has **457 ms median TBT**, with four of five targets met; the new local result does not replace that measurement. See the [performance README](tests/performance/README.md) and [final report](tests/performance/final-performance-and-seo-results.md) for public results, historical comparisons, and CPU-calibration limitations. One latest local run reported a slow-CPU warning; every run is retained.
 
+## Sandbox administration
+
+Use **Admin** in the site header to open the separate administration demonstration. Log in with username `admin` and password `admin123` to view placeholders for workshop listing, workshop creation, workshop editing, and selected informational content.
+
+The client-side access mechanism is for sandbox/testing only and is **not production authentication or role-based access control**. See [Sandbox administration](documentation/sandbox-administration.md) for access behavior, limitations, and verification steps.
+
 ## Repository Structure
 - `/documentation` — Requirements engineering document, API contract specs, and future-development roadmap
 - `/design` — Wireframes, user journeys, information architecture maps, and persona assets

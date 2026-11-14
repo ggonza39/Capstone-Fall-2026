@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -34,12 +34,22 @@ const Contact = lazyThemedPage(() => import("./pages/Contact"));
 const WorkshopDetail = lazyThemedPage(() => import("./pages/WorkshopDetail"));
 const Donate = lazyThemedPage(() => import("./pages/Donate"));
 const NotFound = lazyThemedPage(() => import("./pages/NotFound"));
+const AdminApp = lazy(() => import("./admin/AdminApp"));
 
 function App() {
   return (
     <BrowserRouter>
 
       <Routes>
+
+        <Route
+          path="/admin/*"
+          element={
+            <Suspense fallback={<div className="site-page-loading" role="status">Loading administration...</div>}>
+              <AdminApp />
+            </Suspense>
+          }
+        />
 
         <Route element={<MainLayout />}>
 

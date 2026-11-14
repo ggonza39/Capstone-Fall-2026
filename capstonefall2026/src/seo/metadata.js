@@ -9,6 +9,14 @@ export function getRouteMetadata(pathname = "/") {
     const pathWithoutSearch = pathname.split(/[?#]/, 1)[0] || "/";
     const path = pathWithoutSearch.replace(/\/+$/, "") || "/";
     const staticPath = path.toLowerCase();
+    if (staticPath === "/admin" || staticPath.startsWith("/admin/")) {
+        return {
+            title: staticPath === "/admin/login" ? "Admin Login | TechSmart Sandbox" : "Administration | TechSmart Sandbox",
+            description: "TechSmart sandbox administration demonstration for testing workshop and informational content workflows.",
+            canonical: null,
+            robots: "noindex,nofollow",
+        };
+    }
     const route = seoConfig.routes[staticPath];
     const workshop = /^\/workshops\/([^/]+)$/i.exec(path);
 

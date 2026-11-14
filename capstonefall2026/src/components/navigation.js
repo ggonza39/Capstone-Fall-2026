@@ -6,6 +6,7 @@ const navigation = [
     { label: "Resources", path: "/resources" },
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
+    { label: "Admin", path: "/admin" },
 ];
 
 export default navigation;
