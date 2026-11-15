@@ -11,6 +11,8 @@ import {
   isWorkshopFull,
   validateWorkshopRegistration,
 } from "./validation-logic/workshopRegistration.mjs";
+import { landingPageParagraphs, impactComponentParagraphs } from './data/paragraphs';
+import PageType  from "./pageTypeEnum";
 
 /**
  * Mock Service Layer.
@@ -267,5 +269,39 @@ export const handlers = [
         { status: 201 }
       );
     }
+  ),
+
+  // Informational Content Updates (Milestone 3)
+  // GetParagraphs method
+  // ChatGPT was used for assistance in creating this method: getting pageType, Object.values and response object structure.
+  http.get("/api/v1/paragraphs/:pageType", async ({ params }) => {
+    await delay(300); 
+
+    var pageType = Number(params.pageType);
+
+    if(!Object.values(PageType).includes(pageType)) {
+      return HttpResponse.json(
+        {
+          error: {
+            code: "NOT_FOUND",
+            message: "The requested paragraphs were not found."
+          }
+        }
+      )
+    }
+
+    if(pageType === PageType.Landing) {
+      return HttpResponse.json(
+          { paragraphs: landingPageParagraphs },
+          { status: 200 }
+      );
+    }
+    else if(pageType === PageType.WantToHelp) {
+      return HttpResponse.json( 
+        { paragraphs: impactComponentParagraphs },
+        { status: 200 }
+      );
+    }
+  }
   ),
 ];

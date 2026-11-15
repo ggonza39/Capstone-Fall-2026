@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { getParagraphs } from "../services/informationalContentService.js";
+import PageType  from "../mocks/pageTypeEnum";
+import Content from "../components/Content";
 import "./Home.css";
 
 // Reuse the existing Material artwork without runtime styling for static icons.
@@ -38,6 +41,27 @@ function Home() {
         navigate(`/need-help?zip=${zipCode}`);
     };
 
+    // This useState and useEffect code block was generated using ChatGPT assistance.
+    const [paragraphs, setParagraphs] = useState([]);
+
+    useEffect(() => {
+        let ignore = false;
+
+        async function load() {
+            // API call: Informational content fetch
+            // Fetch all paragraphs on this page up-front in one round trip
+            const items = await getParagraphs(PageType.Landing);
+            if (!ignore) setParagraphs(items);
+        }
+
+        load().catch(console.error);
+
+        return () => {
+            ignore = true;
+        };
+    }, []);
+
+  
     return (
         <>
             <section className="home-section home-hero">
@@ -45,8 +69,11 @@ function Home() {
                     <div className="home-hero-content">
                         <h1>Technology Made Simple.</h1>
                         <p className="home-hero-description">
-                            TechSmart Learning for Seniors is a non-profit organization committed to teaching older
-                            adults the latest tools and technology to help them lead active lives.
+                            <Content 
+                                id="landing-hero"
+                                fromParagraphs={paragraphs}
+                                fallbackContent="TechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives."
+                            ></Content>
                         </p>
                         <div className="home-hero-actions">
                             <RouterLink className="home-button" to="/need-help">
