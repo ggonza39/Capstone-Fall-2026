@@ -23,11 +23,13 @@ import mobile1200 from "../assets/optimized/senior-mobile-learning-1200.webp";
 import group480 from "../assets/optimized/senior-group-learning-480.webp";
 import group800 from "../assets/optimized/senior-group-learning-800.webp";
 import group1200 from "../assets/optimized/senior-group-learning-1200.webp";
+import Content from "./Content";
 
 // Account for the source pixels cropped by objectFit: cover as well as slot width.
 // The tablet source is 16:9; the other photos are approximately 3:2.
 const photoSizes = "(min-width: 900px) 368px, (min-width: 600px) max(345px, calc(50vw - 32px)), max(330px, calc(100vw - 32px))";
 const tabletSizes = "(min-width: 900px) 436px, (min-width: 600px) max(409px, calc(50vw - 32px)), max(392px, calc(100vw - 32px))";
+
 
 const impactPhotos = [
   {
@@ -61,7 +63,7 @@ const impactPhotos = [
   },
 ];
 
-function ImpactSection() {
+function ImpactSection({paragraphs}) {
   return (
     <Box
       component="section"
@@ -91,19 +93,21 @@ function ImpactSection() {
 
             
             <Typography variant="body1" sx={{ mb: 2 }}>
-            Since 2012, TechSmart Learning for Seniors has
-            educated more than 7,000 older adults across
-            metro Atlanta.
+              <Content 
+                    id="impact-main"
+                    fromParagraphs={paragraphs}
+                    fallbackContent="Since 2012, TechSmart Learning for Seniors has educated more than 7,000 older adults across metro Atlanta."
+              ></Content>
+           
             </Typography>
 
             <Typography variant="body1" sx={{ mb: 3 }}>
-            Through technology education, volunteers, donations,
-            and community partnerships, TechSmart helps older
-            adults build digital skills, gain confidence, and
-            stay connected.
+              <Content 
+                    id="impact-secondary"
+                    fromParagraphs={paragraphs}
+                    fallbackContent="Through technology education, volunteers, donations, and community partnerships, TechSmart helps older adults build digital skills, gain confidence, and stay connected."
+              ></Content>
             </Typography>
-
-
 
             <Stack spacing={2}>
               <Paper
