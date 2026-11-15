@@ -12,7 +12,7 @@ import {
   validateWorkshopRegistration,
 } from "./validation-logic/workshopRegistration.mjs";
 import { landingPageParagraphs, impactComponentParagraphs } from './data/paragraphs';
-import { PageType } from "./pageTypeEnum.js"
+import PageType  from "./pageTypeEnum";
 
 /**
  * Mock Service Layer.
@@ -290,13 +290,13 @@ export const handlers = [
       )
     }
 
-    if(pageType == PageType.Landing) {
+    if(pageType === PageType.Landing) {
       return HttpResponse.json(
           { paragraphs: landingPageParagraphs },
           { status: 200 }
       );
     }
-    else if(pageType == PageType.WantToHelp) {
+    else if(pageType === PageType.WantToHelp) {
       return HttpResponse.json( 
         { paragraphs: impactComponentParagraphs },
         { status: 200 }

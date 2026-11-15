@@ -8,7 +8,7 @@ import ImpactSection from "../components/ImpactSection";
 import PartnersSection from "../components/PartnersSection";
 import { useState, useEffect } from "react";
 import { getParagraphs } from "../services/informationalContentService.js";
-import { PageType } from "../mocks/pageTypeEnum.js";
+import PageType from "../mocks/pageTypeEnum";
 
 /**
  * PBI-9 Implement "I Want to Help" Donate/Volunteer/Advocate journeys
