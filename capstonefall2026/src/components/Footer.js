@@ -1,11 +1,3 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Link,
-  Stack,
-} from "@mui/material";
-
 import { Link as RouterLink } from "react-router-dom";
 
 
@@ -13,93 +5,32 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Box
-      component="footer"
-      sx={{
-        backgroundColor: "primary.main",
-        color: "primary.contrastText",
-
-        mt: "auto",
-
-        py: 4,
-      }}
-    >
-      <Container maxWidth="lg">
-
-        <Stack
-          spacing={2}
-          alignItems={{
-            xs: "flex-start",
-            md: "center",
-          }}
-        >
-
-          <Typography
-            variant="body1"
-            sx={{
-              fontWeight: 700,
-            }}
-          >
+    <footer className="site-footer">
+      <div className="site-container">
+        <div className="site-footer-content">
+          <p className="site-footer-name">
             TechSmart Learning for Seniors
-          </Typography>
-
-
-          <Stack
-            component="nav"
-            aria-label="Footer navigation"
-
-            direction={{
-              xs: "column",
-              sm: "row",
-            }}
-
-            spacing={{
-              xs: 1,
-              sm: 3,
-            }}
-          >
-            <Link
-              component={RouterLink}
-              to="/need-help"
-              color="inherit"
-            >
+          </p>
+          <nav aria-label="Footer navigation" className="site-footer-navigation">
+            <RouterLink to="/need-help">
               I Need Help
-            </Link>
-
-            <Link
-              component={RouterLink}
-              to="/want-to-help"
-              color="inherit"
-            >
+            </RouterLink>
+            <RouterLink to="/want-to-help">
               I Want to Help
-            </Link>
-
-            <Link
-              component={RouterLink}
-              to="/resources"
-              color="inherit"
-            >
+            </RouterLink>
+            <RouterLink to="/resources">
               Resources
-            </Link>
-
-            <Link
-              component={RouterLink}
-              to="/contact"
-              color="inherit"
-            >
+            </RouterLink>
+            <RouterLink to="/contact">
               Contact
-            </Link>
-          </Stack>
-
-
-          <Typography variant="body2">
+            </RouterLink>
+          </nav>
+          <p className="site-footer-copyright">
             © {currentYear} TechSmart Learning for Seniors
-          </Typography>
-
-        </Stack>
-
-      </Container>
-    </Box>
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }
 

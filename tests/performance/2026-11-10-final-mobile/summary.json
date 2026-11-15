@@ -1,0 +1,2086 @@
+{
+  "phase": "Final deployed implementation after frontend performance/SEO optimization",
+  "clientDate": "2026-11-10",
+  "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+  "route": "/",
+  "aggregation": "Independent median for each metric across all five sequential runs; timings in milliseconds. No runs discarded.",
+  "baselineSource": "documentation/milestones/Milestone-3.md, PBI-14",
+  "baselineComparability": "Original baseline raw reports and conditions are unavailable; historical baseline comparisons are descriptive, not controlled before/after evidence.",
+  "lighthouseVersion": "12.8.2",
+  "settings": {
+    "output": [
+      "json",
+      "html"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "seo"
+    ],
+    "skipAudits": null
+  },
+  "environmentComparison": {
+    "initialNode": "v20.11.1",
+    "finalNode": "v20.11.1",
+    "initialChrome": "156.0.8078.80",
+    "finalChrome": "157.0.8103.39",
+    "initialHostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "finalHostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "chromeVersionChanged": true,
+    "operatingSystemMatches": true,
+    "cpuMatches": true,
+    "note": "Browser version changed between measurement sets; Lighthouse settings, machine profile, runtime and deployed URL are recorded. Timing changes are observed results, not a controlled attribution to code alone."
+  },
+  "deployment": {
+    "measuredClientDate": "2026-11-10",
+    "timezone": "America/New_York",
+    "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+    "localReferenceCommit": "714ae3df202181affa95f638c1636085a72e91c6",
+    "deployedCommit": null,
+    "deployedCommitNote": "Public artifacts do not expose a verified source commit; the local commit is a reference only.",
+    "nodeVersion": "v20.11.1",
+    "lighthouseCli": "C:\\Users\\jlhar\\AppData\\Local\\npm-cache\\_npx\\ed05d372d6adb15e\\node_modules\\lighthouse\\cli\\index.js",
+    "lighthouseVersion": "12.8.2",
+    "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "chromeVersion": "157.0.8103.39",
+    "operatingSystem": {
+      "Caption": "Microsoft Windows 11 Home",
+      "Version": "10.0.26200",
+      "OSArchitecture": "64-bit"
+    },
+    "cpu": {
+      "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 8
+    },
+    "runProcedure": "Five sequential navigation audits; fresh Chrome process/profile and default storage reset each run; no URL blocking, interactions, builds, tests, or other browser audits during collection.",
+    "optimizedImageVariants": 24,
+    "preflight": {
+      "capturedAtUtc": "2026-11-10T05:07:52.6103502Z",
+      "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+      "status": 200,
+      "etag": "\"4395876b2448fbb9fb9784b7db8b42e2\"",
+      "lastModified": "Tue, 10 Nov 2026 05:06:04 GMT",
+      "vercelCache": "HIT",
+      "vercelId": "iad1::24zx9-1794287272546-6a5beb6d912b",
+      "entryScript": "/static/js/main.25dae39a.js",
+      "htmlSha256": "3a8c66020ead8131460c9be7af42a3a2e5075408da23667a790ee7bb39f2c7ee"
+    },
+    "afterEachRun": [
+      {
+        "capturedAtUtc": "2026-11-10T05:08:13.8782739Z",
+        "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+        "status": 200,
+        "etag": "\"4395876b2448fbb9fb9784b7db8b42e2\"",
+        "lastModified": "Tue, 10 Nov 2026 05:06:04 GMT",
+        "vercelCache": "HIT",
+        "vercelId": "iad1::cnts5-1794287293865-b3b584e2304b",
+        "entryScript": "/static/js/main.25dae39a.js",
+        "htmlSha256": "3a8c66020ead8131460c9be7af42a3a2e5075408da23667a790ee7bb39f2c7ee"
+      },
+      {
+        "capturedAtUtc": "2026-11-10T05:08:28.4165069Z",
+        "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+        "status": 200,
+        "etag": "\"4395876b2448fbb9fb9784b7db8b42e2\"",
+        "lastModified": "Tue, 10 Nov 2026 05:06:04 GMT",
+        "vercelCache": "HIT",
+        "vercelId": "iad1::6v462-1794287308404-43ac05eeeda8",
+        "entryScript": "/static/js/main.25dae39a.js",
+        "htmlSha256": "3a8c66020ead8131460c9be7af42a3a2e5075408da23667a790ee7bb39f2c7ee"
+      },
+      {
+        "capturedAtUtc": "2026-11-10T05:08:43.0838277Z",
+        "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+        "status": 200,
+        "etag": "\"4395876b2448fbb9fb9784b7db8b42e2\"",
+        "lastModified": "Tue, 10 Nov 2026 05:06:04 GMT",
+        "vercelCache": "HIT",
+        "vercelId": "iad1::cnts5-1794287323054-8f43e1c5f3d1",
+        "entryScript": "/static/js/main.25dae39a.js",
+        "htmlSha256": "3a8c66020ead8131460c9be7af42a3a2e5075408da23667a790ee7bb39f2c7ee"
+      },
+      {
+        "capturedAtUtc": "2026-11-10T05:08:57.8852864Z",
+        "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+        "status": 200,
+        "etag": "\"4395876b2448fbb9fb9784b7db8b42e2\"",
+        "lastModified": "Tue, 10 Nov 2026 05:06:04 GMT",
+        "vercelCache": "HIT",
+        "vercelId": "iad1::pxnk9-1794287337872-f06ff6d486cb",
+        "entryScript": "/static/js/main.25dae39a.js",
+        "htmlSha256": "3a8c66020ead8131460c9be7af42a3a2e5075408da23667a790ee7bb39f2c7ee"
+      },
+      {
+        "capturedAtUtc": "2026-11-10T05:09:12.7057503Z",
+        "requestedUrl": "https://capstone-fall-2026.vercel.app/",
+        "status": 200,
+        "etag": "\"4395876b2448fbb9fb9784b7db8b42e2\"",
+        "lastModified": "Tue, 10 Nov 2026 05:06:04 GMT",
+        "vercelCache": "HIT",
+        "vercelId": "iad1::rwlpk-1794287352697-bfa7d1f15444",
+        "entryScript": "/static/js/main.25dae39a.js",
+        "htmlSha256": "3a8c66020ead8131460c9be7af42a3a2e5075408da23667a790ee7bb39f2c7ee"
+      }
+    ],
+    "unchangedAcrossAllRuns": true,
+    "completedAtUtc": "2026-11-10T05:09:12.7813947Z"
+  },
+  "runs": [
+    {
+      "run": 1,
+      "reportJson": "run-1.report.json",
+      "reportHtml": "run-1.report.html",
+      "fetchTimeUtc": "2026-11-10T05:08:03.535Z",
+      "FCP": 832.289,
+      "LCP": 1707.289,
+      "TBT": 413,
+      "Speed Index": 1174.2185381437464,
+      "seoScore": 100,
+      "performanceScore": 90,
+      "cls": 0,
+      "benchmarkIndex": 1881,
+      "warnings": [],
+      "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+    },
+    {
+      "run": 2,
+      "reportJson": "run-2.report.json",
+      "reportHtml": "run-2.report.html",
+      "fetchTimeUtc": "2026-11-10T05:08:18.582Z",
+      "FCP": 780.55,
+      "LCP": 1684.55,
+      "TBT": 439,
+      "Speed Index": 928.1383117329287,
+      "seoScore": 100,
+      "performanceScore": 89,
+      "cls": 0,
+      "benchmarkIndex": 1962,
+      "warnings": [],
+      "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+    },
+    {
+      "run": 3,
+      "reportJson": "run-3.report.json",
+      "reportHtml": "run-3.report.html",
+      "fetchTimeUtc": "2026-11-10T05:08:33.163Z",
+      "FCP": 784.0665,
+      "LCP": 1740.0665,
+      "TBT": 366,
+      "Speed Index": 987.0132416739568,
+      "seoScore": 100,
+      "performanceScore": 91,
+      "cls": 0,
+      "benchmarkIndex": 1931,
+      "warnings": [],
+      "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+    },
+    {
+      "run": 4,
+      "reportJson": "run-4.report.json",
+      "reportHtml": "run-4.report.html",
+      "fetchTimeUtc": "2026-11-10T05:08:47.981Z",
+      "FCP": 782.175,
+      "LCP": 1724.175,
+      "TBT": 413,
+      "Speed Index": 980.6636626619945,
+      "seoScore": 100,
+      "performanceScore": 90,
+      "cls": 0,
+      "benchmarkIndex": 2150.5,
+      "warnings": [],
+      "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+    },
+    {
+      "run": 5,
+      "reportJson": "run-5.report.json",
+      "reportHtml": "run-5.report.html",
+      "fetchTimeUtc": "2026-11-10T05:09:02.663Z",
+      "FCP": 783.944,
+      "LCP": 1676.944,
+      "TBT": 361,
+      "Speed Index": 895.6788285545737,
+      "seoScore": 100,
+      "performanceScore": 91,
+      "cls": 0,
+      "benchmarkIndex": 1960.5,
+      "warnings": [],
+      "hostUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+    }
+  ],
+  "comparisons": [
+    {
+      "metric": "FCP",
+      "unit": "ms",
+      "documentedProjectBaseline": 5700,
+      "initialMedian": 819.0665,
+      "finalMedian": 783.944,
+      "minimum": 780.55,
+      "maximum": 832.289,
+      "targetExclusive": 2000,
+      "meetsTarget": true,
+      "allRunsMeetTarget": true,
+      "improvementPercentVsDocumentedBaseline": 86.24659649122808,
+      "improvementPercentVsInitialDeployed": 4.288113358317067
+    },
+    {
+      "metric": "LCP",
+      "unit": "ms",
+      "documentedProjectBaseline": 21800,
+      "initialMedian": 4515.223999999999,
+      "finalMedian": 1707.289,
+      "minimum": 1676.944,
+      "maximum": 1740.0665,
+      "targetExclusive": 2500,
+      "meetsTarget": true,
+      "allRunsMeetTarget": true,
+      "improvementPercentVsDocumentedBaseline": 92.16839908256881,
+      "improvementPercentVsInitialDeployed": 62.18816607991099
+    },
+    {
+      "metric": "TBT",
+      "unit": "ms",
+      "documentedProjectBaseline": 700,
+      "initialMedian": 1018.999999999999,
+      "finalMedian": 413,
+      "minimum": 361,
+      "maximum": 439,
+      "targetExclusive": 200,
+      "meetsTarget": false,
+      "allRunsMeetTarget": false,
+      "improvementPercentVsDocumentedBaseline": 41,
+      "improvementPercentVsInitialDeployed": 59.47006869479878
+    },
+    {
+      "metric": "Speed Index",
+      "unit": "ms",
+      "documentedProjectBaseline": 8700,
+      "initialMedian": 1111.4510471982821,
+      "finalMedian": 980.6636626619945,
+      "minimum": 895.6788285545737,
+      "maximum": 1174.2185381437464,
+      "targetExclusive": 3400,
+      "meetsTarget": true,
+      "allRunsMeetTarget": true,
+      "improvementPercentVsDocumentedBaseline": 88.72800387744833,
+      "improvementPercentVsInitialDeployed": 11.76726450219946
+    },
+    {
+      "metric": "SEO",
+      "unit": "score/100",
+      "documentedProjectBaseline": 40,
+      "initialMedian": 100,
+      "finalMedian": 100,
+      "minimum": 100,
+      "maximum": 100,
+      "targetInclusive": [
+        90,
+        100
+      ],
+      "meetsTarget": true,
+      "allRunsMeetTarget": true,
+      "pointChangeVsDocumentedBaseline": 60,
+      "pointChangeVsInitialDeployed": 0
+    }
+  ],
+  "benchmarkIndexRange": [
+    1881,
+    2150.5
+  ],
+  "remainingAuditFindings": [
+    {
+      "run": 1,
+      "audits": {
+        "unused-javascript": {
+          "score": 0,
+          "displayValue": "Est savings of 40 KiB",
+          "numericValue": 150,
+          "details": {
+            "type": "opportunity",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "subItemsHeading": {
+                  "key": "source",
+                  "valueType": "code"
+                },
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceBytes"
+                },
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceWastedBytes"
+                },
+                "label": "Est Savings"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "totalBytes": 107038,
+                "wastedBytes": 41168,
+                "wastedPercent": 38.46131656378007
+              }
+            ],
+            "overallSavingsMs": 150,
+            "overallSavingsBytes": 41168,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 150
+              }
+            }
+          }
+        },
+        "mainthread-work-breakdown": {
+          "score": 1,
+          "displayValue": "0.9 s",
+          "numericValue": 924.732000000003,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "groupLabel",
+                "valueType": "text",
+                "label": "Category"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Time Spent"
+              }
+            ],
+            "items": [
+              {
+                "group": "scriptEvaluation",
+                "groupLabel": "Script Evaluation",
+                "duration": 406.0600000000027
+              },
+              {
+                "group": "other",
+                "groupLabel": "Other",
+                "duration": 278.44400000000036
+              },
+              {
+                "group": "styleLayout",
+                "groupLabel": "Style & Layout",
+                "duration": 172.284
+              },
+              {
+                "group": "scriptParseCompile",
+                "groupLabel": "Script Parsing & Compilation",
+                "duration": 41.588
+              },
+              {
+                "group": "paintCompositeRender",
+                "groupLabel": "Rendering",
+                "duration": 24.208000000000006
+              },
+              {
+                "group": "parseHTML",
+                "groupLabel": "Parse HTML & CSS",
+                "duration": 2.148
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ]
+          }
+        },
+        "bootup-time": {
+          "score": 1,
+          "displayValue": "0.4 s",
+          "numericValue": 444.1520000000027,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "total",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Total CPU Time"
+              },
+              {
+                "key": "scripting",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Evaluation"
+              },
+              {
+                "key": "scriptParseCompile",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Parse"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "total": 441.2920000000027,
+                "scripting": 390.9840000000027,
+                "scriptParseCompile": 41.032
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "total": 271.05999999999995,
+                "scripting": 4.288,
+                "scriptParseCompile": 0.556
+              },
+              {
+                "url": "Unattributable",
+                "total": 208.244,
+                "scripting": 7.292,
+                "scriptParseCompile": 0
+              }
+            ],
+            "summary": {
+              "wastedMs": 444.1520000000027
+            },
+            "sortedBy": [
+              "total"
+            ]
+          }
+        },
+        "long-tasks": {
+          "score": 1,
+          "displayValue": "5 long tasks found",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "startTime",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Start Time"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 281,
+                "startTime": 1707.289
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 132,
+                "startTime": 1575.289
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 84,
+                "startTime": 832.289
+              },
+              {
+                "url": "Unattributable",
+                "duration": 84,
+                "startTime": 998.289
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 82,
+                "startTime": 916.289
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ],
+            "skipSumming": [
+              "startTime"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "urls": [
+                "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "https://capstone-fall-2026.vercel.app/",
+                "Unattributable"
+              ],
+              "tasks": [
+                {
+                  "urlIndex": 0,
+                  "startTime": 1707.3,
+                  "duration": 281,
+                  "other": 281
+                },
+                {
+                  "urlIndex": 0,
+                  "startTime": 1575.3,
+                  "duration": 132,
+                  "other": 132,
+                  "scriptEvaluation": 0
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 832.3,
+                  "duration": 84,
+                  "other": 84,
+                  "styleLayout": 0
+                },
+                {
+                  "urlIndex": 2,
+                  "startTime": 998.3,
+                  "duration": 84,
+                  "other": 84
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 916.3,
+                  "duration": 82,
+                  "other": 82,
+                  "paintCompositeRender": 0
+                }
+              ]
+            }
+          }
+        },
+        "uses-responsive-images": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0
+          }
+        },
+        "font-display": {
+          "score": 1,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "ms",
+                "label": "Est Savings"
+              }
+            ],
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "run": 2,
+      "audits": {
+        "unused-javascript": {
+          "score": 0,
+          "displayValue": "Est savings of 48 KiB",
+          "numericValue": 150,
+          "details": {
+            "type": "opportunity",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "subItemsHeading": {
+                  "key": "source",
+                  "valueType": "code"
+                },
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceBytes"
+                },
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceWastedBytes"
+                },
+                "label": "Est Savings"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "totalBytes": 128971,
+                "wastedBytes": 49604,
+                "wastedPercent": 38.46131656378007
+              }
+            ],
+            "overallSavingsMs": 150,
+            "overallSavingsBytes": 49604,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 150
+              }
+            }
+          }
+        },
+        "mainthread-work-breakdown": {
+          "score": 1,
+          "displayValue": "0.9 s",
+          "numericValue": 905.4960000000035,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "groupLabel",
+                "valueType": "text",
+                "label": "Category"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Time Spent"
+              }
+            ],
+            "items": [
+              {
+                "group": "scriptEvaluation",
+                "groupLabel": "Script Evaluation",
+                "duration": 480.44400000000326
+              },
+              {
+                "group": "other",
+                "groupLabel": "Other",
+                "duration": 225.16000000000028
+              },
+              {
+                "group": "styleLayout",
+                "groupLabel": "Style & Layout",
+                "duration": 133.544
+              },
+              {
+                "group": "scriptParseCompile",
+                "groupLabel": "Script Parsing & Compilation",
+                "duration": 35.108000000000004
+              },
+              {
+                "group": "paintCompositeRender",
+                "groupLabel": "Rendering",
+                "duration": 29.104000000000006
+              },
+              {
+                "group": "parseHTML",
+                "groupLabel": "Parse HTML & CSS",
+                "duration": 2.136
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ]
+          }
+        },
+        "bootup-time": {
+          "score": 1,
+          "displayValue": "0.5 s",
+          "numericValue": 511.5200000000031,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "total",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Total CPU Time"
+              },
+              {
+                "key": "scripting",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Evaluation"
+              },
+              {
+                "key": "scriptParseCompile",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Parse"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "total": 513.5040000000032,
+                "scripting": 467.7320000000031,
+                "scriptParseCompile": 34.512
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "total": 233.61600000000004,
+                "scripting": 3.668,
+                "scriptParseCompile": 0.596
+              },
+              {
+                "url": "Unattributable",
+                "total": 153.41599999999997,
+                "scripting": 5.0120000000000005,
+                "scriptParseCompile": 0
+              }
+            ],
+            "summary": {
+              "wastedMs": 511.5200000000031
+            },
+            "sortedBy": [
+              "total"
+            ]
+          }
+        },
+        "long-tasks": {
+          "score": 1,
+          "displayValue": "4 long tasks found",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "startTime",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Start Time"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 325,
+                "startTime": 1684.55
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 161,
+                "startTime": 1523.55
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 87,
+                "startTime": 846.55
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 66,
+                "startTime": 780.55
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ],
+            "skipSumming": [
+              "startTime"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "urls": [
+                "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "https://capstone-fall-2026.vercel.app/"
+              ],
+              "tasks": [
+                {
+                  "urlIndex": 0,
+                  "startTime": 1684.6,
+                  "duration": 325,
+                  "other": 325
+                },
+                {
+                  "urlIndex": 0,
+                  "startTime": 1523.6,
+                  "duration": 161,
+                  "other": 161,
+                  "scriptEvaluation": 0
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 846.6,
+                  "duration": 87,
+                  "other": 87,
+                  "paintCompositeRender": 0
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 780.6,
+                  "duration": 66,
+                  "other": 66,
+                  "styleLayout": 0
+                }
+              ]
+            }
+          }
+        },
+        "uses-responsive-images": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0
+          }
+        },
+        "font-display": {
+          "score": 1,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "ms",
+                "label": "Est Savings"
+              }
+            ],
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "run": 3,
+      "audits": {
+        "unused-javascript": {
+          "score": 0,
+          "displayValue": "Est savings of 40 KiB",
+          "numericValue": 160,
+          "details": {
+            "type": "opportunity",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "subItemsHeading": {
+                  "key": "source",
+                  "valueType": "code"
+                },
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceBytes"
+                },
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceWastedBytes"
+                },
+                "label": "Est Savings"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "totalBytes": 107038,
+                "wastedBytes": 41168,
+                "wastedPercent": 38.46131656378007
+              }
+            ],
+            "overallSavingsMs": 160,
+            "overallSavingsBytes": 41168,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 160
+              }
+            }
+          }
+        },
+        "mainthread-work-breakdown": {
+          "score": 1,
+          "displayValue": "0.9 s",
+          "numericValue": 903.2120000000031,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "groupLabel",
+                "valueType": "text",
+                "label": "Category"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Time Spent"
+              }
+            ],
+            "items": [
+              {
+                "group": "scriptEvaluation",
+                "groupLabel": "Script Evaluation",
+                "duration": 408.1440000000028
+              },
+              {
+                "group": "other",
+                "groupLabel": "Other",
+                "duration": 268.4120000000001
+              },
+              {
+                "group": "styleLayout",
+                "groupLabel": "Style & Layout",
+                "duration": 135.74800000000005
+              },
+              {
+                "group": "scriptParseCompile",
+                "groupLabel": "Script Parsing & Compilation",
+                "duration": 57.16799999999999
+              },
+              {
+                "group": "paintCompositeRender",
+                "groupLabel": "Rendering",
+                "duration": 20.792000000000005
+              },
+              {
+                "group": "garbageCollection",
+                "groupLabel": "Garbage Collection",
+                "duration": 8.579999999999998
+              },
+              {
+                "group": "parseHTML",
+                "groupLabel": "Parse HTML & CSS",
+                "duration": 4.367999999999999
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ]
+          }
+        },
+        "bootup-time": {
+          "score": 1,
+          "displayValue": "0.5 s",
+          "numericValue": 460.9720000000029,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "total",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Total CPU Time"
+              },
+              {
+                "key": "scripting",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Evaluation"
+              },
+              {
+                "key": "scriptParseCompile",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Parse"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "total": 471.1400000000029,
+                "scripting": 396.2920000000029,
+                "scriptParseCompile": 56.696
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "total": 231.91600000000003,
+                "scripting": 2.8920000000000003,
+                "scriptParseCompile": 0.47200000000000003
+              },
+              {
+                "url": "Unattributable",
+                "total": 195.248,
+                "scripting": 4.62,
+                "scriptParseCompile": 0
+              }
+            ],
+            "summary": {
+              "wastedMs": 460.9720000000029
+            },
+            "sortedBy": [
+              "total"
+            ]
+          }
+        },
+        "long-tasks": {
+          "score": 1,
+          "displayValue": "4 long tasks found",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "startTime",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Start Time"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 299,
+                "startTime": 1734.0665
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 144,
+                "startTime": 1590.0665
+              },
+              {
+                "url": "Unattributable",
+                "duration": 67,
+                "startTime": 773.0665
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 67,
+                "startTime": 851.0665
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ],
+            "skipSumming": [
+              "startTime"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "urls": [
+                "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "Unattributable",
+                "https://capstone-fall-2026.vercel.app/"
+              ],
+              "tasks": [
+                {
+                  "urlIndex": 0,
+                  "startTime": 1734.1,
+                  "duration": 299,
+                  "other": 299
+                },
+                {
+                  "urlIndex": 0,
+                  "startTime": 1590.1,
+                  "duration": 144,
+                  "other": 144,
+                  "scriptEvaluation": 0
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 773.1,
+                  "duration": 67,
+                  "other": 67,
+                  "scriptEvaluation": 0
+                },
+                {
+                  "urlIndex": 2,
+                  "startTime": 851.1,
+                  "duration": 67,
+                  "other": 67,
+                  "styleLayout": 0
+                }
+              ]
+            }
+          }
+        },
+        "uses-responsive-images": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0
+          }
+        },
+        "font-display": {
+          "score": 1,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "ms",
+                "label": "Est Savings"
+              }
+            ],
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "run": 4,
+      "audits": {
+        "unused-javascript": {
+          "score": 0,
+          "displayValue": "Est savings of 40 KiB",
+          "numericValue": 160,
+          "details": {
+            "type": "opportunity",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "subItemsHeading": {
+                  "key": "source",
+                  "valueType": "code"
+                },
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceBytes"
+                },
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceWastedBytes"
+                },
+                "label": "Est Savings"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "totalBytes": 107038,
+                "wastedBytes": 41168,
+                "wastedPercent": 38.46131656378007
+              }
+            ],
+            "overallSavingsMs": 160,
+            "overallSavingsBytes": 41168,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 160
+              }
+            }
+          }
+        },
+        "mainthread-work-breakdown": {
+          "score": 1,
+          "displayValue": "0.9 s",
+          "numericValue": 913.9000000000029,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "groupLabel",
+                "valueType": "text",
+                "label": "Category"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Time Spent"
+              }
+            ],
+            "items": [
+              {
+                "group": "scriptEvaluation",
+                "groupLabel": "Script Evaluation",
+                "duration": 408.5920000000028
+              },
+              {
+                "group": "other",
+                "groupLabel": "Other",
+                "duration": 284.84000000000026
+              },
+              {
+                "group": "styleLayout",
+                "groupLabel": "Style & Layout",
+                "duration": 150.43599999999998
+              },
+              {
+                "group": "scriptParseCompile",
+                "groupLabel": "Script Parsing & Compilation",
+                "duration": 44.251999999999995
+              },
+              {
+                "group": "paintCompositeRender",
+                "groupLabel": "Rendering",
+                "duration": 23.832
+              },
+              {
+                "group": "parseHTML",
+                "groupLabel": "Parse HTML & CSS",
+                "duration": 1.948
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ]
+          }
+        },
+        "bootup-time": {
+          "score": 1,
+          "displayValue": "0.4 s",
+          "numericValue": 448.1400000000029,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "total",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Total CPU Time"
+              },
+              {
+                "key": "scripting",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Evaluation"
+              },
+              {
+                "key": "scriptParseCompile",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Parse"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "total": 448.7840000000029,
+                "scripting": 394.1440000000029,
+                "scriptParseCompile": 43.72
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "total": 246.248,
+                "scripting": 2.8440000000000003,
+                "scriptParseCompile": 0.532
+              },
+              {
+                "url": "Unattributable",
+                "total": 213.56799999999998,
+                "scripting": 6.9,
+                "scriptParseCompile": 0
+              }
+            ],
+            "summary": {
+              "wastedMs": 448.1400000000029
+            },
+            "sortedBy": [
+              "total"
+            ]
+          }
+        },
+        "long-tasks": {
+          "score": 1,
+          "displayValue": "5 long tasks found",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "startTime",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Start Time"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 282,
+                "startTime": 1712.175
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 138,
+                "startTime": 1574.175
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 88,
+                "startTime": 903.175
+              },
+              {
+                "url": "Unattributable",
+                "duration": 82,
+                "startTime": 991.175
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 73,
+                "startTime": 830.175
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ],
+            "skipSumming": [
+              "startTime"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "urls": [
+                "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "https://capstone-fall-2026.vercel.app/",
+                "Unattributable"
+              ],
+              "tasks": [
+                {
+                  "urlIndex": 0,
+                  "startTime": 1712.2,
+                  "duration": 282,
+                  "other": 282
+                },
+                {
+                  "urlIndex": 0,
+                  "startTime": 1574.2,
+                  "duration": 138,
+                  "other": 138,
+                  "scriptEvaluation": 0
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 903.2,
+                  "duration": 88,
+                  "other": 88,
+                  "paintCompositeRender": 0
+                },
+                {
+                  "urlIndex": 2,
+                  "startTime": 991.2,
+                  "duration": 82,
+                  "other": 82
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 830.2,
+                  "duration": 73,
+                  "other": 73,
+                  "styleLayout": 0
+                }
+              ]
+            }
+          }
+        },
+        "uses-responsive-images": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0
+          }
+        },
+        "font-display": {
+          "score": 1,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "ms",
+                "label": "Est Savings"
+              }
+            ],
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "run": 5,
+      "audits": {
+        "unused-javascript": {
+          "score": 0,
+          "displayValue": "Est savings of 40 KiB",
+          "numericValue": 170,
+          "details": {
+            "type": "opportunity",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "subItemsHeading": {
+                  "key": "source",
+                  "valueType": "code"
+                },
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceBytes"
+                },
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedBytes",
+                "valueType": "bytes",
+                "subItemsHeading": {
+                  "key": "sourceWastedBytes"
+                },
+                "label": "Est Savings"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "totalBytes": 107038,
+                "wastedBytes": 41168,
+                "wastedPercent": 38.46131656378007
+              }
+            ],
+            "overallSavingsMs": 170,
+            "overallSavingsBytes": 41168,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 170
+              }
+            }
+          }
+        },
+        "mainthread-work-breakdown": {
+          "score": 1,
+          "displayValue": "0.9 s",
+          "numericValue": 868.3640000000039,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "groupLabel",
+                "valueType": "text",
+                "label": "Category"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Time Spent"
+              }
+            ],
+            "items": [
+              {
+                "group": "scriptEvaluation",
+                "groupLabel": "Script Evaluation",
+                "duration": 432.47200000000373
+              },
+              {
+                "group": "other",
+                "groupLabel": "Other",
+                "duration": 227.66400000000016
+              },
+              {
+                "group": "styleLayout",
+                "groupLabel": "Style & Layout",
+                "duration": 134.916
+              },
+              {
+                "group": "scriptParseCompile",
+                "groupLabel": "Script Parsing & Compilation",
+                "duration": 36.544
+              },
+              {
+                "group": "paintCompositeRender",
+                "groupLabel": "Rendering",
+                "duration": 26.784000000000002
+              },
+              {
+                "group": "garbageCollection",
+                "groupLabel": "Garbage Collection",
+                "duration": 7.664000000000001
+              },
+              {
+                "group": "parseHTML",
+                "groupLabel": "Parse HTML & CSS",
+                "duration": 2.32
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ]
+          }
+        },
+        "bootup-time": {
+          "score": 1,
+          "displayValue": "0.5 s",
+          "numericValue": 461.26800000000367,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "total",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Total CPU Time"
+              },
+              {
+                "key": "scripting",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Evaluation"
+              },
+              {
+                "key": "scriptParseCompile",
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Script Parse"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "total": 451.37200000000365,
+                "scripting": 404.04000000000366,
+                "scriptParseCompile": 34.944
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "total": 239.20399999999998,
+                "scripting": 10.588,
+                "scriptParseCompile": 1.6
+              },
+              {
+                "url": "Unattributable",
+                "total": 167.276,
+                "scripting": 10.096,
+                "scriptParseCompile": 0
+              }
+            ],
+            "summary": {
+              "wastedMs": 461.26800000000367
+            },
+            "sortedBy": [
+              "total"
+            ]
+          }
+        },
+        "long-tasks": {
+          "score": 1,
+          "displayValue": "4 long tasks found",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "startTime",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Start Time"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "granularity": 1,
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 281,
+                "startTime": 1661.944
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "duration": 135,
+                "startTime": 1526.944
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 80,
+                "startTime": 848.944
+              },
+              {
+                "url": "https://capstone-fall-2026.vercel.app/",
+                "duration": 65,
+                "startTime": 783.944
+              }
+            ],
+            "sortedBy": [
+              "duration"
+            ],
+            "skipSumming": [
+              "startTime"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "urls": [
+                "https://capstone-fall-2026.vercel.app/static/js/main.25dae39a.js",
+                "https://capstone-fall-2026.vercel.app/"
+              ],
+              "tasks": [
+                {
+                  "urlIndex": 0,
+                  "startTime": 1661.9,
+                  "duration": 281,
+                  "other": 281
+                },
+                {
+                  "urlIndex": 0,
+                  "startTime": 1526.9,
+                  "duration": 135,
+                  "other": 135,
+                  "scriptEvaluation": 0
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 848.9,
+                  "duration": 80,
+                  "other": 80,
+                  "paintCompositeRender": 0
+                },
+                {
+                  "urlIndex": 1,
+                  "startTime": 783.9,
+                  "duration": 65,
+                  "other": 65,
+                  "styleLayout": 0
+                }
+              ]
+            }
+          }
+        },
+        "uses-responsive-images": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "modern-image-formats": {
+          "score": 1,
+          "displayValue": "",
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0,
+            "overallSavingsBytes": 0,
+            "sortedBy": [
+              "wastedBytes"
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "metricSavings": {
+                "FCP": 0,
+                "LCP": 0
+              }
+            }
+          }
+        },
+        "render-blocking-resources": {
+          "score": 1,
+          "numericValue": 0,
+          "details": {
+            "type": "opportunity",
+            "headings": [],
+            "items": [],
+            "overallSavingsMs": 0
+          }
+        },
+        "font-display": {
+          "score": 1,
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "ms",
+                "label": "Est Savings"
+              }
+            ],
+            "items": []
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "runs": 5,
+    "runtimeErrors": 0,
+    "warnings": 0,
+    "settingsIdenticalAcrossRunsAndInitial": true,
+    "deployedEntryAndHtmlStableAcrossRuns": true,
+    "reportEntriesVerified": true,
+    "homePageScreenshotManuallyVerified": true
+  },
+  "supplementalDeploymentChecks": {
+    "passed": true,
+    "routes": 9,
+    "checks": 54,
+    "errors": [],
+    "workshopLimitation": "The representative WS-1001 detail is unavailable on this deployment; error metadata is verified, successful workshop-detail content is not.",
+    "unknownPageHttpStatus": 200,
+    "note": "Rendered metadata/content and crawl files, not additional Lighthouse category scores or timing measurements."
+  },
+  "limitations": [
+    "Historical documented baseline raw reports and conditions are unavailable.",
+    "Chrome updated from the initial measurement; CPU/network conditions and other intervening application changes also limit causal comparisons.",
+    "Homepage mobile simulated lab measurements only; not all routes, interaction latency, field users, indexing/rankings, or payment readiness.",
+    "Overall 50% improvement criterion is not evaluated because aggregate versus per-metric interpretation remains unresolved."
+  ]
+}

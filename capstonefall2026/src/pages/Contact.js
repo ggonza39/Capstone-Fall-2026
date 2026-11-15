@@ -178,7 +178,7 @@ function Contact() {
 
                 {submitted && (
                     <Alert severity="success" sx={{ mb: 3 }}>
-                        Your message was submitted successfully.
+                        This is a demonstration form. Your message was not sent to a production system.
                     </Alert>
                 )}
 
