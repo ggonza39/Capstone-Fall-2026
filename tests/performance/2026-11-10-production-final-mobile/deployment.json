@@ -1,0 +1,95 @@
+{
+    "measuredClientDate":  "2026-11-10",
+    "timezone":  "America/New_York",
+    "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+    "localReferenceCommit":  "b33e2e12b92994b21e4620140d6c2f2d15b8024e",
+    "deployedCommit":  null,
+    "deployedCommitNote":  "Public artifacts do not expose a verified source commit; the local commit is a reference only.",
+    "nodeVersion":  "v20.11.1",
+    "lighthouseCli":  "C:\\Users\\jlhar\\AppData\\Local\\npm-cache\\_npx\\ed05d372d6adb15e\\node_modules\\lighthouse\\cli\\index.js",
+    "lighthouseVersion":  "12.8.2",
+    "chromePath":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "chromeVersion":  "157.0.8103.39",
+    "operatingSystem":  {
+                            "Caption":  "Microsoft Windows 11 Home",
+                            "Version":  "10.0.26200",
+                            "OSArchitecture":  "64-bit"
+                        },
+    "cpu":  {
+                "Name":  "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+                "NumberOfCores":  4,
+                "NumberOfLogicalProcessors":  8
+            },
+    "runProcedure":  "Five sequential navigation audits; fresh Chrome process/profile and default storage reset each run; no URL blocking, interactions, builds, tests, or other browser audits during collection.",
+    "optimizedImageVariants":  24,
+    "preflight":  {
+                      "capturedAtUtc":  "2026-11-10T20:10:47.1584475Z",
+                      "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+                      "status":  200,
+                      "etag":  "\"6d7b014329383f43f52624d523351c67\"",
+                      "lastModified":  "Tue, 10 Nov 2026 20:04:27 GMT",
+                      "vercelCache":  "HIT",
+                      "vercelId":  "iad1::gl7z7-1794341447034-98527377afaa",
+                      "entryScript":  "/static/js/main.ce2cc812.js",
+                      "htmlSha256":  "c682740b87122600cc3f7a26e9049a25e3ba8ffcbddd7c40ead1ceca19fca86f"
+                  },
+    "afterEachRun":  [
+                         {
+                             "capturedAtUtc":  "2026-11-10T20:11:21.2830603Z",
+                             "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+                             "status":  200,
+                             "etag":  "\"6d7b014329383f43f52624d523351c67\"",
+                             "lastModified":  "Tue, 10 Nov 2026 20:04:27 GMT",
+                             "vercelCache":  "HIT",
+                             "vercelId":  "iad1::x6t7v-1794341481245-1ac786c94661",
+                             "entryScript":  "/static/js/main.ce2cc812.js",
+                             "htmlSha256":  "c682740b87122600cc3f7a26e9049a25e3ba8ffcbddd7c40ead1ceca19fca86f"
+                         },
+                         {
+                             "capturedAtUtc":  "2026-11-10T20:11:43.3270289Z",
+                             "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+                             "status":  200,
+                             "etag":  "\"6d7b014329383f43f52624d523351c67\"",
+                             "lastModified":  "Tue, 10 Nov 2026 20:04:27 GMT",
+                             "vercelCache":  "HIT",
+                             "vercelId":  "iad1::8xlvv-1794341503318-4dc742489bf9",
+                             "entryScript":  "/static/js/main.ce2cc812.js",
+                             "htmlSha256":  "c682740b87122600cc3f7a26e9049a25e3ba8ffcbddd7c40ead1ceca19fca86f"
+                         },
+                         {
+                             "capturedAtUtc":  "2026-11-10T20:12:04.9570884Z",
+                             "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+                             "status":  200,
+                             "etag":  "\"6d7b014329383f43f52624d523351c67\"",
+                             "lastModified":  "Tue, 10 Nov 2026 20:04:27 GMT",
+                             "vercelCache":  "HIT",
+                             "vercelId":  "iad1::g5ths-1794341524956-abe2e411b5fc",
+                             "entryScript":  "/static/js/main.ce2cc812.js",
+                             "htmlSha256":  "c682740b87122600cc3f7a26e9049a25e3ba8ffcbddd7c40ead1ceca19fca86f"
+                         },
+                         {
+                             "capturedAtUtc":  "2026-11-10T20:12:26.8276268Z",
+                             "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+                             "status":  200,
+                             "etag":  "\"6d7b014329383f43f52624d523351c67\"",
+                             "lastModified":  "Tue, 10 Nov 2026 20:04:27 GMT",
+                             "vercelCache":  "HIT",
+                             "vercelId":  "iad1::mrcnn-1794341546811-0303429fa528",
+                             "entryScript":  "/static/js/main.ce2cc812.js",
+                             "htmlSha256":  "c682740b87122600cc3f7a26e9049a25e3ba8ffcbddd7c40ead1ceca19fca86f"
+                         },
+                         {
+                             "capturedAtUtc":  "2026-11-10T20:13:03.3880058Z",
+                             "requestedUrl":  "https://capstone-fall-2026.vercel.app/",
+                             "status":  200,
+                             "etag":  "\"6d7b014329383f43f52624d523351c67\"",
+                             "lastModified":  "Tue, 10 Nov 2026 20:04:27 GMT",
+                             "vercelCache":  "HIT",
+                             "vercelId":  "iad1::6rzl9-1794341583356-02b7091340f8",
+                             "entryScript":  "/static/js/main.ce2cc812.js",
+                             "htmlSha256":  "c682740b87122600cc3f7a26e9049a25e3ba8ffcbddd7c40ead1ceca19fca86f"
+                         }
+                     ],
+    "unchangedAcrossAllRuns":  true,
+    "completedAtUtc":  "2026-11-10T20:13:03.5512539Z"
+}

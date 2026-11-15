@@ -1,0 +1,103 @@
+{
+  "capturedAtUtc": "2026-11-10T20:38:36.000Z",
+  "referenceCommit": "b33e2e12b92994b21e4620140d6c2f2d15b8024e",
+  "node": "v20.11.1",
+  "lighthouse": "12.8.2",
+  "chrome": "157.0.8103.39",
+  "operatingSystem": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26200",
+    "OSArchitecture": "64-bit"
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz",
+    "NumberOfCores": 4,
+    "NumberOfLogicalProcessors": 8
+  },
+  "baselinePublicTbtMedianMs": 457,
+  "scope": "Controlled local production experiment for build-rendered homepage. The current public457ms result remains unchanged until this source is deployed and a fresh hosted audit confirms it.",
+  "serverBefore": "serve14.2.4 -s build on127.0.0.1:4173",
+  "serverAfter": "serve14.2.4 build -c ../serve.json on127.0.0.1:4173; equivalent static-file precedence and secondary-route fallback",
+  "note": "Both phases use the same Chrome/Lighthouse/config settings and frozen production artifacts. Root/content delivery architecture changes from empty CSR HTML to build-rendered HTML. No timers, delayed essential content, blocked URLs, or lowered targets.",
+  "afterBuild": {
+    "entry": "static/js/main.d43fba1f.js",
+    "css": "static/css/main.9426d4c9.css",
+    "sourceFiles": [
+      {
+        "file": "capstonefall2026/package.json",
+        "sha256": "3d6526a010a5e6a07437966b1ed0a006f54013c74aeb3cf8340d74432a371812"
+      },
+      {
+        "file": "capstonefall2026/src/index.js",
+        "sha256": "03ac5fa51391db04d9750d116f8fe4dd0c7b436f361f76a16bcb5c5a453b5b5a"
+      },
+      {
+        "file": "capstonefall2026/src/reactApp.js",
+        "sha256": "7c365849db4505671c848eac826bc83fc0fcaa12631c683073321d5d6d2ffa01"
+      },
+      {
+        "file": "capstonefall2026/src/components/navigation.js",
+        "sha256": "8127b0e62fea1bb32fd0045b28f537fd143e0f682e174b29ce2c207a3837cd03"
+      },
+      {
+        "file": "capstonefall2026/src/components/Header.js",
+        "sha256": "84844ae37114321a9078c14921ea3a7a5d023d1f4ced7618504cd8ad224c2874"
+      },
+      {
+        "file": "capstonefall2026/src/components/MobileNavigation.js",
+        "sha256": "88392556a6efed9a568562c343a6e8d0c0afbe769b67ca1e1368600b18c30803"
+      },
+      {
+        "file": "capstonefall2026/src/components/ScrollToTop.js",
+        "sha256": "154f4558ca9891da8c54f44ac20e6e7f43b19786fa151447510a73222c7c257d"
+      },
+      {
+        "file": "capstonefall2026/src/pages/Home.js",
+        "sha256": "72633ed98571e7053ea7b71922756a84b6322ea7dde21b6519bf6a69314b2941"
+      },
+      {
+        "file": "capstonefall2026/src/home/enhanceStaticHome.js",
+        "sha256": "70d932ab9e4f23161a3d76d9e0342c82ff45d33bdc0363000cac6e997985658c"
+      },
+      {
+        "file": "capstonefall2026/src/home/homeMenu.js",
+        "sha256": "0ad140dde1dd4a3be70cc5c63822ffc327625cfb967c8459f9701c7a6c1a4191"
+      },
+      {
+        "file": "capstonefall2026/scripts/prerender-home.cjs",
+        "sha256": "0077ae2bcece295d779798dd51ffd3835373c343abd406d94ef8ec0e66dff77c"
+      },
+      {
+        "file": "capstonefall2026/vercel.json",
+        "sha256": "6d99511ccacb445d993d24d1b3d4d12e9a841836e23bbc328634dae09f6fd23c"
+      },
+      {
+        "file": "capstonefall2026/serve.json",
+        "sha256": "80b05817fd265d096d49b671062add07da4726dbe88d9013c570ef6105e703a2"
+      }
+    ],
+    "note": "Reference commit plus current source changes; not deployed."
+  },
+  "verification": {
+    "build": "passed, including postbuild static generation",
+    "browserChecks": 107,
+    "visualDifferences": 0,
+    "routeDeliveryChecks": 11,
+    "fullSuite": {
+      "passed": 136,
+      "failed": 6,
+      "total": 142,
+      "report": "test-results.json"
+    },
+    "retry": {
+      "passed": 20,
+      "failed": 2,
+      "report": "test-results-retry.json"
+    },
+    "newEnhancementAndFocusTests": {
+      "passed": 17,
+      "failed": 0
+    },
+    "testLimitations": "Existing unchanged Advocate and Contact forms use demo feedback while API integration tests expect submitted API outcomes. Full run had Contact5s timeouts;20s retry instead exposes success-message expectation mismatches. These page/test files have no diff in this task. Existing MUI development prop warnings and unset local Stripe key also remain."
+  }
+}

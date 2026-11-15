@@ -1,0 +1,82 @@
+{
+  "url": "http://127.0.0.1:4173",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "staticHome": true,
+      "redirect": null
+    },
+    {
+      "path": "/advocate",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/workshops/WS-1001",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/missing-test-page",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/static/js/main.d43fba1f.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/api/missing",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/static/js/missing.js",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "staticHome": false,
+      "redirect": null
+    },
+    {
+      "path": "/index.html",
+      "status": 308,
+      "contentType": null,
+      "staticHome": false,
+      "redirect": "/"
+    }
+  ]
+}

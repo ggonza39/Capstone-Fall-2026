@@ -10,9 +10,11 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link as RouterLink } from "react-router-dom";
+import PageTheme from "../theme/PageTheme";
 
-function MobileNavigation({ open, onClose, navigation, pathname }) {
+function MobileNavigation({ open, onClose, navigation, pathname, reloadDocument = false }) {
     return (
+        <PageTheme>
         <Drawer
             anchor="right"
             open={open}
@@ -56,6 +58,7 @@ function MobileNavigation({ open, onClose, navigation, pathname }) {
                                 <ListItemButton
                                     component={RouterLink}
                                     to={item.path}
+                                    reloadDocument={reloadDocument}
                                     onClick={onClose}
                                     selected={active}
                                     aria-current={active ? "page" : undefined}
@@ -86,6 +89,7 @@ function MobileNavigation({ open, onClose, navigation, pathname }) {
                 </List>
             </Box>
         </Drawer>
+        </PageTheme>
     );
 }
 
