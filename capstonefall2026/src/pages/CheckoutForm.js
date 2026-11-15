@@ -6,6 +6,7 @@ import {
   useElements,
 } from '@stripe/react-stripe-js';
 import { Box, Button, Container, Stack, Typography, TextField } from "@mui/material";
+import { donate } from "../services/donationService";
 
 function getDonorFieldError(name, value) {
   const trimmedValue = value.trim();
@@ -100,29 +101,21 @@ export function CheckoutForm() {
         return;
       }
 
-      // Only send non-sensitive donation data.
-      const response = await fetch('/api/v1/donor-inquiries', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: donor.firstName.trim(),
-          lastName: donor.lastName.trim(),
-          email: donor.email.trim(),
-          phone: '111-111-1111' // test phone number
-        }),
-      });
+      // Only send non-sensitive donation data.fetch
+      const response = await donate({
+        firstName: donor.firstName.trim(),
+        lastName: donor.lastName.trim(),
+        email: donor.email.trim(),
+        phone: "111-111-1111", // test phone number
+        });
 
-      if (!response.ok) {
+      if (!response.success) {
         throw new Error('Donation simulation failed');
       }
 
-      const result = await response.json();
-
-      if (result.isSimulation && result.success) {
+      if (response.success) {
         setMessage(
-          'Demo successful! No actual payment was processed.'
+          response.message + " This is a simulation, so no real payment was processed."
         );
       }
     } catch (err) {

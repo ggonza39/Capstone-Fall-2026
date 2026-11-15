@@ -6,6 +6,10 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import CampaignIcon from "@mui/icons-material/Campaign";
 import ImpactSection from "../components/ImpactSection";
 import PartnersSection from "../components/PartnersSection";
+import { useState, useEffect } from "react";
+import { getParagraphs } from "../services/informationalContentService.js";
+import { PageType } from "../mocks/pageTypeEnum.js";
+
 /**
  * PBI-9 Implement "I Want to Help" Donate/Volunteer/Advocate journeys
  *
@@ -16,6 +20,25 @@ import PartnersSection from "../components/PartnersSection";
  *
  */
 function WantToHelp() {
+      // This useState and useEffect code block was generated using ChatGPT assistance.
+      const [paragraphs, setParagraphs] = useState([]);
+  
+      useEffect(() => {
+          let ignore = false;
+  
+          async function load() {
+              // API call: Informational content fetch
+              // Fetch all paragraphs on this page up-front in one round trip
+              const items = await getParagraphs(PageType.WantToHelp);
+              if (!ignore) setParagraphs(items);
+          }
+  
+          load().catch(console.error);
+  
+          return () => {
+              ignore = true;
+          };
+      }, []);
     return (
         <>
             <Box
@@ -44,8 +67,9 @@ function WantToHelp() {
                 </Container>
             </Box>
 
+
             {/* Component Impact */}
-            <ImpactSection />
+            <ImpactSection paragraphs={paragraphs}/>
 
             {/* Help Options */}
 

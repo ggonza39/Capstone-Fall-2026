@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { getParagraphs } from "../services/informationalContentService.js";
+import { PageType } from "../mocks/pageTypeEnum.js";
+import Content from "../components/Content";
 
 import {
     Box, Button, Card, CardContent, Container, FormControl, FormHelperText,
@@ -11,6 +14,7 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import SchoolIcon from "@mui/icons-material/School";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 /**
  * PBI-6 Implement dual-path landing and navigation.
  *
@@ -42,6 +46,27 @@ function Home() {
         navigate(`/need-help?zip=${zipCode}`);
     };
 
+    // This useState and useEffect code block was generated using ChatGPT assistance.
+    const [paragraphs, setParagraphs] = useState([]);
+
+    useEffect(() => {
+        let ignore = false;
+
+        async function load() {
+            // API call: Informational content fetch
+            // Fetch all paragraphs on this page up-front in one round trip
+            const items = await getParagraphs(PageType.Landing);
+            if (!ignore) setParagraphs(items);
+        }
+
+        load().catch(console.error);
+
+        return () => {
+            ignore = true;
+        };
+    }, []);
+
+  
     return (
         <>
             {/* Hero Section */}
@@ -80,8 +105,11 @@ function Home() {
                                 maxWidth: "60ch",
                             }}
                         >
-                            TechSmart Learning for Seniors is a non-profit organization committed to teaching older
-                            adults the latest tools and technology to help them lead active lives.
+                            <Content 
+                                id="landing-hero"
+                                fromParagraphs={paragraphs}
+                                fallbackContent="TechSmart Learning for Seniors is a non-profit organization committed to teaching older adults the latest tools and technology to help them lead active lives."
+                            ></Content>
                         </Typography>
 
                         <Stack
