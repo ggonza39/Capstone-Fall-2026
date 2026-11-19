@@ -21,14 +21,8 @@ export default function ParagraphEditor() {
                 setWantToHelpParagraphs(wantToHelpItems);
               }
           }
-  
-          try {
-            load();
-          }
-          catch {
-            setLandingParagraphs([]);
-            setWantToHelpParagraphs([]);
-          }
+          
+          load().catch(console.error);
 
           return () => {
               ignore = true;
@@ -43,7 +37,7 @@ export default function ParagraphEditor() {
             <div className="timeline">
                 <div className="timeline-item">
                 <h4 className="pageType">Landing Page</h4>
-                {landingParagraphs.length === 0 ? "No paragraphs to display." : landingParagraphs.map(paragraph => (
+                {!landingParagraphs || landingParagraphs.length === 0 ? "No paragraphs to display." : landingParagraphs.map(paragraph => (
                     <EditableTextField 
                         key={paragraph.id}
                         label={paragraph.id} 
@@ -58,7 +52,7 @@ export default function ParagraphEditor() {
             
             <div className="timeline-item">
                 <h4 className="pageType">Want to Help</h4>
-                {wantToHelpParagraphs.length === 0 ? "No paragraphs to display." : wantToHelpParagraphs.map(paragraph => (
+                {!wantToHelpParagraphs || wantToHelpParagraphs.length === 0 ? "No paragraphs to display." : wantToHelpParagraphs.map(paragraph => (
                     <EditableTextField 
                         key={paragraph.id}
                         label={paragraph.id} 
