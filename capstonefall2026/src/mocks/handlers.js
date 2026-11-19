@@ -311,9 +311,6 @@ export const handlers = [
     var paragraphId = params.id;
     var pageType = Number(params.pageType);
 
-        console.log(pageType);
-        console.log(paragraphId);
-
     if(!Object.values(PageType).includes(pageType)) {
       return HttpResponse.json(
         {
