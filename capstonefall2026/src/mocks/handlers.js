@@ -11,6 +11,8 @@ import {
   isWorkshopFull,
   validateWorkshopRegistration,
 } from "./validation-logic/workshopRegistration.mjs";
+import { landingPageParagraphs, impactComponentParagraphs } from './data/paragraphs';
+import PageType  from "./pageTypeEnum";
 
 /**
  * Mock Service Layer.
@@ -268,4 +270,96 @@ export const handlers = [
       );
     }
   ),
+
+  // Informational Content Updates (Milestone 3)
+  // GetParagraphs method
+  // ChatGPT was used for assistance in creating this method: getting pageType, Object.values and response object structure.
+  http.get("/api/v1/paragraphs/:pageType", async ({ params }) => {
+    await delay(300); 
+
+    var pageType = Number(params.pageType);
+
+    if(!Object.values(PageType).includes(pageType)) {
+      return HttpResponse.json(
+        {
+          error: {
+            code: "NOT_FOUND",
+            message: "The requested paragraphs were not found."
+          }
+        }
+      )
+    }
+
+    if(pageType === PageType.Landing) {
+      return HttpResponse.json(
+          { paragraphs: landingPageParagraphs },
+          { status: 200 }
+      );
+    }
+    else if(pageType === PageType.WantToHelp) {
+      return HttpResponse.json( 
+        { paragraphs: impactComponentParagraphs },
+        { status: 200 }
+      );
+    }
+  }
+  ),
+
+   http.put("/api/v1/paragraphs/:id/pageType/:pageType", async ({ params }) => {
+    await delay(300); 
+
+    var paragraphId = params.id;
+    var pageType = Number(params.pageType);
+
+    if(!Object.values(PageType).includes(pageType)) {
+      return HttpResponse.json(
+        {
+          error: {
+            code: "NOT_FOUND",
+            message: "The requested paragraphs were not found."
+          }
+        }
+      );
+    }
+
+    var fromParagraphs = null; 
+    
+    // Simulate mock query FROM paragraphs WHERE pageType = <pageType> && paragraphId = <id>
+    switch(pageType) {
+        case PageType.Landing:
+            fromParagraphs = landingPageParagraphs;
+            break;
+        case PageType.WantToHelp:
+            fromParagraphs = impactComponentParagraphs;
+            break;
+        default:
+            fromParagraphs = landingPageParagraphs;
+            break;
+    } 
+
+    const paragraph = fromParagraphs.find(
+        (paragraph) => paragraph.id === paragraphId
+    );
+
+    if(!paragraph) {
+      return HttpResponse.json(
+        {
+          error: {
+            code: "NOT_FOUND",
+            message: "The requested paragraph was not found."
+          }
+        }
+      )
+    }
+
+    return HttpResponse.json(
+        {
+            updateId: generateId("AI"),
+            status: "updated",
+            message: "The selected paragraph has been updated."
+        },
+        { status: 201 } 
+    );
+   }
+),
 ];

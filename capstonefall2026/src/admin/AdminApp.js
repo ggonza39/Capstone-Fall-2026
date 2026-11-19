@@ -4,6 +4,7 @@ import RouteMetadata from "../seo/RouteMetadata";
 import ScrollToTop from "../components/ScrollToTop";
 import { hasSandboxAccess, signInSandbox, signOutSandbox } from "./sandboxAccess";
 import "./Admin.css";
+import ParagraphEditor from "../components/ParagraphEditor";
 
 const sections = [
     {
@@ -126,7 +127,7 @@ function AdminDashboard() {
                 </div>
                 <SandboxNotice />
                 <div className="admin-section-grid">
-                    {sections.map((section, index) => (
+                    {sections.filter((section) => section.id !== "informational-content").map((section, index) => (
                         <section className="admin-section-card" key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}>
                             <div className="admin-card-topline">
                                 <span className="admin-section-number" aria-hidden="true">0{index + 1}</span>
@@ -135,6 +136,17 @@ function AdminDashboard() {
                             <h2 id={`${section.id}-title`}>{section.title}</h2>
                             <p>{section.description}</p>
                             <p className="admin-placeholder-detail">{section.detail}</p>
+                        </section>
+                    ))}
+                    {sections.filter((section) => section.id === "informational-content").map((section, index) => (
+                        <section className="admin-section-card" key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}>
+                            <div className="admin-card-topline">
+                                <span className="admin-section-number" aria-hidden="true">04</span>
+                                <span className="admin-placeholder-badge">Placeholder</span>
+                            </div>
+                            <h2 id={`${section.id}-title`}>{section.title}</h2>
+                            <p>{section.description}</p>
+                            <ParagraphEditor></ParagraphEditor>
                         </section>
                     ))}
                 </div>
