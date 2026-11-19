@@ -6,7 +6,7 @@ import PageType from "../mocks/pageTypeEnum";
 export default function ParagraphEditor() {
      // This useState and useEffect code block was generated using ChatGPT assistance.
       const [landingParagraphs, setLandingParagraphs] = useState([]);
-      const [wantToHelpParagraphs, setNeedToHelpParagraphs] = useState([]);
+      const [wantToHelpParagraphs, setWantToHelpParagraphs] = useState([]);
   
       useEffect(() => {
           let ignore = false;
@@ -18,11 +18,18 @@ export default function ParagraphEditor() {
 
               if (!ignore) {
                 setLandingParagraphs(landingItems);
-                setNeedToHelpParagraphs(wantToHelpItems);
+                setWantToHelpParagraphs(wantToHelpItems);
               }
           }
   
-          load().catch(console.error);
+          try {
+            load();
+          }
+          catch {
+            setLandingParagraphs([]);
+            setWantToHelpParagraphs([]);
+          }
+
           return () => {
               ignore = true;
           };
