@@ -55,11 +55,7 @@ function AdminLogin({ onSignIn }) {
             return;
         }
         try {
-            if (!signInSandbox(username, password)) {
-                setError("Incorrect username or password. Please try again.");
-                return;
-            }
-            onSignIn();
+            onSignIn(username, password, setError);
         } catch (loginError) {
             setError(loginError.message);
         }
@@ -181,7 +177,14 @@ export default function AdminApp() {
                 </div>
             </header>
             <Routes>
-                <Route path="login" element={authenticated ? <Navigate to="/admin" replace /> : <AdminLogin onSignIn={() => { setSignedIn(true); navigate("/admin", { replace: true }); }} />} />
+                <Route path="login" element={authenticated ? <Navigate to="/admin" replace /> : <AdminLogin onSignIn={async (username, password, setError) => { 
+                    var result = await signInSandbox(username, password)
+                    if (!result) {
+                        setError("Incorrect username or password. Please try again.");
+                        return;
+                    } setSignedIn(true); 
+                    navigate("/admin", 
+                    { replace: true }); }} />} />
                 <Route index element={authenticated ? <AdminDashboard /> : <Navigate to="/admin/login" replace />} />
                 <Route path="*" element={<Navigate to={authenticated ? "/admin" : "/admin/login"} replace />} />
             </Routes>

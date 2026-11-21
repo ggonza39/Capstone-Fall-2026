@@ -362,4 +362,36 @@ export const handlers = [
     );
    }
 ),
+
+http.post("/api/v1/authenticate", async ({ request }) => {
+    await delay(300); 
+
+    // https://mswjs.io/docs/http/intercepting-requests/body
+    var body = await request.json();
+
+    var username = body.username;
+    var password = body.password;
+
+    // Whoever replaces this with backend in future: please use a different username and password in database,
+    // because these credentials have been exposed to a public Git repo.
+    if(username === "admin" && password === "admin123") {
+        return HttpResponse.json(
+        {
+            status: "success",
+            message: "Success! Logging in..."
+        },
+        { status: 201 } 
+    )
+    }
+
+    return HttpResponse.json(
+        {
+          error: {
+            code: "NOT_FOUND",
+            message: "A user with the entered username and password was not found. Please try again."
+          }
+        }
+      )
+}
+),
 ];
