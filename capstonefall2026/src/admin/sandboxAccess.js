@@ -18,8 +18,16 @@ function isValidUserFallback(username, password) {
 
 export async function signInSandbox(username, password) {
     var credentials = { username, password }
-    var authenticationResult = await authenticate(credentials);
-    var isFailedAuth = !authenticationResult || authenticationResult.status !== "success"
+    var authenticationResult = null;
+    var isFailedAuth = true;
+
+    try {
+        authenticationResult = await authenticate(credentials);
+        isFailedAuth = !authenticationResult || authenticationResult.status !== "success"
+    }
+    catch(ex) {
+        isFailedAuth = true;
+    }
 
     // Check both the mock authentication result and a fallback in case Mock API fails
     if(isFailedAuth && !isValidUserFallback(username, password)) {
