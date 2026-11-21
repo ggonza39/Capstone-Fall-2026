@@ -1,5 +1,6 @@
 // Public demonstration credentials and a client-side flag are intentionally
 // sandbox-only. This is not production authentication or authorization.
+import { authenticate } from "../services/authenticationService.js";
 export const SANDBOX_SESSION_KEY = "tsls.sandbox.admin.session";
 const SESSION_MARKER = "active";
 
@@ -11,8 +12,17 @@ export function hasSandboxAccess() {
     }
 }
 
-export function signInSandbox(username, password) {
-    if (username !== "admin" || password !== "admin123") {
+function isValidUserFallback(username, password) {
+    return username === "admin" && password === "admin123";
+}
+
+export async function signInSandbox(username, password) {
+    var credentials = { username, password }
+    var authenticationResult = await authenticate(credentials);
+    var isFailedAuth = !authenticationResult || authenticationResult.status !== "success"
+
+    // Check both the mock authentication result and a fallback in case Mock API fails
+    if(isFailedAuth || !isValidUserFallback(username, password)) {
         return false;
     }
 
