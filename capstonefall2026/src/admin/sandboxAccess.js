@@ -12,6 +12,9 @@ export function hasSandboxAccess() {
     }
 }
 
+// !!!!!!!! IMPORTANT !!!!!!!!!!!
+// 👇👇👇👇👇👇👇👇👇👇👇👇
+// This needs to be replaced/removed when real backend is implemented for security reasons.
 function isValidUserFallback(username, password) {
     return username === "admin" && password === "admin123";
 }
@@ -28,8 +31,9 @@ export async function signInSandbox(username, password) {
     catch(ex) {
         isFailedAuth = true;
     }
-
-    // Check both the mock authentication result and a fallback in case Mock API fails
+    
+    // isValidUserFallback needs to be replaced/removed when real backend is implemented for security reasons.
+     // Check both the mock authentication result and a fallback in case Mock API fails
     if(isFailedAuth && !isValidUserFallback(username, password)) {
         return false;
     }
