@@ -22,7 +22,7 @@ export async function signInSandbox(username, password) {
     var isFailedAuth = !authenticationResult || authenticationResult.status !== "success"
 
     // Check both the mock authentication result and a fallback in case Mock API fails
-    if(isFailedAuth || !isValidUserFallback(username, password)) {
+    if(isFailedAuth && !isValidUserFallback(username, password)) {
         return false;
     }
 
