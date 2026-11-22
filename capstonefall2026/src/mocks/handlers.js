@@ -13,6 +13,7 @@ import {
 } from "./validation-logic/workshopRegistration.mjs";
 import { landingPageParagraphs, impactComponentParagraphs } from './data/paragraphs';
 import PageType  from "./pageTypeEnum";
+import { validateWorkshopCreation } from "./validation-logic/workshopCreation.mjs";
 
 /**
  * Mock Service Layer.
@@ -39,6 +40,28 @@ function validationError(fields) {
 }
 
 let nextId = 1001;
+
+/**
+ * Generates unique workshop IDs for sandbox records.
+ * Keeps workshop IDs separate from other mock API records.
+ */
+
+// Separate counter for sandbox workshop IDs.
+let nextWorkshopId = 1004;
+
+function generateWorkshopId() {
+  const existingIds = new Set(
+    workshops.map((workshop) => workshop.id)
+  );
+
+  let candidateId = `WS-${nextWorkshopId++}`;
+
+  while (existingIds.has(candidateId)) {
+    candidateId = `WS-${nextWorkshopId++}`;
+  }
+
+  return candidateId;
+}
 
 function generateId(prefix) {
   return `${prefix}-${nextId++}`;
@@ -154,6 +177,98 @@ export const handlers = [
       { status: 201 }
     );
   }),
+
+// Workshops: Create (PBI-15)
+// Sandbox only - create an in-memory workshop record.
+http.post("/api/workshops", async ({ request }) => {
+  let body;
+
+  try {
+    body = await request.json();
+  } catch {
+    return validationError({
+      request: "Enter valid workshop information.",
+    });
+  }
+
+  // Validate the submitted workshop fields before saving.
+
+  const fields = validateWorkshopCreation(body);
+
+  if (Object.keys(fields).length > 0) {
+
+    return validationError(fields);
+
+  }
+
+  // Create a workshop using the existing WorkshopDetail structure.
+
+  const workshop = {
+
+    id: generateWorkshopId(),
+
+    title: body.title.trim(),
+
+    dateTime: body.dateTime,
+
+    location: body.location.trim(),
+
+    roomNumber: (body.roomNumber || "").trim(),
+
+    instructorName: body.instructorName.trim(),
+
+    accessibilityFeatures: body.accessibilityFeatures || [],
+
+    seatAvailability: body.seatAvailability,
+
+  };
+
+  // Save the workshop in the sandbox's in-memory data.
+
+  workshops.push(workshop);
+
+  // Keep the workshop search results consistent with the detail records.
+
+  const [date, time] = workshop.dateTime.split("T");
+
+  workshopSummaries.push({
+
+    id: workshop.id,
+
+    title: workshop.title,
+
+    date,
+
+    time: time ? time.slice(0, 5) : "",
+
+    address: workshop.location,
+
+    distanceMiles: 0,
+
+    eventType: workshop.location.toLowerCase() === "online"
+
+      ? "Virtual"
+
+      : "In-Person",
+
+  });
+
+  await delay(300);
+
+  return HttpResponse.json(
+
+    {
+
+      workshop,
+
+      message: "Workshop created successfully in the sandbox.",
+
+    },
+
+    { status: 201 }
+
+  );
+}),
 
   // Workshops: Search (PBI-7 / PBI-12)
   http.get("/api/workshops", async ({ request }) => {

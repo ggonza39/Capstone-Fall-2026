@@ -12,6 +12,7 @@ import { validateVolunteerInquiry } from "./validation-logic/volunteerInquiries.
 import { validateContactInquiry } from "./validation-logic/contactInquiries.mjs";
 import { validateDonorInquiry } from "./validation-logic/donorInquiries.mjs";
 import { validateAdvocateInquiry } from "./validation-logic/advocateInquiries.mjs";
+import { validateWorkshopCreation } from "./validation-logic/workshopCreation.mjs";
 import {
   isWorkshopFull,
   validateWorkshopRegistration,
@@ -124,6 +125,63 @@ app.post("/api/v1/advocate-inquiries", async (req, res) => {
     inquiryId: generateId("AI"),
     status: "received",
     message: "Your advocate interest request has been received.",
+  });
+});
+
+// Workshops: Create (PBI-15)
+// Sandbox only — records are stored in memory.
+app.post("/api/workshops", (req, res) => {
+  const body = req.body;
+
+  // Validate workshop information before creating a record.
+  const fields = validateWorkshopCreation(body);
+
+  if (Object.keys(fields).length > 0) {
+    return validationError(res, fields);
+  }
+
+  // Generate an ID that does not conflict with existing workshops.
+  const nextNumber = Math.max(
+    1000,
+    ...workshops.map((workshop) => {
+      const match = /^WS-(\d+)$/.exec(workshop.id);
+      return match ? Number(match[1]) : 1000;
+    })
+  ) + 1;
+
+  const workshop = {
+    id: `WS-${nextNumber}`,
+    title: body.title.trim(),
+    dateTime: body.dateTime,
+    location: body.location.trim(),
+    roomNumber: (body.roomNumber || "").trim(),
+    instructorName: body.instructorName.trim(),
+    accessibilityFeatures: body.accessibilityFeatures || [],
+    seatAvailability: body.seatAvailability,
+  };
+
+  // Add the workshop to the sandbox detail records.
+  workshops.push(workshop);
+
+  // Add a matching entry to the workshop search results.
+  const [date, time] = workshop.dateTime.split("T");
+
+  workshopSummaries.push({
+    id: workshop.id,
+    title: workshop.title,
+    date,
+    time: time ? time.slice(0, 5) : "",
+    address: workshop.location,
+    distanceMiles: 0,
+    eventType:
+      workshop.location.toLowerCase() === "online"
+        ? "Virtual"
+        : "In-Person",
+  });
+
+  return res.status(201).json({
+    workshop,
+    message: "Workshop created successfully in the sandbox.",
   });
 });
 
