@@ -87,3 +87,98 @@
   .admin-login-main { padding: 40px 20px; }
   .admin-login-card { padding: 24px; }
 }
+
+/* PBI-15: Create Workshop form */
+
+.admin-create-workshop {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.admin-create-workshop > div:not(.admin-feedback) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.admin-create-workshop label {
+  display: block;
+  font-weight: 600;
+}
+
+.admin-create-workshop input,
+.admin-create-workshop textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.admin-create-workshop textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.admin-create-workshop button[type="submit"] {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #216eae;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-create-workshop button[type="submit"]:hover {
+  background-color: #185788;
+}
+
+.admin-create-workshop button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-create-workshop input:focus-visible,
+.admin-create-workshop textarea:focus-visible,
+.admin-create-workshop button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.admin-field-error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+/* PBI-15: Administrative action feedback */
+
+.admin-feedback {
+  padding: 1rem 1.25rem;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.admin-feedback p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.admin-feedback--success {
+  background-color: #ecfdf3;
+  border-color: #16803c;
+  color: #14532d;
+}
+
+.admin-feedback--error {
+  background-color: #fef2f2;
+  border-color: #b42318;
+  color: #991b1b;
+}

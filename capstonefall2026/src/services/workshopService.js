@@ -46,3 +46,13 @@ export async function getWorkshopById(workshopId) {
 export async function registerForWorkshop(workshopId, registration) {
     return apiRequest(`/workshops/${workshopId}/registrations`, "POST", registration);
 }
+
+/**
+ * Creates a workshop in the sandbox environment (PBI-15). 
+ * 
+ * Sends workshop information through the shared API client.
+ * This operation must not modify production workshop records.
+ */
+export async function createWorkshop(workshopData) {
+    return apiRequest("/workshops", "POST", workshopData);
+}

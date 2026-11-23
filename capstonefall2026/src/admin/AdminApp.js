@@ -5,6 +5,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import { hasSandboxAccess, signInSandbox, signOutSandbox } from "./sandboxAccess";
 import "./Admin.css";
 import ParagraphEditor from "../components/ParagraphEditor";
+import CreateWorkshop from "./CreateWorkshop";
 
 const sections = [
     {
@@ -127,11 +128,19 @@ function AdminDashboard() {
                         <section className="admin-section-card" key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}>
                             <div className="admin-card-topline">
                                 <span className="admin-section-number" aria-hidden="true">0{index + 1}</span>
-                                <span className="admin-placeholder-badge">Placeholder</span>
+                                {section.id !== "create-workshop" && (
+                                    <span className="admin-placeholder-badge">Placeholder</span>
+                                )}     
                             </div>
                             <h2 id={`${section.id}-title`}>{section.title}</h2>
                             <p>{section.description}</p>
-                            <p className="admin-placeholder-detail">{section.detail}</p>
+                            {section.id === "create-workshop" ? (
+                                <CreateWorkshop />
+                            ) : (
+                                <p className="admin-placeholder-detail">
+                                    {section.detail}
+                                </p>
+                            )}
                         </section>
                     ))}
                     {sections.filter((section) => section.id === "informational-content").map((section, index) => (
