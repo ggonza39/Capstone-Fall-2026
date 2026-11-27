@@ -32,6 +32,19 @@ export async function getWorkshopsByZip(zipCode, eventType) {
     };
 }
 
+export async function getAllWorkshops() {
+    const data = await apiRequest(`/allWorkshops`, "GET");
+    return data.workshops;
+}
+
+// Replaces the entire workshop.
+// Will be used on admin page by first loading the existing workshop fields,
+// and then saving will overwrite any changed fields by replacing the whole workshop.
+export async function updateWorkshopById(workshopId, newWorkshop) {
+    const data = await apiRequest(`/workshops/${workshopId}`, "PUT", newWorkshop);
+    return data.workshop;
+}
+
 export async function getWorkshopById(workshopId) {
     const data = await apiRequest(`/workshops/${workshopId}`, "GET");
 

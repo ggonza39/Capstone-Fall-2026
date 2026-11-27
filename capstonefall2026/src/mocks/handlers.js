@@ -13,7 +13,7 @@ import {
 } from "./validation-logic/workshopRegistration.mjs";
 import { landingPageParagraphs, impactComponentParagraphs } from './data/paragraphs';
 import PageType  from "./pageTypeEnum";
-import { validateWorkshopCreation } from "./validation-logic/workshopCreation.mjs";
+import { validateWorkshopCreation, validateWorkshopUpdate } from "./validation-logic/workshopCreation.mjs";
 
 /**
  * Mock Service Layer.
@@ -49,6 +49,8 @@ let nextId = 1001;
 // Separate counter for sandbox workshop IDs.
 let nextWorkshopId = 1004;
 
+
+
 function generateWorkshopId() {
   const existingIds = new Set(
     workshops.map((workshop) => workshop.id)
@@ -65,6 +67,20 @@ function generateWorkshopId() {
 
 function generateId(prefix) {
   return `${prefix}-${nextId++}`;
+}
+
+// Returns: created workshop from json in-memory
+function createWorkshopFromJson(body) {
+ return {
+    id: generateWorkshopId(),
+    title: body.title.trim(),
+    dateTime: body.dateTime,
+    location: body.location.trim(),
+    roomNumber: (body.roomNumber || "").trim(),
+    instructorName: body.instructorName.trim(),
+    accessibilityFeatures: body.accessibilityFeatures || [],
+    seatAvailability: body.seatAvailability,
+  };
 }
 
 export const handlers = [
@@ -295,6 +311,70 @@ http.post("/api/workshops", async ({ request }) => {
 
     return HttpResponse.json(
       { workshops: results },
+      { status: 200 }
+    );
+  }),
+
+   // All Workshops: Search
+  http.get("/api/allWorkshops", async() => {
+    await delay(500);
+
+    let results = workshopSummaries;
+
+    return HttpResponse.json(
+      { workshops: results },
+      { status: 200 }
+    );
+  }),
+
+ http.put("/api/workshops/:id", async ({ request, params }) => {
+    const body = await request.json();
+    await delay(300);
+
+    // First, see if workshop being updated/replaced exists
+    const workshop = workshops.find(
+      (item) => item.id === params.id
+    );
+
+    if (!workshop) {
+      return HttpResponse.json(
+        {
+          error: {
+            code: "NOT_FOUND",
+            message: "The requested workshop does not exist.",
+          },
+        },
+        { status: 404 }
+      );
+    }
+
+    // Validate the new incoming workshop that is to replace the existing workshop
+     if(!body) {
+        return null;
+     }
+
+      const fields = validateWorkshopUpdate(body);
+      if (Object.keys(fields).length > 0) {
+        return validationError(fields);
+       }
+
+    // Try creating an in-memory workshop object out of json
+    var workshopObject = createWorkshopFromJson(body);
+
+    if(!workshopObject) {
+      return HttpResponse.json(
+        {
+          error: {
+            code: "BAD_REQUEST",
+            message: "The update request did not include a valid workshop.",
+          },
+        },
+        { status: 400 }
+      );
+    }
+
+    return HttpResponse.json(
+      { updatedWorkshop: workshopObject },
       { status: 200 }
     );
   }),

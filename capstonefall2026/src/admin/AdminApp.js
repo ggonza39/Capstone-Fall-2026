@@ -6,6 +6,7 @@ import { hasSandboxAccess, signInSandbox, signOutSandbox } from "./sandboxAccess
 import "./Admin.css";
 import ParagraphEditor from "../components/ParagraphEditor";
 import CreateWorkshop from "./CreateWorkshop";
+import WorkshopEditor from "../components/WorkshopEditor";
 
 const sections = [
     {
@@ -19,12 +20,6 @@ const sections = [
         title: "Create a Workshop",
         description: "A place to add a new workshop.",
         detail: "The workshop creation form will appear here in a future implementation.",
-    },
-    {
-        id: "edit-workshop",
-        title: "Edit a Workshop",
-        description: "A place to update an existing workshop.",
-        detail: "Workshop selection and editing controls will appear here in a future implementation.",
     },
     {
         id: "informational-content",
@@ -41,6 +36,19 @@ function SandboxNotice() {
             This client-side access gate is not production authentication or role-based access control.
         </div>
     );
+}
+
+function VariableSection(sectionId) {
+    switch(sectionId?.section) {
+        case "workshop-listing":
+            return <WorkshopEditor />
+        case "create-workshop":
+            return <CreateWorkshop/>   
+        case "informational-content":
+            return <ParagraphEditor />   
+        default:
+            return <p>Placeholder</p>
+    }
 }
 
 function AdminLogin({ onSignIn }) {
@@ -124,42 +132,23 @@ function AdminDashboard() {
                 </div>
                 <SandboxNotice />
                 <div className="admin-section-grid">
-                    {sections.filter((section) => section.id !== "informational-content").map((section, index) => (
+                    {sections.map((section, index) => (
                         <section className="admin-section-card" key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}>
                             <div className="admin-card-topline">
                                 <span className="admin-section-number" aria-hidden="true">0{index + 1}</span>
-                                {section.id !== "create-workshop" && (
-                                    <span className="admin-placeholder-badge">Placeholder</span>
-                                )}     
                             </div>
                             <h2 id={`${section.id}-title`}>{section.title}</h2>
                             <p>{section.description}</p>
-                            {section.id === "create-workshop" ? (
-                                <CreateWorkshop />
-                            ) : (
-                                <p className="admin-placeholder-detail">
-                                    {section.detail}
-                                </p>
-                            )}
+                            <VariableSection section={section.id}/>
                         </section>
                     ))}
-                    {sections.filter((section) => section.id === "informational-content").map((section, index) => (
-                        <section className="admin-section-card" key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}>
-                            <div className="admin-card-topline">
-                                <span className="admin-section-number" aria-hidden="true">04</span>
-                                <span className="admin-placeholder-badge">Placeholder</span>
-                            </div>
-                            <h2 id={`${section.id}-title`}>{section.title}</h2>
-                            <p>{section.description}</p>
-                            <ParagraphEditor></ParagraphEditor>
-                        </section>
-                    ))}
-                </div>
-                <p className="admin-workspace-note">These sections are placeholders.</p>
+                    </div>
             </main>
         </div>
     );
 }
+
+
 
 export default function AdminApp() {
     const [signedIn, setSignedIn] = useState(hasSandboxAccess);
