@@ -63,5 +63,9 @@ export function validateWorkshopCreation(body) {
     }
 
     return fields;
+}
 
+export function validateWorkshopUpdate(body) {
+    // Same validation as create
+    return validateWorkshopCreation(body);
 }
