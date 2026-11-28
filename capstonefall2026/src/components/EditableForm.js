@@ -1,6 +1,8 @@
 import React, { useId, useRef, useState } from "react";
 
-// This file was entirely generated using ChatGPT.
+// ********************************************
+// This file was entirely generated using ChatGPT
+// *********************************************
 export default function EditableForm({ label, fields, values = {}, id, onLoad, onSave }) {
   const dialog = useRef(null);
   const savePending = useRef(false);
